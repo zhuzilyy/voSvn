@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x12"
+        android:layout_height="@dimen/x45">
+        <TextView
+            android:id="@+id/votime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="1个月"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            />
+        <TextView
+            android:id="@+id/vofree"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="20"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/x5"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="元"
+
+            />
+
+
+        <TextView
+            android:id="@+id/OriginalPrice"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:visibility="visible"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="36元"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/vo_zhekou_tv"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="显示特惠"
+
+            android:paddingBottom="@dimen/x3"
+            android:paddingLeft="@dimen/x6"
+            android:paddingTop="@dimen/x3"
+
+            android:paddingRight="@dimen/x6"
+            android:background="@drawable/vipzhekou_bg"
+
+            />
+
+
+
+    </LinearLayout>
+        <RadioButton
+            android:id="@+id/vorabtn"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/x16"
+            android:textSize="@dimen/x12"
+            android:checked="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:textColor="@color/white"
+            android:background="@mipmap/ra_false"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:layout_height="@dimen/x16" />
+
+    </RelativeLayout>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#e4e4e4"></View>-->
+
+</LinearLayout>

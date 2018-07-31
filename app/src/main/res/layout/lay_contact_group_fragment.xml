@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    >
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/goodFriend_addgroup_re"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/jia"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/jia"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_toRightOf="@+id/jia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="分组管理"
+            android:textSize="14sp"
+
+
+            android:textColor="@color/black_deep"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray">
+        ></View>
+    <LinearLayout
+        android:id="@+id/cs_goodList_fatherView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ExpandableListView
+            android:id="@+id/exList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            ></ExpandableListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x30"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!--title-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="删除人生笔记"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="35dp"
+                    android:text="close"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_corner3"
+                    >
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@mipmap/close3"
+
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/line_dash"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:layerType="software"
+                />
+            <LinearLayout
+                android:layout_marginTop="@dimen/x15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否删除该条人生笔记"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="15sp"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/x15"
+                android:id="@+id/confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/selector_bg3"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

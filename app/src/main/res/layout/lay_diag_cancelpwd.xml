@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x30"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!--title-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="提示："
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                   android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/re_cancel"
+                    android:layout_width="35dp"
+                    android:text="close"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_corner3"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@mipmap/close3"
+
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/imageView2" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/line_dash"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:layerType="software"
+                />
+            <TextView
+                android:layout_marginTop="@dimen/x15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="取消后所有隐藏资料处于公开状态不再加密"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                />
+            <TextView
+                android:id="@+id/tv_confrim"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="确定"
+                android:gravity="center"
+                android:background="@drawable/shape_corner_blue"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_marginLeft="@dimen/x15"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/x35"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

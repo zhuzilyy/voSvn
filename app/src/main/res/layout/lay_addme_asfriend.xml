@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar_blue"
+        android:paddingLeft="@dimen/x12"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+
+            android:layout_width="@dimen/x30"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/fx_top_bar_back" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:text="添加我的方式"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        <TextView
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="添加朋友"
+            android:layout_marginRight="@dimen/x12"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x12" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:text="可以通过以下的方式搜到我"
+            android:textSize="@dimen/x12"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x15"
+            />
+        <!--VO号添加-->
+        <RelativeLayout
+            android:id="@+id/re_void"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_temp_fxid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="vo号"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+            <com.hyphenate.easeui.widget.EaseSwitchButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_VO_Verification"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#dadada" />
+        </RelativeLayout>
+        <!--手机号添加-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="手机号"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <com.hyphenate.easeui.widget.EaseSwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_phoneNumber"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#dadada" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+
+            android:text="关闭后，其他人将不能通过以上的方式搜到我"
+            android:textSize="@dimen/x12"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x15"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:text="可以通过以下方式添加我为好友"
+            android:textSize="@dimen/x12"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x15"
+            />
+        <!--群聊添加-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="群聊"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <com.hyphenate.easeui.widget.EaseSwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_groupchat"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#dadada" />
+        </RelativeLayout>
+        <!--二维码添加-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="二维码"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <com.hyphenate.easeui.widget.EaseSwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_qrcode"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#dadada" />
+        </RelativeLayout>
+        <!--名片添加-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:background="@drawable/fx_btn_list_item_bg"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="名片"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+
+            <com.hyphenate.easeui.widget.EaseSwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_card"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#dadada" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_top_bar_blue"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

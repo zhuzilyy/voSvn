@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_top_bar_blue"
+        android:paddingLeft="@dimen/x12">
+
+        <ImageView
+            android:id="@+id/iv_back"
+
+            android:layout_width="@dimen/x30"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/fx_top_bar_back" />
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+        <TextView
+            android:id="@+id/web_title_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:text="VO会员"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/x12"
+            android:text="添加朋友"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x12"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+       android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ebebeb"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ListView
+            android:choiceMode="singleChoice"
+            android:id="@+id/vipLv"
+            android:scrollbars="none"
+            android:dividerHeight="0dp"
+            android:divider="#00000000"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x40"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/light_gray4"
+        android:layout_above="@+id/zhifull"
+        ></View>
+    <!--003-->
+    <LinearLayout
+        android:id="@+id/zhifull"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:paddingLeft="@dimen/x12"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="支付金额："
+                android:gravity="center"
+                android:textSize="14sp"
+                android:id="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/vip_final_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0.00"
+                android:textSize="14sp"
+                android:textColor="@color/vipcolor"
+                android:gravity="center"
+                />
+            <TextView
+
+                android:paddingLeft="@dimen/x5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="元"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/vip_final_save"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="已省0.00元"
+                android:textSize="@dimen/x12"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/vip_btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="立即付款"
+                android:textSize="16sp"
+                android:background="@drawable/zhifubg"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_top_bar_blue"
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x30"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!--title-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="隐私好友设置"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    />
+                <RelativeLayout
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="35dp"
+                    android:text="close"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_corner3"
+                    >
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@mipmap/close3"
+
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/line_dash"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:layerType="software"
+                />
+            <LinearLayout
+                android:layout_marginTop="@dimen/x15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x75"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/setPwdFriendBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="@dimen/x35"
+                        android:layout_height="@dimen/x35"
+                        android:src="@mipmap/setpwdfriend"
+                        />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="设置加密好友"
+                        android:textColor="#4162ff"
+                        android:layout_marginTop="@dimen/x8"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"/>
+                <LinearLayout
+                    android:id="@+id/fixPwdFriendBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="@dimen/x35"
+                        android:layout_height="@dimen/x35"
+                        android:src="@mipmap/fixpwdfriend"
+                        />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/x8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="修改加密好友"
+                        android:textColor="#4162ff"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/x15"
+                android:id="@+id/allClearPwdFriendBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:text="加密好友一键清除"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/selector_bg3"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

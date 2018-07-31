@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cpiz.android.bubbleview.BubbleTextView
+    android:id="@+id/popup_bubble"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    app:bb_fillColor="@color/blue02version"
+    android:text="接待来访时间管理解放路开始就放老司机了九分裤老司机哦发了多少福美来四大发明老师傅发打开方式福克斯你看到福建省客服雷锋精神考虑到甲方说金佛老司机佛是发死垃圾费"
+    android:textColor="@color/white"/>

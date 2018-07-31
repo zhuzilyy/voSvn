@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_alpha"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/alpha"></RelativeLayout>
+    <!--[原]界面布局开始-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x50"
+            android:paddingLeft="@dimen/x20"
+            android:text="VO"
+            android:textSize="@dimen/x45" />
+        <!--账号-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:layout_marginTop="@dimen/x30"
+            android:orientation="vertical">
+
+            <com.zl.vo_.main.views.MEditText
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                app:me_del_enable="true"
+                app:me_eye_enable="false"
+                app:me_hint="朋友ID/手机号"
+                app:me_hintColor="@color/white"
+                app:me_textColor="@color/white"
+                app:me_textSize="@dimen/x6"></com.zl.vo_.main.views.MEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/white"></View>
+        </LinearLayout>
+
+        <!--密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:layout_marginTop="@dimen/x10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.zl.vo_.main.views.MEditText
+                    android:id="@+id/login_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/x45"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20"
+                    app:me_del_enable="true"
+                    app:me_eye_enable="true"
+                    app:me_hint="密码"
+                    app:me_hintColor="@color/white"
+
+                    app:me_inputType="password"
+                    app:me_textColor="@color/white"
+                    app:me_textSize="@dimen/x6"
+
+                    ></com.zl.vo_.main.views.MEditText>
+
+                <TextView
+                    android:id="@+id/login_forgetpwd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="忘记密码?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x14" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/white"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_marginTop="@dimen/x20"
+
+            >
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:textColor="@color/cpb_white"
+                android:textSize="@dimen/x14"
+                app:cpb_cornerRadius="@dimen/x3"
+                app:cpb_iconComplete="@drawable/ic_action_accept"
+                app:cpb_iconError="@drawable/ic_action_cancel"
+                app:cpb_textIdle="登录" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x14"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <TextView
+                android:id="@+id/wx_login_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/login_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="新用户注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/x25"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录即代表阅读并同意"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+
+        <TextView
+            android:id="@+id/login_service_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务条款"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/x12" />
+
+    </LinearLayout>
+    <!--[原]界面布局结束-->
+    <!--///////////////////////////////////////////////////////-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1.2">
+            <ImageView
+                android:layout_width="@dimen/x110"
+                android:layout_height="@dimen/x100"
+                android:visibility="invisible"
+                android:src="@mipmap/vologo"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="0.5">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--手机号登录，微信登录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.3"
+                >
+                <!--手机号登录-->
+                <LinearLayout
+                    android:id="@+id/ll_phone_login"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/x45"
+                        android:layout_height="@dimen/x45"
+                        android:src="@mipmap/shouji"
+                        />
+                    <TextView
+                        android:layout_marginTop="@dimen/x12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机号登录"
+                        android:textSize="@dimen/x12"
+                        android:textColor="@color/white"
+                        />
+
+
+                </LinearLayout>
+                <!--微信登录-->
+                <LinearLayout
+                    android:id="@+id/ll_wx_login"
+                    android:layout_width="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="@dimen/x45"
+                        android:layout_height="@dimen/x45"
+                        android:src="@mipmap/wexin"
+                        />
+                    <TextView
+                        android:layout_marginTop="@dimen/x12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="微信登录"
+                        android:textSize="@dimen/x12"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <!--使用手机号注册-->
+            <LinearLayout
+                android:id="@+id/ll_phone_register"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:layout_marginBottom="@dimen/x10"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="使用手机号注册>"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <!--///////////////////////////////////////////////////////-->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/switch_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x15"
+        android:paddingBottom="@dimen/x12"
+        android:paddingLeft="@dimen/x12"
+        android:paddingRight="@dimen/x12"
+        android:paddingTop="@dimen/x20"
+        android:text="切换账号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14" />
+
+
+</RelativeLayout>

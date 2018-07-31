@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray4"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <!--topTitle-->
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="@dimen/x12">
+
+            <ImageView
+                android:id="@+id/iv_back"
+
+                android:layout_width="@dimen/x30"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/back_" />
+
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:background="#14191A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/lifenote"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:id="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/writeLifeNote_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/textView9"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp" />
+
+
+        </RelativeLayout>
+
+
+        <com.ybao.pullrefreshview.layout.PullRefreshLayout
+
+
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.zl.vo_.main.views.NormalHeaderView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <com.zl.vo_.main.views.NormalFooterView
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ListView
+                android:id="@+id/lv"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:dividerHeight="0dp"
+                android:divider="#00fff025"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray3" />
+
+
+
+
+
+        </com.ybao.pullrefreshview.layout.PullRefreshLayout>
+    </LinearLayout>
+    <RelativeLayout
+
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_bottom_bar_normal_bg"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:clickable="true"
+        android:visibility="gone"
+        android:id="@+id/re_del"
+        android:background="#aa000000"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:background="@color/bg_white"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/x35"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/x35"
+            android:orientation="vertical"
+            android:layout_height="@dimen/x120">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="是否删除该条笔记"
+
+                android:textColor="@color/black_deep"
+                android:textSize="@dimen/x16"
+                android:gravity="center"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/light_gray4"
+                ></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:background="@drawable/selector_color"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/x12"
+                    android:gravity="center"
+                    android:text="@string/confirm"/>
+                <View
+                    android:layout_width="@dimen/x1"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray4"
+                    ></View>
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:background="@drawable/selector_color"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/x12"
+                    android:text="@string/cancel"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

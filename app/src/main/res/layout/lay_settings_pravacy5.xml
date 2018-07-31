@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--title-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x12"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+
+            android:layout_width="@dimen/x30"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back_" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="设置加密好友"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/setAgain"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="再次设置"
+            android:layout_marginRight="@dimen/x12"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/x3"
+            android:paddingBottom="@dimen/x3"
+            android:paddingRight="@dimen/x6"
+            android:paddingLeft="@dimen/x6"
+            android:textSize="@dimen/x12" />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray4"/>
+
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+        <RelativeLayout
+            android:layout_marginTop="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="325dp"
+            android:layout_marginRight="@dimen/x25"
+            android:layout_marginLeft="@dimen/x25"
+            android:background="@drawable/over_bg"
+            android:paddingRight="@dimen/x25"
+            android:paddingLeft="@dimen/x25"
+            android:paddingBottom="@dimen/x25"
+            >
+            <TextView
+                android:id="@+id/over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恭喜你完成设置"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                android:paddingBottom="@dimen/x5"
+                android:paddingTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/over_top"
+                />
+            <LinearLayout
+                android:layout_marginTop="@dimen/x25"
+                android:layout_below="@+id/over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!--001-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_circle_blue"
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/x10"
+                        android:id="@+id/overOne"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+                <!--002-->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/x25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="2"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_circle_blue"
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="加密好友在设定好的时间点定时隐藏，只有输入正确密码后才能显示"
+                        />
+                </LinearLayout>
+                <!--003-->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/x25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="3"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_circle_blue"
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:text="可以为不同加密好友设置不同的密码"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+        <!--完成-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            >
+            <Button
+                android:id="@+id/goback_setting_btn"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:background="@drawable/shape_corner_blue"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_marginLeft="@dimen/x15"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

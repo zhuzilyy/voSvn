@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "769764571397",
+    "firebase_url": "https://vochat-e3968.firebaseio.com",
+    "project_id": "vochat-e3968",
+    "storage_bucket": "vochat-e3968.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769764571397:android:b3bb7ba35b8926d2",
+        "android_client_info": {
+          "package_name": "com.zl.vo_"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769764571397-gfcntk70bho1c670dc0esvgdkc70a36g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zl.vo_",
+            "certificate_hash": "06bb2d1acb573bdb3ab7a0cb781852412d2c0df9"
+          }
+        },
+        {
+          "client_id": "769764571397-ro5ggmr37aftk70cr19j2hrv5act1l93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe5OSi0B89Q9zKknqG1393qCAYXTtpnfc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769764571397-ro5ggmr37aftk70cr19j2hrv5act1l93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

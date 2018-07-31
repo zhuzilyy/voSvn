@@ -1,0 +1,181 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'android.keystore'
+            keyPassword '031424'
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storePassword '031424'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.zl.vo_"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
+        //使用自定义popwindow
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'x86_64', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.config
+        }
+        debug {
+            jniDebuggable true
+            signingConfig signingConfigs.config
+        }
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+        }
+    }
+    sourceSets {
+        main {
+
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    productFlavors {
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //compile 'com.android.support:appcompat-v7:24.2.1'
+
+    // compile 'com.android.support:appcompat-v7:25.3.0-alpha1'
+    testCompile 'junit:junit:4.12'
+    compile project(':easeui')
+
+    //方法大于65535
+    compile 'com.android.support:multidex:1.0.1'
+
+    //动画登录
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:design:26.1.0'
+
+    //多类型弹框
+    compile 'com.dou361.dialogui:jjdxm-dialogui:1.0.1'
+    compile files('libs/zbardecoder.jar')
+    compile 'io.github.openfeign:feign-gson:9.5.0'
+
+    //时间选择
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+
+    //进度条
+    compile 'com.wang.avi:library:1.0.0'
+    compile project(':libs')
+    compile project(':standardadapter')
+
+    //xutils
+    compile 'org.xutils:xutils:3.5.0'
+    compile project(':multi-image-selector')
+
+    //多图上传
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7'
+    //微信
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //圆形图片
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile files('libs/libammsdk.jar')
+
+    //******联系人索引******
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.2'
+    compile project(':indexlib')
+
+    //更新下载
+    compile 'pub.devrel:easypermissions:0.3.0'
+    compile 'com.yanzhenjie:permission:1.1.0'
+    compile project(':splashview')
+
+    //节操播放器
+    compile 'cn.jzvd:jiaozivideoplayer:6.2.3'
+    compile files('libs/alipaySdk-20170922.jar')
+
+    //欢迎页
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //
+
+    //compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //方微信录制视频
+    compile 'cjt.library.wheel:camera:1.1.9'
+    compile 'com.android.support:cardview-v7:26.1.0'
+
+    //recyclerview header
+    compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
+
+    //多页轮播
+    compile 'com.github.paolorotolo:appintro:4.0.0'
+
+    //带三角的pop窗体
+    compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
+
+    //改变状态栏的颜色
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+    // 添加此行
+    compile 'com.google.android.gms:play-services-base:11.4.0'
+    compile 'com.google.firebase:firebase-database:11.4.0'
+    compile 'com.google.firebase:firebase-messaging:11.4.0'
+
+    //华为推送
+    compile 'com.huawei.android.hms:push:2.5.2.300'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile files('libs/MiPush_SDK_Client_3_6_9.jar')
+    compile project(':hmspush')
+    compile project(':pickerview')
+    compile project(':wheelview')
+}
+// 此行添加在文件末尾
+apply plugin: 'com.google.gms.google-services'

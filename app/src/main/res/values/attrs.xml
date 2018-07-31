@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+
+
+
+
+    </declare-styleable>
+    <attr name="main_bg" format="reference|color"/>
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+
+    <!--xzyTitle-->
+    <declare-styleable name="XTitleView">
+        <!--左边的文字-->
+        <attr name="tv_left" format="string"/>
+        <!--右边的文字-->
+        <attr name="tv_right" format="string"/>
+        <!--back图标是否显示-->
+        <attr name="isshow_back" format="enum">
+            <enum name="visable" value="0"/>
+            <enum name="invisable" value="1"/>
+            <enum name="gone_" value="2"/>
+        </attr>
+        <!--右边的文字是否显示-->
+        <attr name="isshow_right_tv" format="enum">
+            <enum name="visable" value="0"/>
+            <enum name="invisable" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+        <!--右边的图标是否显示-->
+        <attr name="isshow_right_iv" format="enum">
+            <enum name="visable" value="0"/>
+            <enum name="invisable" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+
+        <!--back图标的引用-->
+        <attr name="back_src" format="reference|color"/>
+        <!--右边图标的引用-->
+        <attr name="right_iv_scr" format="reference|color"/>
+        <!--背景色的设置-->
+        <attr name="title_background_color" format="color"/>
+
+
+    </declare-styleable>
+
+
+</resources>

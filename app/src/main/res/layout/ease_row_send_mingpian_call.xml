@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity" >
+
+        <com.hyphenate.easeui.widget.EaseImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:src="@drawable/ease_btn_blue_pressed_shape"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/bubble"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:padding="@dimen/x5"
+            android:layout_toLeftOf="@id/iv_userhead"
+            android:background="@drawable/chat_white_bg" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+               android:layout_marginRight="@dimen/x5"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_account"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="@dimen/x5"
+                        android:layout_below="@+id/tv_chatcontent"
+                        android:layout_toRightOf="@+id/card_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/x10"
+                        android:textColor="@color/gray"
+                        android:text="中南海"
+                        android:singleLine="true"
+                        android:paddingRight="@dimen/x8"
+                        android:enabled="true"
+                        />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_head"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="@dimen/x8"
+                        android:src="@drawable/ic_launcher"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/tv_nick"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="中南海"
+                        android:layout_alignTop="@+id/card_head"
+                        android:layout_alignLeft="@+id/tv_account"
+                        android:layout_alignStart="@+id/tv_account" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@color/gray_normal"></View>
+                <TextView
+                    android:layout_marginTop="@dimen/x3"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_height="wrap_content"
+                    android:text="个人名片"
+                    android:textSize="@dimen/x10"
+                    android:paddingBottom="@dimen/x3"
+                    />
+
+
+            </LinearLayout>
+
+
+            <!--
+                        <TextView
+                            android:id="@+id/tv_chatcontent"
+                            style="@style/chat_content_date_style"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black_deep"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/iv_call_icon"
+                            android:background="@null"
+                            android:minHeight="40dp"
+                            android:padding="6dp"
+                            />-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/bubble"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textColor="@android:color/black"
+                android:visibility="visible"
+               />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/msg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/bubble"
+            android:clickable="true"
+            android:src="@drawable/ease_msg_state_failed_resend"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ack"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/bubble"
+            android:text="@string/text_ack_msg"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

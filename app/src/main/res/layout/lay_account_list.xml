@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45">
+        <TextView
+            android:id="@+id/switchAccount_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="25789632541"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x15"
+            android:textSize="@dimen/x14"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

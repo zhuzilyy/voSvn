@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/addgroup_re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/jia"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:layout_marginLeft="@dimen/x12"
+            android:src="@mipmap/jia"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_toRightOf="@+id/jia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="添加分组"
+            android:textSize="14sp"
+            android:textColor="@color/black_deep"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x15"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msg_copy"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="复制消息" />
+
+        <TextView
+
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除消息"
+            android:id="@+id/msg_delete" />
+
+        <TextView
+            android:id="@+id/msg_forword"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="转发" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

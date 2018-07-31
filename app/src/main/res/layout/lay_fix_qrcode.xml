@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#161616"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back_" />
+
+        <TextView
+
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的二维码"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_marginTop="@dimen/x60"
+        android:layout_marginBottom="@dimen/x45"
+        android:background="@color/white"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x10"
+            >
+            <ImageView
+                android:id="@+id/ewm_head"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:src="@mipmap/girl2"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!--昵称，性别-->
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/ewm_nick"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxWidth="@dimen/x100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="ay"
+                        android:textSize="@dimen/x14"
+                        />
+                    <ImageView
+                        android:id="@+id/ewm_sex"
+                        android:layout_marginLeft="@dimen/x8"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:src="@drawable/fx_icon_male"
+                        />
+
+                </LinearLayout>
+                <!--地址-->
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/ewm_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="中国 沈阳"
+                        android:textSize="@dimen/x10"
+                        android:gravity="center_vertical"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:src="@drawable/fx_bg_btn_gray"
+            android:id="@+id/code_image"
+            android:layout_centerInParent="true"
+            android:layout_width="240dp"
+            android:layout_height="240dp" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

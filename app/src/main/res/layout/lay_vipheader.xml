@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@id/back"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:src="@mipmap/back_"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VO会员"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x95"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x15"
+        android:background="@mipmap/vip_bg"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vip_head"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x60"
+            app:civ_border_width="@dimen/x3"
+            app:civ_border_color="@color/yellow2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:src="@mipmap/girl2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x10"
+            >
+            <ImageView
+                android:id="@+id/vip_state"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:src="@mipmap/vipstate"
+                android:visibility="visible"
+                />
+            <TextView
+                android:layout_marginLeft="@dimen/x10"
+                android:id="@+id/vip_name"
+                android:paddingRight="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大亭子"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxWidth="@dimen/x100"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/x15"
+                android:id="@+id/vip_info_iv"
+                android:layout_width="@dimen/x85"
+                android:layout_height="@dimen/x20"
+                android:src="@mipmap/vip_icon"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x6"
+        android:background="#ececec"/>
+    <LinearLayout
+        android:id="@+id/function_vip_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x38"
+        android:orientation="horizontal"
+        android:background="@color/vipcolor"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/vip_arrow"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:src="@mipmap/arrow_down"
+
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x35"
+
+            android:text="蓝钻会员6大专享功能"
+            android:paddingLeft="@dimen/x12"
+            android:paddingRight="@dimen/x12"
+
+            android:paddingBottom="@dimen/x8"
+            android:paddingTop="@dimen/x8"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:id="@+id/textView12" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/function_four_ll"
+        android:paddingTop="@dimen/x15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x15"
+        >
+        <!--001-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/vip_function_pressfriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="一键好友隐藏"
+                android:paddingTop="@dimen/x6"
+                android:textColor="@color/black"
+                android:paddingBottom="@dimen/x6"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                />
+
+            <TextView
+                android:id="@+id/vip_function_shakefriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="@dimen/x6"
+                android:paddingBottom="@dimen/x6"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="一摇好友隐藏"
+                />
+
+        </LinearLayout>
+        <!--002-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/vip_function_showallfriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="一键显示好友"
+                android:paddingTop="@dimen/x6"
+                android:textColor="@color/black"
+                android:paddingBottom="@dimen/x6"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                />
+
+            <TextView
+                android:id="@+id/vip_function_allclear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="@dimen/x6"
+                android:paddingBottom="@dimen/x6"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="一键清除加密好友"
+                />
+
+        </LinearLayout>
+        <!--002-->
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/vip_function_lifenoteprivacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="人生笔记隐私功能"
+                android:paddingTop="@dimen/x6"
+                android:textColor="@color/black"
+                android:paddingBottom="@dimen/x6"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                />
+
+            <TextView
+                android:id="@+id/vip_function_infortrans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="@dimen/x6"
+                android:paddingBottom="@dimen/x6"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@drawable/shape_stoke_bluenew"
+                android:text="信息传输端对端加密"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray4"
+        />
+
+
+
+
+
+</LinearLayout>

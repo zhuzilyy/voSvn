@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+    <!--tittle-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/back_" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/The_new_group_chat"
+            android:textColor="#000000"
+            android:textSize="@dimen/x16"
+            android:id="@+id/textView6"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ease_common_tab_bg"
+            android:onClick="save"
+            android:text="@string/button_addfriends"
+            android:textColor="#000000"
+            android:textSize="@dimen/x12"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignBaseline="@+id/textView6"
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/button"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:layout_marginTop="@dimen/x10"
+            android:gravity="center_horizontal"
+           android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_group_avatar"
+                android:layout_width="@dimen/x65"
+                android:layout_height="@dimen/x65"
+                android:padding="@dimen/x2"
+                android:src="@mipmap/head"
+                android:background="@drawable/circle_stroke"
+                />
+            <ImageView
+                android:layout_width="@dimen/x15"
+                android:layout_height="@dimen/x15"
+                android:src="@mipmap/group_camera"
+               android:layout_alignBottom="@+id/edit_group_avatar"
+                android:layout_alignRight="@+id/edit_group_avatar"
+                />
+        </RelativeLayout>
+        <!--群名称-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/x8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <com.zl.vo_.main.views.MEditText
+                android:id="@+id/edit_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x35"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginLeft="@dimen/x30"
+                app:me_textColor="@color/black"
+                app:me_hint="请输入群组名称"
+                app:me_del_enable="true"
+                app:me_eye_enable="false"
+                app:me_hintColor="@color/gray"
+                app:me_textSize="5sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/light_gray4"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/jiaoliu"
+            android:scaleType="centerCrop"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+    <!--群名称-->
+   <!-- <LinearLayout
+        android:layout_marginTop="@dimen/x15"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <EditText
+            android:layout_weight="3"
+            android:id="@+id/edit_group_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:hint="请输入群组名称"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textSize="@dimen/x14" />
+    </LinearLayout>-->
+    <!--群头像-->
+   <!-- <RelativeLayout
+        android:layout_marginTop="@dimen/x15"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x70"
+
+            android:gravity="center_vertical"
+
+            android:background="@mipmap/create_grou_name"
+            >
+            <ImageView
+                android:id="@+id/edit_group_avatar"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="群组头像"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/x14"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>-->
+
+
+
+
+
+
+    <!--群拓展{隐藏}-->
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/edit_group_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/em_button_normal_shape"
+        android:gravity="top"
+        android:hint="@string/Group_chat_profile"
+        android:lines="5"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:textSize="@dimen/x14" />
+    <!--是否公开化{隐藏}-->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/em_button_normal_shape"
+        >
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Whether_the_public"
+            android:textColor="#333"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            />
+        <CheckBox
+            android:id="@+id/cb_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/em_checkbox_bg_selector"
+            />
+    </LinearLayout>
+    <!--是否公开化{隐藏}-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_open_invite"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/em_button_normal_shape"
+        >
+        <TextView
+            android:id="@+id/second_desc"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Open_group_members_invited"
+            android:textColor="#333"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            />
+        <CheckBox
+            android:id="@+id/cb_member_inviter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/em_checkbox_bg_selector"
+            />
+    </LinearLayout>
+
+</LinearLayout>

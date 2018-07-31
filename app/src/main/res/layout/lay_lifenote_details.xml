@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--topTitle-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/x12">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/x30"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/back_" />
+
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:background="#14191A"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/lifenote"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/writeLifeNote_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/x12"
+                android:text="@string/writeNote"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x12"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray4" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:layout_marginBottom="@dimen/x35"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lifenote_details_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x30"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x12"
+                    android:text="2017-12-1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x20" />
+
+                <TextView
+                    android:id="@+id/lifenote_details_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x12"
+                    android:text="2017-12-1"
+                    android:textColor="@color/gray"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/x12" />
+
+
+                <com.zl.vo_.main.views.NewGridView
+                    android:id="@+id/lifenote_details_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x15"
+                    android:layout_marginTop="@dimen/x12"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:numColumns="3"
+
+                    android:scrollbars="none"></com.zl.vo_.main.views.NewGridView>
+
+
+                <RelativeLayout
+                    android:id="@+id/loading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/title"
+                    android:background="#44000000"
+                    android:clickable="true"
+                    android:visibility="gone">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:layout_width="@dimen/custom_avloading_height"
+                        android:layout_height="@dimen/custom_avloading_height"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        app:indicator="BallScaleMultiple"
+                        app:indicator_color="@color/common_top_bar_blue"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lifenote_big_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="#000000"
+        android:visibility="gone"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/lifenote_big_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

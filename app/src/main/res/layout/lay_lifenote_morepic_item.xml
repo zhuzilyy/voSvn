@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/lifeNote_item_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x90"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/girl2"
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_marginTop="@dimen/x5"
+        />
+
+</LinearLayout>

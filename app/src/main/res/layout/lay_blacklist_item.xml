@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x10"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/black_item_avatar"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+           android:src="@drawable/ease_default_avatar"
+            />
+        <TextView
+            android:id="@+id/black_item_name"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/x12"
+            android:textColor="@color/black"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

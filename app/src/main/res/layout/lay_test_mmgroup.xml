@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/ed_001"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+
+        android:hint="请输入...."
+        />
+    <EditText
+        android:id="@+id/ed_002"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+
+        android:hint="请输入...."
+        />
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:text="添加分组"
+        />
+    <Button
+        android:id="@+id/btn_del"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:text="删除分组"
+        />
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:text="更新分组"
+        />
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:text="查询分组"
+        />
+
+
+</LinearLayout>

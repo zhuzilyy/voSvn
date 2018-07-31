@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--loading-->
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_bottom_bar_normal_bg"
+
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <!--title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/x45">
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@mipmap/back_"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="返回"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x16"
+                />
+
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/light_gray"
+        ></View>
+
+    <!--账号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_marginTop="@dimen/x30"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45"
+            android:orientation="horizontal"
+            >
+
+            <com.zl.vo_.main.views.MEditText
+                android:id="@+id/register_phone"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="@dimen/x45"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                app:me_del_enable="true"
+                app:me_eye_enable="false"
+                app:me_hint="手机号"
+                app:me_hintColor="@color/black"
+                app:me_textColor="@color/black"
+                app:me_textSize="@dimen/x5"/>
+            <TextView
+                android:id="@+id/register_getcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="获取验证码"
+                android:layout_weight="1"
+                android:textSize="@dimen/x14"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@color/light_gray"></View>
+    </LinearLayout>
+        <!--账号-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:orientation="vertical">
+
+            <com.zl.vo_.main.views.MEditText
+                android:id="@+id/register_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                app:me_del_enable="true"
+                app:me_eye_enable="false"
+                app:me_hint="验证码"
+                app:me_hintColor="@color/black"
+                app:me_textColor="@color/black"
+                app:me_textSize="@dimen/x5"></com.zl.vo_.main.views.MEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/light_gray"></View>
+        </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.zl.vo_.main.views.MEditText
+                android:id="@+id/register_pwd"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x45"
+                android:layout_weight="3"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                app:me_del_enable="true"
+                app:me_eye_enable="true"
+                app:me_hint="密码"
+                app:me_hintColor="@color/black"
+
+                app:me_inputType="password"
+                app:me_textColor="@color/black"
+                app:me_textSize="@dimen/x5"
+
+                ></com.zl.vo_.main.views.MEditText>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@color/light_gray"></View>
+    </LinearLayout>
+        <!--昵称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50"
+            android:layout_marginTop="@dimen/x10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.zl.vo_.main.views.MEditText
+                    android:id="@+id/register_nick"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/x45"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20"
+                    app:me_del_enable="true"
+                    app:me_hint="昵称"
+                    app:me_hintColor="@color/black"
+
+                    app:me_textColor="@color/black"
+                    app:me_textSize="@dimen/x5"
+
+                    ></com.zl.vo_.main.views.MEditText>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/light_gray"></View>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/register_submit"
+        android:layout_marginTop="@dimen/x25"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x16"
+        android:background="@drawable/login_btn_selector2"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        />
+        <LinearLayout
+            android:id="@+id/ll_Protocol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x14"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击'注册'即将表示同意"
+                android:textSize="@dimen/x12"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户协议"
+
+                android:textColor="@color/btn_blue_pressed"
+                android:textSize="@dimen/x12"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

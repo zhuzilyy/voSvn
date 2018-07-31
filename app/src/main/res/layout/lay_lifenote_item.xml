@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/lifeNote_ll_click"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/x10"
+
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/line_dash"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layerType="software"
+        android:layout_marginBottom="@dimen/x5"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30">
+
+        <TextView
+
+            android:id="@+id/lifenote_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30"
+            android:textSize="@dimen/x16"
+            android:textStyle="bold"
+            android:textColor="@color/black_deep"
+            android:text="2017年11月7日"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x12"
+
+            />
+        <ImageView
+            android:id="@+id/delete_lifenote_icon"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:src="@mipmap/delete"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/lifenote_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="中国共产党，简称中共，成立于1921年7月，1949年10月至今为代表工人阶级领导工农联盟和统一战线，在中国大陆实行人民民主专政的中华人民共和国唯一执政党。中国工人阶级的先锋队，中国社会主义事业的领导核心，中国各族人民利益的代表者。中国共产党以马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想和科学发展观作为自己的行动指南，最终目的是实现共产主义的社会制度。"
+        android:paddingLeft="@dimen/x35"
+        android:paddingRight="@dimen/x15"
+        android:paddingBottom="@dimen/x5"
+        />
+    <!--多图-->
+    <LinearLayout
+        android:id="@+id/lifeNote_morePic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants"
+        >
+        <com.zl.vo_.main.views.NewGridView
+            android:focusable="false"
+
+            android:focusableInTouchMode="false"
+            android:scrollbars="none"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x15"
+            android:id="@+id/lifenote_item_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+
+            android:numColumns="3"
+            ></com.zl.vo_.main.views.NewGridView>
+    </LinearLayout>
+    <!--一张图-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lifeNote_onePic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/x25"
+            >
+            <ImageView
+                android:id="@+id/lifeNote_onePic_iv"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/x140"
+                android:src="@mipmap/head"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

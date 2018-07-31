@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x250"
+    android:background="@color/bg_white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x250"
+        android:background="@color/bg_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x180">
+            <ImageView
+                android:id="@+id/lifeNote_header_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x180"
+                android:src="@mipmap/qiujing"
+                android:scaleType="fitXY"
+                />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentBottom="true"
+                android:background="#99000000"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="你今天心情怎么样"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x130"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/lifeNote_bg_icon"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/x15"
+            android:src="@mipmap/lifenote_setting"
+
+            />
+
+        <!--写-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+
+             android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_alignParentStart="true">
+            <android.support.v7.widget.CardView
+
+                android:layout_width="@dimen/x74"
+                android:layout_height="@dimen/x74"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/x37"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                app:cardElevation="@dimen/x5"
+                app:cardBackgroundColor="@color/white"
+                >
+                <RelativeLayout
+                    android:id="@+id/writeLifeNote_circle"
+                    android:layout_margin="@dimen/x3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_round"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/x40"
+                        android:layout_height="@dimen/x40"
+                        android:src="@drawable/write_"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30"
+                android:text="开始记录人生笔记"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                />
+
+
+            <!--暂时隐藏-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x30"
+
+
+                >
+
+
+                <!--头像-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/lifeNote_header_avator"
+                    android:layout_width="@dimen/x73"
+                    android:layout_centerInParent="true"
+                    android:layout_height="@dimen/x73"
+                    android:src="@mipmap/head"
+                    android:padding="@dimen/x2"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/x2"
+
+
+                    />
+                <!--名字-->
+                <TextView
+                    android:id="@+id/lifeNote_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="星尚莲湖刺客系"
+                    android:textSize="16sp"
+                    android:layout_below="@+id/lifeNote_header_avator"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/x2"
+
+
+
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+    <!--title-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="详细资料"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/moreInfo"
+            android:layout_width="@dimen/x20"
+            android:layout_alignParentRight="true"
+            android:layout_height="@dimen/x20"
+            android:src="@drawable/more_details"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x15"
+            />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/title"
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray4"
+        />
+    <!--个人信息-->
+    <LinearLayout
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/fx_default_useravatar" />
+
+                <LinearLayout
+                    android:id="@+id/ll_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/iv_avatar"
+                    android:orientation="vertical">
+                    <!--备注-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TEST"
+                            android:textColor="#353535"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/iv_sex"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="8dp"
+                             />
+                    </LinearLayout>
+                    <!--昵称-->
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/x3"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_nike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="昵称:"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+                    <!--VO好-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_voNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vo号236547896"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <!--选择分组-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/re_switGroup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/selectgroup"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:text="选择分组"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/selectgroup"
+                    android:id="@+id/groupName_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DBDBDB" />
+            </RelativeLayout>
+            <!--地区-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_region_temp"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:text="地区"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_region"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_region_temp"
+                    android:text="安徽  合肥"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DBDBDB" />
+            </RelativeLayout>
+            <!--电话-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/phone_re"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_phone_temp"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:text="电话"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_phone_temp"
+                    android:text=""
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DBDBDB" />
+            </RelativeLayout>
+            <!--个性签名-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_sign_temp"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:text="个性签名"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_sign_temp"
+                    android:text="安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥安徽  合肥"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DBDBDB" />
+            </RelativeLayout>
+            <!--手机-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/re_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_mobile_temp"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:text="手机号"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_mobile_temp"
+                    android:text="12343252356666"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DBDBDB" />
+            </RelativeLayout>
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/fx_bg_btn_green"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="添加到通讯录"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--发送消息-->
+    <Button
+        android:visibility="gone"
+        android:stateListAnimator="@null"
+        android:id="@+id/btn_msg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_corner_blue"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="发送消息"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x60"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+    <!--添加到通讯录-->
+    <Button
+        android:visibility="gone"
+        android:stateListAnimator="@null"
+        android:id="@+id/btn_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_corner_blue"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="添加到通讯录"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x42"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+    <!--更多信息-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/re_bigMore"
+        android:background="#aa000000"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:id="@+id/re_moreInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </RelativeLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!--设置备注-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/setAlias_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="设置备注"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+            <!--反馈-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/Complaint_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="反馈"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+            <!--发送该名片-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/sendCard_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="发送该名片"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+            <!--加入黑名单-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/addBlacklist_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="加入黑名单"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+            <!--清空聊天记录-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/ClearMsg_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="清除聊天记录"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+            <!--删除-->
+            <RelativeLayout
+                android:background="@drawable/selector_color"
+                android:id="@+id/delete_re"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x45">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="删除"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_deep"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--输入添加好友的信息-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/reason_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000"
+        >
+        <LinearLayout
+           android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/x12"
+            android:background="@color/white"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="你需要发送验证申请，等待对方验证"
+                />
+            <EditText
+                android:layout_marginTop="@dimen/x10"
+                android:id="@+id/reson_ed"
+                android:gravity="top"
+                android:padding="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="加个好友呗"
+                android:textColorHint="@color/black_deep"
+                android:textColor="@color/black_deep"
+                android:layout_centerVertical="true"
+                />
+            <RelativeLayout
+                android:layout_marginTop="@dimen/x15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@drawable/tongyong_btn_agree"
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x25"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingRight="@dimen/x15"
+
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x25"
+                    android:text="发送"
+                    android:textColor="@color/white"
+                    android:background="@drawable/tongyong_btn_refuse"
+                    android:id="@+id/send"
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingRight="@dimen/x15"
+                    android:textSize="14sp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_top_bar_blue"
+
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/friend_big_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff000000"
+        >
+        <ImageView
+            android:id="@+id/friend_big_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

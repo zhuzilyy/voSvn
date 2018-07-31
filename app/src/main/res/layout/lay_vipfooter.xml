@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x15"
+        android:background="@color/light_gray4"
+        ></View>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <WebView
+            android:id="@+id/vip_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+     <!--   <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x35">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="温馨提示"
+                android:textSize="@dimen/x16"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/x12"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="付费协议>"
+                android:textSize="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/x12"
+                />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.什么是vovip?"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x12"
+
+                />
+            <TextView
+                android:paddingLeft="@dimen/x12"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x12"
+                android:paddingRight="@dimen/x12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="分离式分解了福利房间放假佛飞机发酵欧文福建省附近偶尔玩金佛so放假哦就藕粉色Joe发我就佛为金佛违反即佛文件佛万佛即佛文件佛付文峰of我二姐佛分解为放假哦文件方可浪费发哦我放假金佛违反金佛额为奇偶金佛二维if奇偶王府井撒娇就分手了附件四废旧塑料非穆斯林就方式来积分 方式来附件四就方式来积分了就方式来积分见佛杀佛 副书记"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x12"
+
+                />
+
+
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>

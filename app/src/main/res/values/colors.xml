@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#292929</color>
+    <color name="colorPrimaryDark">#292929</color>
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue02version">#4162ff</color>
+
+    <color name="ssxinheise5">#26000000</color>
+    <color name="ssxinmian16">@color/ssxinheise5</color>
+    <color name="ssxinbaise4">#ffffffff</color>
+    <color name="ssxinzi7">@color/ssxinbaise4</color>
+    <color name="ssxinzi8">@color/ssxinbaise4</color>
+
+    <color name="mmblue">#1296db</color>
+    <color name="partTranslucent">#39000000</color>
+    <color name="yellow">#7fceb600</color>
+    <color name="yellow2">#bf8d37</color>
+    <color name="vipcolor">#e2b24f</color>
+    <color name="white_alpha">#a5ffffff</color>
+    <color name="gray">#99555555</color>
+    <color name="mmblue_deep">#00179b</color>
+    <color name="light_gray">#d6d6d6</color>
+    <color name="red">#ff00</color>
+    <color name="light_gray2">#c2c2c2</color>
+    <color name="light_gray4">#dedede</color>
+    <color name="light_gray5">#ececec</color>
+    <color name="light_gray3">#f4f4f4</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="pink">#fdf1ff</color>
+
+    //****************************
+    <color name="mian_top_bg_corlor">#342f97</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_white">#f2f2f2</color>
+    <color name="invatationbgcolor">#ee098c00</color>
+    <color name="alpha_white_5">#aaffffff</color>
+    <color name="mmred">#a70e0e</color>
+    <color name="mmbule_n">#00d4ec</color>
+    <color name="mmgreen_n">#669900</color>
+    <color name="mmbule_p">#01a3b6</color>
+    <color name="mmgreen_p">#496e00</color>
+    <color name="vip">#ffaf30</color>
+    <color name="viptextcolor">#b46114</color>
+
+</resources>

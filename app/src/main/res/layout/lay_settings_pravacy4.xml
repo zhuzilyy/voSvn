@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--topTitle-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="@dimen/x12">
+
+        <ImageView
+            android:id="@+id/iv_back"
+
+            android:layout_width="@dimen/x30"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back_" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="修改加密好友"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:id="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/writeLifeNote_tv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/write"
+            android:layout_marginRight="15dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/textView9"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/x100"
+        >
+
+        <com.zl.vo_.main.views.MEditText
+            android:id="@+id/privacy4_pwd"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x35"
+            app:me_del_enable="true"
+            app:me_eye_enable="true"
+            app:me_inputType="password"
+            app:me_hint="请输入密码"
+            app:me_padding_left="@dimen/x15"
+            app:me_textSize="6sp"
+            app:me_background="#00ffffff"
+            app:me_textColor="@color/black_deep"
+            app:me_hintColor="@color/black_deep"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginLeft="@dimen/x15"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray4"
+            android:layout_margin="10dp"
+            android:layout_marginRight="@dimen/x10"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/privacy4_submit"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/x15"
+                android:background="@drawable/shape_corner_blue"
+ />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_top_bar_blue"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

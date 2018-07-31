@@ -1,0 +1,1 @@
+include ':app', ':easeui', ':standardadapter', ':libs', ':multi-image-selector', ':indexlib', ':splashview', ':hmspush', ':wheelview', ':pickerview'

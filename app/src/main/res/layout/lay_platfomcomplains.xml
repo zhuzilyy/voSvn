@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--title-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_" />
+
+        <View
+
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="反馈"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/moreInfo"
+            android:layout_width="@dimen/x20"
+            android:layout_alignParentRight="true"
+            android:layout_height="@dimen/x20"
+            android:src="@drawable/more_details"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x15"
+            />
+
+
+    </RelativeLayout>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/title"
+        android:background="@color/light_gray4"
+        android:id="@+id/line"/>
+    <LinearLayout
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/et_complain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x150"
+            android:background="@drawable/shape_stoke_"
+            android:layout_marginLeft="@dimen/x12"
+            android:hint="请输入您的投诉内容"
+            android:gravity="top"
+            android:padding="@dimen/x6"
+            android:textSize="12sp"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x12"
+            />
+        <Button
+            android:id="@+id/btn_complain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginLeft="@dimen/x12"
+            android:gravity="center"
+            android:text="反馈"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/x15"
+            android:background="@drawable/shape_corner_blue"
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_top_bar_blue"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

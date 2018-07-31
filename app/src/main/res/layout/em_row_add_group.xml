@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ease_mm_listitem"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4dp"
+            android:padding="5dp"
+            android:src="@drawable/em_roominfo_add_btn" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/avatar"
+            android:text="@string/newchat"
+            android:textColor="#8C8C8C"
+            android:textSize="@dimen/x14" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textColor="@color/gray"
+        android:layout_below="@id/rl_group"
+        android:background="@color/light_gray5"
+        android:visibility="visible"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="我的群组"
+
+        />
+
+</RelativeLayout>

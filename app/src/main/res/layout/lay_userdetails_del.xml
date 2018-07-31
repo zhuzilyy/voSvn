@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--title-->
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="删除联系人"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                />
+            <RelativeLayout
+                android:id="@+id/re_cancel"
+                android:layout_width="35dp"
+                android:text="close"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_corner3"
+                >
+
+                <ImageView
+
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@mipmap/close3"
+
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/imageView2" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/line_dash"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layerType="software"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除联系人将同时删除该联系人的聊天记录"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/x12"
+            android:paddingBottom="@dimen/x20"
+            android:textSize="16sp"
+            android:textColor="@color/black_deep"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingRight="@dimen/x10"
+            android:paddingLeft="@dimen/x10"
+            android:layout_height="@dimen/x45">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="取消"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="确认"
+                android:textSize="16sp"
+                android:background="@drawable/shape_corner_blue"
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

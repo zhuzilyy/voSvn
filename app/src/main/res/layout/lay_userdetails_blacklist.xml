@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <!--title-->
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="加入黑名单"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                />
+            <RelativeLayout
+                android:id="@+id/re_cancel"
+                android:layout_width="35dp"
+                android:text="close"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_corner3"
+                >
+
+                <ImageView
+
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@mipmap/close3"
+
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/imageView2" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/line_dash"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layerType="software"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x12"
+            android:paddingLeft="@dimen/x20"
+
+            android:paddingRight="@dimen/x20"
+            android:paddingBottom="@dimen/x20"
+            android:textColor="@color/black_deep"
+            android:text="加入黑名单后，你将不再受到对方的消息"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:id="@+id/textView10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+           ></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45">
+
+
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:background="@drawable/shape_corner_blue"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

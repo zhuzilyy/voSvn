@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/hyp_dialog_bg"
+    >
+
+    <TextView
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/commDialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x25"
+        android:text="title"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x15"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingRight="@dimen/x15"
+        android:textSize="18sp"
+        android:textColor="@color/black_deep"
+
+        />
+
+    <ScrollView
+        android:layout_marginTop="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/commDialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contentn"
+            android:textSize="16sp"
+            android:maxHeight="@dimen/x100"
+            android:minHeight="@dimen/x75"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:textColor="@color/black_deep"
+
+            />
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/x15"
+        android:layout_marginBottom="@dimen/x10"
+        >
+
+        <Button
+            style="@style/hyp_cancel"
+            android:layout_toLeftOf="@+id/commDialog_confirm"
+            android:id="@+id/commDialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_height="@dimen/x30"
+            android:text="cancel"
+            />
+        <Button
+            style="@style/hyp_confirm"
+
+            android:layout_alignParentRight="true"
+            android:id="@+id/commDialog_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x30"
+            android:text="confirm"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

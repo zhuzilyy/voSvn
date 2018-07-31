@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/back_" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:background="@null"
+                android:textColor="#000"
+                android:imeOptions="actionSearch"
+                android:hint="VO号/手机号"
+                android:paddingLeft="46dp"
+                android:singleLine="true"
+                android:textColorHint="#484c4c"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/fdj_search"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@id/et_search"
+                android:layout_alignLeft="@id/et_search"
+                android:layout_margin="8dp"
+                android:src="@mipmap/fdj_" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_marginBottom="@dimen/x5"
+                android:background="@color/blue02version"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/x12"
+            android:visibility="gone"
+            android:layout_below="@+id/title"
+            android:id="@+id/result_searchContact_re"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80">
+            <ImageView
+                android:id="@+id/searchContacts_head"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ease_default_avatar"
+                android:layout_marginLeft="@dimen/x12"
+                />
+            <LinearLayout
+                android:layout_toRightOf="@+id/searchContacts_head"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x10"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/searchContacts_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="红僧资本"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+
+                    />
+                <TextView
+                    android:id="@+id/searchContacts_vo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+
+                    android:text="红僧资本"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/x12"
+
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--loading-->
+        <RelativeLayout
+            android:layout_below="@+id/title"
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000"
+            android:clickable="true"
+            android:visibility="gone"
+
+            >
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="@dimen/custom_avloading_height"
+                android:layout_height="@dimen/custom_avloading_height"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:indicator="BallScaleMultiple"
+                app:indicator_color="@color/common_bottom_bar_normal_bg"
+
+                />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="#ebebeb" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/x30"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="back"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/back_" />
+
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:background="#14191A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="通讯录好友"
+                android:layout_centerInParent="true"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_addFriend"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="添加朋友"
+                android:layout_marginRight="@dimen/x12"
+                android:textColor="#000000"
+                android:textSize="@dimen/x12" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray5"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#fff"
+            android:paddingBottom="@dimen/x5">
+
+            <TextView
+                android:id="@+id/tv_search_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="46dp"
+                android:singleLine="true"
+                android:text="VO号/手机号"
+                android:textColor="#C5C5C5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_alignBottom="@id/tv_search"
+                android:layout_alignLeft="@id/tv_search"
+                android:layout_marginLeft="@dimen/x15"
+                android:src="@mipmap/fdj_" />
+            <View
+                android:id="@+id/flag"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:background="@color/blue02version"
+                />
+        </RelativeLayout>
+        <!--好友列表-->
+       <!-- <ListView
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/x15"
+            android:id="@+id/newFriend_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+
+        </ListView>-->
+        <LinearLayout
+            android:id="@+id/ll_phoneContacts"
+            android:layout_below="@+id/flag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+
+                <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x75"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:layout_gravity="center_horizontal|top">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <!--微信邀请好友-->
+                        <LinearLayout
+                           android:id="@+id/wx_share_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <ImageView
+                              android:layout_centerInParent="true"
+                                android:id="@+id/wx_icon"
+                                android:layout_width="@dimen/x45"
+                                android:layout_height="@dimen/x45"
+                                android:src="@mipmap/wx_icon"
+
+                                />
+                            <TextView
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/wx_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="@dimen/x15"
+                                android:layout_height="wrap_content"
+                                android:text="添加微信好友"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+
+                <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+                    android:id="@+id/indexBar"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    app:indexBarPressBackground="@color/partTranslucent"
+                    app:indexBarTextSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvSideBarHint"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_side_bar_bg"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp"
+                    android:visibility="gone"
+                    tools:text="A"
+                    tools:visibility="visible"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:onClick="updateDatas"
+                    android:text="更新数据源"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/title"
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000"
+            android:clickable="true"
+            android:visibility="gone"
+            >
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="@dimen/custom_avloading_height"
+                android:layout_height="@dimen/custom_avloading_height"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:indicator="BallScaleMultiple"
+                app:indicator_color="@color/common_top_bar_blue"
+
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
