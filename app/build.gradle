@@ -177,6 +177,7 @@ dependencies {
     compile project(':hmspush')
     compile project(':pickerview')
     compile project(':wheelview')
+    compile project(':galleryfinal')
 }
 // 此行添加在文件末尾
 apply plugin: 'com.google.gms.google-services'
