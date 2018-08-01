@@ -2,7 +2,6 @@ package com.hyphenate.easeui.ui;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.ClipboardManager;
 import android.content.ContentValues;
@@ -16,10 +15,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.FileProvider;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.support.v7.app.AlertDialog;
@@ -37,10 +34,8 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.baidu.platform.comapi.map.E;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMChatRoom;
@@ -54,13 +49,13 @@ import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.EaseUI;
 import com.hyphenate.easeui.R;
-import com.hyphenate.easeui.adapter.GridImageAdapter;
 import com.hyphenate.easeui.domain.EaseEmojicon;
 import com.hyphenate.easeui.domain.EaseUser;
+import com.hyphenate.easeui.listener.UILPauseOnScrollListener;
+import com.hyphenate.easeui.loader.UILImageLoader;
 import com.hyphenate.easeui.model.EaseAtMessageHelper;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.EaseUserUtils;
-import com.hyphenate.easeui.utils.PermissionUtils;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
 import com.hyphenate.easeui.widget.EaseChatExtendMenu;
@@ -72,23 +67,27 @@ import com.hyphenate.easeui.widget.EaseVoiceRecorderView.EaseVoiceRecorderCallba
 import com.hyphenate.easeui.widget.chatrow.EaseCustomChatRowProvider;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
-import com.hyphenate.util.PathUtil;
-import com.luck.picture.lib.PictureBaseActivity;
 import com.luck.picture.lib.PictureSelector;
-import com.luck.picture.lib.PictureSelectorActivity;
 import com.luck.picture.lib.config.PictureConfig;
-import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
-import com.luck.picture.lib.tools.PictureFileUtils;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import cn.finalteam.galleryfinal.CoreConfig;
+import cn.finalteam.galleryfinal.FunctionConfig;
+import cn.finalteam.galleryfinal.GalleryFinal;
+import cn.finalteam.galleryfinal.ThemeConfig;
+import cn.finalteam.galleryfinal.model.PhotoInfo;
 
 /**
  * you can new an EaseChatFragment to use or you can inherit it to expand.
@@ -101,7 +100,6 @@ import java.util.concurrent.Executors;
 public class EaseChatFragment extends EaseBaseFragment implements EMMessageListener {
     protected static final String TAG = "EaseChatFragment";
     protected static final int REQUEST_CODE_MAP = 1;
-    protected static final int REQUEST_CODE_CAMERA = 2;
     protected static final int REQUEST_CODE_LOCAL = 3;
     private File outputImagepath;//存储拍完照后的图片
     public static final int TAKE_PHOTO = 21;//启动相机标识
@@ -164,6 +162,13 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     protected   String forward_msg_id;
     private List<LocalMedia> selectList = new ArrayList<>();
     private RecyclerView recyclerView;
+    private final int REQUEST_CODE_GALLERY = 1001;
+    private FunctionConfig.Builder functionConfigBuilder;
+    private FunctionConfig functionConfig;
+    private List<PhotoInfo> mPhotoList;
+    private UILImageLoader imageLoader;
+    private UILPauseOnScrollListener pauseOnScrollListener;
+    private ThemeConfig themeConfig = null;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_chat, container, false);
@@ -176,6 +181,9 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        functionConfigBuilder = new FunctionConfig.Builder();
+        functionConfigBuilder.setEnableEdit(true);
+        functionConfig = functionConfigBuilder.build();
         //获取系统版本
         currentapiVersion= android.os.Build.VERSION.SDK_INT;
         fragmentArgs = getArguments();  //此处为空 所有没有title
@@ -682,6 +690,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             case ITEM_PICTURE:
                // selectPicFromLocal();
                 //客户要求使用第三方的图片选择框架
+                initGallery();
                 selectPicFromCamera_vo();
                 break;
             case ITEM_LOCATION:
@@ -694,13 +703,39 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             }
         }
     }
-
+    //设置选择图片的一些属性
+    private void initGallery() {
+        themeConfig = ThemeConfig.DEFAULT;
+        imageLoader = new UILImageLoader();
+        pauseOnScrollListener = new UILPauseOnScrollListener(false, true);
+        final FunctionConfig functionConfig = functionConfigBuilder.build();
+        functionConfigBuilder.setEnableEdit(true);
+        CoreConfig coreConfig = new CoreConfig.Builder(getActivity(), imageLoader, themeConfig)
+                .setFunctionConfig(functionConfig)
+                .setPauseOnScrollListener(pauseOnScrollListener)
+                .setNoAnimcation(false)
+                .build();
+        GalleryFinal.init(coreConfig);
+        initImageLoader(this);
+    }
+    //初始化imageLoader
+    private void initImageLoader(EaseChatFragment easeChatFragment) {
+        ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(getActivity());
+        config.threadPriority(Thread.NORM_PRIORITY - 2);
+        config.denyCacheImageMultipleSizesInMemory();
+        config.diskCacheFileNameGenerator(new Md5FileNameGenerator());
+        config.diskCacheSize(50 * 1024 * 1024); // 50 MiB
+        config.tasksProcessingOrder(QueueProcessingType.LIFO);
+        config.writeDebugLogs(); // Remove for release app
+        // Initialize ImageLoader with configuration.
+        ImageLoader.getInstance().init(config.build());
+    }
     /***
      * 客户要求使用第三方图片选择框架，来避免可能发错的情况
      */
     private void selectPicFromCamera_vo() {
-
-        if (true) {
+        GalleryFinal.openGallerySingle(REQUEST_CODE_GALLERY, functionConfig, mOnHanlderResultCallback);
+      /*  if (true) {
             // 进入相册 以下是例子：不需要的api可以不
 
             PictureSelector.create(this)
@@ -744,7 +779,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                     //.videoSecond()//显示多少秒以内的视频or音频也可适用
                     //.recordVideoSecond()//录制视频秒数 默认60s
                     .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
-        }
+        }*/
 
     }
 
@@ -1252,5 +1287,19 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
          */
         EaseCustomChatRowProvider onSetCustomChatRowProvider();
     }
+
+    //选择照片的回调
+    private GalleryFinal.OnHanlderResultCallback mOnHanlderResultCallback = new GalleryFinal.OnHanlderResultCallback() {
+        @Override
+        public void onHanlderSuccess(int reqeustCode, List<PhotoInfo> resultList) {
+            if (resultList != null) {
+                sendImageMessage(resultList.get(0).getPhotoPath());
+            }
+        }
+        @Override
+        public void onHanlderFailure(int requestCode, String errorMsg) {
+            Toast.makeText(getActivity(), errorMsg, Toast.LENGTH_SHORT).show();
+        }
+    };
 
 }

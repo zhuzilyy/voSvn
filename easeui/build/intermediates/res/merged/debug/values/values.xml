@@ -245,6 +245,8 @@
             <enum name="close" value="1"/>
         </attr></declare-styleable>
     <declare-styleable name="EaseTitleBar"><attr format="string" name="titleBarTitle"/><attr format="reference" name="titleBarLeftImage"/><attr format="reference" name="titleBarRightImage"/><attr format="reference|color" name="titleBarBackground"/></declare-styleable>
+    <declare-styleable name="GFFloatingActionButton"><attr format="color" name="fabColorPressed"/><attr format="color" name="fabColorNormal"/><attr format="reference" name="fabIcon"/><attr format="string" name="fabTitle"/></declare-styleable>
+    <declare-styleable name="HorizontalListView"><attr format="dimension" name="dividerWidth"/><attr name="android:divider"/><attr name="android:requiresFadingEdge"/><attr name="android:fadingEdgeLength"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
             <flag name="none" value="0"/>
             <flag name="beginning" value="1"/>
@@ -408,8 +410,14 @@
     <dimen name="chat_nick_text_size">13sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fab_icon_size">24dp</dimen>
+    <dimen name="fab_shadow_offset">3dp</dimen>
+    <dimen name="fab_shadow_radius">9dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_stroke_width">0.0dp</dimen>
     <dimen name="field_margin_right">5dp</dimen>
     <dimen name="field_textsize">14sp</dimen>
+    <dimen name="gf_title_bar_height">56dp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
     <dimen name="height_top_bar">46dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
@@ -460,6 +468,7 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="fab_label" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="jz_fullscreen_id" type="id"/>
@@ -617,6 +626,7 @@
     <string name="address_book">Address book</string>
     <string name="agree">Agree</string>
     <string name="all_members">All members</string>
+    <string name="all_photo">All Photo</string>
     <string name="answer">Answer</string>
     <string name="are_empty_group_of_news">Clearing messages</string>
     <string name="attach_file">File</string>
@@ -660,6 +670,8 @@
     <string name="connect_failuer_toast">Please check the network or try again later</string>
     <string name="copy">Copy</string>
     <string name="copy_message">Copy message</string>
+    <string name="crop_fail">Photo crop failure</string>
+    <string name="crop_suc">Photo crop success</string>
     <string name="delete">Delete</string>
     <string name="delete_conversation">Delete conversation</string>
     <string name="delete_conversation_messages">Delete conversation and messages</string>
@@ -682,6 +694,8 @@
     <string name="dl_waiting">waiting…</string>
     <string name="downwaiting">Downloading the file, please wait a moment</string>
     <string name="dynamic_expression">[Dynamic expression]</string>
+    <string name="edit_letoff_photo_format">The image format does not support this operation!</string>
+    <string name="empty_sdcard">No SD card</string>
     <string name="error_send_invalid_content">The message content is not allowed to be sent!</string>
     <string name="error_send_not_in_the_group">You already were not in the group</string>
     <string name="exit_group">Exit</string>
@@ -690,7 +704,9 @@
     <string name="failed_to_load_data">Failed to load data, please check network or try again later</string>
     <string name="failed_to_move_into">Failed to move to the blacklist, please check the network or try again later</string>
     <string name="file">[file]</string>
+    <string name="folder_photo_size">%1$d Piece</string>
     <string name="forward">Forward</string>
+    <string name="gallery">Gallery</string>
     <string name="get_failed_please_check">Failed to retrieve, please check the network or try again later</string>
     <string name="gif_tag">动图</string>
     <string name="gorup_not_found">Can not find this group</string>
@@ -718,6 +734,7 @@
     <string name="login_failure_failed">Logon failure: failed to retrieve contacts or groups</string>
     <string name="logout">Logout</string>
     <string name="logout_hint">Logout will never clear the chat history, this account can be used on next login</string>
+    <string name="maxsize_zero_tip">Maxsize should be greater than zero</string>
     <string name="move_out_backlist">Remove from blacklist</string>
     <string name="move_up_to_cancel">Finger up to cancel sending</string>
     <string name="mute">Mute</string>
@@ -729,6 +746,7 @@
     <string name="nickname">NickName</string>
     <string name="nickname_description">Once this nick is set, this nick will be used in push notification (by default this is HuanXin ID ) when the receiver is using the IOS device.</string>
     <string name="no_more_messages">no more messages</string>
+    <string name="no_photo">Photo empty</string>
     <string name="no_url">No url</string>
     <string name="not_add_myself">"Can't add myself"</string>
     <string name="not_connect_to_server">Not connect to server, please try again later</string>
@@ -737,8 +755,14 @@
     <string name="notify">New message notification</string>
     <string name="now_refresh_list">Refreshing contact list</string>
     <string name="ok">OK</string>
+    <string name="open_gallery_fail">Gallery init failure!</string>
     <string name="password">Password</string>
     <string name="people">people</string>
+    <string name="permissions_denied_tips">Unable to get pictures</string>
+    <string name="permissions_tips_gallery">This app requesting access to your Gallery</string>
+    <string name="photo_crop">Photo Crop</string>
+    <string name="photo_edit">Photo Edit</string>
+    <string name="photo_list_empty">Failed to get the picture!</string>
     <string name="picture">[Picture]</string>
     <string name="picture_all_audio">所有音频</string>
     <string name="picture_audio">获取系统录音权限被拒绝</string>
@@ -778,7 +802,9 @@
     <string name="picture_video_toast">视频不可预览</string>
     <string name="picture_warning">暂无媒体文件！</string>
     <string name="please_check">key validation error!Please on AndroidManifest.xml file check the key set</string>
+    <string name="please_reopen_gf">Please reopen Gallery</string>
     <string name="please_set_the_current">"Please set the current user's nickname \ n to ios offline push not userid but Nick, see comments"</string>
+    <string name="preview">Preview</string>
     <string name="prompt">Prompt</string>
     <string name="push_nick">IOS offline push nick</string>
     <string name="quiting_the_chat_room">Exiting chat room</string>
@@ -795,6 +821,7 @@
     <string name="robot_chat">Robot chat</string>
     <string name="save">Save</string>
     <string name="save_new_nickname">Save new nickname</string>
+    <string name="saving">Saving picture…</string>
     <string name="sd_card_does_not_exist">"SD card does not exist, can't take pictures"</string>
     <string name="search">Search</string>
     <string name="search_header">Search</string>
@@ -803,6 +830,8 @@
     <string name="search_pubic_group">Search public group</string>
     <string name="searching">searching</string>
     <string name="select_contacts">Select the contact</string>
+    <string name="select_max_tips">Has reached the maximum number selection!</string>
+    <string name="selected">selected(%1$d/%2$d)</string>
     <string name="send_fail">Send failed</string>
     <string name="send_failure_please">Send failure, please test whether the server connection</string>
     <string name="send_successful">Request was sent, waiting for the peer to accept</string>
@@ -814,6 +843,7 @@
     <string name="shake">Shake</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="sure_to_empty_this">Clear all messages?</string>
+    <string name="take_photo_fail">Take photo failure</string>
     <string name="temporary_does_not">Currently the video size greater than 10M is not supported!</string>
     <string name="text_ack_msg">Read</string>
     <string name="text_delivered_msg">Delivered</string>
@@ -844,6 +874,7 @@
     <string name="voice">Voice</string>
     <string name="voice_call">[Voice call]</string>
     <string name="voice_prefix">[Voice]</string>
+    <string name="waiting">Please wait…</string>
     <string name="were_mentioned">You were montioned</string>
     <string name="yangshengqi">Use speaker</string>
     <string name="you_are_group">You have been kicked off from the group</string>

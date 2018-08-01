@@ -296,6 +296,7 @@ public class PhotoView extends GFImageView implements IPhotoView {
     protected void onDetachedFromWindow() {
         mAttacher.cleanup();
         super.onDetachedFromWindow();
+
     }
 
     @Override

@@ -134,6 +134,7 @@
     <string name="address_book">通讯录</string>
     <string name="agree">同意</string>
     <string name="all_members">所有成员</string>
+    <string name="all_photo">全部图片</string>
     <string name="answer">接听</string>
     <string name="are_empty_group_of_news">正在清空群消息……</string>
     <string name="attach_card">名片</string>
@@ -178,6 +179,8 @@
     <string name="connect_failuer_toast">请检查网络或稍候重试</string>
     <string name="copy">复制</string>
     <string name="copy_message">复制消息</string>
+    <string name="crop_fail">裁剪失败</string>
+    <string name="crop_suc">裁剪成功</string>
     <string name="delete">删除</string>
     <string name="delete_conversation">删除会话</string>
     <string name="delete_conversation_messages">删除会话和消息</string>
@@ -200,6 +203,8 @@
     <string name="dl_waiting">请等待……</string>
     <string name="downwaiting">正在下载文件请稍后</string>
     <string name="dynamic_expression">[动态表情]</string>
+    <string name="edit_letoff_photo_format">该图片格式不支持此操作</string>
+    <string name="empty_sdcard">没有SD卡</string>
     <string name="error_send_invalid_content">你发送了不合法的消息内容</string>
     <string name="error_send_not_in_the_group">你已经不在此群了</string>
     <string name="exit_group">退出</string>
@@ -208,7 +213,9 @@
     <string name="failed_to_load_data">加载数据失败，请检查网络或稍后重试</string>
     <string name="failed_to_move_into">移入黑名单失败,请检查网络或稍后重试</string>
     <string name="file">[文件]</string>
+    <string name="folder_photo_size">共%1$d张</string>
     <string name="forward">转发</string>
+    <string name="gallery">手机相册</string>
     <string name="get_failed_please_check">获取失败,请检查网络或稍后再试</string>
     <string name="gorup_not_found">找不到这个群组</string>
     <string name="group_chat">群聊</string>
@@ -234,6 +241,7 @@
     <string name="login_failure_failed">登录失败: 获取好友或群聊失败</string>
     <string name="logout">退出登录</string>
     <string name="logout_hint">退出后不会删除任何历史数据，下次登录依然可以使用本账号</string>
+    <string name="maxsize_zero_tip">maxsize 应该大于0</string>
     <string name="move_out_backlist">移出黑名单</string>
     <string name="move_up_to_cancel">手指上滑，取消发送</string>
     <string name="mute">静音</string>
@@ -245,6 +253,7 @@
     <string name="nickname">昵称</string>
     <string name="nickname_description">设置此昵称以后，在与iOS客户端demo聊天过程中，iOS一侧会显示此昵称而不是环信ID，如果对方使用安卓客户端则此设置不生效</string>
     <string name="no_more_messages">没有更多的消息了</string>
+    <string name="no_photo">无图片</string>
     <string name="not_add_myself">不能添加自己</string>
     <string name="not_connect_to_server">尚未连接至服务器，请稍后重试</string>
     <string name="not_delete_myself">不能删除自己</string>
@@ -252,11 +261,19 @@
     <string name="notify">新消息提醒</string>
     <string name="now_refresh_list">正在刷新联系人</string>
     <string name="ok">确定</string>
+    <string name="open_gallery_fail">相册初始化失败!</string>
     <string name="password">密码</string>
     <string name="people">人)</string>
+    <string name="permissions_denied_tips">无法获取图片</string>
+    <string name="permissions_tips_gallery">这个App请求访问你的相册</string>
+    <string name="photo_crop">图片裁剪</string>
+    <string name="photo_edit">图片编辑</string>
+    <string name="photo_list_empty">获取图片失败!</string>
     <string name="picture">[图片]</string>
     <string name="please_check">key 验证出错! 请在 AndroidManifest.xml 文件中检查 key 设置</string>
+    <string name="please_reopen_gf">请重新打开图片浏览器</string>
     <string name="please_set_the_current">设置当前用户的昵称\n用于ios离线推送时显示用户昵称</string>
+    <string name="preview">预览</string>
     <string name="prompt">提示</string>
     <string name="push_nick">iOS离线推送昵称</string>
     <string name="quiting_the_chat_room">正在退出聊天室……</string>
@@ -272,6 +289,7 @@
     <string name="robot_chat">环信小助手</string>
     <string name="save">保存</string>
     <string name="save_new_nickname">保存</string>
+    <string name="saving">正在保存照片…</string>
     <string name="sd_card_does_not_exist">SD卡不存在，不能拍照</string>
     <string name="search">搜索</string>
     <string name="search_header">搜</string>
@@ -280,6 +298,8 @@
     <string name="search_pubic_group">搜索公开群</string>
     <string name="searching">正在搜索..</string>
     <string name="select_contacts">选择联系人</string>
+    <string name="select_max_tips">已达到最大选择数量</string>
+    <string name="selected">已选(%1$s/%2$s)</string>
     <string name="send_fail">发送消息失败,</string>
     <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
     <string name="send_successful">发送请求成功,等待对方验证</string>
@@ -291,6 +311,7 @@
     <string name="shake">震动</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="sure_to_empty_this">确定清空此群的聊天记录吗？</string>
+    <string name="take_photo_fail">拍照失败</string>
     <string name="temporary_does_not">暂不支持大于10M的视频！</string>
     <string name="text_ack_msg">已读</string>
     <string name="text_delivered_msg">送达</string>
@@ -319,6 +340,7 @@
     <string name="voice">声音</string>
     <string name="voice_call">[语音通话]</string>
     <string name="voice_prefix">[语音]</string>
+    <string name="waiting">请稍等…</string>
     <string name="were_mentioned">[有人@我]</string>
     <string name="yangshengqi">使用扬声器播放语音</string>
     <string name="you_are_group">你被群创建者从此群中移除</string>

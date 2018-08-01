@@ -21,7 +21,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     >
-
     <RelativeLayout
         android:id="@+id/titlebar"
         android:layout_width="match_parent"

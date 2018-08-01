@@ -8,28 +8,28 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_35.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ee_35.png"
-    },
-    {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_dx_checkbox_gray_on.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_dx_checkbox_gray_on.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_settings_selected.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_settings_selected.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_dx_checkbox_gray_on.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_dx_checkbox_gray_on.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ucrop_ic_rotate.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\ucrop\\v2.1.7\\res\\drawable-hdpi-v4\\ucrop_ic_rotate.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_35.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ee_35.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_msg_state_fail_resend.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_msg_state_fail_resend.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ucrop_ic_rotate.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\ucrop\\v2.1.7\\res\\drawable-hdpi-v4\\ucrop_ic_rotate.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
@@ -220,6 +220,10 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_mm_title_back.png"
     },
     {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_crop.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_crop.png"
+    },
+    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -238,6 +242,10 @@
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatto_bg_focused.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatto_bg_focused.9.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gf_ic_preview.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\gf_ic_preview.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_23.png",
@@ -332,12 +340,20 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_rotate.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_rotate.png"
+    },
+    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chat_bg.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\chat_bg.9.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chat_video_mask_to.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chat_video_mask_to.9.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_camera.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_camera.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_14.png",
@@ -470,6 +486,10 @@
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatting_setmode_voice_btn_pressed.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatting_setmode_voice_btn_pressed.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_done.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_done.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_26.png",
@@ -628,6 +648,10 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_app_panel_video_icon.9.png"
     },
     {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_back.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_back.png"
+    },
+    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_appitem_del_btn_pressed.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_appitem_del_btn_pressed.png"
     },
@@ -702,6 +726,10 @@
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chat_face_pressed.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chat_face_pressed.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_gf_clear.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-hdpi-v4\\ic_gf_clear.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_25.png",
