@@ -36,12 +36,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_edit_normal.9.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_new_friends_icon.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_new_friends_icon.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_share_normal.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_share_normal.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_new_friends_icon.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_new_friends_icon.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\def_qq.png",
@@ -60,12 +60,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_share_pressed.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_send_btn_pressed.9.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_send_btn_pressed.9.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_video_call_self.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_video_call_self.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_send_btn_pressed.9.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_send_btn_pressed.9.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_restart_normal.png",

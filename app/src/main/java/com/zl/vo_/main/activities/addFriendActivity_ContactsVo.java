@@ -40,6 +40,7 @@ import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.myindexbar.CityAdapter_contacts;
 import com.zl.vo_.myindexbar.DividerItemDecoration;
+import com.zl.vo_.util.WhiteBgBitmapUtil;
 import com.zl.vo_.utils.AppConst;
 import com.zl.vo_.utils.Url;
 
@@ -334,7 +335,6 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
                 pw_share.dismiss();
             }
         });
-
     }
     /**
      * 设置添加屏幕的背景透明度
@@ -354,8 +354,6 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         mWxApi = WXAPIFactory.createWXAPI(addFriendActivity_ContactsVo.this, AppConst.APP_ID, false);
         // 将该app注册到微信
         mWxApi.registerApp(AppConst.APP_ID);
-
-
 //        WXTextObject textObj = new WXTextObject();
 //        //textObj.text = "http://www.baidu.com";
 //        WXWebpageObject webpage = new WXWebpageObject();
@@ -368,13 +366,13 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         WXWebpageObject webpage = new WXWebpageObject();
         webpage.webpageUrl = "http://www.baidu.com";
         WXMediaMessage msg = new WXMediaMessage(webpage);
-        msg.title ="VO娱乐";
-        msg.description ="vo娱乐" ;
+        msg.title ="人生知己,我在VO等你";
+        msg.description ="将手机摇一摇即可隐藏好友的聊天软件,聊天办公,高端人群都在用" ;
         Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
-        Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, 100, 100, true);
-        msg.setThumbImage(thumbBmp);
+        Bitmap bitmap = WhiteBgBitmapUtil.drawableBitmapOnWhiteBg(this, bmp);
+        //Bitmap thumbBmp = Bitmap.createScaledBitmap(bitmap, 200, 200, true);
+        msg.setThumbImage(bitmap);
         bmp.recycle();
-
 
         // 构造一个Req
         SendMessageToWX.Req req = new SendMessageToWX.Req();

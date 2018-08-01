@@ -44,32 +44,32 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_sent_picture.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_conversation_item.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_conversation_item.xml"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_contact.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_contact.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\jz_dialog_progress.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\layout\\jz_dialog_progress.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_contact.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_contact.xml"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_conversation_item.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_conversation_item.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_file.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_received_file.xml"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_voice.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_received_voice.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_video_call.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_received_video_call.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_voice.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_received_voice.xml"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\ease_row_received_file.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\layout\\ease_row_received_file.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\layout\\picture_selector.xml",

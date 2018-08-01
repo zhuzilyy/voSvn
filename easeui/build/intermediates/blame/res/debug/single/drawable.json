@@ -36,12 +36,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\retry_bg.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\crame.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable\\crame.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\jz_dialog_progress_bg.xml",
