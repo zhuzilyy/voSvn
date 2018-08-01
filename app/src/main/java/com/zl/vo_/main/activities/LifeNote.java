@@ -195,7 +195,7 @@ public class LifeNote extends VoBaseActivity implements View.OnClickListener,Bas
                 btn_confirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        deleteLifeNote_item(positon+"");
+                        deleteLifeNote_item(bigList.get(positon).getId());
                         dialog.dismiss();
                     }
                 });
@@ -232,13 +232,14 @@ public class LifeNote extends VoBaseActivity implements View.OnClickListener,Bas
         x.http().post(params, new MyCommonCallback<Result>() {
             @Override
             public void success(Result data) {
+                Log.i("sss",data+"");
                 loading_view.setVisibility(View.GONE);
                 String info = data.info;
                 if("0".equals(data.code)){
                     isRefrsh=true;
                     page=1;
                     nn=1;
-                  getData(page);
+                    getData(page);
                 }
             }
             @Override
