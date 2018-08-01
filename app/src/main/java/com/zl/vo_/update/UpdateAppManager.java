@@ -363,7 +363,6 @@ public class UpdateAppManager extends Activity {
                                 startInstallPermissionSettingActivity();
                             }
                         }
-
                         @Override
                         public void onNegative() {
 

@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'android.keystore'
             keyPassword '031424'
-            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
             storePassword '031424'
         }
     }

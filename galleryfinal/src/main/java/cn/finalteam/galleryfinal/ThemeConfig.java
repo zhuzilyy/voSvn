@@ -27,7 +27,6 @@ import java.io.Serializable;
  * Date:15/12/16 下午2:49
  */
 public class ThemeConfig implements Serializable{
-
     //默认主题
     public static ThemeConfig DEFAULT = new ThemeConfig.Builder().build();
     //黑色主题
@@ -70,7 +69,14 @@ public class ThemeConfig implements Serializable{
             .setCheckSelectedColor(Color.rgb(0x00, 0x96, 0x88))
             .setCropControlColor(Color.rgb(0x00, 0x96, 0x88))
             .build();
-
+    //Vo主题
+    public static ThemeConfig VO = new ThemeConfig.Builder()
+            .setTitleBarBgColor(Color.parseColor("#4162ff"))
+            .setFabNornalColor(Color.parseColor("#4162ff"))
+            .setFabPressedColor(Color.parseColor("#4162ff"))
+            .setCheckSelectedColor(Color.parseColor("#4162ff"))
+            .setCropControlColor(Color.parseColor("#4162ff"))
+            .build();
     private int titleBarTextColor;
     private int titleBarBgColor;
     private int titleBarIconColor;
@@ -79,7 +85,6 @@ public class ThemeConfig implements Serializable{
     private int fabNornalColor;
     private int fabPressedColor;
     private int cropControlColor;
-
     private int iconBack;
     private int iconCamera;
     private int iconCrop;
