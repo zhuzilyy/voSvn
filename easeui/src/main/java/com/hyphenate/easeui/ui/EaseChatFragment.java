@@ -683,7 +683,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                // selectPicFromLocal();
                 //客户要求使用第三方的图片选择框架
                 selectPicFromCamera_vo();
-
                 break;
             case ITEM_LOCATION:
                 //发送位置，动态申请位置权限
@@ -745,10 +744,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                     //.videoSecond()//显示多少秒以内的视频or音频也可适用
                     //.recordVideoSecond()//录制视频秒数 默认60s
                     .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
-
-
-
-
         }
 
     }
