@@ -1,10 +1,10 @@
 [
     {
-        "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable\\upsdk_update_all_button.xml",
-        "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable\\upsdk_update_all_button.xml"
+        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable\\upsdk_update_all_button.xml",
+        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable\\upsdk_update_all_button.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable\\upsdk_third_download_bg.xml",
-        "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable\\upsdk_third_download_bg.xml"
+        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable\\upsdk_third_download_bg.xml",
+        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable\\upsdk_third_download_bg.xml"
     }
 ]
