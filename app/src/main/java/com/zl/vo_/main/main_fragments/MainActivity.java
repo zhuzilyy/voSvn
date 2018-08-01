@@ -113,6 +113,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends VoBaseActivity implements View.OnClickListener{
     protected static final String TAG = "MainActivity";
+    private int indexq=0;
     //小米推送loglist
     public static List<String> logList = new CopyOnWriteArrayList<String>();
     private TextView unreadLabel;
