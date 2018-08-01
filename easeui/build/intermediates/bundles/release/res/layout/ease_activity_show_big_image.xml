@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#000"
     android:orientation="vertical" >
+
     <!--title-->
 
     <RelativeLayout
@@ -13,7 +14,6 @@
         android:orientation="vertical"
         >
         <com.hyphenate.easeui.widget.photoview.EasePhotoView
-
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
