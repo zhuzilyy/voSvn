@@ -20,7 +20,7 @@ import butterknife.OnClick;
  */
 
 public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickListener{
-    //2018.2.28(过完年后的第一次修改，修复一键清除后重新添加不显示的问题)
+    private int aaaa=100;
     @BindView(R.id.re_function)
     public RelativeLayout re_function;
     @BindView(R.id.re_Complaints)
