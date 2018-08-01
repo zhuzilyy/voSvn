@@ -369,7 +369,6 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         msg.title ="人生知己,我在VO等你";
         msg.description ="将手机摇一摇即可隐藏好友的聊天软件,聊天办公,高端人群都在用" ;
         Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
-
         Bitmap bitmap = WhiteBgBitmapUtil.drawableBitmapOnWhiteBg(this, bmp);
         //Bitmap thumbBmp = Bitmap.createScaledBitmap(bitmap, 200, 200, true);
         msg.setThumbImage(bitmap);
