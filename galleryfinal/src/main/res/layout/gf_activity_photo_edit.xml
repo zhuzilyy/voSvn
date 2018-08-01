@@ -100,7 +100,6 @@
             android:id="@+id/iv_source_photo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_gf_crop_texture"
             />
 
         <cn.finalteam.galleryfinal.widget.crop.CropImageView

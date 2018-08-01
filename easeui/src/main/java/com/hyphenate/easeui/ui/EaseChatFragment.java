@@ -705,7 +705,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     }
     //设置选择图片的一些属性
     private void initGallery() {
-        themeConfig = ThemeConfig.DEFAULT;
+        themeConfig = ThemeConfig.VO;
         imageLoader = new UILImageLoader();
         pauseOnScrollListener = new UILPauseOnScrollListener(false, true);
         final FunctionConfig functionConfig = functionConfigBuilder.build();
