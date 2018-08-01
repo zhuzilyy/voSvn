@@ -30,12 +30,10 @@ public class SuspensionDecoration extends RecyclerView.ItemDecoration {
     private LayoutInflater mInflater;
 
     private int mTitleHeight;//title的高
-    private static int COLOR_TITLE_BG = Color.parseColor("#f2f2f2");
+    private static int COLOR_TITLE_BG = Color.parseColor("#f7f7f7");
     private static int COLOR_TITLE_FONT = Color.parseColor("#FF999999");
     private static int mTitleFontSize;//title字体大小
-
     private int mHeaderViewCount = 0;
-
 
     public SuspensionDecoration(Context context, List<? extends ISuspensionInterface> datas) {
         super();
@@ -54,18 +52,14 @@ public class SuspensionDecoration extends RecyclerView.ItemDecoration {
         this.mTitleHeight = mTitleHeight;
         return this;
     }
-
-
     public SuspensionDecoration setColorTitleBg(int colorTitleBg) {
         COLOR_TITLE_BG = colorTitleBg;
         return this;
     }
-
     public SuspensionDecoration setColorTitleFont(int colorTitleFont) {
         COLOR_TITLE_FONT = colorTitleFont;
         return this;
     }
-
     public SuspensionDecoration setTitleFontSize(int mTitleFontSize) {
         mPaint.setTextSize(mTitleFontSize);
         return this;

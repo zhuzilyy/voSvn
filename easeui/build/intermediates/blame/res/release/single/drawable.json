@@ -28,12 +28,12 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\xiangce.png"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\jz_bottom_seek_thumb.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\jz_bottom_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\location.png",
@@ -68,12 +68,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\image_placeholder.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\image_placeholder.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_sidebar_background_pressed.xml",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\image_placeholder.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\image_placeholder.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_type_select_btn.xml",
@@ -84,12 +84,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\jz_loading.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\fx_main_activity_add.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\fx_main_activity_add.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\gif_tag.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\gif_tag.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\fx_main_activity_add.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\fx_main_activity_add.xml"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_recording_hint_bg.xml",
@@ -108,12 +108,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\ucrop\\v2.1.7\\res\\drawable\\ucrop_vector_ic_crop.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\picture_sb_thumb.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\picture_sb_thumb.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\jz_click_play_selector.xml",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\jz_click_play_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\picture_sb_thumb.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\picture_sb_thumb.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\recall_message_bg.xml",
@@ -208,12 +208,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\jz_click_back_tiny_selector.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\p_seekbar_thumb_normal.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\p_seekbar_thumb_normal.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\jz_click_share_selector.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable\\jz_click_share_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\p_seekbar_thumb_normal.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\p_seekbar_thumb_normal.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_search_api_material.xml",
@@ -284,20 +284,20 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_image_selector.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_chat_image_selector.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_mm_listitem.xml",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_mm_listitem.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_image_selector.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_chat_image_selector.xml"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_recording_text_hint_bg.xml",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_recording_text_hint_bg.xml"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_location_selector.xml",
@@ -332,12 +332,12 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\dialog_shadow.xml",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\dialog_shadow.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\dialog_shadow.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\dialog_shadow.xml"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_press_speak_btn.xml",

@@ -12,16 +12,16 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_record_animate_12.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_dx_checkbox_gray_on.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_dx_checkbox_gray_on.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_settings_selected.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_settings_selected.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_dx_checkbox_gray_on.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_dx_checkbox_gray_on.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ucrop_ic_rotate.png",
@@ -32,20 +32,20 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_msg_state_fail_resend.png"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatto_voice_playing_f1.png",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatto_voice_playing_f1.png"
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_video_download_btn_nor.png",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_video_download_btn_nor.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_chatto_voice_playing_f1.png",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable-hdpi\\ease_chatto_voice_playing_f1.png"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ease_mm_listitem_disable.9.png",

@@ -20,12 +20,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_edit_normal.9.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_share_normal.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_share_normal.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_new_friends_icon.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_new_friends_icon.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_share_normal.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_share_normal.png"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\video_icon.png",
@@ -116,12 +116,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_battery_level_50.png",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_battery_level_50.png"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_add_volume.png",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_add_volume.png"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_battery_level_50.png",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_battery_level_50.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_shrink.png",
@@ -140,12 +140,12 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_takepic_pressed.png"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_back_normal.png",
-        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_back_normal.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_scale.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\ucrop\\v2.1.7\\res\\drawable-xhdpi-v4\\ucrop_ic_scale.png"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_back_normal.png",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_back_normal.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png",

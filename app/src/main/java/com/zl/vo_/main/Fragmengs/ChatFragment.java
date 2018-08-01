@@ -188,12 +188,10 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                                 putExtra("groupId",toChatUsername),REQUEST_CODE_SELECT_AT_USER);
                     }
                 }
-
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                 }
-
                 @Override
                 public void afterTextChanged(Editable s) {
 
@@ -204,9 +202,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         if (forward_msg_id != null) {
             forwardMessage(forward_msg_id);
         }
-
     }
-
     /***
      * 转发消息（复写父类）
      *
@@ -332,14 +328,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     @Override
     protected void emptyHistory() {
         super.emptyHistory();
-
         Intent intent = new Intent(getActivity(), UserDetailsActivityVo.class);
         intent.putExtra("HXid", toChatUsername);
         intent.putExtra("account", accountName);
         intent.putExtra("way", "apply_card");
         startActivity(intent);
-
-
     }
 
     @Override
@@ -397,8 +390,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                             } catch (final HyphenateException e) {
                                 e.printStackTrace();
                                 getActivity().runOnUiThread(new Runnable() {
-                                    public void run() {
-                                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    public void run() { Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -420,7 +412,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                         String videoPath = data.getStringExtra("path");
                         //修改发送视频是
                         File file = new File(PathUtil.getInstance().getImagePath(), "thvideo" + System.currentTimeMillis());
-                       // File file =createFile();
+                       //File file =createFile();
 
                         try {
                             FileOutputStream fos = new FileOutputStream(file);
@@ -454,7 +446,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 case REQUEST_CODE_SELEST_MINGPIAN:
                     if (data != null) {
                         Log.i("xxx", "点击拓展菜单中的按钮发送名片");
-                        Bundle bundle = data.getExtras();//获取从selectContactActivity界面传回的数据
+                        Bundle bundle = data.getExtras(); //获取从selectContactActivity界面传回的数据
                         MyFrindEntivity friend = (MyFrindEntivity) bundle.getSerializable("ssss");
                         String account = friend.getAccount();
                         String userimg = friend.getAvatar();

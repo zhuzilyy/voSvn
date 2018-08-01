@@ -13,6 +13,9 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
@@ -20,6 +23,8 @@ import android.util.Log;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
+import com.dou361.dialogui.DialogUIUtils;
+import com.dou361.dialogui.listener.DialogUIListener;
 import com.zl.vo_.utils.Url;
 
 import org.json.JSONException;
@@ -37,7 +42,7 @@ import java.net.URL;
 /**
  * Created by Administrator on 2017/12/25.
  */
-public class UpdateAppManager {
+public class UpdateAppManager extends Activity {
 
     // 外存sdcard存放路径
     private static final String FILE_PATH = Environment.getExternalStorageDirectory() + "/" + "AutoUpdate" + "/";
@@ -60,6 +65,8 @@ public class UpdateAppManager {
     private int update_versionCode;
     private String update_describe;
     private String update_downurlapk;
+    private int INSTALL_APK_REQUESTCODE = 201;
+    private int GET_UNKNOWN_APP_SOURCES = 202;
 
     public UpdateAppManager(Context context) {
         this.context = context;
@@ -287,11 +294,48 @@ public class UpdateAppManager {
             progressDialog.dismiss();//关闭进度条
             //安装应用
             installApp();
+
+           // installApk();
+
         }
     }
 
+    private void installApk() {
+        File apk = new File(FILE_NAME);
+        if (!apk.exists()) {
+            return;
+        }
+
+        boolean haveInstallPermission;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            //先获取是否有安装未知来源应用的权限
+            haveInstallPermission =UpdateAppManager.this.getPackageManager().canRequestPackageInstalls();
+            if (!haveInstallPermission) {//没有权限
+                DialogUIUtils.showAlert((Activity) context, "获取权限", "安装应用需要打开未知来源权限，请去设置中开启权限", new DialogUIListener() {
+                    @Override
+                    public void onPositive() {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            startInstallPermissionSettingActivity();
+                        }
+                    }
+
+                    @Override
+                    public void onNegative() {
+
+                    }
+                }).show();
+                return;
+            }
+        }
+        //有权限，开始安装应用程序
+        installApk(apk);
+
+
+    }
+
+
     /**
-     * 安装新版本应用
+     *    安装新版本应用
      */
     private void installApp() {
         File appFile = new File(FILE_NAME);
@@ -308,16 +352,28 @@ public class UpdateAppManager {
                 intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 Uri contentUri = FileProvider.getUriForFile(context, "com.zl.vo_.fileprovider", appFile);//com.zl.vo_.fileprovider
                 intent.setDataAndType(contentUri, type);
-            } else if (Build.VERSION.SDK_INT >= 26) {
+            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 //8.0
-//                boolean b = context.getPackageManager().canRequestPackageInstalls();
-//                if (b) {
-//                    //installApk();//安装应用的逻辑(写自己的就可以)
-//                } else {
-//                    //请求安装未知应用来源的权限
-//                    ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES}, 150);
-//
-//                }
+               boolean haveInstallPermission = getPackageManager().canRequestPackageInstalls();
+                if(!haveInstallPermission){
+                    DialogUIUtils.showAlert((Activity) context, "获取权限", "安装应用需要打开未知来源权限，请去设置中开启权限", new DialogUIListener() {
+                        @Override
+                        public void onPositive() {
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                startInstallPermissionSettingActivity();
+                            }
+                        }
+
+                        @Override
+                        public void onNegative() {
+
+                        }
+                    }).show();
+
+                }else {
+                    //有权限，开始安装应用程序
+                    installApk(appFile);
+                }
 
             } else {
                 intent.setDataAndType(Uri.fromFile(appFile), type);
@@ -329,6 +385,35 @@ public class UpdateAppManager {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void startInstallPermissionSettingActivity() {
+        Uri packageURI = Uri.parse("package:" + getPackageName());
+        //注意这个是8.0新API
+        Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, packageURI);
+        startActivityForResult(intent, 10086);
+    }
+
+    //安装应用
+    private void installApk(File apk) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+            intent.setDataAndType(Uri.fromFile(apk), "application/vnd.android.package-archive");
+        } else {
+            File appFile = new File(FILE_NAME);
+            if (!appFile.exists()) {
+                return;
+            }
+            MimeTypeMap mime = MimeTypeMap.getSingleton();
+            String ext = appFile.getName().substring(appFile.getName().lastIndexOf(".") + 1);
+            String type = mime.getMimeTypeFromExtension(ext);
+
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            Uri contentUri = FileProvider.getUriForFile(context, "com.zl.vo_.fileprovider", appFile);//com.zl.vo_.fileprovider
+            intent.setDataAndType(contentUri, type);
+        }
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getBaseContext().startActivity(intent);
+    }
 
 
 
