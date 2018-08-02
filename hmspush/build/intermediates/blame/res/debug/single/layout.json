@@ -28,11 +28,11 @@
         "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\layout\\hms_download_progress.xml"
     },
     {
-        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout\\hwpush_layout7.xml",
-        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\push\\2.6.0.301\\res\\layout\\hwpush_layout7.xml"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout\\hwpush_layout4.xml",
         "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\push\\2.6.0.301\\res\\layout\\hwpush_layout4.xml"
+    },
+    {
+        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout\\hwpush_layout7.xml",
+        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\push\\2.6.0.301\\res\\layout\\hwpush_layout7.xml"
     }
 ]
