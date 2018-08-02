@@ -42,6 +42,13 @@
 
 
     </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
     <!--再次输入密码-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,6 +81,13 @@
 
 
     </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
     <!--密保问题-->
     <LinearLayout
         android:layout_marginTop="@dimen/x20"
@@ -105,7 +119,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/x15"
+
                 android:text="请输入答案："
                 android:textSize="16sp"
                 android:layout_centerVertical="true"
@@ -116,8 +130,7 @@
                 android:background="@drawable/shape_stroke"
                 android:layout_width="0dp"
                 android:layout_marginRight="@dimen/x15"
-                android:layout_height="@dimen/x30"
-
+                android:layout_height="@dimen/x25"
                 android:layout_weight="3"
                 android:paddingLeft="@dimen/x20"
                 android:paddingRight="@dimen/x20"
@@ -141,7 +154,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/x15"
+
                 android:text="请确认答案："
                 android:textSize="16sp"
                 android:layout_centerVertical="true"
@@ -153,7 +166,7 @@
                 android:background="@drawable/shape_stroke"
                 android:layout_width="0dp"
                 android:layout_marginRight="@dimen/x15"
-                android:layout_height="@dimen/x30"
+                android:layout_height="@dimen/x25"
 
                 android:layout_weight="3"
                 android:paddingLeft="@dimen/x20"

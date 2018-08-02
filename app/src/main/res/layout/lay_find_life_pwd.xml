@@ -56,7 +56,7 @@
                 <com.zl.vo_.main.views.MEditText
                     android:id="@+id/et_mibao_question_answer"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/x30"
+                    android:layout_height="@dimen/x25"
                     android:layout_marginLeft="@dimen/x15"
                     android:layout_marginRight="@dimen/x15"
                     android:layout_weight="3"

@@ -562,27 +562,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             Toast.makeText(getActivity(), "此功能需要开通vip", Toast.LENGTH_SHORT).show();
             return;
         }
-//        dialog = new HypCommDialog.Builder(getActivity())
-//                .setTitle("一键清除")
-//                .setContent("确认清除加密好友，清除后将解除好友关系！")
-//                .setCancelable(false)
-//                .setCancelListener("取消", new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//                    }
-//                })
-//                .setConfirmListener("确定", new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Toast.makeText(getActivity(), "执行方法==一键清除", Toast.LENGTH_SHORT).show();
-//                      //  OneKeyAllClear();
-//                        dialog.dismiss();
-//                    }
-//                })
-//                .create();
-//        dialog.show();
-
         final Dialog dialog = new Dialog(getActivity());
         View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_allclear2, null);
         dialog.setContentView(vv);
@@ -597,8 +576,34 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
-                OneKeyAllClear();
+                confirmAgain();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
+
+    }
+
+    private void confirmAgain() {
+
+
+        final Dialog dialog = new Dialog(getActivity());
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_allclear3, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
+               OneKeyAllClear();
                 dialog.dismiss();
             }
         });
