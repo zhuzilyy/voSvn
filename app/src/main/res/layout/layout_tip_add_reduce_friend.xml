@@ -3,19 +3,19 @@
     android:orientation="vertical"
     android:id="@+id/rl_addAndReduceFriend"
     android:visibility="gone"
+    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-
+        android:scaleType="centerCrop"
         android:clickable="true"
-        android:scaleType="center"
         android:src="@mipmap/add_reduce_friend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <ImageView
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
         android:id="@+id/iv_addAndReduceFriend"
-        android:layout_marginBottom="100dp"
         android:layout_marginRight="50dp"
         android:layout_alignParentRight="true"
         android:src="@mipmap/white_know"
