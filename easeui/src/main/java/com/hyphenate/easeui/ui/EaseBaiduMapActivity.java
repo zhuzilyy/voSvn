@@ -121,6 +121,7 @@ public class EaseBaiduMapActivity extends EaseBaseActivity {
 	}
 
 	private void showMap(double latitude, double longtitude, String address) {
+
 		sendButton.setVisibility(View.GONE);
 		LatLng llA = new LatLng(latitude, longtitude);
 		CoordinateConverter converter= new CoordinateConverter();
