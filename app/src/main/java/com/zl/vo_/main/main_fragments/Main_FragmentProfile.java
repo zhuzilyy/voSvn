@@ -5,28 +5,19 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.RotateAnimation;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,10 +26,6 @@ import com.bumptech.glide.Glide;
 import com.cpiz.android.bubbleview.BubblePopupWindow;
 import com.cpiz.android.bubbleview.BubbleTextView;
 import com.cpiz.android.bubbleview.RelativePos;
-import com.dou361.dialogui.DialogUIUtils;
-import com.dou361.dialogui.listener.DialogUIListener;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMConversation;
 import com.hyphenate.easeui.widget.EaseSwitchButton;
 import com.squareup.picasso.Picasso;
 import com.zl.vo_.DemoApplication;
@@ -50,12 +37,9 @@ import com.zl.vo_.main.activities.CreateVoVIPAccountActivityVo;
 import com.zl.vo_.main.activities.CurrentUserInfoActivityVo;
 import com.zl.vo_.main.activities.Help_Feedback;
 import com.zl.vo_.main.activities.LifeNote;
-import com.zl.vo_.main.activities.Setting_PrivacyActivityVo;
 import com.zl.vo_.main.activities.SettingsActivityVo;
-import com.zl.vo_.main.activities.SettingsPrivacyActivity2;
 import com.zl.vo_.main.activities.SettingsPrivacyActivity3;
 import com.zl.vo_.main.activities.SettingsPrivacyActivity4;
-import com.zl.vo_.main.activities.UserDetailsActivityVo;
 import com.zl.vo_.main.activities.addFriendActivity_ContactsVo;
 import com.zl.vo_.main.activities.addFriendActivity_SearchVo;
 import com.zl.vo_.main.https.MyCommonCallback;
@@ -71,13 +55,12 @@ import com.zl.vo_.main.views.PracyFriendDialog;
 import com.zl.vo_.main.views.vipDialog;
 import com.zl.vo_.ui.GroupsActivity;
 import com.zl.vo_.ui.ScanCaptureActivity;
+import com.zl.vo_.utils.SPUtils;
 import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.FXPopWindow;
 
 import org.xutils.http.RequestParams;
 import org.xutils.x;
-
-import java.io.BufferedReader;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -165,7 +148,13 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     public TextView textView17;
     @BindView(R.id.textView14)
     public TextView textView14;
-
+    //薛金柱添加
+    @BindView(R.id.rl_lifeNote)
+    RelativeLayout rl_lifeNote;
+    @BindView(R.id.rl_setFriend)
+    RelativeLayout rl_setFriend;
+    @BindView(R.id.rl_addAndReduceFriend)
+    RelativeLayout rl_addAndReduceFriend;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -262,7 +251,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     @OnClick({R.id.iv_search, R.id.iv_add, R.id.re_myinfo, R.id.re_settings,
             R.id.re_lifenote, R.id.re_createVOVIPAccount, R.id.switch_infopwd,
             R.id.card_SetLifeNote, R.id.card_SetPricyPwd, R.id.card_ClearAllFriend,
-            R.id.guid01, R.id.guid02, R.id.guid03, R.id.guid04,R.id.card_InfoTransform})
+            R.id.guid01, R.id.guid02, R.id.guid03, R.id.guid04,R.id.card_InfoTransform,
+    R.id.iv_lifeNoteKnow,R.id.iv_setFriend,R.id.iv_addAndReduceFriend})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -280,7 +270,15 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-                    mineSetPricyPwd();
+                    rl_setFriend.setVisibility(View.VISIBLE);
+
+                   /* boolean setFriend = (boolean) SPUtils.get(getActivity(), "setFriend", true);
+                    if (setFriend){
+                        rl_setFriend.setVisibility(View.VISIBLE);
+                    }else{
+                        mineSetPricyPwd();
+                    }*/
+                    //mineSetPricyPwd();
                 }
                 break;
 
@@ -289,7 +287,14 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-                    mineHideLifePwd();
+                    rl_lifeNote.setVisibility(View.VISIBLE);
+
+                   /* boolean firstLifeNote = (boolean) SPUtils.get(getActivity(), "firstLifeNote", true);
+                    if (firstLifeNote){
+                        rl_lifeNote.setVisibility(View.VISIBLE);
+                    }else{
+                        mineHideLifePwd();
+                    }*/
                 }
                 break;
             case R.id.card_InfoTransform:
@@ -361,6 +366,20 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 break;
             case R.id.guid04:
                 showPop(" 一键解除加密隐私好友，不留任何信息", guide04);
+                break;
+            case R.id.iv_lifeNoteKnow:
+                rl_lifeNote.setVisibility(View.GONE);
+                mineHideLifePwd();
+                SPUtils.put(getActivity(),"firstLifeNote",false);
+                break;
+            case R.id.iv_setFriend:
+                rl_setFriend.setVisibility(View.GONE);
+                rl_addAndReduceFriend.setVisibility(View.VISIBLE);
+                break;
+            case R.id.iv_addAndReduceFriend:
+                rl_addAndReduceFriend.setVisibility(View.GONE);
+                mineSetPricyPwd();
+                SPUtils.put(getActivity(),"setFriend",false);
                 break;
             default:
                 break;
@@ -466,8 +485,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 })
                 .create();
         lifeNoteSetDialog.show();
-    }
 
+    }
     /***
      * 弹出是否设置人生笔记密码
      */
@@ -693,7 +712,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
         });
     }
     //*****************************************************
-
     /***
      * 信息传输加密
      */

@@ -128,12 +128,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\picture_layer_progress.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable\\picture_layer_progress.xml"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\recall_message_bg.xml",
@@ -302,6 +302,10 @@
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\ucrop_vector_loader.xml",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\ucrop\\v2.1.7\\res\\drawable\\ucrop_vector_loader.xml"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_conrn.xml",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable\\shape_conrn.xml"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\image_placeholder.xml",

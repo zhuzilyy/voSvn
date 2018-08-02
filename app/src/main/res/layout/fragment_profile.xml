@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rl_mine"
     android:background="@color/white">
-
     <!--loading-->
     <RelativeLayout
         android:id="@+id/loading_view"
@@ -517,7 +517,8 @@
             android:layout_width="70dp"
             android:layout_centerHorizontal="true"
             android:layout_height="18dp" />
-
     </RelativeLayout>
-
+    <include layout="@layout/layout_tip_life_note"/>
+    <include layout="@layout/layout_tip_set_friend"/>
+    <include layout="@layout/layout_tip_add_reduce_friend"/>
 </RelativeLayout>

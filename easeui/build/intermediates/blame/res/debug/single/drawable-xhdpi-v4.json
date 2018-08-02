@@ -124,12 +124,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_back_pressed.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\kprogresshud_spinner.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable-xhdpi-v4\\kprogresshud_spinner.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\kprogresshud_spinner.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable-xhdpi-v4\\kprogresshud_spinner.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
@@ -336,12 +336,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_pause_pressed.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_voice_call_receive.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_voice_call_receive.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_gf_crop_tile.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-xhdpi-v4\\ic_gf_crop_tile.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_voice_call_receive.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_voice_call_receive.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\closeversion.png",
@@ -404,12 +404,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_brightness_video.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_gf_back.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.finalteam\\galleryfinal\\1.4.8.5\\res\\drawable-xhdpi-v4\\ic_gf_back.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_close_icon.png",
@@ -428,12 +428,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_battery_level_50.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_takepic_pressed.png",
@@ -540,12 +540,12 @@
         "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\com.github.LuckSiege.PictureSelector\\picture_library\\v2.1.7\\res\\drawable-xhdpi-v4\\icon_audio.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_back_tiny_normal.png",
-        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_back_tiny_normal.png"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ease_chat_location_pressed.png",
         "source": "E:\\vo1.0\\voSvn\\easeui\\src\\main\\res\\drawable-xhdpi\\ease_chat_location_pressed.png"
+    },
+    {
+        "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\jz_back_tiny_normal.png",
+        "source": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\exploded-aar\\cn.jzvd\\jiaozivideoplayer\\6.2.3\\res\\drawable-xhdpi-v4\\jz_back_tiny_normal.png"
     },
     {
         "merged": "E:\\vo1.0\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_gf_rotate.png",
