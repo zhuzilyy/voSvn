@@ -862,6 +862,9 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if(myReceiver!=null){
+            getActivity().unregisterReceiver(myReceiver);
+        }
 
     }
 
@@ -899,6 +902,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
            }
         }
     }
+
+
 
 
 }
