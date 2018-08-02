@@ -150,6 +150,8 @@
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
             android:theme="@style/SingleActivityStyle"/>
+        <activity android:name=".ui.JcPlayerActivity2"
+            android:screenOrientation="portrait"/>
 
         <!--注册Service-->
         <service android:name=".alive_app.service.DaemonService"

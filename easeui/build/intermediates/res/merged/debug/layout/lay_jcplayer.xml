@@ -16,14 +16,35 @@
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="40dp">
-            <ImageView
-                android:id="@+id/video_back"
-                android:layout_gravity="center_vertical"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/back_"
-                android:padding="10dp"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:id="@+id/video_back"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/back_"
+                    android:padding="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/video_send"
+                    android:background="@drawable/shape_conrn"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:layout_width="45dp"
+                    android:visibility="gone"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="发送"
+                    />
+
+            </RelativeLayout>
+
 
         </LinearLayout>
         <cn.jzvd.JZVideoPlayerStandard

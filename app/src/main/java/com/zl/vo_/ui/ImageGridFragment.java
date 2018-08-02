@@ -2,6 +2,7 @@ package com.zl.vo_.ui;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -25,8 +26,11 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.hyphenate.easeui.ui.EaseShowVideoActivity;
+import com.hyphenate.easeui.ui.JcPlayerActivity;
 import com.hyphenate.util.DateUtils;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.TextFormater;
@@ -50,6 +54,8 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 	private ImageAdapter mAdapter;
 	private ImageResizer mImageResizer;
 	List<VideoEntity> mList;
+	private ImageView back;
+	private TextView title;
 
 	/**
 	 * Empty constructor as per the Fragment documentation
@@ -80,6 +86,9 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 		mImageResizer.setLoadingImage(R.drawable.em_empty_photo);
 		mImageResizer.addImageCache(getActivity().getSupportFragmentManager(),
 				cacheParams);
+
+
+
 		
 		
 	}
@@ -89,6 +98,15 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 							 ViewGroup container, Bundle savedInstanceState) {
 		final View v = inflater.inflate(R.layout.em_image_grid_fragment,
 				container, false);
+
+		v.findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				getActivity().finish();
+			}
+		});
+		((TextView)v.findViewById(R.id.tv_title)).setText("视频");
+
 		final GridView mGridView = (GridView) v.findViewById(R.id.gridView);
 		mGridView.setAdapter(mAdapter);
 		mGridView.setOnItemClickListener(this);
@@ -173,16 +191,48 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 		
 		if(position==0)
 		{
-			
 			Intent intent=new Intent();
 			//intent.setClass(getActivity(), RecorderVideoActivity.class);
 			intent.setClass(getActivity(), xzyRecorderViewActivity.class);
 			startActivityForResult(intent, 100);
 		}else{
-			VideoEntity vEntty=mList.get(position-1);
-			Intent intent=getActivity().getIntent().putExtra("path", vEntty.filePath).putExtra("dur", vEntty.duration);
-			getActivity().setResult(Activity.RESULT_OK, intent);
-			getActivity().finish();
+			final Dialog dialog = new Dialog(getActivity());
+			View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_videopreview, null);
+			dialog.setContentView(vv);
+			ImageView cancel = vv.findViewById(R.id.cancel_iv);
+			TextView video_send = vv.findViewById(R.id.video_send);
+			TextView video_preview = vv.findViewById(R.id.video_preview);
+			cancel.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					dialog.dismiss();
+				}
+			});
+			//发送视频
+			video_send.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					VideoEntity vEntty=mList.get(position-1);
+					Intent intent=getActivity().getIntent().putExtra("path", vEntty.filePath).putExtra("dur", vEntty.duration);
+					getActivity().setResult(Activity.RESULT_OK, intent);
+					getActivity().finish();
+					dialog.dismiss();
+				}
+			});
+			//预览视频
+			video_preview.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					VideoEntity vEntty=mList.get(position-1);
+					Intent intent = new Intent(getActivity(),JcPlayerActivity2.class);
+					intent.putExtra("url",vEntty.filePath);
+					intent.putExtra("time",vEntty.duration);
+					intent.putExtra("isPreview","preview");
+					startActivity(intent);
+					dialog.dismiss();
+				}
+			});
+			dialog.show();
 		}
 	}
 
@@ -372,4 +422,16 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 			}
 		}	
 	}
+
+	/***
+	 * 关闭该页面
+	 */
+	public void finshVideo(){
+		if(getActivity()!=null){
+			getActivity().finish();;
+		}
+
+	}
+
+
 }

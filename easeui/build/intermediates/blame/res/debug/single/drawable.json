@@ -312,6 +312,10 @@
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\fx_top_bar_back.xml"
     },
     {
+        "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_conrn.xml",
+        "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\shape_conrn.xml"
+    },
+    {
         "merged": "D:\\AndroidContent\\voSvn\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable\\recall_message_bg.xml",
         "source": "D:\\AndroidContent\\voSvn\\easeui\\src\\main\\res\\drawable\\recall_message_bg.xml"
     },

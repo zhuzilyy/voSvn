@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.widget.Button;
 
 import com.zl.vo_.main.activities.*;
 
 public class ImageGridActivity extends FragmentActivity {
 
 	private static final String TAG = "ImageGridActivity";
+	private Button video_send;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

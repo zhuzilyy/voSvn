@@ -1,8 +1,11 @@
 package com.zl.vo_.main.Fragmengs;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.media.ThumbnailUtils;
@@ -142,6 +145,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
     private List<LocalMedia> selectList = new ArrayList<>();
 
+    private MyReceiver myReceiver;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -151,6 +156,12 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
     @Override
     protected void setUpView() {
+        //注册广播，用于预览后直接发送视频
+        myReceiver =  new MyReceiver();
+        IntentFilter filter =  new IntentFilter("videoPreviewOK");
+        getActivity().registerReceiver(myReceiver,filter);
+
+
         demoModel = new DemoModel(getActivity());
         //设置聊天背景（在子类中设置）
         String bgUrl = demoModel.getChatBackGroundPicUrl();
@@ -853,4 +864,41 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         super.onDestroy();
 
     }
+
+    /****
+     * 接受预览后直接发送视频
+     */
+    class MyReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+           String action =  intent.getAction();
+           int duration = 0;
+           if("videoPreviewOK".equals(action)){
+
+              String videoPath = intent.getStringExtra("path");
+              String durationStr = intent.getStringExtra("time");
+              duration = Integer.parseInt(durationStr);
+
+               //修改发送视频是
+               File file = new File(PathUtil.getInstance().getImagePath(), "thvideo" + System.currentTimeMillis());
+               //File file =createFile();
+
+               try {
+                   FileOutputStream fos = new FileOutputStream(file);
+                   Bitmap ThumbBitmap = ThumbnailUtils.createVideoThumbnail(videoPath, 3);
+                   ThumbBitmap.compress(CompressFormat.JPEG, 100, fos);
+                   // Log.i("bitmaps",ThumbBitmap+"    ?");
+                   fos.close();
+                   sendVideoMessage(videoPath, file.getAbsolutePath(), duration);
+                   Log.i("ui","123465");
+               } catch (Exception e) {
+                   e.printStackTrace();
+               }
+
+           }
+        }
+    }
+
+
 }

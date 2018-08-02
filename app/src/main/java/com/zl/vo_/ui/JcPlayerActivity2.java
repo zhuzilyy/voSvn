@@ -1,35 +1,22 @@
-package com.hyphenate.easeui.ui;
+package com.zl.vo_.ui;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.hyphenate.EMCallBack;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.chat.EMVideoMessageBody;
-import com.hyphenate.easeui.R;
-import com.hyphenate.util.EMLog;
+import com.hyphenate.easeui.ui.EaseBaseActivity;
 
-import java.io.File;
-
-import cn.jzvd.JZVideoPlayer;
 import cn.jzvd.JZVideoPlayerStandard;
-
 
 /**
  * Created by Administrator on 2018/1/3.
  */
 
-public class JcPlayerActivity extends EaseBaseActivity {
+public class JcPlayerActivity2 extends EaseBaseActivity {
     public ProgressBar progressBar;
     private String TAG = "JcPlayerActivity";
     private JZVideoPlayerStandard jzVideoPlayerStandard;
@@ -38,15 +25,16 @@ public class JcPlayerActivity extends EaseBaseActivity {
     private boolean isPreview = false;
     private Button video_send;
     private String time;
+    private ImageGridFragment gridFragment = new ImageGridFragment();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lay_jcplayer);
-        jzVideoPlayerStandard = (JZVideoPlayerStandard) findViewById(R.id.videoplayer);
-        back = (ImageView) findViewById(R.id.video_back);
-        video_send = (Button) findViewById(R.id.video_send);
+        setContentView(com.hyphenate.easeui.R.layout.lay_jcplayer);
+        jzVideoPlayerStandard = (JZVideoPlayerStandard) findViewById(com.hyphenate.easeui.R.id.videoplayer);
+        back = (ImageView) findViewById(com.hyphenate.easeui.R.id.video_back);
+        video_send = (Button) findViewById(com.hyphenate.easeui.R.id.video_send);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +51,7 @@ public class JcPlayerActivity extends EaseBaseActivity {
         time = getIntent().getStringExtra("time");
         if ("preview".equals(preview)) {
             //是预览界面，显示直接发送视频
-            video_send.setVisibility(View.VISIBLE);
+         //   video_send.setVisibility(View.VISIBLE);
             video_send.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -72,8 +60,8 @@ public class JcPlayerActivity extends EaseBaseActivity {
                     intent.putExtra("path",localFilePath);
                     intent.putExtra("time",time);
                     sendBroadcast(intent);
-
-
+                    gridFragment.finshVideo();
+                    finish();
 
                 }
             });
@@ -99,5 +87,6 @@ public class JcPlayerActivity extends EaseBaseActivity {
         jzVideoPlayerStandard.release();
     }
 }
+
 
 
