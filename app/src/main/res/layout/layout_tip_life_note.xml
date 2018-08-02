@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/rl_lifeNote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:clickable="true"
+        android:scaleType="center"
+        android:src="@mipmap/set_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_lifeNoteKnow"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/white_know"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
