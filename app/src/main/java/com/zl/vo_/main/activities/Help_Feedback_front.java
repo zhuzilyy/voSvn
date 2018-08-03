@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
+import com.zl.vo_.utils.Url;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,7 +84,8 @@ public class Help_Feedback_front extends VoBaseActivity implements View.OnClickL
                 break;
             case R.id.re_function:
                 Intent intent=new Intent(Help_Feedback_front.this,Help_Feedback.class);
-                intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/page_list");
+              //  intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/page_list");
+                intent.putExtra("url", Url.FunctionIntroduceUrl);
                 intent.putExtra("param","16");
                 intent.putExtra("title","功能介绍");
                 startActivity(intent);

@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -53,6 +54,12 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 		//如果没回调onResp，八成是这句没有写
 		DemoApplication.mWxApi.handleIntent(this.getIntent(), this);
 		instance=this;
+		findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+			}
+		});
 	}
 
 	// 微信发送请求到第三方应用时，会回调到该方法

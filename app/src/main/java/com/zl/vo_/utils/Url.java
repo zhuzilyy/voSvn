@@ -19,6 +19,7 @@ public class Url {
     //查找好友log
     public static String FindFriendURL=mURL+"find_friend";
     //好友申请前验证接口
+
     public static String ApplyFriendURL=mURL+"apply_friend";
     //用户资料接口
     public static String FriendInfoURL=mURL+"friend_info";
