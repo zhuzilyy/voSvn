@@ -139,7 +139,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     public ImageView flag03;
     @BindView(R.id.flag04)
     public ImageView flag04;
-
     @BindView(R.id.textView15)
     public TextView textView15;
     @BindView(R.id.textView16)
