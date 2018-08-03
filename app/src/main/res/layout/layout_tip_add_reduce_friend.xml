@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:id="@+id/rl_addAndReduceFriend"
     android:visibility="gone"
+    android:id="@+id/rl_addAndReduceFriend"
     android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,10 +10,10 @@
         android:scaleType="centerCrop"
         android:clickable="true"
         android:src="@mipmap/add_reduce_friend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <ImageView
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         android:layout_alignParentBottom="true"
         android:id="@+id/iv_addAndReduceFriend"
         android:layout_marginRight="50dp"
