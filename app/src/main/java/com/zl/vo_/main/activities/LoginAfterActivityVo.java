@@ -18,6 +18,7 @@ import com.dd.CircularProgressButton;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.zl.vo_.DemoModel;
+
 import com.zl.vo_.R;
 import com.zl.vo_.db.DemoDBManager;
 import com.zl.vo_.main.Entity.LoginData;
@@ -25,6 +26,7 @@ import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_fragments.MainActivity;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.util.Utils;
 import com.zl.vo_.utils.Url;
@@ -44,9 +46,9 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
     @BindView(R.id.login2_back)
     public LinearLayout login2_back;
     @BindView(R.id.login_name)
-    public MEditText login_name;
+    public ClearEditText login_name;
     @BindView(R.id.login_pwd)
-    public MEditText login_pwd;
+    public ClearEditText login_pwd;
     @BindView(R.id.login_submit)
     public CircularProgressButton login_submit;
     public DemoModel demoModel;
@@ -109,7 +111,6 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
                 }
                 login_submit.setProgress(0);
                 login_submit.setProgress(99);
-
 
                 RequestParams params=new RequestParams(Url.LoginURL);
                 params.addParameter("account_mobile",loginName);

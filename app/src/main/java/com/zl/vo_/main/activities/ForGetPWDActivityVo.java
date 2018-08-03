@@ -14,6 +14,7 @@ import com.zl.vo_.R;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.util.CodeTimerTask;
 import com.zl.vo_.util.Utils;
@@ -32,11 +33,11 @@ import butterknife.OnClick;
 
 public class ForGetPWDActivityVo extends VoBaseActivity implements View.OnClickListener{
     @BindView(R.id.forgetpwd_phone)
-    public MEditText forgetpwd_phone;
+    public ClearEditText forgetpwd_phone;
     @BindView(R.id.forgetpwd_code)
-    public MEditText forgetpwd_code;
+    public ClearEditText forgetpwd_code;
     @BindView(R.id.forgetpwd_pwd)
-    public MEditText forgetpwd_pwd;
+    public ClearEditText forgetpwd_pwd;
     @BindView(R.id.forgetpwd_getcode)
     public TextView forgetpwd_getcode;
     @BindView(R.id.forgetpwd_submit)

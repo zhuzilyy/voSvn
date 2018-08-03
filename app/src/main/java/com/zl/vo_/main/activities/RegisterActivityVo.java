@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.zl.vo_.R;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.util.CodeTimerTask;
 import com.zl.vo_.util.Utils;
@@ -32,15 +33,15 @@ import butterknife.OnClick;
 
 public class RegisterActivityVo extends VoBaseActivity implements View.OnClickListener{
     @BindView(R.id.register_phone)
-    public MEditText register_phone;
+    public ClearEditText register_phone;
     @BindView(R.id.register_code)
-    public MEditText register_code;
+    public ClearEditText register_code;
     @BindView(R.id.register_pwd)
-    public MEditText register_pwd;
+    public ClearEditText register_pwd;
     @BindView(R.id.register_getcode)
     public TextView register_getcode;
     @BindView(R.id.register_nick)
-    public MEditText register_nick;
+    public ClearEditText register_nick;
     @BindView(R.id.register_submit)
     public Button register_submit;
 
