@@ -2,16 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:id="@+id/rl_setFriend"
-    android:clickable="true"
     android:visibility="gone"
+    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
         android:clickable="true"
         android:scaleType="centerCrop"
         android:src="@mipmap/set_friend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <ImageView
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
