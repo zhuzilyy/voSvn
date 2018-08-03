@@ -170,7 +170,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
         mInit();
         return vv;
     }
-
     private void mInit() {
         //初始化开关
         switch_infopwd.closeSwitch();
