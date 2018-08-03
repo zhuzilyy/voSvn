@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:text="gsgsggdga"
         android:singleLine="true"
         android:ellipsize="end"
@@ -96,6 +96,7 @@
         android:singleLine="true"
         android:ellipsize="end"
         android:padding="7dp"
+        android:layout_marginBottom="5dp"
         android:textColor="@color/list_itease_secondary_color"
         android:textSize="12sp" />
 

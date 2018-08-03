@@ -124,7 +124,7 @@
             android:layout_height="@dimen/x1"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"></View>
+            android:background="@color/light_gray"/>
     </LinearLayout>
         <!--账号-->
         <LinearLayout
@@ -143,14 +143,14 @@
                 app:me_hint="验证码"
                 app:me_hintColor="@color/black"
                 app:me_textColor="@color/black"
-                app:me_textSize="@dimen/x5"></com.zl.vo_.main.views.MEditText>
+                app:me_textSize="@dimen/x5"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x1"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"></View>
+                android:background="@color/light_gray"/>
         </LinearLayout>
 
     <!--密码-->
@@ -181,7 +181,7 @@
                 app:me_textColor="@color/black"
                 app:me_textSize="@dimen/x5"
 
-                ></com.zl.vo_.main.views.MEditText>
+                />
 
 
         </LinearLayout>
@@ -191,7 +191,7 @@
             android:layout_height="@dimen/x1"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"></View>
+            android:background="@color/light_gray"/>
     </LinearLayout>
         <!--昵称-->
         <LinearLayout
@@ -219,7 +219,7 @@
                     app:me_textColor="@color/black"
                     app:me_textSize="@dimen/x5"
 
-                    ></com.zl.vo_.main.views.MEditText>
+                    />
 
 
             </LinearLayout>
@@ -229,7 +229,7 @@
                 android:layout_height="@dimen/x1"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"></View>
+                android:background="@color/light_gray"/>
         </LinearLayout>
 
     <Button

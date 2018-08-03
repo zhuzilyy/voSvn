@@ -12,6 +12,14 @@
         android:gravity="center_vertical"
         android:background="@color/blue02version"
         >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="@dimen/x8"
+            android:src="@mipmap/back"
+            android:layout_marginLeft="@dimen/x10"
+            />
 
         <ImageView
 

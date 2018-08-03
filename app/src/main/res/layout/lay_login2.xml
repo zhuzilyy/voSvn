@@ -90,15 +90,15 @@
             <com.zl.vo_.main.views.MEditText
                 android:id="@+id/login_name"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x45"
-                android:paddingLeft="@dimen/x20"
-                android:paddingRight="@dimen/x20"
+                android:layout_height="45dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 app:me_del_enable="true"
                 app:me_eye_enable="false"
                 app:me_hint="手机号/VO号"
                 app:me_hintColor="@color/black"
                 app:me_textColor="@color/black"
-                app:me_textSize="@dimen/x5"/>
+                app:me_textSize="5sp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -123,10 +123,10 @@
                 <com.zl.vo_.main.views.MEditText
                     android:id="@+id/login_pwd"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/x45"
+                    android:layout_height="45dp"
                     android:layout_weight="3"
-                    android:paddingLeft="@dimen/x20"
-                    android:paddingRight="@dimen/x20"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     app:me_del_enable="true"
                     app:me_eye_enable="true"
                     app:me_hint="密码"
@@ -134,7 +134,7 @@
 
                     app:me_inputType="password"
                     app:me_textColor="@color/black"
-                    app:me_textSize="@dimen/x5"
+                    app:me_textSize="5sp"
 
                     />
 
@@ -143,22 +143,22 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x1"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="@color/light_gray"/>
         </LinearLayout>
 
         <com.dd.CircularProgressButton
             android:id="@+id/login_submit"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x45"
-            android:layout_marginLeft="@dimen/x20"
-            android:layout_marginRight="@dimen/x20"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/x14"
-            android:layout_marginTop="@dimen/x25"
-            app:cpb_cornerRadius="@dimen/x3"
+            android:textSize="14sp"
+            android:layout_marginTop="25dp"
+            app:cpb_cornerRadius="3dp"
             app:cpb_iconComplete="@drawable/ic_action_accept"
             app:cpb_selectorIdle="@drawable/idle_state_selector"
             app:cpb_selectorError="@drawable/error_state_selector"
@@ -186,10 +186,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="@dimen/x12"
+            android:layout_marginTop="12dp"
             android:text="忘记密码?"
             android:textColor="@color/black"
-            android:textSize="@dimen/x14" />
+            android:textSize="14sp" />
 
 
 
