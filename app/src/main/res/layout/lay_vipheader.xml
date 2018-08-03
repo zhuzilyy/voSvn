@@ -51,42 +51,90 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/x10"
             >
-            <ImageView
-                android:id="@+id/vip_state"
-                android:layout_width="@dimen/x20"
-                android:layout_height="@dimen/x20"
-                android:src="@mipmap/vipstate"
-                android:visibility="visible"
-                />
-            <TextView
-                android:layout_marginLeft="@dimen/x10"
-                android:id="@+id/vip_name"
-                android:paddingRight="@dimen/x5"
-                android:layout_marginRight="@dimen/x10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="大亭子"
-                android:singleLine="true"
-                android:ellipsize="end"
-                android:maxWidth="@dimen/x100"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"/>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                >
+                <ImageView
+                    android:id="@+id/vip_state"
+                    android:layout_width="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/x20"
+                    android:src="@mipmap/vipstate"
+                    android:visibility="visible"
+                    />
+                <TextView
+                    android:layout_toRightOf="@+id/vip_state"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:id="@+id/vip_name"
+                    android:paddingRight="@dimen/x5"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:text="大亭子"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/x100"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:visibility="visible"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/vip_try"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/vip_icon"
+                    android:text="会员试用"
+                    android:background="@drawable/shape_vip_try"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                >
+                <TextView
+
+                    android:layout_marginLeft="@dimen/x10"
+                    android:id="@+id/vip_endtime"
+                    android:paddingRight="@dimen/x5"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期：2018年10月1日"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"/>
 
 
-            <ImageView
-                android:visibility="gone"
-                android:layout_marginTop="@dimen/x15"
-                android:id="@+id/vip_info_iv"
-                android:layout_width="@dimen/x85"
-                android:layout_height="@dimen/x20"
-                android:src="@mipmap/vip_icon"
 
-                />
+
+
 
 
         </LinearLayout>

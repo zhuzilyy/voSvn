@@ -122,7 +122,7 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
                         LoginData loginData=data.data;
                         LoginData.LoginInfo loginInfo=loginData.getInfo();
                         if("0".equals(data.code)){
-                            Toast.makeText(LoginAfterActivityVo.this, ""+data.info, Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(LoginAfterActivityVo.this, ""+data.info, Toast.LENGTH_SHORT).show();
                             if(loginInfo!=null){
                                 LoginData.LoginInfo.LoginAccountInfo user=loginInfo.getAccount_info();
                                 if(user!=null){
@@ -189,7 +189,7 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
                     public void run() {
                       //  loadingview.setVisibility(View.GONE);
                         login_submit.setProgress(-1);
-                        Toast.makeText(LoginAfterActivityVo.this, s, Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(LoginAfterActivityVo.this, s, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

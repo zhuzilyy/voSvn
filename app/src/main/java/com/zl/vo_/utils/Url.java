@@ -147,9 +147,4 @@ public class Url {
     public static String WX_REGISTER=mURL+"weixin_mobile_login";
 
 
-
-
-
-
-
 }
