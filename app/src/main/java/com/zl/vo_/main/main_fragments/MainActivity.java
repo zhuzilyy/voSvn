@@ -234,7 +234,6 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
             // 解锁，暂不用，保留
         }
     };
-
     //------------------保活结束-----------------------------》》
     @Override
     protected void onStart() {
@@ -242,7 +241,6 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         //检查更新
         checkPackageVersion();
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

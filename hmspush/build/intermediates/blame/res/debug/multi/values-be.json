@@ -1,5 +1,865 @@
 [
     {
+        "outputFile": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 127,
+                    "endOffset": 178
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 127,
+                        "endOffset": 178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 183,
+                    "endColumn": 121,
+                    "endOffset": 300
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 183,
+                        "endColumn": 121,
+                        "endOffset": 300
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 305,
+                    "endColumn": 69,
+                    "endOffset": 370
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 305,
+                        "endColumn": 69,
+                        "endOffset": 370
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 375,
+                    "endColumn": 88,
+                    "endOffset": 459
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 375,
+                        "endColumn": 88,
+                        "endOffset": 459
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 464,
+                    "endColumn": 274,
+                    "endOffset": 734
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 464,
+                        "endColumn": 274,
+                        "endOffset": 734
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 739,
+                    "endColumn": 71,
+                    "endOffset": 806
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 739,
+                        "endColumn": 71,
+                        "endOffset": 806
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 811,
+                    "endColumn": 113,
+                    "endOffset": 920
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 811,
+                        "endColumn": 113,
+                        "endOffset": 920
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 925,
+                    "endColumn": 108,
+                    "endOffset": 1029
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 925,
+                        "endColumn": 108,
+                        "endOffset": 1029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1034,
+                    "endColumn": 86,
+                    "endOffset": 1116
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1034,
+                        "endColumn": 86,
+                        "endOffset": 1116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1121,
+                    "endColumn": 66,
+                    "endOffset": 1183
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1121,
+                        "endColumn": 66,
+                        "endOffset": 1183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1188,
+                    "endColumn": 135,
+                    "endOffset": 1319
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1188,
+                        "endColumn": 135,
+                        "endOffset": 1319
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1324,
+                    "endColumn": 135,
+                    "endOffset": 1455
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1324,
+                        "endColumn": 135,
+                        "endOffset": 1455
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1460,
+                    "endColumn": 114,
+                    "endOffset": 1570
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1460,
+                        "endColumn": 114,
+                        "endOffset": 1570
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1575,
+                    "endColumn": 131,
+                    "endOffset": 1702
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1575,
+                        "endColumn": 131,
+                        "endOffset": 1702
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1707,
+                    "endColumn": 82,
+                    "endOffset": 1785
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1707,
+                        "endColumn": 82,
+                        "endOffset": 1785
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1790,
+                    "endColumn": 76,
+                    "endOffset": 1862
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1790,
+                        "endColumn": 76,
+                        "endOffset": 1862
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1867,
+                    "endColumn": 78,
+                    "endOffset": 1941
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1867,
+                        "endColumn": 78,
+                        "endOffset": 1941
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1946,
+                    "endColumn": 74,
+                    "endOffset": 2016
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1946,
+                        "endColumn": 74,
+                        "endOffset": 2016
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2021,
+                    "endColumn": 160,
+                    "endOffset": 2177
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2021,
+                        "endColumn": 160,
+                        "endOffset": 2177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2182,
+                    "endColumn": 80,
+                    "endOffset": 2258
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\push\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 80,
+                        "endOffset": 131
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2263,
+                    "endColumn": 71,
+                    "endOffset": 2330
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2182,
+                        "endColumn": 71,
+                        "endOffset": 2249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2335,
+                    "endColumn": 71,
+                    "endOffset": 2402
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2254,
+                        "endColumn": 71,
+                        "endOffset": 2321
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2407,
+                    "endColumn": 180,
+                    "endOffset": 2583
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2326,
+                        "endColumn": 180,
+                        "endOffset": 2502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2588,
+                    "endColumn": 137,
+                    "endOffset": 2721
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2507,
+                        "endColumn": 137,
+                        "endOffset": 2640
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2726,
+                    "endColumn": 100,
+                    "endOffset": 2822
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2645,
+                        "endColumn": 100,
+                        "endOffset": 2741
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2827,
+                    "endColumn": 131,
+                    "endOffset": 2954
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2746,
+                        "endColumn": 131,
+                        "endOffset": 2873
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2959,
+                    "endColumn": 88,
+                    "endOffset": 3043
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2878,
+                        "endColumn": 88,
+                        "endOffset": 2962
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3048,
+                    "endColumn": 78,
+                    "endOffset": 3122
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2967,
+                        "endColumn": 78,
+                        "endOffset": 3041
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3127,
+                    "endColumn": 67,
+                    "endOffset": 3190
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 3046,
+                        "endColumn": 67,
+                        "endOffset": 3109
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3195,
+                    "endColumn": 68,
+                    "endOffset": 3259
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 3114,
+                        "endColumn": 68,
+                        "endOffset": 3178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3264,
+                    "endColumn": 68,
+                    "endOffset": 3328
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 3183,
+                        "endColumn": 68,
+                        "endOffset": 3247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3333,
+                    "endColumn": 50,
+                    "endOffset": 3379
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 3252,
+                        "endColumn": 50,
+                        "endOffset": 3298
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3384,
+                    "endColumn": 54,
+                    "endOffset": 3434
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 3303,
+                        "endColumn": 54,
+                        "endOffset": 3353
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 3439,
+                    "endColumn": 49,
+                    "endOffset": 3484
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 3358,
+                        "endColumn": 49,
+                        "endOffset": 3403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3489,
+                    "endColumn": 77,
+                    "endOffset": 3562
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 3408,
+                        "endColumn": 77,
+                        "endOffset": 3481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3567,
+                    "endColumn": 120,
+                    "endOffset": 3683
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 3486,
+                        "endColumn": 120,
+                        "endOffset": 3602
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3688,
+                    "endColumn": 49,
+                    "endOffset": 3733
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 3607,
+                        "endColumn": 49,
+                        "endOffset": 3652
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3738,
+                    "endColumn": 92,
+                    "endOffset": 3826
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 3657,
+                        "endColumn": 92,
+                        "endOffset": 3745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3831,
+                    "endColumn": 57,
+                    "endOffset": 3884
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 3750,
+                        "endColumn": 57,
+                        "endOffset": 3803
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3889,
+                    "endColumn": 53,
+                    "endOffset": 3938
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 3808,
+                        "endColumn": 53,
+                        "endOffset": 3857
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3943,
+                    "endColumn": 62,
+                    "endOffset": 4001
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 3862,
+                        "endColumn": 62,
+                        "endOffset": 3920
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4006,
+                    "endColumn": 65,
+                    "endOffset": 4067
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 3925,
+                        "endColumn": 65,
+                        "endOffset": 3986
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4072,
+                    "endColumn": 58,
+                    "endOffset": 4126
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 3991,
+                        "endColumn": 58,
+                        "endOffset": 4045
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4131,
+                    "endColumn": 99,
+                    "endOffset": 4226
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 4050,
+                        "endColumn": 99,
+                        "endOffset": 4145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 4231,
+                    "endColumn": 55,
+                    "endOffset": 4282
+                },
+                "from": {
+                    "file": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\values-be\\values-be.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 4150,
+                        "endColumn": 55,
+                        "endOffset": 4201
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
         "map": [
             {
