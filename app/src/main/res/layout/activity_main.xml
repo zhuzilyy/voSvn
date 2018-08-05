@@ -36,8 +36,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-
-
             <Button
                 android:stateListAnimator="@null"
                 android:id="@+id/btn_conversation"
@@ -152,17 +150,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
             <Button
                 android:id="@+id/btn_profile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:drawableTop="@drawable/fx_tab_profile_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
-                android:scaleType="matrix"
                 android:text="@string/mine"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp" />
