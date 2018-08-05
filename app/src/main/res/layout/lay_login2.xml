@@ -104,7 +104,7 @@
                 android:text=""
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 />
           <!--  <com.zl.vo_.main.views.MEditText
                 android:id="@+id/login_name"
@@ -155,7 +155,7 @@
                     android:text=""
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     />
 
     <!--            <com.zl.vo_.main.views.MEditText
