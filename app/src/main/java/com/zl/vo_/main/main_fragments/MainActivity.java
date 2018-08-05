@@ -240,6 +240,7 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         super.onStart();
         //检查更新
         checkPackageVersion();
+
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
