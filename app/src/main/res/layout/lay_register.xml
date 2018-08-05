@@ -92,8 +92,27 @@
             android:layout_height="@dimen/x45"
             android:orientation="horizontal"
             >
+            <com.zl.vo_.main.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_phone"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"
+                />
 
-            <com.zl.vo_.main.views.MEditText
+          <!--  <com.zl.vo_.main.views.MEditText
                 android:id="@+id/register_phone"
                 android:layout_width="0dp"
                 android:layout_weight="2"
@@ -105,7 +124,7 @@
                 app:me_hint="手机号"
                 app:me_hintColor="@color/black"
                 app:me_textColor="@color/black"
-                app:me_textSize="@dimen/x5"/>
+                app:me_textSize="@dimen/x5"/>-->
             <TextView
                 android:id="@+id/register_getcode"
                 android:layout_width="0dp"
@@ -131,8 +150,27 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x50"
             android:orientation="vertical">
+            <com.zl.vo_.main.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"
+                />
 
-            <com.zl.vo_.main.views.MEditText
+         <!--   <com.zl.vo_.main.views.MEditText
                 android:id="@+id/register_code"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x45"
@@ -143,7 +181,7 @@
                 app:me_hint="验证码"
                 app:me_hintColor="@color/black"
                 app:me_textColor="@color/black"
-                app:me_textSize="@dimen/x5"/>
+                app:me_textSize="@dimen/x5"/>-->
 
             <View
                 android:layout_width="match_parent"
@@ -164,8 +202,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <com.zl.vo_.main.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/register_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"
+                />
 
-            <com.zl.vo_.main.views.MEditText
+          <!--  <com.zl.vo_.main.views.MEditText
                 android:id="@+id/register_pwd"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/x45"
@@ -181,7 +238,7 @@
                 app:me_textColor="@color/black"
                 app:me_textSize="@dimen/x5"
 
-                />
+                />-->
 
 
         </LinearLayout>
@@ -204,7 +261,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
+                <com.zl.vo_.main.views.ClearEditText
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_marginLeft="15dp"
+                    android:maxLength="11"
+                    android:id="@+id/register_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入昵称"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16sp"
+                    />
+<!--
                 <com.zl.vo_.main.views.MEditText
                     android:id="@+id/register_nick"
                     android:layout_width="0dp"
@@ -219,7 +295,7 @@
                     app:me_textColor="@color/black"
                     app:me_textSize="@dimen/x5"
 
-                    />
+                    />-->
 
 
             </LinearLayout>

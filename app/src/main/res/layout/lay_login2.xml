@@ -87,7 +87,26 @@
             android:layout_marginTop="@dimen/x30"
             android:orientation="vertical">
 
-            <com.zl.vo_.main.views.MEditText
+            <com.zl.vo_.main.views.ClearEditText
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginLeft="15dp"
+                android:maxLength="11"
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="手机号/VO号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"
+                />
+          <!--  <com.zl.vo_.main.views.MEditText
                 android:id="@+id/login_name"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
@@ -98,8 +117,7 @@
                 app:me_hint="手机号/VO号"
                 app:me_hintColor="@color/black"
                 app:me_textColor="@color/black"
-                app:me_textSize="5sp"/>
-
+                app:me_textSize="5sp"/>-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x1"
@@ -119,8 +137,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <com.zl.vo_.main.views.ClearEditText
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingRight="10dp"
+                    android:id="@+id/login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:password="true"
+                    android:hint="请输入密码"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16sp"
+                    />
 
-                <com.zl.vo_.main.views.MEditText
+    <!--            <com.zl.vo_.main.views.MEditText
                     android:id="@+id/login_pwd"
                     android:layout_width="0dp"
                     android:layout_height="45dp"
@@ -136,7 +174,7 @@
                     app:me_textColor="@color/black"
                     app:me_textSize="5sp"
 
-                    />
+                    />-->
 
 
             </LinearLayout>
