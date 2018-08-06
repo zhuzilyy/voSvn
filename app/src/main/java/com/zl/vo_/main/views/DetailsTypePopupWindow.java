@@ -57,7 +57,6 @@ public class DetailsTypePopupWindow extends PopupWindow implements
                     this);
             rootView.findViewById(R.id.pop_helpback_ll).setOnClickListener(
                     this);
-
             reportTv = (TextView) rootView.findViewById(R.id.report_tv);
             collectionTv = (TextView) rootView.findViewById(R.id.collection_tv);
 
@@ -67,9 +66,8 @@ public class DetailsTypePopupWindow extends PopupWindow implements
         mPop.setBackgroundDrawable(new BitmapDrawable());
         mPop.setOutsideTouchable(true);
         mPop.setFocusable(true);
-        mPop.showAsDropDown(mView,0, DensityUtils.dp2px(mActivity, -10));
+        mPop.showAsDropDown(mView,10, DensityUtils.dp2px(mActivity, -10));
     }
-
     /**
      *
      * @param v
