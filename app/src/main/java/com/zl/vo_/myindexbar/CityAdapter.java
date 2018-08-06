@@ -124,7 +124,6 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
                         return;
                     }
                 });
-
                 holder.content.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View view) {
