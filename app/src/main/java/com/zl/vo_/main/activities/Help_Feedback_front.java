@@ -79,14 +79,15 @@ public class Help_Feedback_front extends VoBaseActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.re_feedback:
                 Intent intent1=new Intent(Help_Feedback_front.this,PlatformComplainsActivityVo.class);
-                intent1.putExtra("title","投诉");
+
                 startActivity(intent1);
                 break;
             case R.id.re_function:
                 Intent intent=new Intent(Help_Feedback_front.this,Help_Feedback.class);
               //  intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/page_list");
+             //   intent.putExtra("url","http://api.ykhswl.net/voadmin/home/api/page_list");
                 intent.putExtra("url", Url.FunctionIntroduceUrl);
-                intent.putExtra("param","16");
+                intent.putExtra("param","15");
                 intent.putExtra("title","功能介绍");
                 startActivity(intent);
                 break;

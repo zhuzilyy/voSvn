@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="盖州市朋朋网络科技有限公司"
+            android:text="盖州市花生网络科技有限公司"
             android:gravity="center"
             />
     </LinearLayout>

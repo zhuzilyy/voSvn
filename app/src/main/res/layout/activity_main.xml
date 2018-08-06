@@ -14,15 +14,15 @@
     <RelativeLayout
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="@dimen/x60"
-        android:layout_height="@dimen/x60"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
         android:background="@drawable/circle_white_stroke"
         android:layout_marginBottom="@dimen/x7"/>
     <LinearLayout
 
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center_vertical"
@@ -32,10 +32,8 @@
         <RelativeLayout
             android:id="@+id/btn_container_conversation"
             android:layout_width="0dp"
-
             android:layout_height="match_parent"
             android:layout_weight="1">
-
             <Button
                 android:stateListAnimator="@null"
                 android:id="@+id/btn_conversation"
@@ -44,8 +42,6 @@
                 android:background="@color/white"
                 android:drawableTop="@drawable/fx_tab_chat_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
                 android:text="VO"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp"
@@ -80,8 +76,7 @@
                 android:background="@color/white"
                 android:drawableTop="@drawable/fx_tab_contact_list_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
+
                 android:scaleType="matrix"
                 android:text="@string/AddressBook"
                 android:textColor="@color/em_main_botton_text_color"
@@ -106,9 +101,6 @@
             android:layout_weight="1"
             android:visibility="invisible"
             >
-
-
-
         </RelativeLayout>
         <!--发现-->
         <RelativeLayout
@@ -124,8 +116,7 @@
                 android:background="@color/white"
                 android:drawableTop="@drawable/fx_tab_find_bg"
                 android:onClick="onTabClicked"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
+
                 android:scaleType="matrix"
                 android:text="@string/find"
                 android:textColor="@color/em_main_botton_text_color"
@@ -162,6 +153,7 @@
                 android:textSize="12sp" />
         </RelativeLayout>
     </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/noclick"
         android:layout_width="match_parent"
@@ -234,31 +226,28 @@
         android:id="@+id/show_incircle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="@dimen/x58"
-        android:layout_height="@dimen/x58"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
         android:background="@drawable/circle_white"
         android:layout_marginBottom="@dimen/x7"/>
-
-
     <RelativeLayout
-
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="@dimen/x58"
-        android:layout_height="@dimen/x58"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
         android:background="@drawable/circle_white"
         android:layout_marginBottom="@dimen/x7"
         >
         <RelativeLayout
             android:id="@+id/re_plus"
-            android:layout_width="@dimen/x48"
-            android:layout_height="@dimen/x48"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
             android:background="@drawable/circle"
             android:layout_centerInParent="true"
             >
                 <ImageView
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@mipmap/plus"
                     android:layout_centerInParent="true"
                     />
@@ -271,13 +260,11 @@
                 android:background="@drawable/circle_white_stoke5"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@mipmap/close_main"
                     android:layout_centerInParent="true"
                     />
-
-
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
