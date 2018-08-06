@@ -47,9 +47,7 @@ public class LifeNoteSetDialog extends Dialog {
         ll_fixPwd= findViewById(R.id.lifenote_fixPWD);
         ll_cancelPwd= findViewById(R.id.lifenote_cancelPWD);
         ll_findPwd= findViewById(R.id.lifenote_findPWD);
-
     }
-
     @Override
     public void show() {
         super.show();

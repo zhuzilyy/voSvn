@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x30"
+        android:paddingBottom="@dimen/x10"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,8 +51,8 @@
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@drawable/line_dash"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:layerType="software"
@@ -60,7 +60,7 @@
             <LinearLayout
                 android:layout_marginTop="@dimen/x15"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x75"
+                android:layout_height="@dimen/x65"
                 android:orientation="horizontal"
                 >
                 <LinearLayout
@@ -71,9 +71,9 @@
                     android:gravity="center"
                     android:layout_height="match_parent">
                     <ImageView
-                        android:layout_width="@dimen/x30"
-                        android:layout_height="@dimen/x30"
-                        android:src="@mipmap/setpwd_lifenote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/lifenote_setpwd"
                         />
                     <TextView
                         android:gravity="center"
@@ -87,13 +87,13 @@
                     <View
                         android:layout_marginTop="@dimen/x15"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/x1"
+                        android:layout_height="0.5dp"
                         android:background="@color/gray"
                         android:layout_marginLeft="@dimen/x15"
                         />
                 </LinearLayout>
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="0.5dp"
                     android:layout_height="match_parent"
                     android:background="@color/gray"/>
                 <LinearLayout
@@ -106,7 +106,7 @@
                     <ImageView
                         android:layout_width="@dimen/x30"
                         android:layout_height="@dimen/x30"
-                        android:src="@mipmap/fixpwd_lifenote"
+                        android:src="@mipmap/lifenote_changepwd_"
                         />
 
                     <TextView
@@ -130,7 +130,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x75"
+                android:layout_height="@dimen/x65"
                 android:orientation="horizontal"
                 >
                 <LinearLayout
@@ -141,9 +141,9 @@
                     android:gravity="center"
                     android:layout_height="match_parent">
                     <ImageView
-                        android:layout_width="@dimen/x30"
-                        android:layout_height="@dimen/x30"
-                        android:src="@mipmap/cancelpwd_lifenote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/lifenote_canclepwd"
                         />
                     <TextView
                         android:gravity="center"
@@ -156,7 +156,7 @@
                         />
                 </LinearLayout>
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="0.5dp"
                     android:layout_height="match_parent"
                     android:background="@color/gray"/>
                 <LinearLayout
@@ -167,9 +167,9 @@
                     android:gravity="center"
                     android:layout_height="match_parent">
                     <ImageView
-                        android:layout_width="@dimen/x30"
-                        android:layout_height="@dimen/x30"
-                        android:src="@mipmap/getbackpwd_lifenote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/lifenote_findpwd"
                         />
                     <TextView
                         android:gravity="center"
@@ -179,11 +179,9 @@
                         android:text="找回密码"
                         android:textSize="14sp"
                         android:textColor="@color/blue02version"
-
                         />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>

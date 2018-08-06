@@ -48,8 +48,8 @@
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@drawable/line_dash"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:layerType="software"
@@ -80,7 +80,6 @@
                 android:layout_marginTop="@dimen/x10"
                 android:textSize="14sp"
                 />
-
         </LinearLayout>
 
     </RelativeLayout>
