@@ -7,7 +7,7 @@
     >
     <LinearLayout
         android:id="@+id/pop_group_ll"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_weight="1"
         android:layout_height="0dp"
         android:gravity="center_vertical"
@@ -15,10 +15,9 @@
         android:layout_marginTop="15dp"
         >
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="22dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/group_v" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/list_group" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,17 +34,16 @@
         android:background="#999999"/>
     <LinearLayout
         android:id="@+id/pop_addfriend_ll"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_weight="1"
         android:layout_height="0dp"
         android:gravity="center_vertical"
         android:layout_marginLeft="23dp"
         >
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="23dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/addfriend_v" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/list_add_friend" />
         <TextView
             android:id="@+id/collection_tv"
             android:layout_width="match_parent"
@@ -62,7 +60,7 @@
         android:background="#999999"/>
     <LinearLayout
         android:id="@+id/pop_scan_ll"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_weight="1"
         android:layout_height="0dp"
         android:gravity="center_vertical"
@@ -70,10 +68,9 @@
         android:layout_marginBottom="5dp"
         >
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/scan_v" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/list_fick" />
         <TextView
             android:id="@+id/report_tv"
             android:layout_width="match_parent"
@@ -90,7 +87,7 @@
         android:background="#999999"/>
     <LinearLayout
         android:id="@+id/pop_helpback_ll"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_weight="1"
         android:layout_height="0dp"
         android:gravity="center_vertical"
@@ -98,10 +95,9 @@
         android:layout_marginBottom="5dp"
         >
         <ImageView
-            android:layout_width="18dp"
-            android:layout_height="20dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/feedback_v" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/list_help"/>
         <TextView
             android:id="@+id/report_"
             android:layout_width="match_parent"

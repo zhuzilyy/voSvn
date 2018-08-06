@@ -286,7 +286,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                     showVip();
                 } else {
                     rl_lifeNote.setVisibility(View.VISIBLE);
-
                    /* boolean firstLifeNote = (boolean) SPUtils.get(getActivity(), "firstLifeNote", true);
                     if (firstLifeNote){
                         rl_lifeNote.setVisibility(View.VISIBLE);

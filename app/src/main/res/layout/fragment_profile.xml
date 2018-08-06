@@ -48,6 +48,7 @@
                 android:background="@color/white">
 
                 <TextView
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -60,24 +61,22 @@
 
                 <ImageView
                     android:id="@+id/iv_add"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="15dp"
                     android:clickable="true"
                     android:src="@mipmap/more_" />
-
                 <ImageView
                     android:id="@+id/iv_search"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="15dp"
                     android:layout_toLeftOf="@id/iv_add"
                     android:clickable="true"
                     android:src="@mipmap/fdj_" />
-
             </RelativeLayout>
             <!--头像-->
             <android.support.v7.widget.CardView
