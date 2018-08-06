@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:onClick="back"
             android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
+            android:paddingLeft="10dp"
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:scaleType="centerInside"
@@ -113,12 +113,12 @@
 
             <ImageView
                 android:id="@+id/iv_game"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="12dp"
-                android:src="@mipmap/about_vo_icon" />
+                android:src="@mipmap/vo_introduce" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -183,13 +183,13 @@
 
             <ImageView
                 android:id="@+id/iv_update"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="12dp"
                 android:visibility="visible"
-                android:src="@mipmap/checknewversion_icon" />
+                android:src="@mipmap/vo_inspect" />
 
             <TextView
                 android:layout_width="wrap_content"

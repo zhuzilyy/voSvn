@@ -20,7 +20,6 @@ import butterknife.OnClick;
  */
 
 public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickListener{
-    private int aaaa=100;
     @BindView(R.id.re_function)
     public RelativeLayout re_function;
     @BindView(R.id.re_Complaints)
