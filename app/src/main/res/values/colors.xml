@@ -22,6 +22,7 @@
     <color name="red">#ff00</color>
     <color name="light_gray2">#c2c2c2</color>
     <color name="light_gray4">#dedede</color>
+    <color name="common_line">#e5e5e5</color>
     <color name="light_gray5">#ececec</color>
     <color name="light_gray3">#f4f4f4</color>
     <color name="color_f6">#f6f6f6</color>
