@@ -118,6 +118,8 @@ public class Url {
     public static String GetNewVOVewsionAPKUrl=mURL+"apk_info";
     //功能介绍
     public static String FunctionIntroduceUrl=mURL+"page_list";
+ //用户协议
+ public static String UserAgreementUrl=mURL+"webview?id=3";
 
     //************************************************
     //设置人生笔记密码

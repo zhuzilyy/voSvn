@@ -4,8 +4,8 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#4162ff</item>
-        <item name="colorAccent">@color/vip_btn_bg_n</item>
+        <item name="colorPrimaryDark">#5544aa</item>
+        <item name="colorAccent">#5544aa</item><!--光标的颜色-->
         <!--按钮选中或者点击获得焦点后的颜色-->
 
 

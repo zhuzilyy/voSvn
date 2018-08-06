@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="common_top_bar_blue">#4162ff</color>
+    <color name="common_top_bar_blue">#5544aa</color>
     <color name="btn_login_normal">#00acff</color>
     <color name="btn_login_pressed">#46678d</color>
     <color name="btn_logout_normal">#d33f3f</color>
@@ -26,7 +26,7 @@
     <color name="btn_gray_pressed_status">#b5b5b6</color>
     <color name="btn_gray_pressed">#666667</color>
     <color name="btn_blue_normal">#1e90ff</color>
-    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="btn_blue_pressed">#5544aa</color>
     <color name="orange">#ff9a41</color>
     <color name="orange2">#ffaf30</color>
     <color name="vip_btn_bg_n">#e3b34f</color>

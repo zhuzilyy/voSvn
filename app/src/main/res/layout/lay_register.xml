@@ -339,7 +339,7 @@
                 android:layout_height="wrap_content"
                 android:text="用户协议"
 
-                android:textColor="@color/btn_blue_pressed"
+                android:textColor="@color/blue02version"
                 android:textSize="@dimen/x12"
                 />
         </LinearLayout>

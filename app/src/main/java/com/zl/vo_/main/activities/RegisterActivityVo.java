@@ -82,7 +82,7 @@ public class RegisterActivityVo extends VoBaseActivity implements View.OnClickLi
             case R.id.ll_Protocol:
                 Intent intent=new Intent(RegisterActivityVo.this,Help_Feedback.class);
                 intent.putExtra("title","用户协议");
-                intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/webview?id=3");
+                intent.putExtra("url",Url.UserAgreementUrl);
                 startActivity(intent);
                 break;
             default:

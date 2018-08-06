@@ -10,14 +10,14 @@
     <color name="ssxinzi7">@color/ssxinbaise4</color>
     <color name="ssxinzi8">@color/ssxinbaise4</color>
 
-    <color name="mmblue">#1296db</color>
+    <color name="mmblue">#5544aa</color>
     <color name="partTranslucent">#39000000</color>
     <color name="yellow">#7fceb600</color>
     <color name="yellow2">#bf8d37</color>
     <color name="vipcolor">#e2b24f</color>
     <color name="white_alpha">#a5ffffff</color>
     <color name="gray">#99555555</color>
-    <color name="mmblue_deep">#00179b</color>
+    <color name="mmblue_deep">#5544aa</color>
     <color name="light_gray">#d6d6d6</color>
     <color name="red">#ff00</color>
     <color name="light_gray2">#c2c2c2</color>
@@ -29,15 +29,15 @@
     <color name="pink">#fdf1ff</color>
 
     //****************************
-    <color name="mian_top_bg_corlor">#342f97</color>
+    <color name="mian_top_bg_corlor">#5544aa</color>
     <color name="white">#ffffff</color>
     <color name="gray_white">#f7f7f7</color>
     <color name="invatationbgcolor">#ee098c00</color>
     <color name="alpha_white_5">#aaffffff</color>
     <color name="mmred">#a70e0e</color>
-    <color name="mmbule_n">#00d4ec</color>
+    <color name="mmbule_n">#5544aa</color>
     <color name="mmgreen_n">#669900</color>
-    <color name="mmbule_p">#01a3b6</color>
+    <color name="mmbule_p">#5544aa</color>
     <color name="mmgreen_p">#496e00</color>
     <color name="vip">#ffaf30</color>
     <color name="viptextcolor">#b46114</color>
