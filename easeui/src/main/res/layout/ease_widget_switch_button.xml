@@ -5,16 +5,16 @@
 
     <ImageView
         android:id="@+id/iv_switch_open"
-        android:layout_width="44dp"
-        android:layout_height="28dp"
-        android:background="@drawable/openversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/openversion"
         android:visibility="visible" />
 
     <ImageView
         android:id="@+id/iv_switch_close"
-        android:layout_width="44dp"
-        android:layout_height="28dp"
-        android:background="@drawable/closeversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/closeversion"
         android:visibility="invisible" />
 
 </FrameLayout>
