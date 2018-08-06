@@ -79,6 +79,10 @@
                     android:clickable="true"
                     android:src="@mipmap/fdj_" />
             </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_gray4" />
             <!--头像-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"

@@ -78,6 +78,7 @@
                 app:cardBackgroundColor="@color/white"
                 >
                 <RelativeLayout
+                    android:visibility="visible"
                     android:id="@+id/writeLifeNote_circle"
                     android:layout_margin="@dimen/x3"
                     android:layout_width="match_parent"
@@ -87,7 +88,7 @@
                     <ImageView
                         android:layout_width="@dimen/x40"
                         android:layout_height="@dimen/x40"
-                        android:src="@drawable/write_"
+                        android:src="@mipmap/yumao"
                         android:layout_centerInParent="true"
                         />
                 </RelativeLayout>

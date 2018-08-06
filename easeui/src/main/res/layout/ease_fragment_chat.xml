@@ -11,31 +11,24 @@
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        hyphenate:titleBarLeftImage="@drawable/back_" />
-
+        hyphenate:titleBarLeftImage="@mipmap/back_"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/input_menu"
         android:layout_below="@id/title_bar"
-
         >
         <ImageView
             android:scaleType="fitXY"
             android:id="@+id/chatBackground_iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             />
-
         <com.hyphenate.easeui.widget.EaseChatMessageList
             android:id="@+id/message_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
             />
-
         <com.hyphenate.easeui.widget.EaseVoiceRecorderView
             android:id="@+id/voice_recorder"
             android:layout_width="wrap_content"
@@ -49,6 +42,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
-
-
 </RelativeLayout>

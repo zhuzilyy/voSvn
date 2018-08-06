@@ -71,7 +71,7 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.em_row_add_group, parent, false);
 			}
-			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.mipmap.newgroup);
+			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.mipmap.build_group);
 			((TextView) convertView.findViewById(R.id.name)).setText(newGroup);
 		} else {
 			if (convertView == null) {

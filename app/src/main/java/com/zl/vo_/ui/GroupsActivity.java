@@ -114,9 +114,6 @@ public class GroupsActivity extends VoBaseActivity {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-				Log.i("YY","4456");
 				if (position == 0) {
 					// create a new group
 					//TODO 隐藏创建分组
