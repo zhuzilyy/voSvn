@@ -199,6 +199,7 @@
         />
     <!--隐藏好友弹出-->
     <ImageView
+
         android:id="@+id/hideFriend_img_menu"
         android:layout_width="@dimen/x12"
         android:layout_height="@dimen/x12"
