@@ -5,6 +5,7 @@
     android:background="@mipmap/bg_pw"
     android:orientation="vertical"
     >
+
     <LinearLayout
         android:id="@+id/pop_group_ll"
         android:layout_width="100dp"
