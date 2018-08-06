@@ -43,6 +43,8 @@
                 android:drawableTop="@drawable/fx_tab_chat_bg"
                 android:onClick="onTabClicked"
                 android:text="VO"
+
+                android:scaleType="matrix"
                 android:textColor="@color/em_main_botton_text_color"
                 android:textSize="12sp"
                 android:layout_alignParentTop="true"
@@ -116,7 +118,6 @@
                 android:background="@color/white"
                 android:drawableTop="@drawable/fx_tab_find_bg"
                 android:onClick="onTabClicked"
-
                 android:scaleType="matrix"
                 android:text="@string/find"
                 android:textColor="@color/em_main_botton_text_color"
