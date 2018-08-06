@@ -115,12 +115,12 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
                     @Override
                     public void onClick(View v) {
                         listener.onMyContactItemClick(position);
-                       /* Intent intent=new Intent(mContext, ChatActivity.class);
+                       /*Intent intent=new Intent(mContext, ChatActivity.class);
                         intent.putExtra("userId",mDatas.get(position).getHuanxinID());
                         intent.putExtra("account",mDatas.get(position).getAccount());
                         intent.putExtra("avatar", myUtils.readUser(mContext).getAvatar());
                         intent.putExtra("nick",myUtils.readUser(mContext).getNickname());
-                        mContext.startActivity(intent);*/
+                        mContext.startActivity( intent);*/
                         return;
                     }
                 });
