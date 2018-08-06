@@ -168,13 +168,12 @@
 
                         <ImageView
                             android:id="@+id/iv_shoucang"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="12dp"
                             android:src="@mipmap/publish_lifenote" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -185,13 +184,10 @@
                             android:textColor="#353535"
                             android:textSize="14sp" />
                     </RelativeLayout>
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:layout_marginLeft="@dimen/x12"
-                        android:layout_marginRight="@dimen/x12"
-                        android:background="@color/light_gray4" />
+                        android:background="@color/common_line" />
                     <!--系统设置-->
                     <RelativeLayout
                         android:id="@+id/re_settings"
@@ -203,8 +199,8 @@
 
                         <ImageView
                             android:id="@+id/iv_find_password"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="12dp"
@@ -219,18 +215,19 @@
                             android:text="设置"
                             android:textColor="#353535"
                             android:textSize="14sp" />
-
                     </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/common_line" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!--开通vo会员-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardElevation="0dp">
-
                 <RelativeLayout
                     android:id="@+id/re_createVOVIPAccount"
                     android:layout_width="match_parent"
@@ -238,7 +235,6 @@
                     android:background="@drawable/fx_btn_list_item_bg"
                     android:clickable="true"
                     android:paddingLeft="12dp">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -251,16 +247,14 @@
 
                     <ImageView
                         android:id="@+id/iv_xiangce"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
                         android:layout_marginStart="12dp"
                         android:src="@mipmap/vip" />
-
-
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
             <!--vo会员功能-->
@@ -277,33 +271,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/x12"
-                    android:layout_marginRight="@dimen/x12"
                     android:layout_marginTop="@dimen/x12"
                     app:cardCornerRadius="@dimen/x3"
                     app:cardElevation="0dp"
-
                     app:contentPaddingLeft="12dp">
                     <!--人生笔记密码设置-->
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
                         <ImageView
                             android:id="@+id/guid01"
                             android:layout_marginRight="15dp"
                             android:layout_centerVertical="true"
                             android:layout_alignParentRight="true"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:src="@mipmap/guide_icon"/>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="12dp"
+                            android:layout_marginLeft="20dp"
                             android:gravity="center_vertical"
                             android:text="人生笔记密码设置"
                             android:textColor="@color/black"
@@ -316,8 +305,8 @@
 
                         <ImageView
                             android:id="@+id/flag01"
-                            android:layout_width="@dimen/x23"
-                            android:layout_height="@dimen/x23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_lifelock"
                             android:layout_alignTop="@+id/guid01"
@@ -343,21 +332,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
                         <ImageView
                             android:id="@+id/flag02"
                             android:layout_centerVertical="true"
-                            android:layout_width="@dimen/x23"
-                            android:layout_height="@dimen/x23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_pracy" />
-
                         <TextView
                             android:layout_toRightOf="@+id/flag02"
                             android:layout_centerVertical="true"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="12dp"
                             android:gravity="center_vertical"
                             android:text="隐私好友设置"
                             android:id="@+id/textView16"
@@ -365,8 +351,8 @@
                             android:textSize="14sp" />
                         <ImageView
                             android:id="@+id/guid02"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:src="@mipmap/guide_icon"
                             android:layout_centerVertical="true"
                             android:layout_alignParentRight="true"
@@ -395,8 +381,8 @@
 
                         <ImageView
                             android:id="@+id/flag_03"
-                            android:layout_width="@dimen/x23"
-                            android:layout_height="@dimen/x23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_infopwd" />
@@ -422,8 +408,8 @@
                             android:layout_marginRight="@dimen/x10" />
                         <ImageView
                             android:id="@+id/guid03"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:src="@mipmap/guide_icon"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
@@ -453,15 +439,15 @@
                         <ImageView
                             android:id="@+id/flag04"
                             android:layout_centerVertical="true"
-                            android:layout_width="@dimen/x23"
-                            android:layout_height="@dimen/x23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_allclear" />
 
                         <ImageView
                             android:id="@+id/guid04"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:src="@mipmap/guide_icon"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"

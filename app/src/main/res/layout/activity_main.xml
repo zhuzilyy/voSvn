@@ -125,7 +125,7 @@
                 android:drawableTop="@drawable/fx_tab_find_bg"
                 android:onClick="onTabClicked"
                 android:paddingBottom="3dip"
-                android:paddingTop="3dip"
+                android:paddingTop="6dip"
                 android:scaleType="matrix"
                 android:text="@string/find"
                 android:textColor="@color/em_main_botton_text_color"

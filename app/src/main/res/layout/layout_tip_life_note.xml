@@ -2,21 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:clickable="true"
     android:visibility="gone"
+    android:background="#887d7d7d"
     android:id="@+id/rl_lifeNote"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
+        android:layout_centerInParent="true"
         android:clickable="true"
         android:scaleType="centerCrop"
         android:src="@mipmap/set_pwd"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <ImageView
-        android:id="@+id/iv_lifeNoteKnow"
-        android:layout_marginBottom="95dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/iv_lifeNoteKnow"
+        android:layout_marginRight="50dp"
         android:src="@mipmap/white_know"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
