@@ -5,13 +5,10 @@
     android:layout_height="wrap_content"
     android:background="@drawable/shape_corner"
     >
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x30"
-
-
+        android:paddingBottom="@dimen/x10"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,23 +42,21 @@
                         android:layout_width="@dimen/x20"
                         android:layout_height="@dimen/x20"
                         android:src="@mipmap/close3"
-
                         />
-
                 </RelativeLayout>
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@drawable/line_dash"
+                android:background="@color/gray"
+                android:layout_height="0.5dp"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:layerType="software"
                 />
             <LinearLayout
-                android:layout_marginTop="@dimen/x15"
+                android:layout_marginTop="@dimen/x10"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x75"
+                android:layout_height="@dimen/x65"
                 android:orientation="horizontal"
                 >
                 <LinearLayout
@@ -72,22 +67,22 @@
                     android:gravity="center"
                     android:layout_height="match_parent">
                     <ImageView
-                        android:layout_width="@dimen/x35"
-                        android:layout_height="@dimen/x35"
-                        android:src="@mipmap/setpwdfriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/private_friend"
                         />
                     <TextView
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="设置加密好友"
-                        android:textColor="#4162ff"
+                        android:textColor="@color/blue02version"
                         android:textSize="14sp"
                         android:layout_marginTop="@dimen/x8"
                         />
                 </LinearLayout>
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="0.5dp"
                     android:layout_height="match_parent"
                     android:background="@color/gray"/>
                 <LinearLayout
@@ -98,9 +93,9 @@
                     android:gravity="center"
                     android:layout_height="match_parent">
                     <ImageView
-                        android:layout_width="@dimen/x35"
-                        android:layout_height="@dimen/x35"
-                        android:src="@mipmap/fixpwdfriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/add_del_friend"
                         />
                     <TextView
                         android:gravity="center"
@@ -108,7 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="修改加密好友"
-                        android:textColor="#4162ff"
+                        android:textColor="@color/blue02version"
                         android:textSize="14sp"
 
                         />
@@ -129,10 +124,6 @@
                 />
 
         </LinearLayout>
-
-
-
-
     </RelativeLayout>
 
 </LinearLayout>
