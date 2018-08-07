@@ -17,6 +17,7 @@ import com.zl.vo_.main.Entity.LoginData;
 import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.utils.Url;
 
@@ -40,13 +41,13 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
     @BindView(R.id.btn_confirm)
     public Button btn_confirm;
     @BindView(R.id.et_pwd)
-    public MEditText et_pwd;
+    public ClearEditText et_pwd;
     @BindView(R.id.et_pwd_confirm)
-    public MEditText et_pwd_confirm;
+    public ClearEditText et_pwd_confirm;
     @BindView(R.id.et_mibao_question_answer)
-    public MEditText et_mibao_question_answer;
+    public ClearEditText et_mibao_question_answer;
     @BindView(R.id.et_mibao_question_answer_again)
-    public MEditText et_mibao_question_answer_again;
+    public ClearEditText et_mibao_question_answer_again;
     @BindView(R.id.loading_view)
     public RelativeLayout loading_view;
 

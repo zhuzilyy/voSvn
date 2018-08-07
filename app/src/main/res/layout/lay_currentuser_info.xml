@@ -2,15 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/gray_white"
     android:orientation="vertical" >
-
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:background="@color/white" >
-
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="40dp"
@@ -55,7 +53,6 @@
         android:id="@+id/re_avatar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/fx_btn_list_item_bg"
         android:clickable="true" >
 
@@ -77,21 +74,12 @@
             android:text="头像"
             android:textColor="#353535"
             android:textSize="16sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#dadada" />
     </RelativeLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/x10"
-        android:background="@color/light_gray5"
+        android:background="@color/gray_white"
         />
-
     <RelativeLayout
         android:id="@+id/re_name"
         android:layout_width="match_parent"
@@ -250,24 +238,5 @@
             android:text="@string/more"
             android:textColor="#353535"
             android:textSize="16sp" />
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#dadada" />
     </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x10"
-        android:background="@color/light_gray5"
-        />
-
-
-
-
-
 </LinearLayout>

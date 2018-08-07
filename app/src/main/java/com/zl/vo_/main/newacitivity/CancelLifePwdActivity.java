@@ -18,6 +18,7 @@ import com.zl.vo_.main.Entity.LoginData;
 import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.utils.Url;
 
@@ -37,7 +38,7 @@ public class CancelLifePwdActivity extends VoBaseActivity implements View.OnClic
     @BindView(R.id.tv_title) public TextView title;
     @BindView(R.id.loading_view) public RelativeLayout loading_view;
     @BindView(R.id.button2) public Button btn2;
-    @BindView(R.id.et_pwd_y) public MEditText et_pwd_y;
+    @BindView(R.id.et_pwd_y) public ClearEditText et_pwd_y;
 
     @Override
     protected void onCreate(Bundle arg0) {
@@ -55,7 +56,7 @@ public class CancelLifePwdActivity extends VoBaseActivity implements View.OnClic
             }
         });
 
-        title.setText("修改密码");
+        title.setText("取消密码");
 
     }
     @OnClick({R.id.button2})

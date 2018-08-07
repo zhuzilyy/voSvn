@@ -523,6 +523,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
         tv_setpwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.dismiss();
                 startActivity(new Intent(getActivity(), SettingLifePwdActivity.class));
             }
         });
@@ -602,13 +603,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             }
         });
         dialog.show();
-
-
     }
-
     private void confirmAgain() {
-
-
         final Dialog dialog = new Dialog(getActivity());
         View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_allclear3, null);
         dialog.setContentView(vv);

@@ -4,13 +4,11 @@
     android:layout_height="match_parent"
     android:background="@color/common_bg"
     android:orientation="vertical" >
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:background="@color/white"
         android:gravity="center_vertical" >
-
         <include layout="@layout/ease_commom_back_btn" />
 
         <TextView
@@ -35,16 +33,14 @@
             android:id="@+id/swipe_layout"
             android:layout_height="match_parent" 
             android:layout_width="match_parent">
-             
 		    <ListView
-
 		        android:id="@+id/list"
 		        android:layout_width="match_parent"
 		        android:layout_height="match_parent"
 		        android:background="@android:color/transparent"
 		        android:cacheColorHint="#00000000"
 		        android:descendantFocusability="afterDescendants"
-		        android:divider="#D4D4D4"
+		        android:divider="@color/common_line"
 		        android:dividerHeight="0.5dp"
 		        android:fastScrollAlwaysVisible="false"
 		        android:fastScrollEnabled="false" />

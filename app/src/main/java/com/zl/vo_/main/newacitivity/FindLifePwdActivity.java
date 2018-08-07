@@ -16,6 +16,7 @@ import com.zl.vo_.main.Entity.LoginData;
 import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.utils.Url;
 
@@ -34,7 +35,7 @@ public class FindLifePwdActivity extends VoBaseActivity implements View.OnClickL
     @BindView(R.id.iv_back) public ImageView back;
     @BindView(R.id.tv_title) public TextView title;
     @BindView(R.id.loading_view) public RelativeLayout loading_view;
-    @BindView(R.id.et_mibao_question_answer) public MEditText et_mibao_question_answer;
+    @BindView(R.id.et_mibao_question_answer) public ClearEditText et_mibao_question_answer;
     @BindView(R.id.button2) Button button2;
     @BindView(R.id.et_pwdnew) MEditText et_pwdnew;
     @BindView(R.id.et_pwd_confirm) MEditText et_pwd_confirm;

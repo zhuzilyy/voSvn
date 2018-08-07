@@ -19,6 +19,7 @@ import com.zl.vo_.main.Entity.MyPwdEntity;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.main.views.XTitleView;
 import com.zl.vo_.utils.Url;
@@ -38,9 +39,9 @@ public class SettingsPrivacyActivity3 extends VoBaseActivity {
     @BindView(R.id.iv_back)
     public ImageView title;
     @BindView(R.id.Met_privacy3_pwd)
-    public MEditText Met_privacy3_pwd;
+    public ClearEditText Met_privacy3_pwd;
     @BindView(R.id.Met_privacy3_againmpwd)
-    public MEditText Met_privacy3_againmpwd;
+    public ClearEditText Met_privacy3_againmpwd;
     @BindView(R.id.tv_privacy3_submit)
     public TextView tv_privacy3_submit;
     @BindView(R.id.loading_view)

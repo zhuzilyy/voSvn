@@ -3,30 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/white"
     android:orientation="vertical">
-
     <include layout="@layout/layout_title" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/ll_title"
         android:orientation="vertical">
-
+    <!--密保问题-->
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/x15"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp">
+        <View
+            android:background="@color/blue02version"
+            android:layout_width="5dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请回答密保问题"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/x15"
-                android:layout_marginTop="@dimen/x10"
-                android:text="请回答密保问题"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,8 +52,8 @@
                 android:layout_marginTop="@dimen/x15"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
-
                 <TextView
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -52,28 +62,28 @@
                     android:text="输入答案"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
-
-                <com.zl.vo_.main.views.MEditText
+                <com.zl.vo_.main.views.ClearEditText
                     android:id="@+id/et_mibao_question_answer"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/x25"
-                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_height="@dimen/x30"
                     android:layout_marginRight="@dimen/x15"
                     android:layout_weight="3"
-                    android:background="@drawable/shape_stroke"
-                    android:paddingLeft="@dimen/x20"
-                    android:paddingRight="@dimen/x20"
-                    app:me_del_enable="true"
-                    app:me_eye_enable="true"
-                    app:me_hint=""
-                    app:me_hintColor="@color/black"
-                    app:me_inputType="normal"
-                    app:me_textColor="@color/black"
-                    app:me_textSize="@dimen/x5" />
-
-
+                    android:paddingLeft="@dimen/x15"
+                    android:paddingRight="@dimen/x15"
+                    android:inputType="textPassword"
+                    android:hint="请输入答案"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                  />
             </LinearLayout>
-
+            <View
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/common_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
@@ -84,7 +94,6 @@
                 android:background="@drawable/shape_corner_blue"
                 android:text="确定"
                 android:textColor="@color/white" />
-
             <LinearLayout
                 android:id="@+id/ll_part2"
                 android:visibility="gone"

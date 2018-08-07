@@ -194,8 +194,6 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
      * @param mobile
      */
     private void sendSMSwithLink(final String mobile) {
-
-
         final Dialog dialog=new Dialog(addFriendActivity_ContactsVo.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.lay_dia_sms);
