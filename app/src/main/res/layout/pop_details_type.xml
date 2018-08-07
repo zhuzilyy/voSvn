@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@mipmap/bg_pw"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="170dp"
     >
-
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/bg_pw"
+        android:layout_width="140dp"
+        android:layout_height="170dp" />
     <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="10dp"
         android:id="@+id/pop_group_ll"
-        android:layout_width="100dp"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="15dp"
         >
         <ImageView
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/list_group" />
@@ -25,8 +32,7 @@
             android:text="发起群聊"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginLeft="10dp"
             />
     </LinearLayout>
     <View
@@ -35,11 +41,10 @@
         android:background="#999999"/>
     <LinearLayout
         android:id="@+id/pop_addfriend_ll"
-        android:layout_width="100dp"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="10dp"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -52,8 +57,8 @@
             android:text="添加朋友"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginLeft="10dp"
+            />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -62,11 +67,9 @@
     <LinearLayout
         android:id="@+id/pop_scan_ll"
         android:layout_width="100dp"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="23dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -79,8 +82,8 @@
             android:text="扫一扫"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginLeft="10dp"
+            />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -88,12 +91,10 @@
         android:background="#999999"/>
     <LinearLayout
         android:id="@+id/pop_helpback_ll"
-        android:layout_width="100dp"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="23dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
         >
         <ImageView
             android:layout_width="wrap_content"
@@ -106,7 +107,8 @@
             android:text="帮助与反馈"
             android:textColor="#000000"
             android:textSize="14sp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginLeft="10dp"
+           />
     </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

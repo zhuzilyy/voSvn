@@ -61,12 +61,11 @@ public class DetailsTypePopupWindow extends PopupWindow implements
             collectionTv = (TextView) rootView.findViewById(R.id.collection_tv);
 
         }
-
         //当你发现有背景色时，需给布局文件设置背景色，这样即可覆盖系统自带的背景色。
         mPop.setBackgroundDrawable(new BitmapDrawable());
         mPop.setOutsideTouchable(true);
         mPop.setFocusable(true);
-        mPop.showAsDropDown(mView,10, DensityUtils.dp2px(mActivity, -10));
+        mPop.showAsDropDown(mView,0, DensityUtils.dp2px(mActivity, -10));
     }
     /**
      *
