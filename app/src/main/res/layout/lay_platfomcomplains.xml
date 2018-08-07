@@ -75,7 +75,7 @@
             android:id="@+id/et_complain"
             android:layout_width="match_parent"
             android:layout_height="@dimen/x150"
-            android:hint="请输入您的投诉内容"
+            android:hint="请输入您的反馈内容"
             android:gravity="top"
             android:padding="@dimen/x6"
             android:textSize="14sp"

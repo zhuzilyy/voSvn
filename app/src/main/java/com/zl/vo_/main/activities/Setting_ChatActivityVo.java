@@ -1,5 +1,6 @@
 package com.zl.vo_.main.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -7,10 +8,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dou361.dialogui.DialogUIUtils;
@@ -102,7 +105,8 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
             break;
         case R.id.clearAllmsg_re:
             //清空所有聊天记录
-            clearMsg_re.setVisibility(View.VISIBLE);
+          //  clearMsg_re.setVisibility(View.VISIBLE);
+            clearAllMsg();
 
             break;
         case R.id.clearMsg_re:
@@ -120,6 +124,33 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
         default:
             break;
     }
+    }
+
+    /***
+     * 清空所有消息
+     */
+    private void clearAllMsg() {
+
+        final Dialog dialog = new Dialog(Setting_ChatActivityVo.this);
+        View vv = LayoutInflater.from(Setting_ChatActivityVo.this).inflate(R.layout.lay_clearallmsg, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearAllmsg();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
     }
 
     /***

@@ -103,7 +103,7 @@
         android:layout_alignParentStart="true">
         <!--功能介绍-->
         <RelativeLayout
-            android:id="@+id/re_function"
+            android:id="@+id/re_vointroduce"
             android:layout_width="match_parent"
             android:layout_height="48dp"
 

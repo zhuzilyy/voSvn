@@ -21,6 +21,7 @@ import com.zl.vo_.main.activities.addFriendActivity_SearchVo;
 import com.zl.vo_.main.views.DetailsTypePopupWindow;
 import com.zl.vo_.ui.GroupsActivity;
 import com.zl.vo_.ui.ScanCaptureActivity;
+import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.FXPopWindow;
 
 import butterknife.BindView;
@@ -90,7 +91,12 @@ public class Main_FragmentFind extends Fragment implements View.OnClickListener 
                                 break;
                             //帮助及反馈
                             case 3:
-                                startActivity(new Intent(getActivity(),Help_Feedback.class));
+                                Intent intent=new Intent(getActivity(),Help_Feedback.class);
+                                intent.putExtra("url", Url.FunctionIntroduceUrl);
+                                intent.putExtra("param","15");
+                                intent.putExtra("title","功能介绍");
+                                startActivity(intent);
+
                                 break;
                         }
                     }

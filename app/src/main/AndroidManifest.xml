@@ -140,6 +140,9 @@
                     />
             </intent-filter>
         </activity>
+        <!--选择联系人-->
+        <activity android:name=".ui.PickAtUserActivity"
+            android:screenOrientation="portrait"/>
         <!--保活开始-->
         <activity android:name=".alive_app.SinglePixelActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
