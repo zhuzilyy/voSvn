@@ -41,14 +41,12 @@ public class ClearEditText extends EditText implements OnFocusChangeListener, Te
      *
      * 删除按钮的引用
      */
-
     private Drawable mClearDrawable;
 
     /**
      *
      * 控件是否有焦点
      */
-
     private boolean hasFoucs;
 
     public ClearEditText(Context context) {
@@ -56,7 +54,6 @@ public class ClearEditText extends EditText implements OnFocusChangeListener, Te
         this(context, null);
 
     }
-
     public ClearEditText(Context context, AttributeSet attrs) {
 
         // 这里构造方法也很重要，不加这个很多属性不能再XML里面定义
@@ -66,33 +63,22 @@ public class ClearEditText extends EditText implements OnFocusChangeListener, Te
     }
 
     public ClearEditText(Context context, AttributeSet attrs, int defStyle) {
-
         super(context, attrs, defStyle);
-
         init();
 
     }
-
     private void init() {
-
         // 获取EditText的DrawableRight,假如没有设置我们就使用默认的图片
-
         mClearDrawable = getCompoundDrawables()[2];
-
         if (mClearDrawable == null) {
-
             // throw new
             // NullPointerException("You can add drawableRight attribute in XML");
-
           //  mClearDrawable = getResources().getDrawable(R.mipmap.img_login_selected_deleted);
             mClearDrawable = getResources().getDrawable(R.mipmap.delete2);
         }
-
         mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(),
                 mClearDrawable.getIntrinsicHeight());
-
         // 默认设置隐藏图标
-
         setClearIconVisible(false);
 
         // 设置焦点改变的监听
@@ -201,18 +187,15 @@ public class ClearEditText extends EditText implements OnFocusChangeListener, Te
     public void afterTextChanged(Editable s) {
 
     }
-
     /**
      *
      * 设置晃动动画
      */
-
     public void setShakeAnimation() {
 
         this.setAnimation(shakeAnimation(5));
 
     }
-
     /**
      *
      * 晃动动画

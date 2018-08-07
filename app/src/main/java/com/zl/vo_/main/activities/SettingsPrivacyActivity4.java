@@ -15,6 +15,7 @@ import com.zl.vo_.main.Entity.CheckPwdEntivity;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.main.views.XTitleView;
 import com.zl.vo_.utils.Url;
@@ -35,7 +36,7 @@ public class SettingsPrivacyActivity4 extends VoBaseActivity implements View.OnC
     @BindView(R.id.title)
     public RelativeLayout title;
     @BindView(R.id.privacy4_pwd)
-    public MEditText privacy4_pwd;
+    public ClearEditText privacy4_pwd;
     @BindView(R.id.privacy4_submit)
     public TextView privacy4_submit;
     @BindView(R.id.loading_view)

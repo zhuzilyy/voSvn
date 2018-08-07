@@ -42,7 +42,6 @@
                         android:layout_width="@dimen/x20"
                         android:layout_height="@dimen/x20"
                         android:src="@mipmap/close3"
-
                         android:layout_centerVertical="true"
                         android:layout_centerHorizontal="true"
                         android:id="@+id/imageView2" />
@@ -128,6 +127,15 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginRight="@dimen/x25"
+                android:layerType="software"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x65"

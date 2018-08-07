@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:layout_height="match_parent">
     <include layout="@layout/layout_title"/>
     <LinearLayout
@@ -16,6 +20,7 @@
         android:orientation="horizontal"
         android:layout_height="@dimen/x40">
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/x15"
@@ -25,28 +30,25 @@
             android:layout_centerVertical="true"
             android:textColor="@color/black"
             />
-        <com.zl.vo_.main.views.MEditText
+        <com.zl.vo_.main.views.ClearEditText
             android:id="@+id/et_pwd_y"
             android:layout_width="0dp"
             android:layout_height="@dimen/x45"
             android:layout_weight="3"
-            android:paddingLeft="@dimen/x20"
-            android:paddingRight="@dimen/x20"
-            app:me_del_enable="true"
-            app:me_eye_enable="true"
-            app:me_hint=""
-            app:me_hintColor="@color/black"
-            app:me_inputType="password"
-            app:me_textColor="@color/black"
-            app:me_textSize="@dimen/x5"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:inputType="textPassword"
+            android:background="@null"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:hint="输入原密码"
+            android:textSize="14sp"
             />
-
-
     </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/gray"
+            android:background="@color/common_line"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             />

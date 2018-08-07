@@ -15,6 +15,7 @@ import com.zl.vo_.main.Entity.LoginData;
 import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.utils.Url;
 
@@ -32,9 +33,9 @@ import butterknife.OnClick;
 public class FixLifePwdActivity extends VoBaseActivity implements View.OnClickListener{
     @BindView(R.id.iv_back) public ImageView back;
     @BindView(R.id.tv_title) public TextView title;
-    @BindView(R.id.et_pwd) public MEditText et_pwd;
-    @BindView(R.id.et_pwdnew) public MEditText et_pwdnew;
-    @BindView(R.id.et_pwd_confirm) public MEditText et_pwd_confirm;
+    @BindView(R.id.et_pwd) public ClearEditText et_pwd;
+    @BindView(R.id.et_pwdnew) public ClearEditText et_pwdnew;
+    @BindView(R.id.et_pwd_confirm) public ClearEditText et_pwd_confirm;
     @BindView(R.id.button2) public Button btn_confirm;
     @BindView(R.id.loading_view) public RelativeLayout loading_view;
 
