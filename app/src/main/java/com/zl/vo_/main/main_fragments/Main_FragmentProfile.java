@@ -327,7 +327,12 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                                 break;
                             //帮助及反馈
                             case 3:
-                                startActivity(new Intent(getActivity(), Help_Feedback.class));
+                                Intent intent=new Intent(getActivity(),Help_Feedback.class);
+                                intent.putExtra("url", Url.FunctionIntroduceUrl);
+                                intent.putExtra("param","15");
+                                intent.putExtra("title","功能介绍");
+                                startActivity(intent);
+
                                 break;
                         }
                     }

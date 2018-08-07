@@ -195,8 +195,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     if (count == 1 && "@".equals(String.valueOf(s.charAt(start)))) {
-                        startActivityForResult(new Intent(getActivity(), PickAtUserActivity.class).
-                                putExtra("groupId",toChatUsername),REQUEST_CODE_SELECT_AT_USER);
+//                        startActivityForResult(new Intent(getActivity(), PickAtUserActivity.class).
+//                                putExtra("groupId",toChatUsername),REQUEST_CODE_SELECT_AT_USER);
                     }
                 }
                 @Override

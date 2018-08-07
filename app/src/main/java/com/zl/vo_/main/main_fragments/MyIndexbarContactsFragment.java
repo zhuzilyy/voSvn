@@ -34,6 +34,7 @@ import com.zl.vo_.main.Entity.FriendListEntity;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.activities.ChatActivity;
 import com.zl.vo_.main.activities.Help_Feedback;
+import com.zl.vo_.main.activities.Help_Feedback_front;
 import com.zl.vo_.main.activities.MyFrindEntivity;
 import com.zl.vo_.main.activities.addFriendActivity_ContactsVo;
 import com.zl.vo_.main.activities.addFriendActivity_SearchVo;
@@ -462,7 +463,12 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
                                 break;
                             //帮助及反馈
                             case 3:
-                                startActivity(new Intent(getActivity(),Help_Feedback.class));
+                                Intent intent=new Intent(getActivity(),Help_Feedback.class);
+                                intent.putExtra("url", Url.FunctionIntroduceUrl);
+                                intent.putExtra("param","15");
+                                intent.putExtra("title","功能介绍");
+                                startActivity(intent);
+
                                 break;
                         }
                     }

@@ -20,8 +20,8 @@ import butterknife.OnClick;
  */
 
 public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickListener{
-    @BindView(R.id.re_function)
-    public RelativeLayout re_function;
+    @BindView(R.id.re_vointroduce)
+    public RelativeLayout re_vointroduce;
     @BindView(R.id.re_Complaints)
     public RelativeLayout re_tousu;
     private UpdateAppManager manager;
@@ -37,15 +37,15 @@ public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickLis
     private void mInit() {
         manager=new UpdateAppManager(this);
     }
-    @OnClick({R.id.re_function,R.id.re_Complaints,R.id.re_update})
+    @OnClick({R.id.re_vointroduce,R.id.re_Complaints,R.id.re_update})
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.re_function:
+            case R.id.re_vointroduce:
                 Intent intent=new Intent(AboutVoActivityVo.this,Help_Feedback.class);
                 intent.putExtra("url", Url.FunctionIntroduceUrl);
                 intent.putExtra("param","15");
-                intent.putExtra("title","功能介绍");
+                intent.putExtra("title","VO介绍");
                 startActivity(intent);
                 break;
             case R.id.re_Complaints:
