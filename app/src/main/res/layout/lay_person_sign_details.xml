@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="@color/backgroundColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     >
     <!--title-->
     <RelativeLayout
@@ -20,7 +23,7 @@
             android:layout_centerVertical="true"
             android:onClick="back"
             android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:scaleType="centerInside"
@@ -49,7 +52,7 @@
         <TextView
             android:id="@+id/tv_submitsign"
             android:layout_width="48dp"
-            android:layout_height="32dp"
+            android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
@@ -68,14 +71,12 @@
         android:layout_height="wrap_content"
         android:minHeight="@dimen/x120"
         android:background="@drawable/bg_radiu03_color_white"
-        android:layout_marginLeft="@dimen/x12"
-        android:layout_marginRight="@dimen/x12"
         android:layout_marginTop="@dimen/x12"
         android:hint="我的个性签名"
         android:gravity="top"
         android:padding="@dimen/x5"
-        android:textSize="@dimen/x12"
-
+        android:textSize="13sp"
+        android:maxLines="10"
         />
     <RelativeLayout
         android:layout_below="@+id/title"

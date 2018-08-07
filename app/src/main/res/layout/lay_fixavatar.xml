@@ -42,7 +42,7 @@
         <TextView
             android:id="@+id/tv_save"
             android:layout_width="48dp"
-            android:layout_height="32dp"
+            android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
@@ -124,14 +124,6 @@
             android:text="头像"
             android:textColor="#353535"
             android:textSize="16sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:background="#dadada" />
     </RelativeLayout>
 
 

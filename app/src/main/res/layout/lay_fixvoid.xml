@@ -25,12 +25,12 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:onClick="back"
+            android:layout_marginLeft="10dp"
             android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:scaleType="centerInside"
-            android:src="@drawable/back_" />
+            android:src="@mipmap/back_" />
 
         <View
             android:id="@+id/view_temp"
@@ -43,24 +43,24 @@
             android:background="#14191A" />
 
         <TextView
+            android:layout_centerInParent="true"
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/view_temp"
             android:text="更改VO账号"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_save"
             android:layout_width="48dp"
-            android:layout_height="28dp"
+            android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
-            android:background="@drawable/fx_bg_btn_green"
+            android:background="@drawable/shape_corner_blue"
             android:gravity="center"
             android:text="保存"
             android:textColor="#fff"
@@ -81,7 +81,6 @@
         android:minHeight="48dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/fx_bg_et"
         android:textColor="#353535"
         android:textSize="16sp" />
 
