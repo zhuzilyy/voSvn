@@ -58,7 +58,6 @@ public class setAliasActivityVo extends VoBaseActivity {
             public void onClick(View view) {
                 loading_view.setVisibility(View.VISIBLE);
                 String remrak=et_info.getText().toString().trim();
-
                 RequestParams params=new RequestParams(Url.UpdateRemarkUrl);
                 params.addParameter("userid",myUtils.readUser(setAliasActivityVo.this).getUserid());
                 params.addParameter("friend_userid",friendUserId_);
@@ -112,7 +111,6 @@ public class setAliasActivityVo extends VoBaseActivity {
         intent.putExtra("allas",friendInfo.getRemark());
         setResult(201,intent);
         sendBroadcast(new Intent("needRefresh"));
-
         finish();
 
 
