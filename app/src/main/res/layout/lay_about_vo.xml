@@ -14,13 +14,13 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="@dimen/x30"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:onClick="back"
             android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="15dp"
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:scaleType="centerInside"
@@ -33,7 +33,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/iv_back"
-            android:background="#14191A"
+            android:background="@color/common_line"
             android:visibility="gone"
             />
 
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_below="@+id/title"
-        android:background="@color/light_gray4"/>
+        android:background="@color/common_line"/>
 
     <LinearLayout
 
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="盖州市花生网络科技有限公司"
+            android:text="辽宁省花生网络科技有限公司"
             android:gravity="center"
             />
     </LinearLayout>
@@ -129,14 +129,11 @@
                 android:text="VO介绍"
                 android:textColor="#353535"
                 android:textSize="16sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="12dp"
-                android:background="#dadada" />
         </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/common_line" />
         <!--投诉-->
         <RelativeLayout
             android:visibility="gone"
@@ -167,10 +164,10 @@
                 android:textSize="16sp" />
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.1dp"
+                android:layout_height="0.5dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginRight="12dp"
-                android:background="#dadada" />
+                android:background="@color/common_line" />
         </RelativeLayout>
         <!--升级-->
         <RelativeLayout

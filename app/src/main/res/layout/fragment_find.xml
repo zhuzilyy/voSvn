@@ -49,7 +49,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray4" />
+        android:background="@color/common_line" />
     <!--帮助与反馈-->
     <RelativeLayout
         android:id="@+id/re_helpfeedback"
@@ -82,20 +82,10 @@
             android:layout_marginStart="12dp" />
     </RelativeLayout>
     <View
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray4" />
-
+        android:background="@color/common_line" />
     <!--关于vo-->
-    <View
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/light_gray4" />
-
     <RelativeLayout
         android:id="@+id/re_aboutVO"
         android:layout_width="match_parent"
@@ -147,11 +137,10 @@
         <!--android:layout_marginRight="12dp"-->
         <!--android:background="#dadada" />-->
     </RelativeLayout>
-
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/light_gray5"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line"
         />
     <!--扫一扫-->
     <RelativeLayout
@@ -190,8 +179,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:background="@color/light_gray4" />
     <!--游戏 gone-->
     <RelativeLayout

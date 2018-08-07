@@ -26,10 +26,9 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"
             android:visibility="gone"
             android:layout_toRightOf="@id/iv_back"
-            android:background="#14191A" />
+            android:background="@color/common_line" />
 
         <TextView
             android:id="@+id/web_title_"
@@ -60,7 +59,7 @@
         android:id="@+id/flag"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray5"
+        android:background="@color/common_line"
         />
     <RelativeLayout
         android:layout_below="@+id/flag"
@@ -96,11 +95,9 @@
     <View
         android:id="@+id/flag01"
         android:layout_below="@+id/re_function"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray4" />
+        android:background="@color/common_line" />
 
     <!--关于vo-->
     <RelativeLayout
