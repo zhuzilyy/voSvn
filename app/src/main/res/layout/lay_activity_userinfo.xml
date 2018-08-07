@@ -380,7 +380,7 @@
         android:layout_marginBottom="@dimen/x60"
         android:layout_gravity="bottom"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
     <!--添加到通讯录-->
     <Button
         android:visibility="gone"
@@ -399,7 +399,7 @@
         android:layout_marginBottom="@dimen/x42"
         android:layout_gravity="bottom"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
     <!--更多信息-->
     <LinearLayout
         android:visibility="gone"

@@ -22,7 +22,7 @@
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:scaleType="centerInside"
-            android:src="@drawable/back_" />
+            android:src="@mipmap/back_" />
 
         <View
             android:id="@+id/view_temp"
