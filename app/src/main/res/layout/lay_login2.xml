@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     >
 
 
@@ -39,7 +42,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:background="@color/white"
-        android:layout_height="@dimen/x45">
+        android:layout_height="46dp">
         <LinearLayout
             android:id="@+id/login2_back"
             android:layout_width="wrap_content"
@@ -47,10 +50,10 @@
             android:gravity="center_vertical"
             >
             <ImageView
-                android:layout_width="@dimen/x20"
-                android:layout_height="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@mipmap/back_"
-                android:layout_marginLeft="@dimen/x12"
                 />
             <TextView
                 android:textColor="@color/white"
@@ -62,7 +65,6 @@
                 android:visibility="gone"
                 />
 
-
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -71,129 +73,91 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/x16"
+            android:textSize="18sp"
             />
 
     </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x1"
-        android:background="@color/light_gray"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line"
         />
         <!--账号-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50"
-            android:layout_marginTop="@dimen/x30"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
                 android:inputType="number"
-                android:layout_marginLeft="15dp"
                 android:maxLength="11"
                 android:id="@+id/login_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="手机号/VO号"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
                 android:text=""
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
-                android:textSize="14sp"
-                />
-          <!--  <com.zl.vo_.main.views.MEditText
-                android:id="@+id/login_name"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                app:me_del_enable="true"
-                app:me_eye_enable="false"
-                app:me_hint="手机号/VO号"
-                app:me_hintColor="@color/black"
-                app:me_textColor="@color/black"
-                app:me_textSize="5sp"/>-->
+                android:textSize="14sp"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x1"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"/>
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_line"/>
         </LinearLayout>
 
         <!--密码-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50"
-            android:layout_marginTop="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:orientation="horizontal">
                 <com.zl.vo_.main.views.ClearEditText
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:inputType="textPassword"
                     android:singleLine="true"
-                    android:paddingRight="10dp"
                     android:id="@+id/login_pwd"
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:layout_height="45dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:password="true"
                     android:hint="请输入密码"
-                    android:paddingLeft="10dp"
                     android:text=""
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
                     android:textSize="14sp"
                     />
-
-    <!--            <com.zl.vo_.main.views.MEditText
-                    android:id="@+id/login_pwd"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_weight="3"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    app:me_del_enable="true"
-                    app:me_eye_enable="true"
-                    app:me_hint="密码"
-                    app:me_hintColor="@color/black"
-
-                    app:me_inputType="password"
-                    app:me_textColor="@color/black"
-                    app:me_textSize="5sp"
-
-                    />-->
-
-
             </LinearLayout>
-
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/light_gray"/>
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_line"/>
         </LinearLayout>
 
         <com.dd.CircularProgressButton
             android:id="@+id/login_submit"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             app:cpb_cornerRadius="3dp"
             app:cpb_iconComplete="@drawable/ic_action_accept"
             app:cpb_selectorIdle="@drawable/idle_state_selector"
@@ -224,14 +188,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:text="忘记密码?"
             android:textColor="@color/black"
             android:textSize="14sp" />
-
-
-
-
     </LinearLayout>
 
 </RelativeLayout>

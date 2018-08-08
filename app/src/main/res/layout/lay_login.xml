@@ -293,6 +293,8 @@
             </LinearLayout>
             <!--使用手机号注册-->
             <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
                 android:id="@+id/ll_phone_register"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -300,26 +302,21 @@
                 android:layout_marginBottom="@dimen/x10"
                 >
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="使用手机号注册>"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用手机号注册"
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-
                     />
-
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/white_right_arrow"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
             </LinearLayout>
-
-
-
-
         </LinearLayout>
-
-
-
-
-
     </LinearLayout>
 
     <!--///////////////////////////////////////////////////////-->

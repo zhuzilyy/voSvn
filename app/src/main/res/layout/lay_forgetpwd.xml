@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:background="@color/white"
-            android:layout_height="@dimen/x45">
+            android:layout_height="46dp">
             <LinearLayout
                 android:id="@+id/ll_back"
                 android:layout_width="wrap_content"
@@ -22,10 +22,10 @@
                 android:gravity="center_vertical"
                 >
                 <ImageView
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@mipmap/back_"
-                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginLeft="10dp"
                     />
                 <TextView
                     android:visibility="gone"
@@ -53,22 +53,21 @@
         </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x1"
-        android:background="@color/light_gray"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line"
         ></View>
 
     <!--账号-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x50"
-        android:layout_marginTop="@dimen/x30"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x45"
+            android:layout_height="35dp"
             android:orientation="horizontal"
             >
-
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
                 android:inputType="number"
@@ -118,17 +117,17 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x1"
+            android:layout_height="0.5dp"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"></View>
+            android:background="@color/common_line"/>
     </LinearLayout>
         <!--账号-->
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50"
+            android:layout_height="35dp"
             android:orientation="vertical">
-
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
                 android:inputType="number"
@@ -164,19 +163,18 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x1"
+                android:layout_height="0.5dp"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"></View>
+                android:background="@color/common_line"/>
         </LinearLayout>
 
     <!--密码-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x50"
-        android:layout_marginTop="@dimen/x10"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -188,7 +186,7 @@
                 android:maxLength="11"
                 android:id="@+id/forgetpwd_pwd"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="35dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@null"
@@ -224,23 +222,23 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x1"
+            android:layout_height="0.5dp"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"></View>
+            android:background="@color/common_line"/>
     </LinearLayout>
 
         <Button
             android:id="@+id/forgetpwd_submit"
-            android:layout_marginTop="@dimen/x25"
+            android:layout_marginTop="40dp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x45"
+            android:layout_height="40dp"
             android:text="确定"
-            android:textSize="@dimen/x16"
+            android:textSize="14sp"
             android:textColor="@color/white"
             android:background="@drawable/login_btn_selector2"
-            android:layout_marginLeft="@dimen/x15"
-            android:layout_marginRight="@dimen/x15"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             />
     </LinearLayout>
 
