@@ -139,8 +139,6 @@
                 android:orientation="horizontal">
                 <com.zl.vo_.main.views.ClearEditText
                     android:singleLine="true"
-                    android:inputType="number"
-                    android:maxLength="11"
                     android:paddingRight="10dp"
                     android:id="@+id/login_pwd"
                     android:layout_width="match_parent"

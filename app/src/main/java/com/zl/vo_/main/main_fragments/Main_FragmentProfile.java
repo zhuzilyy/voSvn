@@ -198,49 +198,26 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
      * 初始化时判断是否为vip,如果不是vip,某些条目显示成灰色
      */
     private void juageVip() {
+        flag01.setImageResource(R.mipmap.vo_lifelock);
+        flag02.setImageResource(R.mipmap.vo_pracy);
+        flag03.setImageResource(R.mipmap.vo_infopwd);
+        flag04.setImageResource(R.mipmap.vo_allclear);
+        textView14.setTextColor(getResources().getColor(R.color.black));
+        textView15.setTextColor(getResources().getColor(R.color.black));
+        textView16.setTextColor(getResources().getColor(R.color.black));
+        textView17.setTextColor(getResources().getColor(R.color.black));
+        card_SetLifeNote.setEnabled(true);
+        card_SetPricyPwd.setEnabled(true);
+        card_InfoTransform.setEnabled(true);
+        card_ClearAllFriend.setEnabled(true);
         LoginData.LoginInfo.LoginAccountInfo user = myUtils.readUser(getActivity());
         if (user != null) {
              vip = user.getVip();
             if ("0".equals(vip)) {
-                //非vip
-
-                flag01.setImageResource(R.mipmap.vo_lifelock_gray);
-                flag02.setImageResource(R.mipmap.vo_pracy_gray);
-                flag03.setImageResource(R.mipmap.vo_infopwd_gray);
-                flag04.setImageResource(R.mipmap.vo_allclear_gray);
-
-                textView14.setTextColor(getResources().getColor(R.color.gray));
-                textView15.setTextColor(getResources().getColor(R.color.gray));
-                textView16.setTextColor(getResources().getColor(R.color.gray));
-                textView17.setTextColor(getResources().getColor(R.color.gray));
-
-//                card_SetLifeNote.setEnabled(false);
-//                card_SetPricyPwd.setEnabled(false);
-//                card_InfoTransform.setEnabled(false);
-//                card_ClearAllFriend.setEnabled(false);
 
             } else if ("1".equals(vip)) {
                 //vip
                 switch_infopwd.setEnabled(true);
-                flag01.setImageResource(R.mipmap.vo_lifelock);
-                flag02.setImageResource(R.mipmap.vo_pracy);
-                flag03.setImageResource(R.mipmap.vo_infopwd);
-                flag04.setImageResource(R.mipmap.vo_allclear);
-
-                textView14.setTextColor(getResources().getColor(R.color.black));
-                textView15.setTextColor(getResources().getColor(R.color.black));
-                textView16.setTextColor(getResources().getColor(R.color.black));
-                textView17.setTextColor(getResources().getColor(R.color.black));
-
-                card_SetLifeNote.setEnabled(true);
-                card_SetPricyPwd.setEnabled(true);
-                card_InfoTransform.setEnabled(true);
-                card_ClearAllFriend.setEnabled(true);
-
-//                guide01.setVisibility(View.INVISIBLE);
-//                guide02.setVisibility(View.INVISIBLE);
-//                guide03.setVisibility(View.INVISIBLE);
-//                guide04.setVisibility(View.INVISIBLE);
 
             }
         }

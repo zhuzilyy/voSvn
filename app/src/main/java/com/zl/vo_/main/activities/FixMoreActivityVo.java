@@ -205,8 +205,6 @@ public class FixMoreActivityVo extends VoBaseActivity implements View.OnClickLis
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.re_sex:
-                //性别
-                //性别
                 //  Toast.makeText(this, "性别", Toast.LENGTH_SHORT).show();
                 List<String> string_sex = new ArrayList<>();
                 string_sex.add("男");
@@ -214,7 +212,6 @@ public class FixMoreActivityVo extends VoBaseActivity implements View.OnClickLis
                 DialogUIUtils.showBottomSheetAndCancel(FixMoreActivityVo.this, string_sex, "取消", new DialogUIItemListener() {
                     @Override
                     public void onItemClick(CharSequence text, int position) {
-
                         switch(position){
                             case 0:
                                 tv_sex.setText("男");

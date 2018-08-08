@@ -271,13 +271,64 @@
                 android:orientation="vertical"
                 android:paddingBottom="@dimen/x12"
                 android:visibility="visible">
+                <!--隐私好友设置-->
+                <android.support.v7.widget.CardView
+                    android:layout_marginTop="@dimen/x12"
+                    android:id="@+id/card_SetPricyPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardCornerRadius="@dimen/x3"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="22dp">
+
+                        <ImageView
+                            android:id="@+id/flag02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/vo_pracy" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/flag02"
+                            android:gravity="center_vertical"
+                            android:text="隐私好友设置"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/guid02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/guide_icon" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
                 <!--人生笔记密码设置-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/card_SetLifeNote"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginTop="@dimen/x12"
                     app:cardCornerRadius="@dimen/x3"
                     app:cardElevation="0dp">
                     <!--人生笔记密码设置-->
@@ -321,57 +372,6 @@
                             android:layout_alignTop="@+id/guid01"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_lifelock" />
-
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/common_line" />
-                <!--隐私好友设置-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/card_SetPricyPwd"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_vertical"
-                    app:cardCornerRadius="@dimen/x3"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingLeft="22dp">
-
-                        <ImageView
-                            android:id="@+id/flag02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center_vertical"
-                            android:src="@mipmap/vo_pracy" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="20dp"
-                            android:layout_toRightOf="@+id/flag02"
-                            android:gravity="center_vertical"
-                            android:text="隐私好友设置"
-                            android:textColor="@color/black"
-                            android:textSize="14sp" />
-
-                        <ImageView
-                            android:id="@+id/guid02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="15dp"
-                            android:src="@mipmap/guide_icon" />
 
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
