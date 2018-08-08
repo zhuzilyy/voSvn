@@ -11,13 +11,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingLeft="@dimen/x12">
+        >
 
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@mipmap/back_" />
         <View

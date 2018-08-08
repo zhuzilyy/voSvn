@@ -17,16 +17,11 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="@dimen/x30"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:onClick="back"
-            android:paddingBottom="5dp"
             android:layout_marginLeft="10dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
         <View
@@ -68,7 +63,7 @@
         android:id="@+id/sign_ed"
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:minHeight="@dimen/x120"
         android:background="@drawable/bg_radiu03_color_white"
         android:layout_marginTop="@dimen/x12"

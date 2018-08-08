@@ -300,7 +300,6 @@ public class FixMoreActivityVo extends VoBaseActivity implements View.OnClickLis
     }
 
     private void showPickerView() {// 弹出选择器
-
         OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int options1, int options2, int options3, View v) {

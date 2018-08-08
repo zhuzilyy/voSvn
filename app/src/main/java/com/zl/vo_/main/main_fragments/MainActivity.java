@@ -344,7 +344,6 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
                     main_messageFragment.unlockMain();
                 }
                 hideFunctionCircle();
-
             }
         });
         hideFriend_img_menu.setOnClickListener(new View.OnClickListener() {
@@ -355,7 +354,6 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
                     main_messageFragment.lockMain();
                 }
                 hideFunctionCircle();
-
             }
         });
 

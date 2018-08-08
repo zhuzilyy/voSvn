@@ -5,7 +5,7 @@
     android:background="@drawable/shape_corner"
     >
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
         >
@@ -17,7 +17,7 @@
             <!--title-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50">
+                android:layout_height="50dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

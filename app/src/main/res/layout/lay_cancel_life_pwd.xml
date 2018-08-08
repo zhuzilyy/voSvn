@@ -16,6 +16,7 @@
         >
     <!--输入原密码-->
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="@dimen/x40">
@@ -35,8 +36,8 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/x45"
             android:layout_weight="3"
-            android:paddingLeft="@dimen/x15"
-            android:paddingRight="@dimen/x15"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:inputType="textPassword"
             android:background="@null"
             android:textColorHint="@color/black"
@@ -54,14 +55,13 @@
             />
 
     <Button
-
-        android:layout_marginTop="@dimen/x35"
-        android:layout_marginRight="@dimen/x25"
-        android:layout_marginLeft="@dimen/x25"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:textColor="@color/white"
         android:background="@drawable/shape_corner_blue"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:text="确定"
         android:id="@+id/button2" />
 

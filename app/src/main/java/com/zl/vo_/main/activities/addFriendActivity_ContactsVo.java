@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.mcxtzhang.indexlib.IndexBar.widget.IndexBar;
 import com.mcxtzhang.indexlib.suspension.SuspensionDecoration;
+import com.superrtc.util.BitmapUtil;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
@@ -352,26 +353,15 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         mWxApi = WXAPIFactory.createWXAPI(addFriendActivity_ContactsVo.this, AppConst.APP_ID, false);
         // 将该app注册到微信
         mWxApi.registerApp(AppConst.APP_ID);
-//        WXTextObject textObj = new WXTextObject();
-//        //textObj.text = "http://www.baidu.com";
-//        WXWebpageObject webpage = new WXWebpageObject();
-//        // 用WXTextObject对象初始化一个WXMediaMessage对象
-//        WXMediaMessage msg = new WXMediaMessage();
-//        msg.mediaObject = textObj;
-//        // 发送文本类型的消息时，title字段不起作用
-//        msg.title = "Will be ignored";
-//        msg.description = "hfahfhashfd";
         WXWebpageObject webpage = new WXWebpageObject();
         webpage.webpageUrl = "http://www.baidu.com";
         WXMediaMessage msg = new WXMediaMessage(webpage);
-        msg.title ="人生知己,我在VO等你";
-        msg.description ="将手机摇一摇即可隐藏好友的聊天软件,聊天办公,高端人群都在用" ;
+        msg.title ="人生知己，我在VO等你！";
+        msg.description ="手机摇一摇即可隐藏好友,聊天办公,高端人群都在用" ;
         Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
-        Bitmap bitmap = WhiteBgBitmapUtil.drawableBitmapOnWhiteBg(this, bmp);
-        //Bitmap thumbBmp = Bitmap.createScaledBitmap(bitmap, 200, 200, true);
+        Bitmap bitmap = WhiteBgBitmapUtil.changeColor(bmp);
         msg.setThumbImage(bitmap);
-        bmp.recycle();
-
+        //bitmap.recycle();
         // 构造一个Req
         SendMessageToWX.Req req = new SendMessageToWX.Req();
         req.transaction = buildTransaction("text"); // transaction字段用于唯一标识一个请求
@@ -387,11 +377,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         // 调用api接口发送数据到微信
         mWxApi.sendReq(req);
     }
-
     public static String buildTransaction(final String type) {
         return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
     }
-
-
-
 }

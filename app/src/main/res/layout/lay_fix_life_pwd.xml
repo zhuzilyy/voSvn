@@ -18,7 +18,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="@dimen/x40">
+        android:layout_height="35dp">
         <TextView
             android:visibility="gone"
             android:layout_width="wrap_content"
@@ -31,6 +31,7 @@
             android:textColor="@color/black"
             />
         <com.zl.vo_.main.views.ClearEditText
+            android:singleLine="true"
             android:id="@+id/et_pwd"
             android:layout_width="0dp"
             android:layout_height="@dimen/x45"
@@ -55,9 +56,10 @@
             />
     <!--输入新密码-->
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="@dimen/x40">
+        android:layout_height="35dp">
         <TextView
             android:visibility="gone"
             android:layout_width="wrap_content"
@@ -70,6 +72,7 @@
             android:textColor="@color/black"
             />
         <com.zl.vo_.main.views.ClearEditText
+            android:singleLine="true"
             android:id="@+id/et_pwdnew"
             android:layout_width="0dp"
             android:layout_height="@dimen/x45"
@@ -94,9 +97,10 @@
             />
     <!--确认新密码-->
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="@dimen/x40">
+        android:layout_height="35dp">
         <TextView
             android:visibility="gone"
             android:layout_width="wrap_content"
@@ -109,6 +113,7 @@
             android:textColor="@color/black"
             />
         <com.zl.vo_.main.views.ClearEditText
+            android:singleLine="true"
             android:id="@+id/et_pwd_confirm"
             android:layout_width="0dp"
             android:layout_height="@dimen/x45"
@@ -131,14 +136,13 @@
             android:layout_marginRight="15dp"
             />
     <Button
-
-        android:layout_marginTop="@dimen/x35"
-        android:layout_marginRight="@dimen/x25"
-        android:layout_marginLeft="@dimen/x25"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:textColor="@color/white"
         android:background="@drawable/shape_corner_blue"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:text="确定"
         android:id="@+id/button2" />
 

@@ -7,7 +7,7 @@
     android:id="@+id/rl_lifeNote"
     >
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/x10"
         >
@@ -19,7 +19,7 @@
             <!--title-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50">
+                android:layout_height="50dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -57,9 +57,9 @@
                 android:layerType="software"
                 />
             <LinearLayout
-                android:layout_marginTop="@dimen/x15"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x65"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 >
                 <LinearLayout
@@ -116,9 +116,9 @@
                         android:text="修改密码"
                         android:textSize="14sp"
                         android:textColor="@color/blue02version"
-
                         android:id="@+id/textView11" />
                     <View
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/x1"
                         android:background="@color/gray"
@@ -138,7 +138,7 @@
                 />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x65"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
                 >
                 <LinearLayout

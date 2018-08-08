@@ -13,13 +13,11 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:onClick="back"
             android:layout_marginLeft="10dp"
-            android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
         <View
@@ -74,7 +72,7 @@
             android:background="@drawable/bg_feedback"
             android:id="@+id/et_complain"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x150"
+            android:layout_height="180dp"
             android:hint="请输入您的反馈内容"
             android:gravity="top"
             android:padding="@dimen/x6"
@@ -84,14 +82,14 @@
         <Button
             android:id="@+id/btn_complain"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x40"
-            android:layout_marginRight="@dimen/x12"
-            android:layout_marginLeft="@dimen/x12"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:gravity="center"
             android:text="提交"
             android:textSize="14sp"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/x15"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_corner_blue"
             />
 
