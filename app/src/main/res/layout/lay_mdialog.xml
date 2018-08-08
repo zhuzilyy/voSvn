@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
         <!--title-->
         <RelativeLayout
-
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50">
+            android:layout_height="50dp">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="清空聊天记录"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
                 />
             <RelativeLayout
                 android:id="@+id/re_cancel"
@@ -45,8 +44,8 @@
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@drawable/line_dash"
+            android:layout_height="0.5dp"
+            android:background="@color/common_line"
             android:layout_marginLeft="@dimen/x15"
             android:layout_marginRight="@dimen/x15"
             android:layerType="software"
@@ -54,8 +53,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/x12"
-            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
             android:text="确认要清空聊天记录"
             android:gravity="center_vertical"
             android:paddingLeft="16sp"
@@ -70,8 +69,7 @@
             android:paddingLeft="@dimen/x10"
             android:paddingRight="@dimen/x10"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x45">
-
+            android:layout_height="wrap_content">
             <View
                 android:layout_width="@dimen/x1"
                 android:layout_height="match_parent"
@@ -86,9 +84,7 @@
                 android:text="确定"
                 android:gravity="center"
                 />
-
         </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>

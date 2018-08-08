@@ -97,13 +97,13 @@ public class Setting_DonotDisturbModeActivityVo extends VoBaseActivity implement
                     starttime.setVisibility(View.GONE);
                     endtiem.setVisibility(View.GONE);
                     settingsModel.setIsDisturb(false);
-                    Toast.makeText(this, "关", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "关", Toast.LENGTH_SHORT).show();
                 } else {
                     switch_disrupt.openSwitch();
                     starttime.setVisibility(View.VISIBLE);
                     endtiem.setVisibility(View.VISIBLE);
                     settingsModel.setIsDisturb(true);
-                    Toast.makeText(this, "开", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "开", Toast.LENGTH_SHORT).show();
 
                 }
                 break;
