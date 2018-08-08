@@ -99,6 +99,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
                 });
                 break;
             case 2:
+            //    holder.line.setVisibility(View.GONE);
                 holder.avatar.setImageResource(R.mipmap.groupchat);
                 //群聊
                 holder.content.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +112,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
 
             default:
                 Glide.with(mContext).load(friend.getAvatar()).into(holder.avatar);
+                holder.line.setVisibility(View.GONE);
                 holder.content.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -151,6 +153,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
         de.hdodenhof.circleimageview.CircleImageView avatar;
         View content;
         RelativeLayout newmsg_icon;
+        View line;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -158,6 +161,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
             avatar = (de.hdodenhof.circleimageview.CircleImageView) itemView.findViewById(R.id.ivAvatar);
             content = itemView.findViewById(R.id.content);
             newmsg_icon=itemView.findViewById(R.id.newmsg_icon);
+            line = itemView.findViewById(R.id.line);
         }
     }
 }

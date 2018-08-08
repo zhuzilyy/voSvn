@@ -14,7 +14,6 @@
         android:background="@color/white">
 
         <TextView
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -23,7 +22,8 @@
             android:text="VO"
             android:textColor="@color/blue02version"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_add"
@@ -44,7 +44,6 @@
             android:layout_toLeftOf="@id/iv_add"
             android:clickable="true"
             android:src="@mipmap/fdj_" />
-
     </RelativeLayout>
 
     <View
@@ -60,20 +59,15 @@
         android:layout_below="@+id/flag"
         android:orientation="vertical">
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white">
-
-            </android.support.v7.widget.RecyclerView>
+                android:background="@android:color/white" />
 
             <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
                 android:id="@+id/indexBar"
@@ -103,9 +97,7 @@
                 android:onClick="updateDatas"
                 android:text="更新数据源"
                 android:visibility="gone" />
-
         </FrameLayout>
-
     </LinearLayout>
     <!--loading-->
     <RelativeLayout
@@ -123,10 +115,6 @@
             android:layout_centerInParent="true"
             android:visibility="visible"
             app:indicator="BallScaleMultiple"
-            app:indicator_color="@color/common_top_bar_blue"
-
-            />
-
+            app:indicator_color="@color/common_top_bar_blue" />
     </RelativeLayout>
-
 </RelativeLayout>
