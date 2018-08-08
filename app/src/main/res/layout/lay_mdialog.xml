@@ -20,21 +20,21 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginLeft="20dp"
                 />
             <RelativeLayout
                 android:id="@+id/re_cancel"
                 android:layout_width="35dp"
                 android:text="close"
-                android:layout_height="@dimen/x30"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/shape_corner3"
                 >
 
                 <ImageView
 
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@mipmap/close3"
 
                     android:layout_centerVertical="true"
@@ -60,7 +60,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="16sp"
             android:textColor="@color/black_deep"
-            android:textSize="18sp"
+            android:textSize="16sp"
             />
         <View
             android:layout_width="match_parent"
