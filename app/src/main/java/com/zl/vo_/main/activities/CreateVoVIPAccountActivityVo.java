@@ -175,7 +175,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         LoginData.LoginInfo.LoginAccountInfo user= myUtils.readUser(CreateVoVIPAccountActivityVo.this);
         if(user!=null){
             Glide.with(CreateVoVIPAccountActivityVo.this).load(user.getAvatar()).into(vip_head);
-            vip_name.setText(user.getNickname());
+            vip_name.setText(user.getNickname()+"(蓝钻会员)");
             if("1".equals(user.getVip())){
                 vip_state.setVisibility(View.VISIBLE);
             }else {

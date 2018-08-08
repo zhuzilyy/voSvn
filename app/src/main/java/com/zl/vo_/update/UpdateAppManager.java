@@ -2,6 +2,7 @@ package com.zl.vo_.update;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -20,11 +21,16 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dou361.dialogui.DialogUIUtils;
 import com.dou361.dialogui.listener.DialogUIListener;
+import com.zl.vo_.R;
 import com.zl.vo_.utils.Url;
 
 import org.json.JSONException;
@@ -160,12 +166,37 @@ public class UpdateAppManager extends Activity {
                     Log.e(TAG, "提示更新！");
                     showNoticeDialog();
                 } else {
-                    Log.e(TAG, "已是最新版本！");
+                    showNoUpdateDia();
                 }
             }
         }
 
         new mAsyncTask().execute(version_path);
+    }
+
+    /***
+     * 展示暂无更新
+     */
+    private void showNoUpdateDia() {
+        final Dialog dialog = new Dialog(context);
+        View vv = LayoutInflater.from(context).inflate(R.layout.lay_noupdate, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
 

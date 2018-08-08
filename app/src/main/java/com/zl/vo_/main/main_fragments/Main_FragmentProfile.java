@@ -245,14 +245,15 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-                    rl_setFriend.setVisibility(View.VISIBLE);
 
-                   /* boolean setFriend = (boolean) SPUtils.get(getActivity(), "setFriend", true);
+                   // rl_setFriend.setVisibility(View.VISIBLE);
+
+                    boolean setFriend = (boolean) SPUtils.get(getActivity(), "setFriend", true);
                     if (setFriend){
                         rl_setFriend.setVisibility(View.VISIBLE);
                     }else{
                         mineSetPricyPwd();
-                    }*/
+                    }
                     //mineSetPricyPwd();
                 }
                 break;
@@ -262,13 +263,13 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-                    rl_lifeNote.setVisibility(View.VISIBLE);
-                   /* boolean firstLifeNote = (boolean) SPUtils.get(getActivity(), "firstLifeNote", true);
+                   // rl_lifeNote.setVisibility(View.VISIBLE);
+                    boolean firstLifeNote = (boolean) SPUtils.get(getActivity(), "firstLifeNote", true);
                     if (firstLifeNote){
                         rl_lifeNote.setVisibility(View.VISIBLE);
                     }else{
                         mineHideLifePwd();
-                    }*/
+                    }
                 }
                 break;
             case R.id.card_InfoTransform:

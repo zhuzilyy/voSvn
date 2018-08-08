@@ -12,11 +12,11 @@
         <ImageView
             android:layout_centerVertical="true"
             android:id="@id/back"
-            android:layout_width="@dimen/x20"
-            android:layout_height="@dimen/x20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@mipmap/back_"
-            android:layout_marginTop="@dimen/x10"
-            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                     android:layout_width="@dimen/x20"
                     android:layout_centerVertical="true"
                     android:layout_height="@dimen/x20"
-                    android:src="@mipmap/vipstate"
+                    android:src="@mipmap/vip_vip"
                     android:visibility="visible"
                     />
                 <TextView
@@ -85,12 +85,11 @@
                     android:text="大亭子"
                     android:singleLine="true"
                     android:ellipsize="end"
-                    android:maxWidth="@dimen/x100"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     />
                 <TextView
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
                     android:id="@+id/vip_try"
@@ -114,14 +113,17 @@
                 android:gravity="center_vertical"
                 >
                 <TextView
-
-                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/vip_endtime"
-                    android:paddingRight="@dimen/x5"
-                    android:layout_marginRight="@dimen/x10"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="截止日期：2018年10月1日"
+                    android:text="2018年10月1日到期"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="@drawable/shape_corner_vip"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     />
