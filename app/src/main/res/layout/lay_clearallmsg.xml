@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="260dp"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_corner"
     >
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x30"
+        android:paddingBottom="10dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             <!--title-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50">
+                android:layout_height="50dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -58,7 +58,7 @@
             <TextView
                 android:id="@+id/tv_confirm"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:text="确认清空所有聊天记录，清空后不可恢复！"
                 android:textColor="@color/black"
                 android:textSize="16sp"
