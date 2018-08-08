@@ -50,7 +50,7 @@ public class ConversationListFragment extends EaseConversationListFragment {
     protected void initView() {
         super.initView();
 
-        View errorView =  View.inflate(getActivity(), R.layout.em_chat_neterror_item, null);
+        View errorView =  View.inflate(getActivity(), R.layout.em_chat_neterror_item,null);
         //**************************************
         myReceiver=new MyReceiver();
         IntentFilter filter=new IntentFilter("UpdateFriendOK");

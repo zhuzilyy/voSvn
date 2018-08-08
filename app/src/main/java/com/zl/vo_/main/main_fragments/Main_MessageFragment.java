@@ -32,10 +32,16 @@ import com.zl.vo_.R;
 import com.zl.vo_.db.DemoDBManager;
 import com.zl.vo_.main.Entity.CheckPwdEntivity;
 import com.zl.vo_.main.Entity.Result;
+import com.zl.vo_.main.activities.Help_Feedback;
+import com.zl.vo_.main.activities.addFriendActivity_ContactsVo;
+import com.zl.vo_.main.activities.addFriendActivity_SearchVo;
 import com.zl.vo_.main.adapter.TabsAdapter;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.TimeUtil;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.DetailsTypePopupWindow;
+import com.zl.vo_.ui.GroupsActivity;
+import com.zl.vo_.ui.ScanCaptureActivity;
 import com.zl.vo_.update.CheckUpdateManager;
 import com.zl.vo_.update.DownloadService;
 import com.zl.vo_.update.bean.Version;
@@ -84,6 +90,11 @@ public class Main_MessageFragment extends Fragment implements View.OnClickListen
     public TextView vo_Entertainment;
     private Version mVersion;
     private static final int RC_EXTERNAL_STORAGE = 0x04;//存储权限
+    @BindView(R.id.iv_add)
+    public ImageView iv_add;
+    @BindView(R.id.iv_search)
+    public ImageView iv_search;
+
 
     @Nullable
     @Override
@@ -121,10 +132,50 @@ public class Main_MessageFragment extends Fragment implements View.OnClickListen
 
 
     }
-    @OnClick({R.id.lock,R.id.unlock,R.id.vo_Entertainment})
+    @OnClick({R.id.lock,R.id.unlock,R.id.vo_Entertainment,R.id.iv_add, R.id.iv_search})
     @Override
     public void onClick(View v) {
         switch(v.getId()){
+
+            case R.id.iv_add:
+                DetailsTypePopupWindow typePopupWindow = new DetailsTypePopupWindow(getActivity(),iv_add,"","");
+                typePopupWindow.setmItemsOnClick(new DetailsTypePopupWindow.ItemsOnClick() {
+                    @Override
+                    public void itemsOnClick(int position) {
+                        switch (position) {
+                            case 0:
+                                startActivity(new Intent(getActivity(),GroupsActivity.class));
+                                break;
+                            //添加新的好友
+                            case 1:
+                                startActivity(new Intent(getActivity(),addFriendActivity_ContactsVo.class));
+                                break;
+                            //扫一扫
+                            case 2:
+                                startActivity(new Intent(getActivity(),ScanCaptureActivity.class));
+                                break;
+                            //帮助及反馈
+                            case 3:
+                                Intent intent=new Intent(getActivity(),Help_Feedback.class);
+                                intent.putExtra("url", Url.FunctionIntroduceUrl);
+                                intent.putExtra("param","15");
+                                intent.putExtra("title","功能介绍");
+                                startActivity(intent);
+
+                                break;
+                        }
+                    }
+                });
+
+
+
+
+
+                break;
+            case R.id.iv_search:
+                startActivity(new Intent(getActivity(), addFriendActivity_SearchVo.class));
+                break;
+
             //下载V娱乐
             case R.id.vo_Entertainment:
                 // 通过包名获取要跳转的app，创建intent对象

@@ -1,14 +1,18 @@
 package com.zl.vo_.main.activities;
 
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.zl.vo_.R;
 import com.zl.vo_.adapter.BlackListAdapter;
@@ -91,12 +95,39 @@ public class MyBlackListActivityVo extends VoBaseActivity implements View.OnClic
         blackLV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                re_dialog.setVisibility(View.VISIBLE);
+              //  re_dialog.setVisibility(View.VISIBLE);
+                unLockBlackList();
                 currentIndex=bigList.get(i).getUserid();
                 return true;
             }
         });
     }
+
+    /***
+     * 解除黑名单
+     */
+    private void unLockBlackList() {
+        final Dialog dialog = new Dialog(MyBlackListActivityVo.this);
+        View vv = LayoutInflater.from(MyBlackListActivityVo.this).inflate(R.layout.lay_unlock_blacklist, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Remove_blacklist(currentIndex);
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
     @OnClick({R.id.btn_confirm,R.id.btn_cancel})
     @Override
     public void onClick(View v) {
@@ -104,7 +135,7 @@ public class MyBlackListActivityVo extends VoBaseActivity implements View.OnClic
             case R.id.btn_confirm:
                 //解除黑名单
                 re_dialog.setVisibility(View.GONE);
-                Remove_blacklist(currentIndex);
+              //  Remove_blacklist(currentIndex);
                 break;
             case R.id.btn_cancel:
                 re_dialog.setVisibility(View.GONE);
