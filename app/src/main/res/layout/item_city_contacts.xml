@@ -45,8 +45,8 @@
 
         <Button
             android:id="@+id/addressBtn"
-            android:layout_width="@dimen/x60"
-            android:layout_height="@dimen/x22"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
             android:text="接受"
             android:textSize="12sp"
             android:textColor="@color/white"

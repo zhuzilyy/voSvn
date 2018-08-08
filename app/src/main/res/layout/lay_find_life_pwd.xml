@@ -49,7 +49,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x40"
-                android:layout_marginTop="@dimen/x15"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
                 <TextView
@@ -63,6 +63,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
                 <com.zl.vo_.main.views.ClearEditText
+                    android:singleLine="true"
                     android:id="@+id/et_mibao_question_answer"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/x30"
@@ -87,10 +88,10 @@
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginLeft="@dimen/x25"
-                android:layout_marginRight="@dimen/x25"
-                android:layout_marginTop="@dimen/x35"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shape_corner_blue"
                 android:text="确定"
                 android:textColor="@color/white" />

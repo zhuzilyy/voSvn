@@ -9,90 +9,89 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_top_bar"
-        android:background="@color/white" >
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:onClick="back"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
-            android:src="@mipmap/back_" />
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="back"
+                android:src="@mipmap/back_" />
 
-        <View
-            android:id="@+id/view_temp"
-            android:layout_width="1dp"
-            android:visibility="gone"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_toRightOf="@id/iv_back"
-            android:background="#14191A" />
+            <View
+                android:id="@+id/view_temp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:background="#14191A"
+                android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:text="更改昵称"
-            android:layout_centerInParent="true"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="更改昵称"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/tv_save"
-            android:layout_width="48dp"
-            android:layout_height="24dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/shape_corner_blue"
-            android:gravity="center"
-            android:text="保存"
-            android:textColor="#fff"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/shape_corner_blue"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/light_gray4"/>
+            android:background="@color/light_gray4" />
 
-    <EditText
-        android:paddingLeft="5dp"
-        android:id="@+id/et_info"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:textColor="#353535"
-        android:textSize="16sp" />
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/tv_note"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="好名字可以让你的好朋友更容易记得你"
-        android:textColor="#AAAAAA"
-        android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:minHeight="48dp"
+            android:paddingLeft="5dp"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="好名字可以让你的好朋友更容易记得你"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <RelativeLayout
