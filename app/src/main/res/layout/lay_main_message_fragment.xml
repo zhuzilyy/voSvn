@@ -31,9 +31,19 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
             android:text="VO"
+            android:visibility="gone"
             android:textColor="@color/blue02version"
             android:textSize="22sp"
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
 
         <LinearLayout
             android:visibility="gone"
@@ -73,6 +83,29 @@
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:src="@mipmap/more_" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/iv_add"
+            android:clickable="true"
+            android:src="@mipmap/fdj_" />
+
+
     </RelativeLayout>
 
     <android.support.v4.view.ViewPager
