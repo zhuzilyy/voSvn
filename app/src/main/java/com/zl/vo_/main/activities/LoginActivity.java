@@ -88,9 +88,6 @@ public class LoginActivity extends VoBaseActivity implements View.OnClickListene
         SharedPreferences adShare = getSharedPreferences("adfirst",Context.MODE_PRIVATE);
         adShare.edit().putInt("first",1).commit();
 
-
-
-
         setContentView(R.layout.lay_login);
         ButterKnife.bind(this);
         //VoBaseActivity.addActivity(this);
@@ -350,7 +347,6 @@ public class LoginActivity extends VoBaseActivity implements View.OnClickListene
         req.scope = "snsapi_userinfo";
         req.state = "diandi_wx_login";
         DemoApplication.mWxApi.sendReq(req);
-
     }
 //******************************************************************************
     /***

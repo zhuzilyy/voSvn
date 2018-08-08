@@ -40,7 +40,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:background="@color/white"
-            android:layout_height="@dimen/x45">
+            android:layout_height="46dp">
             <LinearLayout
                 android:id="@+id/ll_back"
                 android:layout_width="wrap_content"
@@ -48,10 +48,10 @@
                 android:gravity="center_vertical"
                 >
                 <ImageView
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@mipmap/back_"
-                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginLeft="10dp"
                     />
                 <TextView
                     android:textColor="@color/white"
@@ -77,19 +77,19 @@
         </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x1"
-        android:background="@color/light_gray"
-        ></View>
+        android:layout_height="0.5dp"
+        android:background="@color/common_line"
+        />
 
     <!--账号-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x50"
-        android:layout_marginTop="@dimen/x30"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x45"
+            android:layout_height="35dp"
             android:orientation="horizontal"
             >
             <com.zl.vo_.main.views.ClearEditText
@@ -98,7 +98,7 @@
                 android:layout_marginLeft="15dp"
                 android:maxLength="11"
                 android:id="@+id/register_phone"
-                android:layout_height="45dp"
+                android:layout_height="35dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="0dp"
                 android:layout_weight="2"
@@ -111,20 +111,6 @@
                 android:textColorHint="@color/gray"
                 android:textSize="14sp"
                 />
-
-          <!--  <com.zl.vo_.main.views.MEditText
-                android:id="@+id/register_phone"
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:layout_height="@dimen/x45"
-                android:paddingLeft="@dimen/x20"
-                android:paddingRight="@dimen/x20"
-                app:me_del_enable="true"
-                app:me_eye_enable="false"
-                app:me_hint="手机号"
-                app:me_hintColor="@color/black"
-                app:me_textColor="@color/black"
-                app:me_textSize="@dimen/x5"/>-->
             <TextView
                 android:id="@+id/register_getcode"
                 android:layout_width="0dp"
@@ -140,15 +126,16 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x1"
+            android:layout_height="0.5dp"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"/>
+            android:background="@color/common_line"/>
     </LinearLayout>
         <!--账号-->
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50"
+            android:layout_height="35dp"
             android:orientation="vertical">
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
@@ -185,17 +172,17 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x1"
+                android:layout_height="0.5dp"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"/>
+                android:background="@color/common_line"/>
         </LinearLayout>
 
     <!--密码-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x50"
-        android:layout_marginTop="@dimen/x10"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -209,7 +196,7 @@
                 android:maxLength="11"
                 android:id="@+id/register_pwd"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="35dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@null"
@@ -245,16 +232,16 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x1"
+            android:layout_height="0.5dp"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginRight="@dimen/x20"
-            android:background="@color/light_gray"/>
+            android:background="@color/common_line"/>
     </LinearLayout>
         <!--昵称-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50"
-            android:layout_marginTop="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -268,7 +255,7 @@
                     android:maxLength="11"
                     android:id="@+id/register_nick"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="35dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@null"
@@ -302,23 +289,23 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x1"
+                android:layout_height="0.5dp"
                 android:layout_marginLeft="@dimen/x20"
                 android:layout_marginRight="@dimen/x20"
-                android:background="@color/light_gray"/>
+                android:background="@color/common_line"/>
         </LinearLayout>
 
     <Button
         android:id="@+id/register_submit"
-        android:layout_marginTop="@dimen/x25"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x45"
+        android:layout_height="40dp"
         android:text="注册"
         android:textColor="@color/white"
-        android:textSize="@dimen/x16"
+        android:textSize="14sp"
         android:background="@drawable/login_btn_selector2"
-        android:layout_marginLeft="@dimen/x15"
-        android:layout_marginRight="@dimen/x15"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         />
         <LinearLayout
             android:id="@+id/ll_Protocol"
@@ -326,21 +313,20 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="@dimen/x14"
+            android:layout_marginTop="20dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="点击'注册'即将表示同意"
-                android:textSize="@dimen/x12"
+                android:textSize="12sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="用户协议"
-
                 android:textColor="@color/blue02version"
-                android:textSize="@dimen/x12"
+                android:textSize="12sp"
                 />
         </LinearLayout>
     </LinearLayout>

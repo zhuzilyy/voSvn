@@ -159,7 +159,6 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 			WXErrorInfo wxErrorInfo = gson.fromJson(response, WXErrorInfo.class);
 			// 提示错误信息
 			Log.i("wxErrorInfo","错误信息: " + wxErrorInfo.getErrmsg());
-
 			}
 	}
 

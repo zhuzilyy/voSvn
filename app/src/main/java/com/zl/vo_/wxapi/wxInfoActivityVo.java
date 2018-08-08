@@ -84,7 +84,7 @@ public class wxInfoActivityVo extends VoBaseActivity implements View.OnClickList
 
 
     }
-    @OnClick({R.id.ll_Protocol,R.id.wx_next})
+    @OnClick({R.id.ll_Protocol,R.id.wx_next,R.id.iv_back})
     @Override
     public void onClick(View v) {
         switch(v.getId()){
@@ -98,11 +98,11 @@ public class wxInfoActivityVo extends VoBaseActivity implements View.OnClickList
             case R.id.wx_next:
                 WechatLogin(openidStr,unionidStr,nicknameStr,Integer.parseInt(sexStr),headimgurlStr);
                 break;
-            default:
+            case R.id.iv_back:
+                finish();
                 break;
         }
     }
-
     //微信登录
     private void WechatLogin(final String openId,final String unionId,final String nickname,final int sex,final String headimgurl){
         loading_view.setVisibility(View.VISIBLE);
