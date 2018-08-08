@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <ImageView
+        android:visibility="gone"
         android:layout_marginTop="120dp"
         android:id="@+id/iv_addAndReduceFriend"
         android:layout_marginRight="50dp"

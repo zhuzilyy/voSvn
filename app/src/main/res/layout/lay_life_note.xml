@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray4"
-
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,20 +20,14 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="@dimen/x12">
+            >
 
             <ImageView
                 android:id="@+id/iv_back"
-
-                android:layout_width="@dimen/x30"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-
-                android:paddingBottom="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="5dp"
-                android:scaleType="centerInside"
+                android:layout_marginLeft="10dp"
                 android:src="@mipmap/back_" />
 
             <View
@@ -58,7 +51,6 @@
                 android:layout_centerHorizontal="true"
                 android:textSize="18sp"
                 android:id="@+id/textView9" />
-
             <TextView
                 android:id="@+id/writeLifeNote_tv"
                 android:visibility="gone"

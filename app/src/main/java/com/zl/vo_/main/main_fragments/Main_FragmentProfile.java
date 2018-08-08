@@ -154,7 +154,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     RelativeLayout rl_setFriend;
     @BindView(R.id.rl_addAndReduceFriend)
     RelativeLayout rl_addAndReduceFriend;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -227,7 +226,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             R.id.re_lifenote, R.id.re_createVOVIPAccount, R.id.switch_infopwd,
             R.id.card_SetLifeNote, R.id.card_SetPricyPwd, R.id.card_ClearAllFriend,
             R.id.guid01, R.id.guid02, R.id.guid03, R.id.guid04,R.id.card_InfoTransform,
-    R.id.iv_lifeNoteKnow,R.id.iv_setFriend,R.id.iv_addAndReduceFriend})
+            R.id.iv_lifeNoteKnow,R.id.iv_setFriend,R.id.iv_addAndReduceFriend,
+            R.id.rl_lifeNote, R.id.rl_setFriend,R.id.rl_addAndReduceFriend})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -245,9 +245,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-
                    // rl_setFriend.setVisibility(View.VISIBLE);
-
                     boolean setFriend = (boolean) SPUtils.get(getActivity(), "setFriend", true);
                     if (setFriend){
                         rl_setFriend.setVisibility(View.VISIBLE);
@@ -264,7 +262,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
-                   // rl_lifeNote.setVisibility(View.VISIBLE);
                     boolean firstLifeNote = (boolean) SPUtils.get(getActivity(), "firstLifeNote", true);
                     if (firstLifeNote){
                         rl_lifeNote.setVisibility(View.VISIBLE);
@@ -276,13 +273,11 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             case R.id.card_InfoTransform:
             case R.id.switch_infopwd:
                 //信息传输加密
-
                 if ("0".equals(vip)) {
                     showVip();
                 } else {
                     mineInfoPwd();
                 }
-
                 break;
             case R.id.iv_search:
                 startActivity(new Intent(getActivity(), addFriendActivity_SearchVo.class));
@@ -357,12 +352,22 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 rl_setFriend.setVisibility(View.GONE);
                 rl_addAndReduceFriend.setVisibility(View.VISIBLE);
                 break;
+            case R.id.rl_setFriend:
+                rl_setFriend.setVisibility(View.GONE);
+                rl_addAndReduceFriend.setVisibility(View.VISIBLE);
+                break;
             case R.id.iv_addAndReduceFriend:
                 rl_addAndReduceFriend.setVisibility(View.GONE);
                 mineSetPricyPwd();
                 SPUtils.put(getActivity(),"setFriend",false);
                 break;
-            default:
+            case R.id.rl_addAndReduceFriend:
+                rl_addAndReduceFriend.setVisibility(View.GONE);
+                mineSetPricyPwd();
+                SPUtils.put(getActivity(),"setFriend",false);
+                break;
+            case R.id.rl_lifeNote:
+                rl_lifeNote.setVisibility(View.GONE);
                 break;
         }
     }
