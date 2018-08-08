@@ -198,6 +198,7 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
             public void onClick(View v) {
                  comfirmDeleteFriend(position);
                 dialog.dismiss();
+
             }
         });
         dialog.show();
