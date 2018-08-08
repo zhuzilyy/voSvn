@@ -60,6 +60,8 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     //---------------------
     @BindView(R.id.iv_back)
     public ImageView iv_back;
+    @BindView(R.id.back)
+    public ImageView back;
     @BindView(R.id.vipLv)
     public ListView vipLv;
     public vipAdapter adapter;
@@ -79,7 +81,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
 //    public TextView vip_info_tv;
 //    @BindView(R.id.vip_info_iv)
 //    public ImageView vip_info_iv;
-    public ImageView back;
+
 
     public List<VIPProductData.VIPProductInfo.VIPProductCell> biglist=new ArrayList<>();
     @BindView(R.id.vip_btn_submit)
@@ -136,7 +138,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         });
     }
     private void mInit() {
-
 
         View headerview=LayoutInflater.from(CreateVoVIPAccountActivityVo.this).inflate(R.layout.lay_vipheader,null);
         final View footerview= LayoutInflater.from(CreateVoVIPAccountActivityVo.this).inflate(R.layout.lay_vipfooter,null);
@@ -265,7 +266,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
             }
         });
     }
-    @OnClick({R.id.iv_back,R.id.vip_btn_submit})
+    @OnClick({R.id.iv_back,R.id.vip_btn_submit,R.id.back})
     @Override
     public void onClick(View v) {
         switch(v.getId()){
