@@ -148,7 +148,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
                     mRv.setAdapter(mAdapter);
                     mRv.addItemDecoration(mDecoration = new SuspensionDecoration(addFriendActivity_ContactsVo.this,mDatas));
                     //如果add两个，那么按照先后顺序，依次渲染。
-                    //mRv.addItemDecoration(new DividerItemDecoration(addFriendActivity_ContactsVo.this, DividerItemDecoration.VERTICAL_LIST));
+                 //   mRv.addItemDecoration(new DividerItemDecoration(addFriendActivity_ContactsVo.this, DividerItemDecoration.VERTICAL_LIST));
                     //indexbar初始化
                     mIndexBar.setmPressedShowTextView(mTvSideBarHint)//设置HintTextView
                             .setNeedRealIndex(true)//设置需要真实的索引

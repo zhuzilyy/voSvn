@@ -1,5 +1,6 @@
 package com.zl.vo_.main.main_fragments;
 
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -137,7 +138,7 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
         mRv.addItemDecoration(mDecoration = new SuspensionDecoration(getActivity(),mDatas));
         //如果add两个，那么按照先后顺序，依次渲染。
 
-        //mRv.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+       // mRv.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
         //indexbar初始化
         mIndexBar.setmPressedShowTextView(mTvSideBarHint)//设置HintTextView
@@ -166,18 +167,103 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
 
             @Override
             public void onMyContactItemLongClick(int position) {
-                Toast.makeText(getActivity(), "长按position"+position, Toast.LENGTH_SHORT).show();
-                showSingleChoiceDialog(position);
+              //  showSingleChoiceDialog(position);
+                showDeleteOrBlackListDiaLog(position);
             }
         });
     }
+
+    private void showDeleteOrBlackListDiaLog(final int position) {
+        final Dialog dialog = new Dialog(getActivity());
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_delete_blacklist, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView tv_blacklist = vv.findViewById(R.id.tv_blacklist);
+        TextView tv_delete = vv.findViewById(R.id.tv_delete);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        tv_blacklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirmAddBlackList(position);
+                dialog.dismiss();
+            }
+        });
+        tv_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 comfirmDeleteFriend(position);
+                dialog.dismiss();
+
+            }
+        });
+        dialog.show();
+
+    }
+
+    /**
+     * 删除好友
+     * @param position
+     */
+    private void comfirmDeleteFriend(final int position) {
+        final Dialog dialog = new Dialog(getActivity());
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_delete_friend, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
+                deleteFriend(mDatas.get(position).getUserID());
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
     /****
      * 加入黑名单
+     * @param position
      */
-    private void showSingleChoiceDialog(final int position) {
+    private void confirmAddBlackList(final int position) {
+        final Dialog dialog = new Dialog(getActivity());
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_addblack_list, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //  Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
+                addBlackList(myUtils.readUser(getActivity()).getHuanxin_account(),mDatas.get(position).getHuanxinID());
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+
+   /* private void showSingleChoiceDialog(final int position) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("vo好友");
+        builder.setTitle("vo123好友");
         builder.setIcon(R.mipmap.logo);
         builder.setSingleChoiceItems(single_list, 0, new DialogInterface.OnClickListener() {
             @Override
@@ -201,7 +287,7 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
 
         AlertDialog dialog = builder.create();
         dialog.show();
-    }
+    }*/
 
 
     /***
@@ -265,7 +351,8 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
                     }
                     @Override
                     public void onMyContactItemLongClick(int position) {
-                        showSingleChoiceDialog(position);
+                        //showSingleChoiceDialog(position);
+                        showDeleteOrBlackListDiaLog(position);
                     }
                 });
             }
@@ -367,7 +454,8 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
             @Override
             public void onMyContactItemLongClick(int position) {
 
-                showSingleChoiceDialog(position);
+               // showSingleChoiceDialog(position);
+                showDeleteOrBlackListDiaLog(position);
             }
         });
 
@@ -405,7 +493,8 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
                 }
                 @Override
                 public void onMyContactItemLongClick(int position) {
-                    showSingleChoiceDialog(position);
+                   // showSingleChoiceDialog(position);
+                    showDeleteOrBlackListDiaLog(position);
                 }
             });
         } else {
@@ -433,7 +522,8 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
                 @Override
                 public void onMyContactItemLongClick(int position) {
 
-                    showSingleChoiceDialog(position);
+                    //showSingleChoiceDialog(position);
+                    showDeleteOrBlackListDiaLog(position);
                 }
             });
         }
