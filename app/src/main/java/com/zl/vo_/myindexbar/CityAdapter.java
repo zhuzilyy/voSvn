@@ -112,7 +112,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
 
             default:
                 Glide.with(mContext).load(friend.getAvatar()).into(holder.avatar);
-                holder.line.setVisibility(View.GONE);
+               // holder.line.setVisibility(View.GONE);
                 holder.content.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
