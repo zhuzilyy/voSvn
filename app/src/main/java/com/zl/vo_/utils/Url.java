@@ -8,6 +8,9 @@ public class Url {
 
    // public static String mURL="http://47.95.115.55:8080/voadmin/home/api/";
     public static String mURL="http://api.ykhswl.net/voadmin/home/api/";
+                             //http://api.ykhswl.net/vo_admin_system/sy_api.php?userid=1512
+  //会员试用
+   public static String TestVip="http://api.ykhswl.net/vo_admin_system/sy_api.php";
     //注册
     public static String RegisterURL=mURL+"register";
     //登录
@@ -137,8 +140,12 @@ public class Url {
 
 
 
+
+
     //获取群主、会员信息
     public static String GroupInvitationUrl=mURL+"get_group_user_info";
+
+
 
     /**
      * 薛金柱

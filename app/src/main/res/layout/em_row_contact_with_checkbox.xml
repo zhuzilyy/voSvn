@@ -32,8 +32,8 @@
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:scaleType="fitXY"
             android:src="@drawable/em_default_avatar" />
@@ -48,7 +48,7 @@
             android:singleLine="true"
             android:ellipsize="end"
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 

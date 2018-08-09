@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,8 +37,10 @@ import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.Entity.VIPProductData;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.util.Utils;
 import com.zl.vo_.utils.Url;
 
+import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
@@ -75,6 +78,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     public TextView vip_name;
     @BindView(R.id.loading_view)
     public RelativeLayout loading_view;
+    
 
     public ImageView vip_state;
 //    @BindView(R.id.vip_info_tv)
@@ -100,6 +104,9 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     public TextView vip_function_allclear;
     public TextView vip_function_lifenoteprivacy;
     public TextView vip_function_infortrans;
+    
+    private LinearLayout ll_vipnofree;
+    private TextView tv_vipnofree;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -112,7 +119,48 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         registerReceiver(myReceiver,filter);
         getData();
         mInit();
+        LoginData.LoginInfo.LoginAccountInfo user  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
+        if(user!= null){
+            String userId  = user.getUserid();
+            if(!TextUtils.isEmpty(userId)){
+                getVipTest(userId);
+            }
+        }
+
     }
+
+    /***
+     * 是否是试用
+     * @param unionid
+     */
+    private void getVipTest(String unionid) {
+
+        RequestParams params= new RequestParams(Url.TestVip);
+        params.addParameter("userid",unionid);
+        x.http().post(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Log.i("aa",""+result);
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                Log.i("aa",""+ex.getMessage());
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+        
+    }
+
     private void getData() {
         loading_view.setVisibility(View.VISIBLE);
         RequestParams params=new RequestParams(Url.GetVIPProductUrl);
@@ -152,6 +200,9 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         function_four_ll=headerview.findViewById(R.id.function_four_ll);
         function_arrow=headerview.findViewById(R.id.vip_arrow);
 
+        ll_vipnofree=headerview.findViewById(R.id.ll_vipnofree);
+        tv_vipnofree = headerview.findViewById(R.id.tv_vipnofree);
+        
         vip_function_pressfriend=headerview.findViewById(R.id.vip_function_pressfriend);
         vip_function_shakefriend=headerview.findViewById(R.id.vip_function_shakefriend);
         vip_function_showallfriend=headerview.findViewById(R.id.vip_function_showallfriend);
@@ -204,8 +255,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                 }
             }
         });
-
-
 
 
     }

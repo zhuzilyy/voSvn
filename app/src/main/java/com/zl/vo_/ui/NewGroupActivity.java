@@ -14,6 +14,7 @@
 package com.zl.vo_.ui;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -28,6 +29,7 @@ import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -201,11 +203,39 @@ public class NewGroupActivity extends VoBaseActivity {
 	public void save(View v) {
 		String name = groupNameEditText.getText().toString();
 		if (TextUtils.isEmpty(name)) {
-		    new EaseAlertDialog(this, R.string.Group_name_cannot_be_empty).show();
+		  //  new EaseAlertDialog(this, R.string.Group_name_cannot_be_empty).show();
+			showEmpty();
 		} else {
 			// select from contact list
 			startActivityForResult(new Intent(this, GroupPickContactsActivity.class).putExtra("groupName", name), 200);
 		}
+	}
+
+	/***
+	 * 群组名称不能为空
+	 */
+	private void showEmpty() {
+		final Dialog dialog = new Dialog(NewGroupActivity.this);
+		View vv = LayoutInflater.from(NewGroupActivity.this).inflate(R.layout.lay_groupnameempty, null);
+		dialog.setContentView(vv);
+		ImageView cancel = vv.findViewById(R.id.cancel_iv);
+		TextView confirm = vv.findViewById(R.id.tv_confrim);
+		cancel.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.dismiss();
+			}
+		});
+		confirm.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//  Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
+
+				dialog.dismiss();
+			}
+		});
+		dialog.show();
+
 	}
 
 	@Override

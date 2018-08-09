@@ -107,16 +107,10 @@
             android:textColor="#AAAAAA"
             android:textSize="14sp" />
     </LinearLayout>
-    <View
-        android:id="@+id/flag"
-        android:layout_below="@+id/head"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/light_gray5"
-        />
+
     <LinearLayout
         android:background="@color/white"
-        android:layout_below="@+id/flag"
+        android:layout_below="@+id/head"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -135,15 +129,9 @@
             android:textSize="16sp"
             android:background="@drawable/shape_corner_blue"
             />
-        <ImageView
-            android:id="@+id/iv_flag"
-            android:layout_below="@+id/flag"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:padding="@dimen/x25"
-            android:src="@mipmap/sign_bg"
-            />
+
         <LinearLayout
+            android:visibility="gone"
             android:layout_below="@+id/iv_flag"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

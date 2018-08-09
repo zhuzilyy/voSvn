@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="@color/white"
     android:orientation="vertical" >
     <!--tittle-->
     <RelativeLayout
@@ -68,10 +68,11 @@
                 android:layout_width="@dimen/x65"
                 android:layout_height="@dimen/x65"
                 android:padding="@dimen/x2"
-                android:src="@mipmap/head"
+                android:src="@mipmap/group"
                 android:background="@drawable/circle_stroke"
                 />
             <ImageView
+                android:visibility="gone"
                 android:layout_width="@dimen/x15"
                 android:layout_height="@dimen/x15"
                 android:src="@mipmap/group_camera"
@@ -118,6 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:visibility="gone"
         >
         <ImageView
             android:layout_width="match_parent"

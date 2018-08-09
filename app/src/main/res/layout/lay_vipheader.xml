@@ -313,6 +313,51 @@
         android:layout_height="1dp"
         android:background="@color/light_gray4"
         />
+    <LinearLayout
+        android:id="@+id/ll_vipnofree"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_marginLeft="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费试用"
+            android:textColor="@color/yellow2"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:id="@+id/tv_vipnofree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7天"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费领取"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/x10"
+            android:paddingBottom="@dimen/x3"
+            android:paddingLeft="@dimen/x6"
+            android:paddingTop="@dimen/x3"
+            android:paddingRight="@dimen/x6"
+            android:background="@drawable/vipzhekou_bg"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
 
 
 

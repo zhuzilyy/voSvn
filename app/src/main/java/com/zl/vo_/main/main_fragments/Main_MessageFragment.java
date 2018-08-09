@@ -1,6 +1,7 @@
 package com.zl.vo_.main.main_fragments;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,6 +19,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,12 +35,14 @@ import com.zl.vo_.db.DemoDBManager;
 import com.zl.vo_.main.Entity.CheckPwdEntivity;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.activities.Help_Feedback;
+import com.zl.vo_.main.activities.LifeNote;
 import com.zl.vo_.main.activities.addFriendActivity_ContactsVo;
 import com.zl.vo_.main.activities.addFriendActivity_SearchVo;
 import com.zl.vo_.main.adapter.TabsAdapter;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.TimeUtil;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.newacitivity.SettingLifePwdActivity;
 import com.zl.vo_.main.views.DetailsTypePopupWindow;
 import com.zl.vo_.ui.GroupsActivity;
 import com.zl.vo_.ui.ScanCaptureActivity;
@@ -206,7 +210,48 @@ public class Main_MessageFragment extends Fragment implements View.OnClickListen
      * 主界面调解锁
      */
     public void unlockMain() {
-        DialogUIUtils.showAlertInput(getActivity(), null, "请输入密码", null, "确认", "取消", new DialogUIListener() {
+
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.setCanceledOnTouchOutside(true);
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_unlock_lifecode, null);
+        dialog.setContentView(vv);
+        final EditText ed_pwd = vv.findViewById(R.id.ed_pwd);
+        TextView tv_confirm = vv.findViewById(R.id.tv_confirm);
+        TextView tv_setpwd = vv.findViewById(R.id.tv_setpwd);
+        ImageView cancel_iv = vv.findViewById(R.id.cancel_iv);
+        tv_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pwdStr = ed_pwd.getText().toString().trim();
+                if (TextUtils.isEmpty(pwdStr)) {
+                    return;
+                }
+                try{
+                    dowithTempHide(pwdStr);
+                    dialog.dismiss();
+                }catch (Exception e){
+
+                }
+
+
+            }
+        });
+
+
+        cancel_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        dialog.show();
+
+
+
+
+      /*  DialogUIUtils.showAlertInput(getActivity(), null, "请输入密码", null, "确认22", "取消", new DialogUIListener() {
             @Override
             public void onPositive() {
                 DialogUIUtils.dismiss();
@@ -222,12 +267,12 @@ public class Main_MessageFragment extends Fragment implements View.OnClickListen
                 if(TextUtils.isEmpty(input1)){
                     return;
                 }
-                /***
+                *//***
                  * 处理临时隐藏
-                 */
+                 *//*
                 dowithTempHide(input1);
             }
-        }).show();
+        }).show();*/
     }
 
     /**
