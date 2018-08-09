@@ -227,7 +227,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             R.id.card_SetLifeNote, R.id.card_SetPricyPwd, R.id.card_ClearAllFriend,
             R.id.guid01, R.id.guid02, R.id.guid03, R.id.guid04,R.id.card_InfoTransform,
             R.id.iv_lifeNoteKnow,R.id.iv_setFriend,R.id.iv_addAndReduceFriend,
-            R.id.rl_lifeNote, R.id.rl_setFriend,R.id.rl_addAndReduceFriend})
+            R.id.rl_lifeNote, R.id.rl_setFriend,R.id.rl_addAndReduceFriend,R.id.iv_lifeNote,
+            R.id.iv_bgSetFriend,R.id.iv_bgAddAndReduceFriend})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -368,6 +369,20 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                 break;
             case R.id.rl_lifeNote:
                 rl_lifeNote.setVisibility(View.GONE);
+                break;
+            case R.id.iv_lifeNote:
+                rl_lifeNote.setVisibility(View.GONE);
+                mineHideLifePwd();
+                SPUtils.put(getActivity(),"firstLifeNote",false);
+                break;
+            case R.id.iv_bgSetFriend:
+                rl_setFriend.setVisibility(View.GONE);
+                rl_addAndReduceFriend.setVisibility(View.VISIBLE);
+                break;
+            case R.id.iv_bgAddAndReduceFriend:
+                rl_addAndReduceFriend.setVisibility(View.GONE);
+                mineSetPricyPwd();
+                SPUtils.put(getActivity(),"setFriend",false);
                 break;
         }
     }

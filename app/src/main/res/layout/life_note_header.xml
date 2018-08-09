@@ -18,12 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x180">
             <ImageView
+                android:scaleType="fitXY"
                 android:id="@+id/lifeNote_header_bg"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x180"
-                android:src="@mipmap/qiujing"
-                android:scaleType="fitXY"
-                />
+                android:src="@mipmap/bg_life_note" />
             <RelativeLayout
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -52,7 +51,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/x15"
             android:layout_marginTop="@dimen/x15"
-            android:src="@mipmap/lifenote_setting"
+            android:src="@mipmap/life_setting"
             />
         <!--写-->
         <LinearLayout

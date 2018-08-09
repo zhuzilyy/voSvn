@@ -7,15 +7,6 @@
     android:background="@color/white"
     android:paddingBottom="@dimen/x10"
     >
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@drawable/line_dash"
-        android:layout_marginLeft="@dimen/x12"
-        android:layout_marginRight="@dimen/x12"
-        android:layerType="software"
-        android:layout_marginBottom="@dimen/x5"
-        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/x30">
@@ -25,7 +16,7 @@
             android:id="@+id/lifenote_item_time"
             android:layout_width="match_parent"
             android:layout_height="@dimen/x30"
-            android:textSize="@dimen/x16"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/black_deep"
             android:text="2017年11月7日"
@@ -50,7 +41,7 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:text="中国共产党，简称中共，成立于1921年7月，1949年10月至今为代表工人阶级领导工农联盟和统一战线，在中国大陆实行人民民主专政的中华人民共和国唯一执政党。中国工人阶级的先锋队，中国社会主义事业的领导核心，中国各族人民利益的代表者。中国共产党以马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想和科学发展观作为自己的行动指南，最终目的是实现共产主义的社会制度。"
-        android:paddingLeft="@dimen/x35"
+        android:paddingLeft="@dimen/x12"
         android:paddingRight="@dimen/x15"
         android:paddingBottom="@dimen/x5"
         />
@@ -101,5 +92,14 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layerType="software"
+        android:layout_marginBottom="@dimen/x5"
+        />
 </LinearLayout>

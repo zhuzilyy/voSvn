@@ -263,7 +263,6 @@ public class LifeNote extends VoBaseActivity implements View.OnClickListener,Bas
                 List<String> strings = new ArrayList<>();
                 strings.add("相册");
                 strings.add("照相机");
-
                 DialogUIUtils.showBottomSheetAndCancel(LifeNote.this, strings, "取消", new DialogUIItemListener() {
                     @Override
                     public void onItemClick(CharSequence text, int position) {
@@ -344,12 +343,12 @@ public class LifeNote extends VoBaseActivity implements View.OnClickListener,Bas
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        int output_X = 480, output_Y = 480;
+        int output_X = 1120, output_Y = 630;
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case CODE_CAMERA_REQUEST://拍照完成回调
                     cropImageUri = Uri.fromFile(fileCropUri);
-                    PhotoUtils.cropImageUri(this, imageUri, cropImageUri, 0, 0, output_X, output_Y, CODE_RESULT_REQUEST);
+                    PhotoUtils.cropImageUri(this, imageUri, cropImageUri, 16, 9, output_X, output_Y, CODE_RESULT_REQUEST);
                     break;
                 case CODE_GALLERY_REQUEST://访问相册完成回调
                     if (hasSdcard()) {
@@ -357,7 +356,7 @@ public class LifeNote extends VoBaseActivity implements View.OnClickListener,Bas
                         Uri newUri = Uri.parse(PhotoUtils.getPath(this, data.getData()));
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                             newUri = FileProvider.getUriForFile(this, "com.zl.vo_.fileprovider", new File(newUri.getPath()));
-                        PhotoUtils.cropImageUri(this, newUri, cropImageUri, 0, 0, output_X, output_Y, CODE_RESULT_REQUEST);
+                        PhotoUtils.cropImageUri(this, newUri, cropImageUri, 16, 9, output_X, output_Y, CODE_RESULT_REQUEST);
                     } else {
                         Toast.makeText(LifeNote.this, "设备没有SD卡!", Toast.LENGTH_SHORT).show();
                     }
