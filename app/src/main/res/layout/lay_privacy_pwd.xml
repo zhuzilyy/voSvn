@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <View
@@ -12,14 +14,13 @@
         android:background="@color/light_gray4"
         />
     <ListView
+        android:background="@color/white"
+        android:divider="@null"
       android:id="@+id/lv"
       android:layout_below="@+id/line"
         android:scrollbars="none"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
-
-
-
     <RelativeLayout
         android:layout_below="@+id/title"
         android:id="@+id/loading_view"
@@ -46,23 +47,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:background="@color/white"
-        android:paddingLeft="@dimen/x12"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/iv_back"
-
-            android:layout_width="@dimen/x30"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-
-            android:paddingBottom="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
         <View
@@ -101,9 +96,7 @@
             android:paddingBottom="@dimen/x3"
             android:paddingRight="@dimen/x6"
             android:paddingLeft="@dimen/x6"
-            android:textSize="@dimen/x12" />
-
-
+            android:textSize="14sp" />
     </RelativeLayout>
 
 </RelativeLayout>

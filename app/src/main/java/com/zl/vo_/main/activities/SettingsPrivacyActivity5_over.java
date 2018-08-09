@@ -30,8 +30,6 @@ public class SettingsPrivacyActivity5_over extends VoBaseActivity implements Vie
     public ImageView iv_back;
     @BindView(R.id.goback_setting_btn)
     public Button goback_setting_btn;
-    @BindView(R.id.overOne)
-    public TextView overOne;
     @BindView(R.id.setAgain)
     public TextView setAgain;
 
@@ -55,7 +53,6 @@ public class SettingsPrivacyActivity5_over extends VoBaseActivity implements Vie
         ImageSpan image2 = new ImageSpan(this,R.mipmap.over_privacy, DynamicDrawableSpan.ALIGN_BOTTOM);
         span3.setSpan(image,19,20, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         span3.setSpan(image2,28,29, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        overOne.setText(span3);
     }
    @OnClick({R.id.goback_setting_btn,R.id.setAgain})
     @Override

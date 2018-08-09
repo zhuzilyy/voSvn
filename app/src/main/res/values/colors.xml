@@ -43,4 +43,5 @@
     <color name="vip">#ffaf30</color>
     <color name="viptextcolor">#b46114</color>
     <color name="backgroundColor">#f7f7f7</color>
+    <color name="tipcolor">#333333</color>
 </resources>

@@ -75,16 +75,16 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 
 	switch (resp.errCode) {
 			case BaseResp.ErrCode.ERR_AUTH_DENIED:
+				finish();
 			case BaseResp.ErrCode.ERR_USER_CANCEL:
 				if (RETURN_MSG_TYPE_SHARE == resp.getType()){
 					Toast.makeText(this, "分享失败", Toast.LENGTH_SHORT).show();
-					finish();
 				}
 				else Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show();
+				finish();
 				break;
 			case BaseResp.ErrCode.ERR_OK:
 				Log.i("ee","000");
-
 				switch (resp.getType()) {
 					case RETURN_MSG_TYPE_LOGIN:
 						//拿到了微信返回的code,立马再去请求access_token

@@ -172,7 +172,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     private void mInit() {
         //初始化开关
         switch_infopwd.closeSwitch();
-        Glide.with(getActivity()).asGif().load(R.drawable.info_iv01).into(info_iv01);
+        Glide.with(getActivity()).asGif().load(R.mipmap.passing).into(info_iv01);
         Glide.with(getActivity()).asGif().load(R.drawable.info_iv02).into(info_iv02);
         //判断是否为vip状态，如果不是，某些条目为灰色
         juageVip();
@@ -217,7 +217,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             } else if ("1".equals(vip)) {
                 //vip
                 switch_infopwd.setEnabled(true);
-
             }
         }
     }
