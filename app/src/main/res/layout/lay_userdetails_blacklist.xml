@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
 
@@ -15,7 +15,7 @@
         <RelativeLayout
 
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x50">
+            android:layout_height="50dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -24,21 +24,21 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/x20"
+               android:layout_centerInParent="true"
                 />
             <RelativeLayout
                 android:id="@+id/re_cancel"
                 android:layout_width="35dp"
                 android:text="close"
-                android:layout_height="@dimen/x30"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/shape_corner3"
                 >
 
                 <ImageView
 
-                    android:layout_width="@dimen/x20"
-                    android:layout_height="@dimen/x20"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@mipmap/close3"
 
                     android:layout_centerVertical="true"
@@ -49,8 +49,9 @@
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@drawable/line_dash"
+            android:layout_height="0.5dp"
+
+            android:background="@color/common_line"
             android:layout_marginLeft="@dimen/x15"
             android:layout_marginRight="@dimen/x15"
             android:layerType="software"
