@@ -79,8 +79,6 @@ public class Main_ContactListFragment extends EaseContactListFragment implements
     public FXPopWindow fxPopWindow;
     public MyReceiver myReceiver;
     private Map<String, EaseUser> contactsMap;
-
-
     @SuppressLint("InflateParams")
     @Override
     protected void initView() {
@@ -90,9 +88,7 @@ public class Main_ContactListFragment extends EaseContactListFragment implements
         HeaderItemClickListener clickListener = new HeaderItemClickListener();
         applicationItem = (ContactItemView) headerView.findViewById(R.id.application_item);
         applicationItem.setOnClickListener(clickListener);
-
         ///----------------------
-
         myReceiver=new MyReceiver();
         IntentFilter filter=new IntentFilter("addFrindOK");
         IntentFilter filter1=new IntentFilter("onContactInvited");

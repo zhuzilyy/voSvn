@@ -21,7 +21,7 @@
                     android:layout_height="wrap_content"
                     android:text="会员专享6大功能介绍"
                     android:gravity="center"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="6dp"
                     android:layout_marginTop="10dp"
@@ -69,11 +69,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:background="@color/backgroundColor"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         >
                     <ImageView
@@ -92,7 +94,7 @@
                         android:text="一键好友隐藏"
                         android:textColor="@color/black"
                         android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="5dp"
                         />
                     </RelativeLayout>
@@ -115,11 +117,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:background="@color/backgroundColor"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="@dimen/x5"
                         >
@@ -139,7 +143,7 @@
                             android:text="一摇好友隐藏"
                             android:textColor="@color/black"
                             android:layout_centerHorizontal="true"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -162,12 +166,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_height="wrap_content"
                         android:background="@color/backgroundColor"
-                        android:paddingBottom="@dimen/x5"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
                         android:orientation="vertical"
                         android:layout_marginTop="@dimen/x5"
                         >
@@ -186,7 +191,7 @@
                             android:text="一键显示好友"
                             android:textColor="@color/black"
                             android:layout_centerHorizontal="true"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -211,11 +216,12 @@
                     android:layout_height="wrap_content">
                     <RelativeLayout
                         android:background="@color/backgroundColor"
-                        android:paddingBottom="@dimen/x5"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
                         android:orientation="vertical"
                         android:layout_marginTop="@dimen/x5"
                         >
@@ -234,7 +240,7 @@
                             android:text="一键清除加密好友"
                             android:textColor="@color/black"
                             android:layout_centerHorizontal="true"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -257,12 +263,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_height="wrap_content"
                         android:background="@color/backgroundColor"
-                        android:paddingBottom="@dimen/x5"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
                         android:orientation="vertical"
                         android:layout_marginTop="@dimen/x5"
                         >
@@ -274,13 +281,14 @@
                             android:src="@mipmap/five"
                             />
                         <TextView
+                            android:layout_centerVertical="true"
                             android:id="@+id/title5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="人生笔记隐私功能"
                             android:textColor="@color/black"
                             android:layout_centerHorizontal="true"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -303,12 +311,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_height="wrap_content"
                         android:background="@color/backgroundColor"
-                        android:paddingBottom="@dimen/x5"
                         android:layout_marginRight="@dimen/x5"
                         android:layout_marginLeft="@dimen/x5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
                         android:orientation="vertical"
                         android:layout_marginTop="@dimen/x5"
                         >
@@ -320,13 +329,14 @@
                             android:src="@mipmap/six"
                             />
                         <TextView
+                            android:layout_centerVertical="true"
                             android:id="@+id/title6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="信息传输端对端加密"
                             android:textColor="@color/black"
                             android:layout_centerHorizontal="true"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             />
 
