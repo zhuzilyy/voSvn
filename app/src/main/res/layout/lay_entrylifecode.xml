@@ -24,7 +24,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="密友密码"
+                    android:text="人生笔记"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textColor="@color/black"
@@ -64,7 +64,7 @@
                 android:layout_marginTop="@dimen/x10"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="请输入密码"
+                android:hint="请输入人生笔记密码"
                 android:textSize="14sp"
                 android:inputType="textPassword"
                 android:layout_marginRight="@dimen/x15"

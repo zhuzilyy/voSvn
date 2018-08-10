@@ -3,6 +3,7 @@ package com.zl.vo_.main.main_fragments;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -23,6 +24,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
@@ -35,6 +37,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -303,7 +306,44 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
                 //进入人生笔记
                 LoginData.LoginInfo.LoginAccountInfo user=myUtils.readUser(MainActivity.this);
                 if(!TextUtils.isEmpty(myUtils.readUser(MainActivity.this).getPersonpass())){
-                    DialogUIUtils.showAlertInput(MainActivity.this, null, "请输入密码", null, "确认", "取消", new DialogUIListener() {
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.setCanceledOnTouchOutside(true);
+                    View vv = LayoutInflater.from(MainActivity.this).inflate(R.layout.lay_entrylifecode, null);
+                    dialog.setContentView(vv);
+                    final EditText ed_pwd = vv.findViewById(R.id.ed_pwd);
+                    TextView tv_confirm = vv.findViewById(R.id.tv_confirm);
+                    TextView tv_setpwd = vv.findViewById(R.id.tv_setpwd);
+                    ImageView cancel_iv = vv.findViewById(R.id.cancel_iv);
+                    tv_confirm.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String pwdStr = ed_pwd.getText().toString().trim();
+                            if (TextUtils.isEmpty(pwdStr)) {
+                                return;
+                            }
+                            try{
+                                String pp=  org.xutils.common.util.MD5.md5(pwdStr.toString());
+                                pp=pp.toUpperCase();
+                                Log.i("mmd5","==:"+pp);
+                                Log.i("mmd5","==:"+myUtils.readUser(MainActivity.this).getPersonpass());
+                                if(pp.equals(myUtils.readUser(MainActivity.this).getPersonpass())) {
+                                    startActivity(new Intent(MainActivity.this, LifeNote.class));
+                                }
+                                dialog.dismiss();
+                            }catch (Exception e){
+                            }
+                        }
+                    });
+                    cancel_iv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+
+
+                /*    DialogUIUtils.showAlertInput(MainActivity.this, null, "请输入密码", null, "确认", "取消", new DialogUIListener() {
                         @Override
                         public void onPositive() {
                             DialogUIUtils.dismiss();
@@ -328,7 +368,7 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
                                 Toast.makeText(MainActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
                             }
                         }
-                    }).show();
+                    }).show();*/
                 }else {
                     startActivity(new Intent(MainActivity.this, LifeNote.class));
                 }
