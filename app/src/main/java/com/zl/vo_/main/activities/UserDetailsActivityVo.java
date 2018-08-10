@@ -441,19 +441,22 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                         //可以添加，验证对方需不需要验证
                         if("1".equals(friendInfo.getFriend_apply())){
                             //需要验证，弹出理由框
-
-
                             final Dialog dialog2 = new Dialog(UserDetailsActivityVo.this);
                             View vv = LayoutInflater.from(UserDetailsActivityVo.this).inflate(R.layout.lay_yanzhen, null);
                             dialog2.setContentView(vv);
                             final TextView tv_yanzhenContent = vv.findViewById(R.id.tv_yanzhenContent);
                             TextView confirm = vv.findViewById(R.id.tv_confrim);
-
                             confirm.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
                                     String content = tv_yanzhenContent.getText().toString().trim();
                                     sendReasonForNewFriend(content);
+                                    dialog2.dismiss();
+                                }
+                            });
+                            vv.findViewById(R.id.re_cancel).setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
                                     dialog2.dismiss();
                                 }
                             });

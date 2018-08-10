@@ -23,7 +23,7 @@
                     android:layout_height="match_parent"
                     android:text="群聊"
                     android:gravity="center"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textColor="@color/black"
                     android:layout_centerInParent="true"
                     />
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="群组名称不能为空！"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:layout_marginTop="@dimen/x10"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
