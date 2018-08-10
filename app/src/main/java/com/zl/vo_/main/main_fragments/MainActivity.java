@@ -1413,6 +1413,7 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         } catch (Exception e) {
 
         }
+        //ScreenReceiverUtil.
 
         //startActivity(new Intent(MainActivity.this, SplashActivityVo.class));
     }
