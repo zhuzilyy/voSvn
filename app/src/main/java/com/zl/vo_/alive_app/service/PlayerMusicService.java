@@ -32,7 +32,7 @@ public class PlayerMusicService extends Service {
         super.onCreate();
         if(Contants.DEBUG)
             Log.d(TAG,TAG+"---->onCreate,启动服务");
-        mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.silent);
+        mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.music);
         mMediaPlayer.setLooping(true);
     }
 

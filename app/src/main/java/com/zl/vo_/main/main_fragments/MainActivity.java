@@ -3,6 +3,7 @@ package com.zl.vo_.main.main_fragments;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
+import android.app.ActivityManager;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -258,8 +259,7 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         mJobManager = JobSchedulerManager.getJobSchedulerInstance(this);
         mJobManager.startJobScheduler();
         startDaemonService();
-        // 启动播放无声音乐Service
-        startPlayMusicService();
+
         //-------alive-end-----------------------------
         DemoApplication.setMainActivity(this);
         //设置别名，撤销别名（alias）
@@ -471,7 +471,12 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         //debug purpose only
         registerInternalDebugReceiver();
     }
-//----------------保活服务--------------------------------------------------
+
+
+
+
+
+    //----------------保活服务--------------------------------------------------
     private void stopPlayMusicService() {
         Intent intent = new Intent(MainActivity.this, PlayerMusicService.class);
         stopService(intent);
