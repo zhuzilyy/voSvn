@@ -40,12 +40,10 @@ import java.util.List;
 import java.util.Map;
 
 public class ConversationListFragment extends EaseConversationListFragment {
-
     private TextView errorText;
     private MyReceiver myReceiver;
     public static DemoDBManager dbManager=DemoDBManager.getInstance();
     Map<String,String> Remarks=new HashMap<>();
-
     @Override
     protected void initView() {
         super.initView();
