@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/backgroundColor"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,17 +14,13 @@
         android:background="@color/white">
 
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/iv_back"
-            android:layout_width="@dimen/x30"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:onClick="back"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
         <View
@@ -66,11 +63,10 @@
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray5"
+        android:background="@color/common_line"
         />
     <!--有索引的listview-->
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/flag"
@@ -84,10 +80,9 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white">
+                android:background="@color/white">
 
             </android.support.v7.widget.RecyclerView>
 

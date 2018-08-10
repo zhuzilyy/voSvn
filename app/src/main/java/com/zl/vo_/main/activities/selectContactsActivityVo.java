@@ -79,7 +79,7 @@ public class selectContactsActivityVo extends VoBaseActivity {
         mRv.addItemDecoration(mDecoration = new SuspensionDecoration(selectContactsActivityVo.this,mDatas));
         //如果add两个，那么按照先后顺序，依次渲染。
 
-        mRv.addItemDecoration(new DividerItemDecoration(selectContactsActivityVo.this, DividerItemDecoration.VERTICAL_LIST));
+        //mRv.addItemDecoration(new DividerItemDecoration(selectContactsActivityVo.this, DividerItemDecoration.VERTICAL_LIST));
 
         //indexbar初始化
         mIndexBar.setmPressedShowTextView(mTvSideBarHint)//设置HintTextView
