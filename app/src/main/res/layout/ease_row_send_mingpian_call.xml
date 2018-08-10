@@ -47,25 +47,6 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp">
-
-                    <TextView
-                        android:layout_marginLeft="@dimen/x10"
-                        android:layout_centerVertical="true"
-                        android:id="@+id/tv_account"
-                        android:layout_marginTop="15dp"
-                        android:paddingTop="@dimen/x5"
-                        android:layout_below="@+id/tv_chatcontent"
-                        android:layout_toRightOf="@+id/card_head"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/x10"
-                        android:textColor="@color/gray"
-                        android:text="中南海"
-                        android:singleLine="true"
-                        android:paddingRight="@dimen/x8"
-                        android:enabled="true"
-                        />
-
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/card_head"
                         android:layout_width="45dp"
@@ -75,24 +56,46 @@
                         android:layout_centerVertical="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true" />
-
-                    <TextView
-                        android:id="@+id/tv_nick"
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/card_head"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="中南海"
+                            android:layout_alignTop="@+id/card_head"
+                            android:layout_alignLeft="@+id/tv_account"
+                            android:layout_alignStart="@+id/tv_account" />
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_marginTop="3dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/tv_account"
+                            android:layout_below="@+id/tv_chatcontent"
+                            android:layout_toRightOf="@+id/card_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray"
+                            android:text="中南海"
+                            android:singleLine="true"
+                            android:paddingRight="@dimen/x8"
+                            android:enabled="true"
+                            />
 
-                        android:layout_height="wrap_content"
-                        android:text="中南海"
-                        android:layout_alignTop="@+id/card_head"
-                        android:layout_alignLeft="@+id/tv_account"
-                        android:layout_alignStart="@+id/tv_account" />
-
+                    </LinearLayout>
                 </RelativeLayout>
 
                 <View
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="0.5dp"
                     android:layout_marginRight="@dimen/x5"
-                    android:background="@color/gray_normal"></View>
+                    android:background="@color/common_line"/>
                 <TextView
                     android:layout_marginTop="@dimen/x3"
                     android:layout_width="wrap_content"
