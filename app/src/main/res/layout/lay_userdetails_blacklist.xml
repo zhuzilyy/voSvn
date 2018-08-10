@@ -78,9 +78,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/x45">
-
-
-
             <TextView
                 android:id="@+id/confirm"
                 android:layout_width="0dp"

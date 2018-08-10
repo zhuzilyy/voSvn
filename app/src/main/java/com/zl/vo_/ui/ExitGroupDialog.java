@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zl.vo_.R;
@@ -24,7 +25,8 @@ import com.zl.vo_.main.activities.VoBaseActivity;
 
 
 public class ExitGroupDialog extends VoBaseActivity {
-
+    private ImageView imageView;
+    private TextView tv_title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,15 @@ public class ExitGroupDialog extends VoBaseActivity {
             text.setText(toast);
             exitBtn.setText("解散");
         }
+        imageView=findViewById(R.id.iv_back);
+        tv_title=findViewById(R.id.tv_title);
+        tv_title.setText("退出");
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
     public void logout(View view){
     	setResult(RESULT_OK);

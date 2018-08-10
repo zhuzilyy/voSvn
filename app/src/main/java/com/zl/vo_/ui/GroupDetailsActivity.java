@@ -125,7 +125,6 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 			return;
 		}
 		setContentView(R.layout.em_activity_group_details);
-
 		/***
 		 * 从自己的服务器上加载群聊信息
 		 */

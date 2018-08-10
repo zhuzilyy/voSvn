@@ -75,13 +75,8 @@ public class GroupPickContactsActivity extends VoBaseActivity {
 			user.setAvatar(allFriendsList.get(i).getAvatar());
 			user.setNick(allFriendsList.get(i).getNike());
 			user.setUsername(allFriendsList.get(i).getHuanxinID());
-
-
 			alluserList.add(user);
 		}
-
-
-
 //		for (EaseUser user : DemoHelper.getInstance().getContactList().values()) {
 //			if (!user.getUsername().equals(Constant.NEW_FRIENDS_USERNAME) & !user.getUsername().equals(Constant.GROUP_USERNAME) & !user.getUsername().equals(Constant.CHAT_ROOM) & !user.getUsername().equals(Constant.CHAT_ROBOT))
 //				alluserList.add(user);
@@ -103,7 +98,6 @@ public class GroupPickContactsActivity extends VoBaseActivity {
 //                }
 //            }
 //        });
-
 		ListView listView = (ListView) findViewById(R.id.list);
 		contactAdapter = new PickContactAdapter(this, R.layout.em_row_contact_with_checkbox, alluserList);
 		listView.setAdapter(contactAdapter);

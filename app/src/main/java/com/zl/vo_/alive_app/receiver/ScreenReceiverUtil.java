@@ -19,11 +19,9 @@ public class ScreenReceiverUtil {
     private SreenBroadcastReceiver mScreenReceiver;
     // 屏幕状态改变回调接口
     private SreenStateListener mStateReceiverListener;
-
     public ScreenReceiverUtil(Context mContext){
         this.mContext = mContext;
     }
-
     public void setScreenReceiverListener(SreenStateListener mStateReceiverListener){
         this.mStateReceiverListener = mStateReceiverListener;
         // 动态启动广播接收器
@@ -34,7 +32,6 @@ public class ScreenReceiverUtil {
         filter.addAction(Intent.ACTION_USER_PRESENT);
         mContext.registerReceiver(mScreenReceiver,filter);
     }
-
     public void stopScreenReceiverListener(){
         mContext.unregisterReceiver(mScreenReceiver);
     }
