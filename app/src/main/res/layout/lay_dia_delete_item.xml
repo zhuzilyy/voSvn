@@ -74,7 +74,6 @@
                     android:textSize="16sp"
                     android:layout_marginLeft="15sp"
                     />
-
             </LinearLayout>
             <Button
                 android:visibility="visible"
