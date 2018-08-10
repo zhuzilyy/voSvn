@@ -71,11 +71,11 @@ public class ThemeConfig implements Serializable{
             .build();
     //Vo主题
     public static ThemeConfig VO = new ThemeConfig.Builder()
-            .setTitleBarBgColor(Color.parseColor("#4162ff"))
-            .setFabNornalColor(Color.parseColor("#4162ff"))
-            .setFabPressedColor(Color.parseColor("#4162ff"))
-            .setCheckSelectedColor(Color.parseColor("#4162ff"))
-            .setCropControlColor(Color.parseColor("#4162ff"))
+            .setTitleBarBgColor(Color.parseColor("#5544aa"))
+            .setFabNornalColor(Color.parseColor("#5544aa"))
+            .setFabPressedColor(Color.parseColor("#5544aa"))
+            .setCheckSelectedColor(Color.parseColor("#5544aa"))
+            .setCropControlColor(Color.parseColor("#5544aa"))
             .build();
     private int titleBarTextColor;
     private int titleBarBgColor;

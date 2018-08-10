@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="@color/backgroundColor"
     >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -14,22 +18,15 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingLeft="@dimen/x12">
-
+        >
         <ImageView
             android:id="@+id/iv_back"
-
-            android:layout_width="@dimen/x30"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-
-            android:paddingBottom="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
+            android:layout_marginLeft="10dp"
             android:src="@mipmap/back_" />
-
         <View
             android:id="@+id/view_temp"
             android:layout_width="1dp"
@@ -39,18 +36,16 @@
             android:visibility="gone"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/iv_back"
-            android:background="#14191A" />
+            android:background="@color/common_line" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/view_temp"
-            android:text="@string/writerLifeNote"
-            android:visibility="gone"
+            android:text="记录人生"
             android:textColor="@color/black"
-            android:textSize="@dimen/x14" />
+            android:textSize="18sp" />
         <TextView
             android:id="@+id/writeLifeNote_tv_submit"
             android:visibility="visible"
@@ -62,9 +57,7 @@
             android:text="@string/save"
             android:layout_marginRight="@dimen/x12"
             android:textColor="@color/black"
-            android:textSize="@dimen/x12" />
-
-
+            android:textSize="14sp" />
     </RelativeLayout>
     <View
         android:id="@+id/line_write"
@@ -73,11 +66,10 @@
         android:layout_height="0.5dp"
         android:background="@color/light_gray4"
         />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x35"
+        android:paddingBottom="10dp"
         android:orientation="vertical"
         android:background="@color/white"
         android:layout_below="@+id/line_write"
@@ -98,7 +90,6 @@
             android:maxHeight="@dimen/x250"
             android:minHeight="@dimen/x122"
             />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
@@ -106,10 +97,35 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:overScrollMode="never" />
-
+        </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:src="@mipmap/write_lift_bottom"
+            />
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="记录生活点滴，每时每刻，重要的人和事"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue02version"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        />
+
     <RelativeLayout
-        android:layout_below="@+id/title"
         android:id="@+id/loading_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -124,34 +140,6 @@
             android:visibility="visible"
             app:indicator="BallScaleMultiple"
             app:indicator_color="@color/common_top_bar_blue"
-
             />
-
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:layout_width="230dp"
-            android:layout_height="230dp"
-            android:src="@mipmap/write_lift_bottom"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="记录生活点滴，每时每刻，重要的人和事"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/blue02version"
-            android:gravity="center"
-            android:layout_marginTop="8dp"
-            />
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</RelativeLayout>
