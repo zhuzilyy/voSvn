@@ -230,27 +230,16 @@ public class Main_MessageFragment extends Fragment implements View.OnClickListen
                     dowithTempHide(pwdStr);
                     dialog.dismiss();
                 }catch (Exception e){
-
                 }
-
-
             }
         });
-
-
         cancel_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
             }
         });
-
-
         dialog.show();
-
-
-
-
       /*  DialogUIUtils.showAlertInput(getActivity(), null, "请输入密码", null, "确认22", "取消", new DialogUIListener() {
             @Override
             public void onPositive() {
