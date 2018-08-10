@@ -155,7 +155,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     public static File tempFile;
     public static final int PHOTO_REQUEST_CAREMA = 1;// 拍照
     public static final int CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE = 2;// 拍摄视频
-    //*****************************************
+    //************************************
     //獲取系統版本
     private  int currentapiVersion;
     //转发消息的id
