@@ -29,6 +29,7 @@ import org.xutils.x;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Administrator on 2017/11/21.
@@ -42,7 +43,7 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
     @BindView(R.id.result_searchContact_re)
     public RelativeLayout result_searchContact_re;
     @BindView(R.id.searchContacts_head)
-    public ImageView searchContacts_head;
+    public CircleImageView searchContacts_head;
     @BindView(R.id.searchContacts_name)
     public TextView searchContacts_name;
     @BindView(R.id.searchContacts_vo)
@@ -61,9 +62,7 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
         VoBaseActivity.addActivity(this);
         mInit();
     }
-
     private void mInit() {
-
         et_search.setOnEditorActionListener(new TextView.OnEditorActionListener(){
 
             @Override
@@ -81,18 +80,15 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
                     }
                     loading_view.setVisibility(View.VISIBLE);
                     result_searchContact_re.setVisibility(View.GONE);
-
                     RequestParams params=new RequestParams(Url.FindFriendURL);
                     params.addParameter("keyword",SearchContent);
                     params.addParameter("userid", myUtils.readUser(addFriendActivity_SearchVo.this).getUserid());
                     x.http().post(params, new MyCommonCallback<Result<SearchContactsEntivity>>() {
-
                         @Override
                         public void success(Result<SearchContactsEntivity> data) {
                             Log.i("ss",data.info);
                             loading_view.setVisibility(View.GONE);
                             Toast.makeText(addFriendActivity_SearchVo.this, data.info, Toast.LENGTH_SHORT).show();
-
                             SearchContactsEntivity dataEntity=data.data;
                             SearchContactsEntivity.SearchContactsInfo contactsInfo= dataEntity.getInfo();
                             if(contactsInfo!=null){

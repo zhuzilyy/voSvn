@@ -47,9 +47,9 @@
             android:layout_height="match_parent"
             android:cacheColorHint="#00000000"
             android:background="@android:color/transparent"
-            android:divider="#D4D4D4"
+            android:divider="@null"
             android:descendantFocusability="afterDescendants"
-            android:dividerHeight="1px"
+            android:dividerHeight="0px"
             android:fastScrollEnabled="true" />
 
         <com.hyphenate.easeui.widget.EaseSidebar

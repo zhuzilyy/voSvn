@@ -53,7 +53,6 @@ public class PrivacyPasswordActivityVo extends VoBaseActivity implements View.On
     public ListView lv;
     public PrivacyPwd_ContactAdapter adapter;
     public TextView hideStratTime_tv;
-
     public boolean isStart=false;
     @BindView(R.id.iv_back)
     public ImageView ivback;

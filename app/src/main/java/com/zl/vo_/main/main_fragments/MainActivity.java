@@ -177,9 +177,6 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
     @BindView(R.id.hideMean_re)
     public RelativeLayout hideMean_re;
     @BindView(R.id.tv_newVersion) public TextView tv_newVersion;
-
-
-
     /**
      * 库 phone表字段
      **/
@@ -1418,9 +1415,9 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         } catch (Exception e) {
 
         }
-        mScreenListener.setScreenReceiverListener(mScreenListenerer);
-
-        //startActivity(new Intent(MainActivity.this, SplashActivityVo.class));
+        if (mScreenListener!=null){
+            mScreenListener.stopScreenReceiverListener();
+        }
     }
 
     private void unregisterBroadcastReceiver() {
