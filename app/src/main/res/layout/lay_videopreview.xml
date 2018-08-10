@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x10"
+        android:paddingBottom="10dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             <!--title-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp">
+                android:layout_height="50dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -54,6 +54,14 @@
                 android:layout_marginRight="10dp"
                 android:layerType="software"
                 />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/tipcolor"
+                android:textSize="14sp"
+                android:layout_marginLeft="15dp"
+                android:text="是否发送此视频"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"

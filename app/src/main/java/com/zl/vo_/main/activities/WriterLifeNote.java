@@ -54,10 +54,6 @@ public class WriterLifeNote extends VoBaseActivity implements View.OnClickListen
     public EditText writeLifeNote_tv_content;
     @BindView(R.id.loading_view)
     public RelativeLayout loading_view;
-
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,17 +84,14 @@ public class WriterLifeNote extends VoBaseActivity implements View.OnClickListen
                 finish();
                 break;
             case R.id.writeLifeNote_tv_submit:
-
                 String content=writeLifeNote_tv_content.getText().toString().trim();
                 String picdata=getpicData_base64();
                 if(TextUtils.isEmpty(content)&&TextUtils.isEmpty(picdata)){
                     Toast.makeText(this, "您要发表什么呢", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 //发表人生笔记
                 submitLifeNote(content,picdata);
-
                 break;
             default:
                 break;
@@ -133,19 +126,15 @@ public class WriterLifeNote extends VoBaseActivity implements View.OnClickListen
      * 写人生笔记
      */
     private void submitLifeNote(String Content,String picData) {
-
         loading_view.setVisibility(View.VISIBLE);
         RequestParams params=new RequestParams(Url.WriteLifeNoteUrl);
         params.addParameter("userid",myUtils.readUser(WriterLifeNote.this).getUserid());
         if(!TextUtils.isEmpty(Content)){
             params.addParameter("content",Content);
         }
-
         if(!TextUtils.isEmpty(picData)){
             params.addParameter("picdata",picData);
         }
-
-
         x.http().post(params, new MyCommonCallback<Result>() {
             @Override
             public void success(Result data) {
@@ -155,9 +144,7 @@ public class WriterLifeNote extends VoBaseActivity implements View.OnClickListen
                     sendBroadcast(new Intent("publishLifeNoteOk"));
                     finish();
                 }
-
             }
-
             @Override
             public void error(Throwable ex, boolean isOnCallback) {
                 loading_view.setVisibility(View.GONE);

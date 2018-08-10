@@ -74,12 +74,12 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x150"
             android:background="@drawable/shape_white"
-            android:layout_marginLeft="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:hint="请输入您的投诉内容"
             android:gravity="top"
             android:padding="@dimen/x6"
             android:textSize="@dimen/x12"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="@dimen/x12"
             />
         <Button
@@ -90,9 +90,9 @@
             android:layout_marginLeft="20dp"
             android:gravity="center"
             android:text="投诉"
-            android:textSize="@dimen/x14"
+            android:textSize="14sp"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/x15"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_corner_blue"
             />
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <RelativeLayout
         android:visibility="gone"
         android:layout_width="match_parent"
@@ -36,7 +36,6 @@
         android:paddingLeft="@dimen/x15"
         android:background="@mipmap/vip_bg"
         >
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/vip_head"
             android:layout_width="@dimen/x60"
@@ -46,10 +45,10 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-
             android:src="@mipmap/girl2"/>
 
         <LinearLayout
+            android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -109,8 +108,7 @@
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 >
                 <TextView
@@ -162,18 +160,13 @@
             android:layout_width="@dimen/x15"
             android:layout_height="@dimen/x15"
             android:src="@mipmap/arrow_down"
-
             />
-
         <TextView
-
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/x35"
-
+            android:layout_height="wrap_content"
             android:text="蓝钻会员6大专享功能"
             android:paddingLeft="@dimen/x12"
             android:paddingRight="@dimen/x12"
-
             android:paddingBottom="@dimen/x8"
             android:paddingTop="@dimen/x8"
             android:textColor="@color/white"
@@ -198,6 +191,9 @@
             android:orientation="horizontal"
             >
             <TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
                 android:id="@+id/vip_function_pressfriend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -208,11 +204,10 @@
                 android:paddingTop="@dimen/x6"
                 android:textColor="@color/black"
                 android:paddingBottom="@dimen/x6"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
                 />
 
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/vip_function_shakefriend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -221,8 +216,8 @@
                 android:paddingTop="@dimen/x6"
                 android:paddingBottom="@dimen/x6"
                 android:textColor="@color/black"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/shape_stoke_bluenew"
                 android:text="一摇好友隐藏"
                 />
@@ -237,6 +232,7 @@
             >
 
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/vip_function_showallfriend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -247,11 +243,12 @@
                 android:paddingTop="@dimen/x6"
                 android:textColor="@color/black"
                 android:paddingBottom="@dimen/x6"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 />
 
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/vip_function_allclear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -260,8 +257,8 @@
                 android:paddingTop="@dimen/x6"
                 android:paddingBottom="@dimen/x6"
                 android:textColor="@color/black"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/shape_stoke_bluenew"
                 android:text="一键清除加密好友"
                 />
@@ -276,6 +273,7 @@
             >
 
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/vip_function_lifenoteprivacy"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -286,11 +284,12 @@
                 android:paddingTop="@dimen/x6"
                 android:textColor="@color/black"
                 android:paddingBottom="@dimen/x6"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 />
 
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/vip_function_infortrans"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -299,8 +298,8 @@
                 android:paddingTop="@dimen/x6"
                 android:paddingBottom="@dimen/x6"
                 android:textColor="@color/black"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/shape_stoke_bluenew"
                 android:text="信息传输端对端加密"
                 />
