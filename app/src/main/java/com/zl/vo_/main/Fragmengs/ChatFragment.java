@@ -24,14 +24,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Toast;
 
-
 import com.bumptech.glide.Glide;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMImageMessageBody;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
-
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.hyphenate.easeui.ui.EaseChatFragment.EaseChatFragmentHelper;
@@ -51,11 +49,8 @@ import com.zl.vo_.R;
 import com.zl.vo_.db.DemoDBManager;
 import com.zl.vo_.domain.RobotUser;
 import com.zl.vo_.main.Entity.LoginData;
-import com.zl.vo_.main.activities.ChatActivity;
-import com.zl.vo_.main.activities.Help_Feedback;
 import com.zl.vo_.main.activities.MyFrindEntivity;
 import com.zl.vo_.main.activities.UserDetailsActivityVo;
-import com.zl.vo_.main.activities.addFriendActivity_ContactsVo;
 import com.zl.vo_.main.activities.selectContactsActivityVo;
 import com.zl.vo_.main.main_fragments.MainActivity;
 import com.zl.vo_.main.main_utils.MinPianConstant;
@@ -66,15 +61,11 @@ import com.zl.vo_.ui.ChatRoomDetailsActivity;
 import com.zl.vo_.ui.ContextMenuActivity;
 import com.zl.vo_.ui.ForwardMessageActivity;
 import com.zl.vo_.ui.GroupDetailsActivity;
-import com.zl.vo_.ui.GroupsActivity;
 import com.zl.vo_.ui.ImageGridActivity;
-import com.zl.vo_.ui.PickAtUserActivity;
-import com.zl.vo_.ui.ScanCaptureActivity;
 import com.zl.vo_.ui.VideoCallActivity;
 import com.zl.vo_.ui.VoiceCallActivity;
 import com.zl.vo_.widget.ChatRowVoiceCall;
 import com.zl.vo_.widget.EaseChatRowRecall;
-import com.zl.vo_.widget.FXPopWindow;
 import com.zl.vo_.widget.scan.GameShareCharRow;
 import com.zl.vo_.widget.scan.MingPianCharRow;
 

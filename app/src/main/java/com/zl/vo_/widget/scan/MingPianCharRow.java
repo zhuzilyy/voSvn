@@ -40,8 +40,6 @@ public class MingPianCharRow extends EaseChatRow {
             inflater.inflate(message.direct()== EMMessage.Direct.RECEIVE?
                     R.layout.ease_row_received_mingpian_call:R.layout.ease_row_send_mingpian_call,this);
         }
-
-
     }
 
     @Override
