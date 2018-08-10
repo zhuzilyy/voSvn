@@ -351,10 +351,10 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         //use the menu in base class
         super.registerExtendMenuItem();
         //extend menu items
-        inputMenu.registerExtendMenuItem(R.string.attach_video, R.mipmap.video_chat, ITEM_VIDEO, extendMenuItemClickListener);
+        inputMenu.registerExtendMenuItem(R.string.attach_video, R.mipmap.send_video, ITEM_VIDEO, extendMenuItemClickListener);
         //**********************************************
         //增加一个名片发送
-        inputMenu.registerExtendMenuItem("名片", R.mipmap.card, MINGPIAN, extendMenuItemClickListener);
+        inputMenu.registerExtendMenuItem("名片", R.mipmap.send_idcard, MINGPIAN, extendMenuItemClickListener);
         //************************************************
         //聊天室暂时不支持红包功能
         //red packet code : 注册红包菜单选项
