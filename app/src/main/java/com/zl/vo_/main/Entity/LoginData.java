@@ -63,6 +63,15 @@ public class LoginData {
             private String row_number;
             private String account;
             private String mobile;
+            private String sy;
+
+            public String getSy() {
+                return sy;
+            }
+
+            public void setSy(String sy) {
+                this.sy = sy;
+            }
 
             public String getId() {
                 return id;

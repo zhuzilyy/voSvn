@@ -86,7 +86,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
 //    @BindView(R.id.vip_info_iv)
 //    public ImageView vip_info_iv;
 
-
     public List<VIPProductData.VIPProductInfo.VIPProductCell> biglist=new ArrayList<>();
     @BindView(R.id.vip_btn_submit)
     public Button vip_btn_submit;
@@ -107,6 +106,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     
     private LinearLayout ll_vipnofree;
     private TextView tv_vipnofree;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -200,9 +200,18 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         function_four_ll=headerview.findViewById(R.id.function_four_ll);
         function_arrow=headerview.findViewById(R.id.vip_arrow);
 
+
         ll_vipnofree=headerview.findViewById(R.id.ll_vipnofree);
         tv_vipnofree = headerview.findViewById(R.id.tv_vipnofree);
-        
+        LoginData.LoginInfo.LoginAccountInfo user2  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
+        if(user2!=null){
+            if("0".equals(user2.getSy())){
+               ll_vipnofree.setVisibility(View.VISIBLE);
+            }else if("1".equals(user2.getSy())) {
+                ll_vipnofree.setVisibility(View.GONE);
+            }
+        }
+
         vip_function_pressfriend=headerview.findViewById(R.id.vip_function_pressfriend);
         vip_function_shakefriend=headerview.findViewById(R.id.vip_function_shakefriend);
         vip_function_showallfriend=headerview.findViewById(R.id.vip_function_showallfriend);

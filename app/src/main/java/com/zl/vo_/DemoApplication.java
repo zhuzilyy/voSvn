@@ -183,7 +183,7 @@ public class DemoApplication extends Application {
         isRunInBackground = false;
         // 暂停播放无声音乐Service
         stopPlayMusicService();
-        Toast.makeText(getInstance(), "暂停播放无声音乐Service", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getInstance(), "暂停播放无声音乐Service", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -195,21 +195,18 @@ public class DemoApplication extends Application {
         isRunInBackground = true;
         // 启动播放无声音乐Service
         startPlayMusicService();
-        Toast.makeText(getInstance(), "启动播放无声音乐Service", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getInstance(), "启动播放无声音乐Service", Toast.LENGTH_SHORT).show();
 
     }
 
     private void stopPlayMusicService() {
-        Intent intent = new Intent(getInstance(), PlayerMusicService.class);
+        Intent intent = new Intent(getInstance(),PlayerMusicService.class);
         getInstance().stopService(intent);
     }
-
     private void startPlayMusicService() {
         Intent intent = new Intent(getInstance(), PlayerMusicService.class);
         startService(intent);
     }
-
-
     /** 初始化小米消息推送 **/
     private void initXiaomiPush() {
         // 注册 push 服务，注册成功后会向 DemoMessageReceiver 发送广播
