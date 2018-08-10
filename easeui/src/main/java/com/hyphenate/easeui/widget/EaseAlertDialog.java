@@ -90,7 +90,6 @@ public class EaseAlertDialog extends Dialog {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.ease_alert_dialog);
-		
 		Button cancel = (Button)findViewById(R.id.btn_cancel);
 		Button ok = (Button)findViewById(R.id.btn_ok);
 		TextView titleView = (TextView) findViewById(R.id.title);
