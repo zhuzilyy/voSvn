@@ -120,23 +120,18 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         getData();
         mInit();
         LoginData.LoginInfo.LoginAccountInfo user  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
-        if(user!= null){
-            String userId  = user.getUserid();
-            if(!TextUtils.isEmpty(userId)){
-                getVipTest(userId);
-            }
-        }
+
 
     }
 
     /***
-     * 是否是试用
-     * @param unionid
+     * 开通试用
+     * @param userId
      */
-    private void getVipTest(String unionid) {
+    private void getVipTest(String userId) {
 
         RequestParams params= new RequestParams(Url.TestVip);
-        params.addParameter("userid",unionid);
+        params.addParameter("userid",userId);
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -203,7 +198,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
 
         ll_vipnofree=headerview.findViewById(R.id.ll_vipnofree);
         tv_vipnofree = headerview.findViewById(R.id.tv_vipnofree);
-        LoginData.LoginInfo.LoginAccountInfo user2  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
+        final LoginData.LoginInfo.LoginAccountInfo user2  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
         if(user2!=null){
             if("0".equals(user2.getSy())){
                ll_vipnofree.setVisibility(View.VISIBLE);
@@ -261,6 +256,16 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     vip_final_save.setText("已省"+df.format(disPrice)+"元");
 
                     pid=biglist.get(i-1).getProduct_id();
+                }
+            }
+        });
+
+        //开通vip试用
+        ll_vipnofree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(user2!=null){
+                    getVipTest(user2.getUserid());
                 }
             }
         });
