@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    >
     <!--title-->
     <RelativeLayout
         android:id="@+id/title"
@@ -12,15 +14,12 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:onClick="back"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
+            android:layout_marginLeft="10dp"
             android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
@@ -49,6 +48,7 @@
             android:layout_width="@dimen/x20"
             android:layout_alignParentRight="true"
             android:layout_height="@dimen/x20"
+            android:background="@color/white"
             android:src="@drawable/more_details"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/x15"
@@ -61,7 +61,7 @@
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray5"
+        android:background="@color/common_line"
         />
     <LinearLayout
         android:layout_below="@+id/line"
@@ -73,21 +73,21 @@
             android:id="@+id/et_complain"
             android:layout_width="match_parent"
             android:layout_height="@dimen/x150"
-            android:background="@drawable/shape_stoke_"
-            android:layout_marginLeft="@dimen/x12"
+            android:background="@drawable/shape_white"
+            android:layout_marginLeft="20dp"
             android:hint="请输入您的投诉内容"
             android:gravity="top"
             android:padding="@dimen/x6"
             android:textSize="@dimen/x12"
-            android:layout_marginRight="@dimen/x12"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="@dimen/x12"
             />
         <Button
             android:id="@+id/btn_complain"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x40"
-            android:layout_marginRight="@dimen/x12"
-            android:layout_marginLeft="@dimen/x12"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:gravity="center"
             android:text="投诉"
             android:textSize="@dimen/x14"
