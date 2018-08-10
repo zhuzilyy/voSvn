@@ -326,8 +326,6 @@ public class MyContactsListFragment extends Fragment implements View.OnClickList
                 intent.putExtra("account",bbList.get(i-1).getAccount());
                 intent.putExtra("avatar",myUtils.readUser(getActivity()).getAvatar());
                 intent.putExtra("nick",myUtils.readUser(getActivity()).getNickname());
-
-
                 startActivity(intent);
                // startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", BigList.get(i-1).getHuanxinID()));
             }
