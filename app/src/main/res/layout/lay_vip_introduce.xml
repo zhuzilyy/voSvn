@@ -14,15 +14,14 @@
             >
             <!--title-->
             <RelativeLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x50">
+                android:layout_height="50dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="会员专享6大功能介绍"
                     android:gravity="center"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="6dp"
                     android:layout_marginTop="10dp"
@@ -53,8 +52,8 @@
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@drawable/line_dash"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:layerType="software"
@@ -64,249 +63,297 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@color/backgroundColor"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/one_icon"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/one"
                         />
                     <TextView
+                        android:layout_centerVertical="true"
                         android:id="@+id/title1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="一键好友隐藏"
                         android:textColor="@color/black"
                         android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:layout_marginTop="5dp"
                         />
+                    </RelativeLayout>
                     <TextView
-                        android:layout_below="@+id/title1"
+                        android:layout_marginTop="3dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="开通VO会员后，可以对好友进行隐私设置，点击隐藏快捷键，即可隐藏快捷键"
-                        android:textColor="@color/gray"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/title1"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        />
-
-
-                </RelativeLayout>
+                        android:text="开通VO会员后，可以对好友进行隐私设置，点击隐藏快捷键，即可隐藏快捷键"
+                        android:textColor="@color/tipcolor"
+                        android:textSize="13sp" />
+                </LinearLayout>
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/x5"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/two_icon"
-                        />
-                    <TextView
-                        android:id="@+id/title2"
-                        android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@color/backgroundColor"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="一摇好友隐藏"
-                        android:textColor="@color/black"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
-                        />
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/x5"
+                        >
+
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/two"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一摇好友隐藏"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            />
+                    </RelativeLayout>
                     <TextView
+                        android:layout_marginTop="3dp"
                         android:layout_below="@+id/title2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="开通VO会员后，可以对好友进行隐私设置，手机摇一摇，即可隐藏快捷键"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/tipcolor"
                         android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         />
-
-
-                </RelativeLayout>
+                </LinearLayout>
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/x5"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/three_icon"
-                        />
-                    <TextView
-                        android:id="@+id/title3"
-                        android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_height="wrap_content"
-                        android:text="一键显示好友"
-                        android:textColor="@color/black"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
-                        />
+                        android:background="@color/backgroundColor"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/x5"
+                        >
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/three"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一键显示好友"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            />
+                    </RelativeLayout>
                     <TextView
+                        android:layout_marginTop="3dp"
                         android:layout_below="@+id/title3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="开通VO会员后，可以对好友进行隐私设置，点击显示好友快捷键，输入正确密码显示"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/tipcolor"
                         android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         />
 
-
-                </RelativeLayout>
+                </LinearLayout>
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/x5"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/four_icon"
-                        />
-                    <TextView
-                        android:id="@+id/title4"
-                        android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:background="@color/backgroundColor"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_height="wrap_content"
-                        android:text="一键清除加密好友"
-                        android:textColor="@color/black"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
-                        />
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/x5"
+                        >
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/four"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/title4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一键清除加密好友"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            />
+                    </RelativeLayout>
                     <TextView
+                        android:layout_marginTop="3dp"
                         android:layout_below="@+id/title4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="私密好友聊天记录不留任何痕迹"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/tipcolor"
                         android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         />
-
-
-                </RelativeLayout>
+                </LinearLayout>
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/x5"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/five_icon"
-                        />
-                    <TextView
-                        android:id="@+id/title5"
-                        android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_height="wrap_content"
-                        android:text="人生笔记隐私功能"
-                        android:textColor="@color/black"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
-                        />
+                        android:background="@color/backgroundColor"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/x5"
+                        >
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/five"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/title5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人生笔记隐私功能"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            />
+                    </RelativeLayout>
                     <TextView
+                        android:layout_marginTop="3dp"
                         android:layout_below="@+id/title5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="为用户提供终身免费的信息、图片、视频云存储，并可设置密码保护隐私"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/tipcolor"
                         android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         />
-
-
-                </RelativeLayout>
+                </LinearLayout>
                 <!--一键隐藏好友-->
-                <RelativeLayout
-                    android:background="@color/light_gray5"
-                    android:paddingBottom="@dimen/x5"
-                    android:layout_marginRight="@dimen/x5"
-                    android:layout_marginLeft="@dimen/x5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/x5"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:src="@mipmap/six_icon"
-                        />
-                    <TextView
-                        android:id="@+id/title6"
-                        android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_height="wrap_content"
-                        android:text="信息传输端对端加密"
-                        android:textColor="@color/black"
-                        android:layout_centerHorizontal="true"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
-                        />
+                        android:background="@color/backgroundColor"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/x5"
+                        >
+                        <ImageView
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/six"
+                            />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/title6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信息传输端对端加密"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </RelativeLayout>
                     <TextView
+                        android:layout_marginTop="3dp"
                         android:layout_below="@+id/title6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="利用2048位密码对用户之间的信息传输进行保护，不会被第三方窃取，确保信息传输安全"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/tipcolor"
                         android:layout_centerHorizontal="true"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         />
-
-
-                </RelativeLayout>
-
-
-
+                </LinearLayout>
 
             </LinearLayout>
             <View
@@ -334,7 +381,6 @@
                     android:text="确定"
                     android:gravity="center"
                     />
-
             </LinearLayout>
 
         </LinearLayout>

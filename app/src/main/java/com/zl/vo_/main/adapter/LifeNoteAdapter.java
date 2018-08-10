@@ -82,7 +82,6 @@ public class LifeNoteAdapter extends BaseAdapter {
             holder= (viewHolder) view.getTag();
 
         }
-
         if(itemdata.getPicarr().size()>1){
             //图片大于一张
             holder.ll_morePic.setVisibility(View.VISIBLE);
@@ -112,8 +111,6 @@ public class LifeNoteAdapter extends BaseAdapter {
             holder.content.setText(bigList.get(i).getContent());
             Picasso.with(mContext).load(bigList.get(i).getPicarr().get(0)).placeholder(R.mipmap.girl2).into(holder.lone_iv);
 
-
-
         }else {
             //没有图片
             holder.ll_morePic.setVisibility(View.GONE);
@@ -140,27 +137,6 @@ public class LifeNoteAdapter extends BaseAdapter {
                 mContext.startActivity(intent);
             }
         });
-
-
-/*
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent=new Intent(mContext,LifeNoteDetailsActivityVo.class);
-                intent.putExtra("id",bigList.get(i).getId());
-                mContext.startActivity(intent);
-            }
-        });*/
-
-
-
-
-
-
-
-
-
         return view;
     }
 

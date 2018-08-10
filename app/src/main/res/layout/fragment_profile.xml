@@ -92,48 +92,50 @@
                 <RelativeLayout
                     android:id="@+id/re_myinfo"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-
+                    android:layout_height="wrap_content"
                     android:background="@drawable/fx_btn_list_item_bg"
                     android:clickable="true"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_centerVertical="true"
                         android:id="@+id/iv_avatar"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_marginLeft="15dp"
                         android:src="@drawable/fx_default_useravatar" />
 
-
-                    <TextView
-                        android:id="@+id/tv_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <LinearLayout
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_toRightOf="@id/iv_avatar"
-                        android:ellipsize="end"
-                        android:maxWidth="@dimen/x100"
-                        android:singleLine="true"
-                        android:text="dddd"
-                        android:textColor="#353535"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:id="@+id/tv_void"
+                        android:layout_toRightOf="@+id/iv_avatar"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_toRightOf="@id/iv_avatar"
-                        android:text="vo号:"
-                        android:textColor="#AAAAAA"
-                        android:textSize="14sp" />
-
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_toRightOf="@id/iv_avatar"
+                            android:ellipsize="end"
+                            android:maxWidth="@dimen/x100"
+                            android:singleLine="true"
+                            android:text="dddd"
+                            android:textColor="#353535"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/tv_void"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toRightOf="@id/iv_avatar"
+                            android:text="vo号:"
+                            android:textColor="#AAAAAA"
+                            android:textSize="14sp" />
+                    </LinearLayout>
                     <ImageView
                         android:layout_width="18dp"
                         android:layout_height="18dp"
@@ -401,7 +403,6 @@
                             android:layout_centerVertical="true"
                             android:layout_gravity="center_vertical"
                             android:src="@mipmap/vo_infopwd" />
-
                         <TextView
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
@@ -499,29 +500,41 @@
     </ScrollView>
     <!--信息传输加密-->
     <RelativeLayout
+        android:gravity="center"
         android:id="@+id/re_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/loading_view"
         android:layout_toRightOf="@+id/loading_view"
-        android:background="#aa000000"
+        android:background="#bb7d7d7d"
         android:clickable="true"
         android:visibility="gone">
-
         <ImageView
+            android:layout_centerHorizontal="true"
             android:id="@+id/info_iv01"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/info_iv02"
             android:layout_width="70dp"
             android:layout_height="18dp"
             android:layout_below="@+id/info_iv01"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_below="@+id/info_iv01"
+            android:text="2048位密码加密中,保护您的信息不被第三方窃取"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
     <include layout="@layout/layout_tip_life_note" />

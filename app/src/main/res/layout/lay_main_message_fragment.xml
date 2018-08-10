@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray5"
+    android:background="@color/white"
     android:orientation="vertical">
     <!--搜索,添加，标题-->
-
     <android.support.design.widget.TabLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"
@@ -15,15 +14,12 @@
         android:visibility="gone"
         app:tabIndicatorColor="@color/invatationbgcolor"
         app:tabSelectedTextColor="@color/invatationbgcolor" />
-
-
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:layout_alignParentTop="true"
         android:background="@color/white">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,15 +100,15 @@
             android:layout_toLeftOf="@id/iv_add"
             android:clickable="true"
             android:src="@mipmap/fdj_" />
-
-
     </RelativeLayout>
-
+    <View
+        android:background="@color/common_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
         android:layout_weight="1"
         android:background="@color/white" />
 

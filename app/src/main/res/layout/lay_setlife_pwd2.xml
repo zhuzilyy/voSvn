@@ -58,6 +58,7 @@
                 android:layerType="software"
                 />
             <EditText
+                android:inputType="textPassword"
                 android:singleLine="true"
                 android:id="@+id/ed_pwd"
                 android:layout_marginTop="@dimen/x10"

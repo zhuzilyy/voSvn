@@ -7,12 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
+        android:id="@+id/iv_bgSetFriend"
         android:clickable="true"
         android:scaleType="centerCrop"
         android:src="@mipmap/set_friend"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <ImageView
+        android:visibility="gone"
         android:layout_marginTop="120dp"
         android:id="@+id/iv_setFriend"
         android:layout_marginRight="50dp"

@@ -76,7 +76,6 @@ public class PhotoUtils {
         intent.putExtra("noFaceDetection", true);
         activity.startActivityForResult(intent, requestCode);
     }
-
     /**
      * 读取uri所在的图片
      *
