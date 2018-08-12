@@ -58,7 +58,7 @@
             android:layout_height="47dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/ease_btn_blue_selector"
+            android:background="#5544aa"
             android:gravity="center"
             android:text="@string/ok"
             android:textColor="#fff"

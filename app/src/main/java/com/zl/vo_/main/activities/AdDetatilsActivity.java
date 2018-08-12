@@ -33,7 +33,6 @@ public class AdDetatilsActivity extends VoBaseActivity {
     private String messageID;
     @BindView(R.id.loading_view)
     public RelativeLayout loading_view;
-
     @BindView(R.id.iv_back)
     public ImageView back;
     public String title_str;

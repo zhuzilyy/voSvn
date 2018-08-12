@@ -48,8 +48,6 @@ import com.hyphenate.chat.EMMucSharedFile;
 import com.hyphenate.chat.EMPushConfigs;
 import com.hyphenate.easeui.ui.EaseGroupListener;
 import com.hyphenate.easeui.utils.EaseUserUtils;
-import com.hyphenate.easeui.widget.EaseAlertDialog;
-import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
 import com.hyphenate.easeui.widget.EaseExpandGridView;
 import com.hyphenate.easeui.widget.EaseSwitchButton;
 import com.hyphenate.exceptions.HyphenateException;
@@ -665,7 +663,7 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 				break;
 
 			case R.id.clear_all_history: // 清空聊天记录
-				String st9 = getResources().getString(R.string.sure_to_empty_this);
+				/*String st9 = getResources().getString(R.string.sure_to_empty_this);
 				new EaseAlertDialog(GroupDetailsActivity.this, null, st9, null, new AlertDialogUser() {
 
 					@Override
@@ -674,8 +672,27 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 							clearGroupHistory();
 						}
 					}
-				}, true).show();
-
+				}, true).show();*/
+				final Dialog dialog = new Dialog(this);
+				View vv = LayoutInflater.from(this).inflate(R.layout.lay_clear, null);
+				dialog.setContentView(vv);
+				ImageView cancel = vv.findViewById(R.id.cancel_iv);
+				TextView confirm = vv.findViewById(R.id.tv_confrim);
+				cancel.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						dialog.dismiss();
+					}
+				});
+				confirm.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						//  Toast.makeText(getActivity(), "一键清除", Toast.LENGTH_SHORT).show();
+						clearGroupHistory();
+						dialog.dismiss();
+					}
+				});
+				dialog.show();
 				break;
 
 			case R.id.rl_change_group_name:

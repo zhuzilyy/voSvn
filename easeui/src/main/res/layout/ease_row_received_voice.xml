@@ -37,7 +37,6 @@
             android:layout_below="@+id/tv_userid"
             android:background="@drawable/ease_chatfrom_bg"
             >
-
             <ImageView
                 android:id="@+id/iv_voice"
                 android:layout_width="wrap_content"
@@ -47,7 +46,6 @@
 	            android:layout_centerInParent="true"
                 android:src="@drawable/ease_chatfrom_voice_playing" />
         </RelativeLayout>
-
         <TextView
             android:id="@+id/tv_length"
             style="@style/chat_text_name_style"

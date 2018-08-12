@@ -6,8 +6,6 @@
     android:layout_height="fill_parent"
     android:animateLayoutChanges="true"
     >
-
-
     <ImageView
         android:id="@+id/banner_view"
         android:layout_width="fill_parent"
