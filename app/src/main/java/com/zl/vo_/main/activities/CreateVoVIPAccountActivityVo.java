@@ -103,7 +103,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     public TextView vip_function_allclear;
     public TextView vip_function_lifenoteprivacy;
     public TextView vip_function_infortrans;
-    
     private LinearLayout ll_vipnofree;
     private TextView tv_vipnofree;
 
