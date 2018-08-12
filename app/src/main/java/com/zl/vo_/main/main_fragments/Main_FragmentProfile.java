@@ -154,6 +154,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     RelativeLayout rl_setFriend;
     @BindView(R.id.rl_addAndReduceFriend)
     RelativeLayout rl_addAndReduceFriend;
+    private Dialog jiaMiDialog;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -172,7 +173,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     private void mInit() {
         //初始化开关
         switch_infopwd.closeSwitch();
-        Glide.with(getActivity()).asGif().load(R.mipmap.passing).into(info_iv01);
+        Glide.with(getActivity()).asGif().load(R.mipmap.jiami).into(info_iv01);
         Glide.with(getActivity()).asGif().load(R.drawable.info_iv02).into(info_iv02);
         //判断是否为vip状态，如果不是，某些条目为灰色
         juageVip();
@@ -437,6 +438,16 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             showInfoRe(switch_infopwd, re_info);
         }
     }
+    private void showJiamiDialog() {
+        jiaMiDialog = new Dialog(getActivity());
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.lay_dialog_jiami, null);
+        jiaMiDialog.setContentView(view);
+        ImageView iv_jiami=view.findViewById(R.id.iv_jiami);
+        Glide.with(getActivity()).asGif().load(R.mipmap.jiami).into(iv_jiami);
+        jiaMiDialog.show();
+        jiaMiDialog.setCancelable(false);
+        jiaMiDialog.setCanceledOnTouchOutside(false);
+    }
 
     private void mineHideLifePwd() {
         lifeNoteSetDialog = new LifeNoteSetDialog.Builder(getActivity())
@@ -604,7 +615,7 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     }
     private void confirmAgain() {
         final Dialog dialog = new Dialog(getActivity());
-        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_allclear3, null);
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.lay_clear, null);
         dialog.setContentView(vv);
         ImageView cancel = vv.findViewById(R.id.cancel_iv);
         TextView confirm = vv.findViewById(R.id.tv_confrim);
@@ -623,8 +634,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             }
         });
         dialog.show();
-
-
     }
 
     private void showPop(String tvStr, ImageView iv) {
@@ -717,12 +726,14 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
      * 信息传输加密
      */
     public void showInfoRe(final EaseSwitchButton button, final RelativeLayout re_info) {
-        re_info.setVisibility(View.VISIBLE);
+        showJiamiDialog();
+        //re_info.setVisibility(View.VISIBLE);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 button.openSwitch();
-                re_info.setVisibility(View.INVISIBLE);
+                //re_info.setVisibility(View.INVISIBLE);
+                jiaMiDialog.dismiss();
             }
         }, 7930);
     }

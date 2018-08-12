@@ -28,7 +28,6 @@ public class AppInfoActivity extends AppIntro2 {
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-
         addSlide(new appinfo01());
         addSlide(new appinfo02());
         addSlide(new appinfo03());

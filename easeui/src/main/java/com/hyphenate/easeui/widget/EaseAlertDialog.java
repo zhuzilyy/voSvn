@@ -94,7 +94,6 @@ public class EaseAlertDialog extends Dialog {
 		Button ok = (Button)findViewById(R.id.btn_ok);
 		TextView titleView = (TextView) findViewById(R.id.title);
 		setTitle(title);
-		
 		View.OnClickListener listener = new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
