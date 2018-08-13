@@ -361,6 +361,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
         Bitmap bitmap = WhiteBgBitmapUtil.changeColor(bmp);
         msg.setThumbImage(bitmap);
+
         //bitmap.recycle();
         // 构造一个Req
         SendMessageToWX.Req req = new SendMessageToWX.Req();
