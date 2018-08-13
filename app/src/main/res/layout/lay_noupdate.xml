@@ -60,7 +60,7 @@
                 android:id="@+id/tv_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="暂无更新！"
+                android:text="当前为最新版本！"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:layout_marginTop="@dimen/x10"

@@ -52,18 +52,15 @@ public class LifeNoteAdapter extends BaseAdapter {
     public interface deleteLifeNoteLister{
         void  deleteLifeNote(View view,int position);
     }
-
     public void setDeleteLifeNoteLister(deleteLifeNoteLister l){
         noteLister=l;
     }
-
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
         LifeNoteListData.LifeNoteListInfo.LifeNoteListList itemdata=bigList.get(i);
         viewHolder holder=null;
         final int currentpostion;
         currentpostion=i;
-
         if(view==null){
             holder=new viewHolder();
             view= LayoutInflater.from(mContext).inflate(R.layout.lay_lifenote_item,null);
