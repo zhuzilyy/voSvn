@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.dd.CircularProgressButton;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.zl.vo_.DemoHelper;
 import com.zl.vo_.DemoModel;
 
 import com.zl.vo_.R;
@@ -191,6 +192,11 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
                       //  loadingview.setVisibility(View.GONE);
                         login_submit.setProgress(-1);
                       //  Toast.makeText(LoginAfterActivityVo.this, s, Toast.LENGTH_SHORT).show();
+                        if("User is already login".equals(s)){
+                            logout(true);
+                        }
+
+
                     }
                 });
             }
@@ -201,5 +207,41 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
         });
 
 
+    }
+
+
+    /****
+     * 退出登录
+     */
+    private void logout(final Boolean b) {
+        DemoHelper.getInstance().logout(false, new EMCallBack() {
+            @Override
+            public void onSuccess() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        // show login scree
+                        if(b){
+                            //Toast.makeText(SettingsActivityVo.this, "退出程序", Toast.LENGTH_SHORT).show();
+                            myUtils.clearSharedUser(LoginAfterActivityVo.this);
+                            //杀死进程
+
+                        }else {
+                            //Toast.makeText(SettingsActivityVo.this, "退出登录", Toast.LENGTH_SHORT).show();
+                            myUtils.clearSharedUser(LoginAfterActivityVo.this);
+
+                        }
+
+                    }
+                });
+            }
+
+            @Override
+            public void onError(int i, String s) {
+                Toast.makeText(LoginAfterActivityVo.this, "退出登录移除", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onProgress(int i, String s) {
+            }
+        });
     }
 }
