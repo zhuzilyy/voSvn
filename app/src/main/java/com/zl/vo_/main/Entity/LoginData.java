@@ -65,6 +65,16 @@ public class LoginData {
             private String mobile;
             private String sy;
 
+            public String getVip_enddate() {
+                return vip_enddate;
+            }
+
+            public void setVip_enddate(String vip_enddate) {
+                this.vip_enddate = vip_enddate;
+            }
+
+            private String vip_enddate;
+
             public String getSy() {
                 return sy;
             }
