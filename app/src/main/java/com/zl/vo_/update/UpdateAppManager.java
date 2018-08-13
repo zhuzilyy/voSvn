@@ -225,7 +225,6 @@ public class UpdateAppManager extends Activity {
      * 显示下载进度对话框
      */
     public void showDownloadDialog() {
-
         progressDialog = new ProgressDialog(context);
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(false);
