@@ -1,19 +1,24 @@
 package com.zl.vo_.ui;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.dou361.dialogui.DialogUIUtils;
@@ -23,21 +28,34 @@ import com.hyphenate.exceptions.HyphenateException;
 import com.zl.vo_.R;
 import com.zl.vo_.main.Entity.GroupAvatarData;
 import com.zl.vo_.main.Entity.Result;
+import com.zl.vo_.main.activities.LifeNote;
+import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
+import com.zl.vo_.main.main_utils.PhotoUtils;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.utils.Url;
 
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class EditActivity extends BaseActivity{
+public class EditActivity extends VoBaseActivity{
 	private ImageView groupAvatar;
 	private String GroupId;
 	private RelativeLayout loadingView;
+
+	//***************************************************************7.0拍照相册
+	private static final int CODE_GALLERY_REQUEST = 0xa0;
+	private static final int CODE_CAMERA_REQUEST = 0xa1;
+	private static final int CODE_RESULT_REQUEST = 0xa2;
+	private File fileUri = new File(Environment.getExternalStorageDirectory().getPath() + "/photo.jpg");
+	private File fileCropUri = new File(Environment.getExternalStorageDirectory().getPath() + "/crop_photo.jpg");
+	private Uri imageUri;
+	private Uri cropImageUri;
 
 	@Override
 	public void onCreate(Bundle arg0) {
@@ -56,7 +74,63 @@ public class EditActivity extends BaseActivity{
 		groupAvatar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				//头像
+
+				List<String> strings = new ArrayList<>();
+				strings.add("相册");
+				strings.add("照相机");
+				DialogUIUtils.showBottomSheetAndCancel(EditActivity.this, strings, "取消", new DialogUIItemListener() {
+					@Override
+					public void onItemClick(CharSequence text, int position) {
+
+						switch(position){
+							case 0:
+								requestPermissions(EditActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, new VoBaseActivity.RequestPermissionCallBack() {
+									@Override
+									public void granted() {
+										PhotoUtils.openPic(EditActivity.this, CODE_GALLERY_REQUEST);
+									}
+									@Override
+									public void denied() {
+										Toast.makeText(EditActivity.this, "部分权限获取失败，正常功能受到影响", Toast.LENGTH_LONG).show();
+									}
+								});
+								break;
+							case 1:
+								//指定action   [照相机]
+								requestPermissions(EditActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, new VoBaseActivity.RequestPermissionCallBack() {
+									@Override
+									public void granted() {
+										if (hasSdcard()) {
+											imageUri = Uri.fromFile(fileUri);
+											if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+												//通过FileProvider创建一个content类型的Uri
+												imageUri = FileProvider.getUriForFile(EditActivity.this, "com.zl.vo_.fileprovider", fileUri);
+											PhotoUtils.takePicture(EditActivity.this, imageUri, CODE_CAMERA_REQUEST);
+										} else {
+											Toast.makeText(EditActivity.this, "设备没有SD卡！", Toast.LENGTH_SHORT).show();
+											Log.e("asd", "设备没有SD卡");
+										}
+									}
+									@Override
+									public void denied() {
+										Toast.makeText(EditActivity.this, "部分权限获取失败，正常功能受到影响", Toast.LENGTH_LONG).show();
+									}
+								});
+								break;
+							default:
+								break;
+						}
+
+					}
+
+					@Override
+					public void onBottomBtnClick() {
+					}
+				}).show();
+
+
+
+	/*			//头像
 				List<String> strings = new ArrayList<>();
 				strings.add("相册");
 				strings.add("照相机");
@@ -88,11 +162,59 @@ public class EditActivity extends BaseActivity{
 				}).show();
 
 
+			*/
+
+
 			}
 		});
 
 
 
+	}
+
+	/**
+	 * 检查设备是否存在SDCard的工具方法
+	 */
+	public static boolean hasSdcard() {
+		String state = Environment.getExternalStorageState();
+		return state.equals(Environment.MEDIA_MOUNTED);
+	}
+
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		int output_X = 1120, output_Y = 1120;
+		if (resultCode == RESULT_OK) {
+			switch (requestCode) {
+				case CODE_CAMERA_REQUEST://拍照完成回调
+					cropImageUri = Uri.fromFile(fileCropUri);
+					PhotoUtils.cropImageUri(this, imageUri, cropImageUri, 1, 1, output_X, output_Y, CODE_RESULT_REQUEST);
+					break;
+				case CODE_GALLERY_REQUEST://访问相册完成回调
+					if (hasSdcard()) {
+						cropImageUri = Uri.fromFile(fileCropUri);
+						Uri newUri = Uri.parse(PhotoUtils.getPath(this, data.getData()));
+						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+							newUri = FileProvider.getUriForFile(this, "com.zl.vo_.fileprovider", new File(newUri.getPath()));
+						PhotoUtils.cropImageUri(this, newUri, cropImageUri, 1, 1, output_X, output_Y, CODE_RESULT_REQUEST);
+					} else {
+						Toast.makeText(EditActivity.this, "设备没有SD卡!", Toast.LENGTH_SHORT).show();
+					}
+					break;
+				case CODE_RESULT_REQUEST:
+					Bitmap bitmap = PhotoUtils.getBitmapFromUri(cropImageUri, this);
+					if (bitmap != null) {
+						showImages(bitmap);
+						//setLifeNoteBg(bitmap);
+					}
+					break;
+			}
+		}
+	}
+
+	private void showImages(Bitmap bitmap) {
+		groupAvatar.setImageBitmap(bitmap);
 	}
 
 	public void save(View view){
@@ -156,77 +278,6 @@ public class EditActivity extends BaseActivity{
 
 
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (resultCode == RESULT_OK) {
-			switch (requestCode) {
-				case 1:
-
-					//相册返回
-					//获取访问资源[选中的图片]的uri
-					Uri uri = data.getData();
-					//将uri解析成为bitmap
-					Bitmap bitmap_album = BitmapFactory.decodeFile(uri.getPath());
-					//进行裁剪
-					CutPic(uri);
-
-					break;
-				case 2:
-					//照相机返回
-
-					/***
-					 * 从Android 4.2之后，data.getdata(),不能够获取图片资源的路径[uri]
-					 * 需要采用下面的方式
-					 */
-					Uri camera_uri;
-					Bundle bundle = data.getExtras();
-					Bitmap bitmap2 = (Bitmap) bundle.get("data");
-
-					if (data.getData() != null) {
-						camera_uri = data.getData();
-
-					} else {
-						camera_uri = Uri.parse(MediaStore.Images.Media.insertImage(getContentResolver(), bitmap2, null, null));
-					}
-
-
-					//进行裁剪
-					CutPic(camera_uri);
-					groupAvatar.setImageBitmap(bitmap2);
-					//将bitmap转换为drawable
-//                    Drawable drawable=new BitmapDrawable(bitmap2);
-//                    head.setBackground(drawable);
-
-					break;
-
-
-				case 3:
-					//裁剪返回
-
-					if (data != null) {
-
-						Bitmap bitmap = data.getParcelableExtra("data");
-						Bitmap temps = zoomImage(bitmap, 500,500);
-						Log.i("base","Height=" + temps.getHeight() + "      Width=" + temps.getWidth());
-						groupAvatar.setImageBitmap(temps);
-                      /*  mmvv.setImageBitmap(temps);*/
-						//将bitmap转换为drawable
-//                        Drawable drawable2=new BitmapDrawable(temps);
-//                        head.setBackground(drawable2);
-					}else {
-
-
-
-					}
-
-					break;
-				default:
-					break;
-			}
-
-		}
-
-	}
 	/**
 	 * 将图片裁剪到指定大小
 	 *
