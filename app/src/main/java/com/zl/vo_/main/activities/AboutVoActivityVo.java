@@ -5,20 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
-
 import com.zl.vo_.R;
 import com.zl.vo_.update.PermissionUtils;
 import com.zl.vo_.update.UpdateAppManager;
 import com.zl.vo_.utils.Url;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
 /**
  * Created by Administrator on 2017/12/4.
  */
-
 public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickListener{
     @BindView(R.id.re_vointroduce)
     public RelativeLayout re_vointroduce;

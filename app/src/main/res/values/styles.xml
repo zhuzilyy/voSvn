@@ -63,14 +63,11 @@
         <item name="android:paddingBottom">4dp</item>
         <item name="android:paddingTop">4dp</item>
     </style>
-
     <!--欢迎页面主题-->
     <style name="splashStyle_" parent="AppTheme">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@mipmap/welbg</item>
     </style>
-
-
     <!--1像素Activity风格 @android:color/transparent-->
     <style name="SingleActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@null</item>
