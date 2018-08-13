@@ -40,6 +40,8 @@ import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.util.Utils;
 import com.zl.vo_.utils.Url;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -107,6 +109,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     public TextView vip_function_infortrans;
     private LinearLayout ll_vipnofree;
     private TextView tv_vipnofree;
+    private TextView vip_endtime;
 
 
     @Override
@@ -129,32 +132,133 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
      * 开通试用
      * @param userId
      */
-    private void getVipTest(String userId) {
+    private void getVipTest(final String userId) {
 
-        RequestParams params= new RequestParams(Url.TestVip);
-        params.addParameter("userid",userId);
-        x.http().post(params, new Callback.CommonCallback<String>() {
+
+        final Dialog dialog = new Dialog(CreateVoVIPAccountActivityVo.this);
+        View vv = LayoutInflater.from(CreateVoVIPAccountActivityVo.this).inflate(R.layout.lay_create_vip_yesno, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(String result) {
-                Log.i("aa",""+result);
-            }
-
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-                Log.i("aa",""+ex.getMessage());
-            }
-
-            @Override
-            public void onCancelled(CancelledException cex) {
-
-            }
-
-            @Override
-            public void onFinished() {
-
+            public void onClick(View v) {
+                dialog.dismiss();
             }
         });
-        
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RequestParams params= new RequestParams(Url.TestVip);
+                params.addParameter("userid",userId);
+                x.http().post(params, new Callback.CommonCallback<String>() {
+                    @Override
+                    public void onSuccess(final String result) {
+                        Log.i("aa",""+result);
+                        //开通试用，将vip == 1,sy==0
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    JSONObject jsonObject =  new JSONObject(result);
+                                    if(jsonObject!=null){
+                                        JSONObject jsonObject1 = jsonObject.getJSONObject("data");
+                                        if(jsonObject1!=null){
+                                            JSONObject jsonObject2 = jsonObject1.getJSONObject("info");
+                                            if(jsonObject2!=null){
+                                                JSONObject jsonObject3 = jsonObject2.getJSONObject("vip");
+                                                if(jsonObject3!=null){
+                                                String endTime = jsonObject3.getString("new_endtime");
+
+                                                    //开通成功，更新数据
+                                                    LoginData.LoginInfo.LoginAccountInfo user = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
+                                                    getUserLastInfo(user.getHuanxin_account());
+
+                                                }
+                                            }
+
+                                        }
+
+                                    }
+
+
+
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+
+
+                            }
+                        });
+                    }
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+                        Log.i("aa",""+ex.getMessage());
+                    }
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+                    }
+                    @Override
+                    public void onFinished() {
+
+                    }
+                });
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+    /***
+     * 获取用户的信息（开通试用）
+     * @param huanxin_account
+     */
+    private void getUserLastInfo(String huanxin_account) {
+        RequestParams params=new RequestParams(Url.AccountInfoURL);
+        params.addParameter("huanxin_account",myUtils.readUser(CreateVoVIPAccountActivityVo.this).getHuanxin_account());
+        x.http().post(params, new MyCommonCallback<Result<LoginData>>() {
+            @Override
+            public void success(Result<LoginData> data) {
+                // loadingview.setVisibility(View.GONE);
+                LoginData loginData=data.data;
+                LoginData.LoginInfo loginInfo=loginData.getInfo();
+                if("0".equals(data.code)){
+                    if(loginInfo!=null){
+                        LoginData.LoginInfo.LoginAccountInfo user=loginInfo.getAccount_info();
+                        if(user!=null){
+                            //清除本地保存的用户信息
+                            myUtils.clearSharedUser(CreateVoVIPAccountActivityVo.this);
+                            myUtils.saveUser(user,CreateVoVIPAccountActivityVo.this);
+                            //免费试用消失
+                            ll_vipnofree.setVisibility(View.GONE);
+                            //显示到期时间，显示vip图样
+                            if(!TextUtils.isEmpty(user.getVip_enddate())){
+                                vip_endtime.setText(user.getVip_enddate()+"到期");
+                                vip_endtime.setVisibility(View.VISIBLE);
+                            }
+                            vip_state.setVisibility(View.VISIBLE);
+
+                            Intent intent=new Intent();
+                            intent.setAction("wxpayOk");
+                            intent.putExtra("state","success");
+                            intent.putExtra("state02","1");
+                            sendBroadcast(intent);
+
+                            //
+
+
+                        }
+                    }
+                }
+            }
+            @Override
+            public void error(Throwable ex, boolean isOnCallback) {
+                Log.i("io","log");
+            }
+        });
     }
 
     private void getData() {
@@ -164,6 +268,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         x.http().post(params, new MyCommonCallback<Result<VIPProductData>>() {
             @Override
             public void success(Result<VIPProductData> data) {
+                Log.i("vip",data+"");
                 loading_view.setVisibility(View.GONE);
                 if("0".equals(data.code)){
                   VIPProductData productData=  data.data;
@@ -195,6 +300,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         function_vip_ll=headerview.findViewById(R.id.function_vip_ll);
         function_four_ll=headerview.findViewById(R.id.function_four_ll);
         function_arrow=headerview.findViewById(R.id.vip_arrow);
+        vip_endtime= headerview.findViewById(R.id.vip_endtime);
 
 
         ll_vipnofree=headerview.findViewById(R.id.ll_vipnofree);
@@ -238,7 +344,17 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
             }else {
                 vip_state.setVisibility(View.GONE);
             }
+
+            //VIP到期时间
+            if(!TextUtils.isEmpty(user.getVip_enddate())){
+                vip_endtime.setVisibility(View.VISIBLE);
+                vip_endtime.setText(user.getVip_enddate()+"到期");
+            }
+
+
         }
+
+
         adapter=new vipAdapter(CreateVoVIPAccountActivityVo.this,biglist);
         vipLv.setAdapter(adapter);
         vipLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -463,8 +579,8 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                 //***********微信支付成功后的操作**************************************************
 
                 String state=intent.getStringExtra("state");
-                String state02=intent.getStringExtra("state02");
-
+                String state02 =intent.getStringExtra("state02");
+                Log.i("ss",state02);
                 LoginData.LoginInfo.LoginAccountInfo user2= myUtils.readUser(CreateVoVIPAccountActivityVo.this);
                 if(user2!=null){
                     Glide.with(CreateVoVIPAccountActivityVo.this).load(user2.getAvatar()).into(vip_head);

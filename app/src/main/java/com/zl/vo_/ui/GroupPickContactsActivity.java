@@ -16,6 +16,7 @@ package com.zl.vo_.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -75,7 +76,12 @@ public class GroupPickContactsActivity extends VoBaseActivity {
 			user.setAvatar(allFriendsList.get(i).getAvatar());
 			user.setNick(allFriendsList.get(i).getNike());
 			user.setUsername(allFriendsList.get(i).getHuanxinID());
-			alluserList.add(user);
+			//   //passid是空的 就说明没有加密
+			if(TextUtils.isEmpty(allFriendsList.get(i).getPassid())){
+				alluserList.add(user);
+			}
+			//alluserList.add(user);
+
 		}
 //		for (EaseUser user : DemoHelper.getInstance().getContactList().values()) {
 //			if (!user.getUsername().equals(Constant.NEW_FRIENDS_USERNAME) & !user.getUsername().equals(Constant.GROUP_USERNAME) & !user.getUsername().equals(Constant.CHAT_ROOM) & !user.getUsername().equals(Constant.CHAT_ROBOT))
@@ -83,7 +89,6 @@ public class GroupPickContactsActivity extends VoBaseActivity {
 //		}
 		// sort the list
 //        Collections.sort(alluserList, new Comparator<EaseUser>() {
-//
 //            @Override
 //            public int compare(EaseUser lhs, EaseUser rhs) {
 //                if(lhs.getInitialLetter().equals(rhs.getInitialLetter())){

@@ -66,12 +66,13 @@
                 android:layout_weight="1.5"
                 >
                 <ImageView
+
                     android:id="@+id/vip_state"
                     android:layout_width="@dimen/x20"
                     android:layout_centerVertical="true"
                     android:layout_height="@dimen/x20"
                     android:src="@mipmap/vip_vip"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     />
                 <TextView
                     android:layout_toRightOf="@+id/vip_state"
@@ -115,6 +116,7 @@
                     android:layout_marginLeft="10dp"
                     android:id="@+id/vip_endtime"
                     android:paddingRight="10dp"
+                    android:visibility="gone"
                     android:layout_marginRight="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
