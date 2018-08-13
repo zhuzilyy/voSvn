@@ -1,6 +1,7 @@
 package com.zl.vo_;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -1562,15 +1563,12 @@ public class DemoHelper {
 
             @Override
             public void onMessageReceived(List<EMMessage> messages) {
-
                 for (EMMessage message : messages) {
                     EMLog.d(TAG, "onMessageReceived id : " + message.getMsgId());
                     //（单聊）检测发送该消息的人是否在我的好友列表中，如果不在，获取信息添加进数据库中
                     testIsMyFriend(message);
                     //检测发送消息的人是否在我的加密列表中
                     isMsgBelongToEncryption = testFriendWithinMyEncryptionTable(message);
-
-
                     //检查是不是名片类型
                     isMingPianTexteMessage(message);
                     //检查是不是分享类型
@@ -1589,7 +1587,6 @@ public class DemoHelper {
                         }
                     }
                     // ******************扩展信息处理完成**********************
-
                     //在后台运行
                     if (!easeUI.hasForegroundActivies()) {
                         if (demoModel.getIsDisturb()) {

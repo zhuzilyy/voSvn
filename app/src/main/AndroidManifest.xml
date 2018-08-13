@@ -159,11 +159,11 @@
             android:enabled="true"
             android:exported="true"
             android:process=":daemon_service"/>
-
+<!--
         <service android:name=".alive_app.service.CancelNoticeService"
             android:enabled="true"
             android:exported="true"
-            android:process=":service"/>
+            android:process=":service"/>-->
         <service android:name=".alive_app.service.PlayerMusicService"
             android:enabled="true"
             android:exported="true"

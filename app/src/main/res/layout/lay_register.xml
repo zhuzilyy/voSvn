@@ -28,7 +28,6 @@
             />
 
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -80,6 +79,46 @@
         android:layout_height="0.5dp"
         android:background="@color/common_line"
         />
+
+        <!--昵称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.zl.vo_.main.views.ClearEditText
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_marginLeft="15dp"
+                    android:maxLength="11"
+                    android:id="@+id/register_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入昵称"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/common_line"/>
+        </LinearLayout>
 
     <!--账号-->
     <LinearLayout
@@ -237,63 +276,7 @@
             android:layout_marginRight="@dimen/x20"
             android:background="@color/common_line"/>
     </LinearLayout>
-        <!--昵称-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <com.zl.vo_.main.views.ClearEditText
-                    android:singleLine="true"
-                    android:inputType="number"
-                    android:layout_marginLeft="15dp"
-                    android:maxLength="11"
-                    android:id="@+id/register_nick"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:hint="请输入昵称"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:text=""
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray"
-                    android:textSize="14sp"
-                    />
-<!--
-                <com.zl.vo_.main.views.MEditText
-                    android:id="@+id/register_nick"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/x45"
-                    android:layout_weight="3"
-                    android:paddingLeft="@dimen/x20"
-                    android:paddingRight="@dimen/x20"
-                    app:me_del_enable="true"
-                    app:me_hint="昵称"
-                    app:me_hintColor="@color/black"
-
-                    app:me_textColor="@color/black"
-                    app:me_textSize="@dimen/x5"
-
-                    />-->
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="@dimen/x20"
-                android:layout_marginRight="@dimen/x20"
-                android:background="@color/common_line"/>
-        </LinearLayout>
 
     <Button
         android:id="@+id/register_submit"

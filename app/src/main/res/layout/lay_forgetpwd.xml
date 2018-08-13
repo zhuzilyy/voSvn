@@ -181,9 +181,8 @@
             android:orientation="horizontal">
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
-                android:inputType="number"
+                android:inputType="textPassword"
                 android:layout_marginLeft="15dp"
-                android:maxLength="11"
                 android:id="@+id/forgetpwd_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
@@ -193,7 +192,6 @@
                 android:hint="请输入密码"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text=""
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="14sp"
