@@ -97,6 +97,7 @@ public class LoginAfterActivityVo extends VoBaseActivity implements View.OnClick
                 break;
             default:
                 break;
+
         }
     }
     private void loginMethod() {
