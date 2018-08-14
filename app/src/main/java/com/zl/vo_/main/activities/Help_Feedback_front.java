@@ -86,8 +86,8 @@ public class Help_Feedback_front extends VoBaseActivity implements View.OnClickL
                 Intent intent=new Intent(Help_Feedback_front.this,Help_Feedback.class);
               //  intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/page_list");
              //   intent.putExtra("url","http://api.ykhswl.net/voadmin/home/api/page_list");
-                intent.putExtra("url", Url.FunctionIntroduceUrl);
-                intent.putExtra("param","15");
+                intent.putExtra("url", "http://api.ykhswl.net/vo_admin_system/list.php");
+                intent.putExtra("param","");
                 intent.putExtra("title","功能介绍");
                 startActivity(intent);
                 break;

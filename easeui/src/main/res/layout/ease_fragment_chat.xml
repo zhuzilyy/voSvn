@@ -13,13 +13,15 @@
         android:layout_height="wrap_content"
         hyphenate:titleBarLeftImage="@mipmap/back_"/>
     <RelativeLayout
+        android:id="@+id/chat_re"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/input_menu"
         android:layout_below="@id/title_bar"
         >
         <ImageView
-            android:scaleType="fitXY"
+            android:scaleType="center"
+            android:visibility="visible"
             android:id="@+id/chatBackground_iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,11 +37,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:visibility="invisible" />
+
+
     </RelativeLayout>
 
     <com.hyphenate.easeui.widget.EaseChatInputMenu
         android:id="@+id/input_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

@@ -39,8 +39,8 @@ public class AboutVoActivityVo extends VoBaseActivity implements View.OnClickLis
         switch(v.getId()){
             case R.id.re_vointroduce:
                 Intent intent=new Intent(AboutVoActivityVo.this,Help_Feedback.class);
-                intent.putExtra("url", Url.FunctionIntroduceUrl);
-                intent.putExtra("param","15");
+                intent.putExtra("url", "http://api.ykhswl.net/vo_admin_system/view.php?id=10");
+                intent.putExtra("param","");
                 intent.putExtra("title","VO介绍");
                 startActivity(intent);
                 break;

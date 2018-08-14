@@ -8,11 +8,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -64,12 +67,14 @@ import com.zl.vo_.ui.GroupDetailsActivity;
 import com.zl.vo_.ui.ImageGridActivity;
 import com.zl.vo_.ui.VideoCallActivity;
 import com.zl.vo_.ui.VoiceCallActivity;
+import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.ChatRowVoiceCall;
 import com.zl.vo_.widget.EaseChatRowRecall;
 import com.zl.vo_.widget.scan.GameShareCharRow;
 import com.zl.vo_.widget.scan.MingPianCharRow;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -156,8 +161,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         demoModel = new DemoModel(getActivity());
         //设置聊天背景（在子类中设置）
         String bgUrl = demoModel.getChatBackGroundPicUrl();
-        Log.i("bgUrl", bgUrl + "   聊天背景图片");
-        Glide.with(getActivity()).load(bgUrl).into(chatBackground_iv);
+        Log.i("bgUrl", bgUrl + "聊天背景图片");
+        Uri uri = Uri.fromFile(new File(bgUrl));
+       Glide.with(getActivity()).load(uri).into(chatBackground_iv);
+
+
         setChatFragmentHelper(this);
         if (chatType == Constant.CHATTYPE_SINGLE) {
             Map<String, RobotUser> robotMap = DemoHelper.getInstance().getRobotList();

@@ -181,10 +181,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
 
                                     }
 
-
-
-
-
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
@@ -580,7 +576,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
 
                 String state=intent.getStringExtra("state");
                 String state02 =intent.getStringExtra("state02");
-                Log.i("ss",state02);
+
                 LoginData.LoginInfo.LoginAccountInfo user2= myUtils.readUser(CreateVoVIPAccountActivityVo.this);
                 if(user2!=null){
                     Glide.with(CreateVoVIPAccountActivityVo.this).load(user2.getAvatar()).into(vip_head);

@@ -1,12 +1,16 @@
 package com.zl.vo_.main.activities;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +27,9 @@ import com.hyphenate.chat.EMConversation;
 import com.hyphenate.easeui.widget.EaseSwitchButton;
 import com.zl.vo_.DemoModel;
 import com.zl.vo_.R;
+import com.zl.vo_.main.main_utils.PhotoUtils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -55,6 +61,15 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
     public Button _confirm;
 
     public DemoModel demoModel=new DemoModel(Setting_ChatActivityVo.this);
+
+    //***************************************************************7.0拍照相册
+    private static final int CODE_GALLERY_REQUEST = 0xa0;
+    private static final int CODE_CAMERA_REQUEST = 0xa1;
+    private static final int CODE_RESULT_REQUEST = 0xa2;
+    private File fileUri = new File(Environment.getExternalStorageDirectory().getPath() + "/photo.jpg");
+    private File fileCropUri = new File(Environment.getExternalStorageDirectory().getPath() + "/crop_photo.jpg");
+    private Uri imageUri;
+    private Uri cropImageUri;
 
 
 
@@ -99,9 +114,8 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
 
             break;
         case R.id.setChatBackground_re:
+            //设置聊天背景
             selectChatBackGround();
-
-
             break;
         case R.id.clearAllmsg_re:
             //清空所有聊天记录
@@ -179,30 +193,53 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
      */
     private void selectChatBackGround() {
 
+
         //头像
         List<String> strings = new ArrayList<>();
         strings.add("相册");
         strings.add("照相机");
         strings.add("取消背景");
-
         DialogUIUtils.showBottomSheetAndCancel(Setting_ChatActivityVo.this, strings, "取消", new DialogUIItemListener() {
+
             @Override
             public void onItemClick(CharSequence text, int position) {
 
                 switch(position){
                     case 0:
+                        requestPermissions(Setting_ChatActivityVo.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, new RequestPermissionCallBack() {
+                            @Override
+                            public void granted() {
+                                PhotoUtils.openPic(Setting_ChatActivityVo.this, CODE_GALLERY_REQUEST);
+                            }
 
-                        //指定action   Intent.ACTION_PICK[图像]
-                        Intent intent_album = new Intent(Intent.ACTION_PICK);
-                        //设置类型
-                        intent_album.setType("image/*");
-                        startActivityForResult(intent_album, 1);
-
+                            @Override
+                            public void denied() {
+                                Toast.makeText(Setting_ChatActivityVo.this, "部分权限获取失败，正常功能受到影响", Toast.LENGTH_LONG).show();
+                            }
+                        });
                         break;
                     case 1:
                         //指定action   [照相机]
-                        Intent intent_camera = new Intent("android.media.action.IMAGE_CAPTURE");
-                        startActivityForResult(intent_camera, 2);
+                        requestPermissions(Setting_ChatActivityVo.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, new RequestPermissionCallBack() {
+                            @Override
+                            public void granted() {
+                                if (hasSdcard()) {
+                                    imageUri = Uri.fromFile(fileUri);
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                                        //通过FileProvider创建一个content类型的Uri
+                                        imageUri = FileProvider.getUriForFile(Setting_ChatActivityVo.this, "com.zl.vo_.fileprovider", fileUri);
+                                    PhotoUtils.takePicture(Setting_ChatActivityVo.this, imageUri, CODE_CAMERA_REQUEST);
+                                } else {
+                                    Toast.makeText(Setting_ChatActivityVo.this, "设备没有SD卡！", Toast.LENGTH_SHORT).show();
+                                    Log.e("asd", "设备没有SD卡");
+                                }
+                            }
+
+                            @Override
+                            public void denied() {
+                                Toast.makeText(Setting_ChatActivityVo.this, "部分权限获取失败，正常功能受到影响", Toast.LENGTH_LONG).show();
+                            }
+                        });
                         break;
                     case 2:
                         //取消背景
@@ -221,64 +258,47 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
 
 
 
-
     }
+
+    /**
+     * 检查设备是否存在SDCard的工具方法
+     */
+    public static boolean hasSdcard() {
+        String state = Environment.getExternalStorageState();
+        return state.equals(Environment.MEDIA_MOUNTED);
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
-                case 1:
-
-                    //相册返回
-                    //获取访问资源[选中的图片]的uri
-                    Uri uri = data.getData();
-
-//                    String picPath= uri.getPath();
-//
-                   String img_path= getRealPathFromURI(uri);
-
-
-                    settingsModel.setChatBackGroundPicUrl(img_path);
-                    String imgurl=settingsModel.getChatBackGroundPicUrl();
-
-
-
-                    break;
-                case 2:
-                    //照相机返回
-
-                    /***
-                     * 从Android 4.2之后，data.getdata(),不能够获取图片资源的路径[uri]
-                     * 需要采用下面的方式
-                     */
-                    Uri camera_uri;
-                    Bundle bundle = data.getExtras();
-                    Bitmap bitmap2 = (Bitmap) bundle.get("data");
-
-                    if (data.getData() != null) {
-                        camera_uri = data.getData();
-
-                    } else {
-                        camera_uri = Uri.parse(MediaStore.Images.Media.insertImage(getContentResolver(), bitmap2, null, null));
-                    }
-
-                   // String picPath_=camera_uri.getPath()+".jpg";
-
-
+                case CODE_CAMERA_REQUEST://拍照完成回调
+                    cropImageUri = Uri.fromFile(fileCropUri);
+                    String camera_uri =  getRealPathFromURI(cropImageUri);
+                    Log.i("ss",camera_uri);
                     settingsModel.setChatBackGroundPicUrl(camera_uri+"");
-                    Log.i("address",camera_uri+"");
+                    String imgurl=settingsModel.getChatBackGroundPicUrl();
+                    Log.i("ss",imgurl);
                     break;
-
-
-
-
-                default:
+                case CODE_GALLERY_REQUEST://访问相册完成回调
+                    if (hasSdcard()) {
+                        cropImageUri = Uri.fromFile(fileCropUri);
+                        Uri newUri = Uri.parse(PhotoUtils.getPath(this, data.getData()));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                            newUri = FileProvider.getUriForFile(this, "com.zl.vo_.fileprovider", new File(newUri.getPath()));
+                        String picpath =  getRealPathFromURI(cropImageUri);
+                        Log.i("ss",picpath);
+                        settingsModel.setChatBackGroundPicUrl(picpath+"");
+                        Log.i("ss",picpath);
+                    } else {
+                        Toast.makeText(Setting_ChatActivityVo.this, "设备没有SD卡!", Toast.LENGTH_SHORT).show();
+                    }
                     break;
             }
-
         }
-
     }
 
     public String getRealPathFromURI(Uri contentUri) {

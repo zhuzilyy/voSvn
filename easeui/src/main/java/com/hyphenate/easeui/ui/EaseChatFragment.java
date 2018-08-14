@@ -34,6 +34,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.hyphenate.EMMessageListener;
@@ -169,6 +170,8 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     private UILImageLoader imageLoader;
     private UILPauseOnScrollListener pauseOnScrollListener;
     private ThemeConfig themeConfig = null;
+
+    public RelativeLayout chat_re;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_chat, container, false);
@@ -202,7 +205,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
      * init view
      */
     protected void initView() {
-
+        chat_re = (RelativeLayout) getView().findViewById(R.id.chat_re);
         voiceRecorderView = (EaseVoiceRecorderView) getView().findViewById(R.id.voice_recorder);
         messageList = (EaseChatMessageList) getView().findViewById(R.id.message_list);
         //聊天背景
