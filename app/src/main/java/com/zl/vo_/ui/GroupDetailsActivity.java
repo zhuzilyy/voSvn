@@ -203,18 +203,12 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 		sharedFilesLayout.setOnClickListener(this);
 		//一进来就开始加载
 		loadingPB.setVisibility(View.VISIBLE);
-
-
 	}
-
-
-
 
 	/***
 	 * 从自己服务器中获取群成员的信息
 	 */
 	private void getUserData(String groupid) {
-
 		RequestParams params=new RequestParams(Url.GetGroupListUrl);
 		params.addParameter("group_id",groupid);
 		x.http().post(params, new MyCommonCallback<Result<GroupDetailsUserData>>() {
@@ -222,7 +216,6 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 			public void success(Result<GroupDetailsUserData> data) {
 				if("0".equals(data.code)){
 					loadingPB.setVisibility(View.GONE);
-
 					GroupDetailsUserData userData=data.data;
 					GroupDetailsUserData.GroupDetailsUserInfo userInfo=userData.getInfo();
 					List<GroupDetailsUserData.GroupDetailsUserInfo.GroupDetailsMemberCell> memberCells= userInfo.getMember_list();
@@ -256,7 +249,6 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 					Toast.makeText(GroupDetailsActivity.this, data.info, Toast.LENGTH_SHORT).show();
 				}
 			}
-
 			@Override
 			public void error(Throwable ex, boolean isOnCallback) {
 				loadingPB.setVisibility(View.GONE);
@@ -1374,13 +1366,11 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 		instance = null;
 
 	}
-
 	private static class ViewHolder{
 		ImageView imageView;
 		TextView textView;
 		ImageView badgeDeleteView;
 	}
-
 	/****
 	 * 群组改变
 	 */

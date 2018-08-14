@@ -61,13 +61,11 @@
                 android:text="删除该好友"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-
-                android:background="@drawable/shape_corner_blue"
+                android:background="@color/blue02version"
                 android:layout_marginTop="@dimen/x10"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:gravity="center"
-
                 />
             <TextView
                 android:id="@+id/tv_blacklist"
@@ -80,7 +78,7 @@
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:gravity="center"
-                android:background="@drawable/shape_corner_blue"
+                android:background="@color/blue02version"
                 />
             <TextView
                 android:visibility="gone"

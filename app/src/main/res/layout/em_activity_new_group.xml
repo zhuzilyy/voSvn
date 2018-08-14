@@ -32,7 +32,7 @@
             android:layout_centerInParent="true"
             android:text="@string/The_new_group_chat"
             android:textColor="#000000"
-            android:textSize="@dimen/x16"
+            android:textSize="18sp"
             android:id="@+id/textView6"/>
 
         <Button
@@ -42,7 +42,7 @@
             android:onClick="save"
             android:text="@string/button_addfriends"
             android:textColor="#000000"
-            android:textSize="@dimen/x12"
+            android:textSize="14sp"
             android:layout_marginRight="@dimen/x10"
             android:layout_alignBaseline="@+id/textView6"
             android:layout_alignBottom="@+id/textView6"

@@ -279,10 +279,6 @@ public class FixMoreActivityVo extends VoBaseActivity implements View.OnClickLis
                                 finish();
 
 
-
-
-
-
                             }
                         }
                     }

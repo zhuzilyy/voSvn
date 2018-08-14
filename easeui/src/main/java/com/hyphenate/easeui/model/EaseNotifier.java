@@ -13,17 +13,21 @@ package com.hyphenate.easeui.model;
 
 import android.app.Application;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Vibrator;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
@@ -41,6 +45,8 @@ import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+
+import static android.content.Context.NOTIFICATION_SERVICE;
 
 /**
  * new message notifier class
@@ -86,7 +92,7 @@ public class EaseNotifier {
      */
     public EaseNotifier init(Context context){
         appContext = context;
-        notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
 
         packageName = appContext.getApplicationInfo().packageName;
         if (Locale.getDefault().getLanguage().equals("zh")) {
@@ -125,7 +131,6 @@ public class EaseNotifier {
      * @param
      */
     public synchronized void onNewMsg(EMMessage message) {
-
         //静默消息
         if(EaseCommonUtils.isSilentMessage(message)){
             return;
@@ -135,7 +140,6 @@ public class EaseNotifier {
         if(!settingsProvider.isMsgNotifyAllowed(message)){
             return;
         }
-
         // 检查app是否运行在后台
         if (!EasyUtils.isAppRunningForeground(appContext)) {
             EMLog.d(TAG, "app is running in backgroud");
@@ -148,6 +152,79 @@ public class EaseNotifier {
         }
 
         vibrateAndPlayTone(message);
+    }
+    private void showCustomerNotification(EMMessage message) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelId = "chat";
+            String channelName = "聊天消息";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            createNotificationChannel(channelId, channelName, importance,message);
+        }
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void createNotificationChannel(String channelId, String channelName, int importance,EMMessage message) {
+        String content=message.getBody().toString();
+        String username = message.getStringAttribute("nick",null);
+        //显示消息详情
+        if (isShowDetails){
+            switch (message.getType()){
+                case TXT:
+                    content =message.getBody().toString();
+                    content=content.substring(5,content.length()-1);
+                    break;
+                case IMAGE:
+                    content="图片消息";
+                    break;
+                case VOICE:
+                    content="语音消息";
+                    break;
+                case LOCATION:
+                    content="位置消息";
+                    break;
+                case VIDEO:
+                    content="视频消息";
+                    break;
+                case FILE:
+                    content="文件消息";
+                    break;
+            }
+        }else{
+            content=username+"发来一条消息";
+        }
+        NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+        NotificationManager manager = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
+        manager.createNotificationChannel(channel);
+        long id = System.currentTimeMillis();
+
+        Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);
+        if (notificationInfoProvider != null) {
+            msgIntent = notificationInfoProvider.getLaunchIntent(message);
+        }
+       /* PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);*/
+        PendingIntent pendingIntent = PendingIntent.getActivity(appContext, (int)id, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+
+        NotificationManager manager1 = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel1 = manager.getNotificationChannel("chat");
+            if (channel.getImportance() == NotificationManager.IMPORTANCE_NONE) {
+                Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
+                intent.putExtra(Settings.EXTRA_APP_PACKAGE, appContext.getPackageName());
+                intent.putExtra(Settings.EXTRA_CHANNEL_ID, channel1.getId());
+                appContext.startActivity(intent);
+                Toast.makeText(appContext, "请手动将通知打开", Toast.LENGTH_SHORT).show();
+            }
+        }
+        Notification notification = new NotificationCompat.Builder(appContext,"chat")
+                .setContentTitle(username+"发来一条消息")
+                .setContentText(content)
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.mipmap.logo)
+                .setLargeIcon(BitmapFactory.decodeResource(appContext.getResources(), R.mipmap.logo))
+                .setAutoCancel(true).setContentIntent(pendingIntent)
+                .build();
+        manager1.notify((int)id, notification);
     }
 
 
@@ -169,14 +246,18 @@ public class EaseNotifier {
         if(!settingsProvider.isMsgNotifyAllowed(message)){
             return;
         }
-
         // 检查app是否运行在后台
         if (!EasyUtils.isAppRunningForeground(appContext)) {
             EMLog.d(TAG, "app is running in backgroud");
             Log.i("xx","=="+isShowDetails);
             //后台
-            sendNotification(message, false);
+            //sendNotification(message, false);
             Log.i("xx","");
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+                showCustomerNotification(message);
+            }else{
+                sendNotification(message, false);
+            }
 
         } else {
             //前台
@@ -287,7 +368,6 @@ public class EaseNotifier {
                 if (customNotifyText != null){
                     notifyText = customNotifyText;
                 }
-
                 if (customCotentTitle != null){
                     contentTitle = customCotentTitle;
                 }
@@ -304,9 +384,7 @@ public class EaseNotifier {
             if (notificationInfoProvider != null) {
                 msgIntent = notificationInfoProvider.getLaunchIntent(message);
             }
-
             PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-
             if(numIncrease){
                 // prepare latest event info section
                 if(!isForeground){
@@ -409,7 +487,7 @@ public class EaseNotifier {
      * @param count
      */
     private static void sendToXiaoMi2(Context context, int count) {
-        NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         Notification.Builder builder = new Notification.Builder(context).setContentTitle("title").setContentText("text").setSmallIcon(context.getApplicationInfo().icon);
         Notification notification = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {

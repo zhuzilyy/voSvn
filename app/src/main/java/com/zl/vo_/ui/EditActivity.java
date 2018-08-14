@@ -184,7 +184,7 @@ public class EditActivity extends VoBaseActivity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		int output_X = 1120, output_Y = 1120;
+		int output_X = 160, output_Y = 160;
 		if (resultCode == RESULT_OK) {
 			switch (requestCode) {
 				case CODE_CAMERA_REQUEST://拍照完成回调

@@ -354,13 +354,14 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         // 将该app注册到微信
         mWxApi.registerApp(AppConst.APP_ID);
         WXWebpageObject webpage = new WXWebpageObject();
-        webpage.webpageUrl = "http://www.baidu.com";
+        webpage.webpageUrl = "http://api.ykhswl.net/vo_admin_system/html5/1.html";
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title ="人生知己，我在VO等你！";
         msg.description ="手机摇一摇即可隐藏好友,聊天办公,高端人群都在用" ;
         Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
         Bitmap bitmap = WhiteBgBitmapUtil.changeColor(bmp);
         msg.setThumbImage(bitmap);
+
         //bitmap.recycle();
         // 构造一个Req
         SendMessageToWX.Req req = new SendMessageToWX.Req();

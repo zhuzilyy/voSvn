@@ -133,8 +133,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
      * @param userId
      */
     private void getVipTest(final String userId) {
-
-
         final Dialog dialog = new Dialog(CreateVoVIPAccountActivityVo.this);
         View vv = LayoutInflater.from(CreateVoVIPAccountActivityVo.this).inflate(R.layout.lay_create_vip_yesno, null);
         dialog.setContentView(vv);

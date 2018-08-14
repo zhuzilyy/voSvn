@@ -26,7 +26,7 @@
             android:layout_toRightOf="@id/avatar"
             android:text="@string/newchat"
             android:textColor="#333"
-            android:textSize="@dimen/x14" />
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <TextView

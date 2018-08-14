@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:layout_marginBottom="10dp"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -71,7 +73,7 @@
             android:layout_width="match_parent"
             android:paddingRight="@dimen/x10"
             android:paddingLeft="@dimen/x10"
-            android:layout_height="@dimen/x45">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:visibility="gone"

@@ -1,19 +1,32 @@
 package com.zl.vo_.main.activities;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
+import android.app.Notification;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -77,11 +90,12 @@ public class SplashActivityVo extends SplashFatherActivityVo implements View.OnC
     private String kindId;
     private String content;
     private String packagename;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.lay_vo_splash);
         VoBaseActivity.addActivity(this);
         ButterKnife.bind(this);
@@ -190,7 +204,39 @@ public class SplashActivityVo extends SplashFatherActivityVo implements View.OnC
 //              }
 //          }
 //      },2000);
+      /*  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelId = "chat";
+            String channelName = "聊天消息";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            createNotificationChannel(channelId, channelName, importance);
+        }*/
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
 
+    private void createNotificationChannel(String channelId, String channelName, int importance) {
+        NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.createNotificationChannel(channel);
+        NotificationManager manager1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel1 = manager.getNotificationChannel("chat");
+            if (channel.getImportance() == NotificationManager.IMPORTANCE_NONE) {
+                Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
+                intent.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());
+                intent.putExtra(Settings.EXTRA_CHANNEL_ID, channel1.getId());
+                startActivity(intent);
+                Toast.makeText(this, "请手动将通知打开", Toast.LENGTH_SHORT).show();
+            }
+        }
+        Notification notification = new NotificationCompat.Builder(this,"chat")
+                .setContentTitle("收到一条聊天消息")
+                .setContentText("今天中午吃什么11111111111？")
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.mipmap.logo)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.logo))
+                .setAutoCancel(true)
+                .build();
+        manager1.notify(1, notification);
     }
     private void goMain() {
         SharedPreferences adShare = getSharedPreferences("adfirst",Context.MODE_PRIVATE);
@@ -283,8 +329,6 @@ public class SplashActivityVo extends SplashFatherActivityVo implements View.OnC
                 break;
             default:
             break;
-
-
         }
     }
 }

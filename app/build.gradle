@@ -6,16 +6,16 @@ android {
         config {
             keyAlias 'android.keystore'
             keyPassword '031424'
-            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
             storePassword '031424'
         }
     }
-    compileSdkVersion 26
+    compileSdkVersion 27
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.zl.vo_"
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 3
         versionName "1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -67,7 +67,7 @@ configurations.all {
         def requested = details.requested
         if (requested.group == 'com.android.support') {
             if (!requested.name.startsWith("multidex")) {
-                details.useVersion '25.3.0'
+                details.useVersion '27.1.1'
             }
         }
     }
@@ -95,6 +95,8 @@ dependencies {
     //butterknife
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //noinspection GradleCompatible
     compile 'com.android.support:design:26.1.0'
 
     //多类型弹框
@@ -178,6 +180,10 @@ dependencies {
     compile project(':pickerview')
     compile project(':wheelview')
     compile project(':galleryfinal')
+
+    //添加的部分
+    compile 'com.google.dagger:dagger:2.12'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
 }
 // 此行添加在文件末尾
 apply plugin: 'com.google.gms.google-services'
