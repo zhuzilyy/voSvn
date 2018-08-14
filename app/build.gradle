@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'android.keystore'
             keyPassword '031424'
-            storeFile file('D:/AndroidContent/keystory/android.keystore')
+            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
             storePassword '031424'
         }
     }
@@ -95,6 +95,7 @@ dependencies {
     //butterknife
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
     //noinspection GradleCompatible
     compile 'com.android.support:design:26.1.0'
 
@@ -153,10 +154,13 @@ dependencies {
     //方微信录制视频
     compile 'cjt.library.wheel:camera:1.1.9'
     compile 'com.android.support:cardview-v7:26.1.0'
+
     //recyclerview header
     compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
+
     //多页轮播
     compile 'com.github.paolorotolo:appintro:4.0.0'
+
     //带三角的pop窗体
     compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
 
@@ -176,10 +180,10 @@ dependencies {
     compile project(':pickerview')
     compile project(':wheelview')
     compile project(':galleryfinal')
+
     //添加的部分
     compile 'com.google.dagger:dagger:2.12'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
-
 }
 // 此行添加在文件末尾
 apply plugin: 'com.google.gms.google-services'

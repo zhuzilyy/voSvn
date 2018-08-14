@@ -195,8 +195,16 @@ public class EaseNotifier {
         NotificationManager manager = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
         manager.createNotificationChannel(channel);
         long id = System.currentTimeMillis();
+
         Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);
+        if (notificationInfoProvider != null) {
+            msgIntent = notificationInfoProvider.getLaunchIntent(message);
+        }
+       /* PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);*/
         PendingIntent pendingIntent = PendingIntent.getActivity(appContext, (int)id, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+
         NotificationManager manager1 = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel1 = manager.getNotificationChannel("chat");
