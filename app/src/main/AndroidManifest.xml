@@ -154,7 +154,7 @@
         <activity android:name=".ui.JcPlayerActivity2"
             android:screenOrientation="portrait"/>
 
-        <!--注册Service-->
+        <!--注册Service将service置为前台，-->
         <service android:name=".alive_app.service.DaemonService"
             android:enabled="true"
             android:exported="true"
@@ -168,6 +168,7 @@
             android:enabled="true"
             android:exported="true"
             android:process=":music_service"/>
+        <!--app复活服务-->
         <service
             android:name=".alive_app.service.AliveJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"/>

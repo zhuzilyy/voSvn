@@ -8,5 +8,5 @@ package com.zl.vo_.alive_app.utils;
 public class Contants {
     public static final boolean DEBUG = true;
 
-    public static final String PACKAGE_NAME = "com.jiangdg.keepappalive";
+    public static final String PACKAGE_NAME = "com.zl.vo_";
 }

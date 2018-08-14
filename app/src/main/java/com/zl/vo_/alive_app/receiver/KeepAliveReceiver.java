@@ -7,7 +7,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Parcelable;
+import android.util.Log;
 import android.widget.Toast;
+
+import com.zl.vo_.alive_app.utils.Contants;
+import com.zl.vo_.alive_app.utils.SystemUtils;
+import com.zl.vo_.main.main_fragments.MainActivity;
 
 /** 监听系统广播，复活进程
  *  (1) 网络变化广播
@@ -24,18 +29,18 @@ public class KeepAliveReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-//        String action = intent.getAction();
-//        if(Contants.DEBUG)
-//            Log.d(TAG,"AliveBroadcastReceiver---->接收到的系统广播："+action);
-//        getNetworkBroadcast(context,intent);
-//        if(SystemUtils.isAppAlive(context,Contants.PACKAGE_NAME)){
-//            Log.i(TAG,"AliveBroadcastReceiver---->APP还是活着的");
-//            return;
-//        }
-//        Intent intentAlive = new Intent(context, SportsActivity.class);
-//        intentAlive.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        context.startActivity(intentAlive);
-//        Log.i(TAG,"AliveBroadcastReceiver---->复活进程(APP)");
+/*        String action = intent.getAction();
+        if(Contants.DEBUG)
+            Log.d(TAG,"AliveBroadcastReceiver---->接收到的系统广播："+action);
+        getNetworkBroadcast(context,intent);
+        if(SystemUtils.isAPPALive(context,Contants.PACKAGE_NAME)){
+            Log.i(TAG,"AliveBroadcastReceiver---->APP还是活着的");
+            return;
+        }
+        Intent intentAlive = new Intent(context, MainActivity.class);
+        intentAlive.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intentAlive);
+        Log.i(TAG,"AliveBroadcastReceiver---->复活进程(APP)");*/
     }
 
     private void getNetworkBroadcast(Context context, Intent intent){
