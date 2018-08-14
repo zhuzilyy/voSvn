@@ -12,18 +12,15 @@
         android:layout_height="@dimen/height_top_bar"
         android:layout_alignParentTop="true"
         android:background="@color/white">
-
         <TextView
-            android:visibility="gone"
+            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:text="VO"
-            android:textColor="@color/blue02version"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:text="帮助"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+             />
 
         <ImageView
             android:layout_centerVertical="true"
