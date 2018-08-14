@@ -79,7 +79,7 @@
             android:hint="请输入您的投诉内容"
             android:gravity="top"
             android:padding="@dimen/x6"
-            android:textSize="@dimen/x12"
+            android:textSize="12sp"
             android:layout_marginTop="@dimen/x12"
             />
         <Button

@@ -70,7 +70,7 @@
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="@dimen/x16"
+                android:textSize="18sp"
                 />
 
         </RelativeLayout>

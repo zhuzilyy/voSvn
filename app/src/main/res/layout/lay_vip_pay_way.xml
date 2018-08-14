@@ -3,26 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="@color/backgroundColor"
     >
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:background="@color/white" >
-
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/iv_back"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:onClick="back"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:scaleType="centerInside"
             android:src="@mipmap/back_" />
 
         <View
@@ -65,14 +60,14 @@
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/light_gray4"
+        android:background="@color/common_line"
         />
     <LinearLayout
         android:background="@color/white"
         android:layout_below="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x30"
+        android:paddingBottom="10dp"
         android:orientation="vertical"
         >
         <RelativeLayout
@@ -97,23 +92,22 @@
                 android:gravity="center_vertical"
                 android:layout_marginLeft="@dimen/x18"
                 />
-
            <RadioButton
                android:id="@+id/ra_zfb"
                android:focusable="false"
                android:focusableInTouchMode="false"
                android:clickable="false"
-               android:layout_width="@dimen/x25"
-               android:layout_height="@dimen/x25"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
                android:layout_alignParentRight="true"
                android:layout_centerVertical="true"
-               android:layout_marginRight="@dimen/x25"
+               android:layout_marginRight="20dp"
                />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x1"
-            android:background="@color/light_gray"
+            android:layout_height="0.5dp"
+            android:background="@color/common_line"
             ></View>
         <RelativeLayout
             android:id="@+id/way_wx_re"
@@ -144,24 +138,24 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:clickable="false"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/x25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/x25"
+                android:layout_marginRight="20dp"
                 />
         </RelativeLayout>
         <Button
             android:id="@+id/way_submit_btn"
-            android:layout_marginTop="@dimen/x25"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x35"
+            android:layout_height="40dp"
             android:text="支付"
-            android:textSize="@dimen/x14"
+            android:textSize="14sp"
             android:textColor="@color/white"
             android:background="@drawable/zhifu_bg"
-            android:layout_marginLeft="@dimen/x15"
-            android:layout_marginRight="@dimen/x15"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             />
     </LinearLayout>
     <RelativeLayout

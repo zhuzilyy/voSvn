@@ -122,8 +122,8 @@
         <activity
             android:name=".main.activities.SplashActivityVo"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|locale"
-            android:theme="@style/splashStyle_"
             android:screenOrientation="portrait"
+            android:theme="@style/splashTheme"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

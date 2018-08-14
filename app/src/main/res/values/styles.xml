@@ -7,9 +7,6 @@
         <item name="colorPrimaryDark">#5544aa</item>
         <item name="colorAccent">#5544aa</item><!--光标的颜色-->
         <!--按钮选中或者点击获得焦点后的颜色-->
-
-
-
     </style>
     <style name="splashStyle" parent="android:Theme.NoTitleBar.Fullscreen">
         <item name="android:windowIsTranslucent">true</item>
@@ -65,8 +62,12 @@
     </style>
     <!--欢迎页面主题-->
     <style name="splashStyle_" parent="AppTheme">
-        <item name="android:windowFullscreen">true</item>
+       <!-- <item name="android:windowFullscreen">true</item>-->
         <item name="android:windowBackground">@mipmap/welbg</item>
+    </style>
+    <style name="splashTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
     <!--1像素Activity风格 @android:color/transparent-->
     <style name="SingleActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">

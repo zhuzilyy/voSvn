@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x40"
             android:text="可以通过以下的方式搜到我"
-            android:textSize="@dimen/x12"
+            android:textSize="12sp"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/x15"
             />
@@ -145,7 +145,7 @@
             android:layout_height="@dimen/x40"
 
             android:text="关闭后，其他人将不能通过以上的方式搜到我"
-            android:textSize="@dimen/x12"
+            android:textSize="12sp"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/x15"
             />
@@ -153,7 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x40"
             android:text="可以通过以下方式添加我为好友"
-            android:textSize="@dimen/x12"
+            android:textSize="12sp"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/x15"
             />
