@@ -2,6 +2,7 @@ package com.hyphenate.easeui.ui;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipboardManager;
 import android.content.ContentValues;
@@ -35,6 +36,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.EMMessageListener;
@@ -390,7 +392,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             }
             @Override
             public void onResendClick(final EMMessage message) {
-                new EaseAlertDialog(getActivity(), R.string.resend, R.string.confirm_resend, null, new AlertDialogUser() {
+               /* new EaseAlertDialog(getActivity(), R.string.resend, R.string.confirm_resend, null, new AlertDialogUser() {
                     @Override
                     public void onResult(boolean confirmed, Bundle bundle) {
                         if (!confirmed) {
@@ -398,7 +400,8 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                         }
                         resendMessage(message);
                     }
-                }, true).show();
+                }, true).show();*/
+                showResendDialog(message);
             }
             @Override
             public void onBubbleLongClick(EMMessage message) {
@@ -418,6 +421,27 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             }
 
         });
+    }
+    private void showResendDialog(final EMMessage message) {
+        final Dialog dialog = new Dialog(getActivity());
+        View vv = LayoutInflater.from(getActivity()).inflate(R.layout.layout_resend, null);
+        dialog.setContentView(vv);
+        ImageView cancel = vv.findViewById(R.id.cancel_iv);
+        TextView confirm = vv.findViewById(R.id.tv_confrim);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resendMessage(message);
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
     protected void setRefreshLayoutListener() {
         swipeRefreshLayout.setOnRefreshListener(new OnRefreshListener() {

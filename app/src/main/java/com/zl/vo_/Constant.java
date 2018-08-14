@@ -20,6 +20,7 @@ import com.hyphenate.easeui.EaseConstant;
 public class Constant extends EaseConstant {
 	//新的朋友
 	public static final String NEW_FRIENDS_USERNAME = "item_new_friends";
+	public static final String DOWN_LOAD_URL = "http://api.ykhswl.net/vo_admin_system/html5/2.php";
 	//群组
 	public static final String GROUP_USERNAME = "item_groups";
 	//聊天室

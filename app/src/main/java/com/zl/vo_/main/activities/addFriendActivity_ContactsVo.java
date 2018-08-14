@@ -31,6 +31,7 @@ import com.tencent.mm.sdk.modelmsg.WXTextObject;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.zl.vo_.Constant;
 import com.zl.vo_.DemoApplication;
 import com.zl.vo_.DemoModel;
 import com.zl.vo_.R;
@@ -204,7 +205,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
                 try{
                     SmsManager smsManager = SmsManager.getDefault();
                     PendingIntent sentIntent = PendingIntent.getBroadcast(addFriendActivity_ContactsVo.this, 0, new Intent(), 0);
-                    smsManager.sendTextMessage(mobile, null, "快来下载VO，和好友一起畅享VO娱乐"+"http://api.ykhswl.net/vo_admin_system/html5/2.html", sentIntent, null);
+                    smsManager.sendTextMessage(mobile, null, "快来下载VO，和好友一起畅享VO娱乐"+ Constant.DOWN_LOAD_URL, sentIntent, null);
                     Toast.makeText(addFriendActivity_ContactsVo.this, "短信已发送", Toast.LENGTH_SHORT).show();
                 }catch (Exception e){
                     e.printStackTrace();
@@ -354,7 +355,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         // 将该app注册到微信
         mWxApi.registerApp(AppConst.APP_ID);
         WXWebpageObject webpage = new WXWebpageObject();
-        webpage.webpageUrl = "http://api.ykhswl.net/vo_admin_system/html5/2.html";
+        webpage.webpageUrl =Constant.DOWN_LOAD_URL;
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title ="人生知己，我在VO等你！";
         msg.description ="手机摇一摇即可隐藏好友,聊天办公,高端人群都在用" ;

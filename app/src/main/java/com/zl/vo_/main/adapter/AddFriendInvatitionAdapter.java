@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
+import com.zl.vo_.Constant;
 import com.zl.vo_.R;
 import com.zl.vo_.main.Entity.friendHintEntivity;
 import com.zl.vo_.main.activities.UserDetailsActivityVo;
@@ -127,7 +128,7 @@ public class AddFriendInvatitionAdapter extends BaseAdapter {
                 try{
                     SmsManager smsManager = SmsManager.getDefault();
                     PendingIntent sentIntent = PendingIntent.getBroadcast(context, 0, new Intent(), 0);
-                    smsManager.sendTextMessage(mobile, null, "快来下载VO，和好友一起畅享VO娱乐"+"    http://www.baidu.com", sentIntent, null);
+                    smsManager.sendTextMessage(mobile, null, "快来下载VO，和好友一起畅享VO娱乐"+ Constant.DOWN_LOAD_URL, sentIntent, null);
                     Toast.makeText(context, "短信已发送", Toast.LENGTH_SHORT).show();
                 }catch (Exception e){
                     e.printStackTrace();

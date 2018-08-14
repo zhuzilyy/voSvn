@@ -58,7 +58,6 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
         ButterKnife.bind(this);
         mInit();
     }
-
     private void mInit() {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,18 +75,14 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_confirm:
-
                 LoginData.LoginInfo.LoginAccountInfo user = myUtils.readUser(SettingLifePwdActivity.this);
                 if(user==null){
                     return;
                 }
                 if(!TextUtils.isEmpty(user.getPersonpass())){
-                    Toast.makeText(this, "改人生笔记已有密码", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "您已经设置过人生笔记密码", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-
-
                 String pwdStr = et_pwd.getText().toString().trim();
                 if (TextUtils.isEmpty(pwdStr)) {
                     Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
@@ -107,8 +102,8 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
                     Toast.makeText(this, "请输入密保答案", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (answerStr.length() > 4) {
-                    Toast.makeText(this, "密保答案最大长度为4", Toast.LENGTH_SHORT).show();
+                if (answerStr.length()!=4) {
+                    Toast.makeText(this, "密保答案长度不符合规范", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -165,7 +160,6 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
                     try {
                         LoginData.LoginInfo.LoginAccountInfo user =myUtils.readUser(SettingLifePwdActivity.this);
                         if(user!=null){
-
                             String pp = org.xutils.common.util.MD5.md5(pwdStr);
                             Log.i("mmd5", "==9999:" + pp);
                             user.setPersonpass(pp.toUpperCase());
@@ -174,7 +168,7 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
                     }catch (Exception e){
                         Log.i("dd",e.getMessage());
                     }
-                    Toast.makeText(SettingLifePwdActivity.this, data.getInfo(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingLifePwdActivity.this,data.getInfo(), Toast.LENGTH_SHORT).show();
                     finish();
 
                 } else {

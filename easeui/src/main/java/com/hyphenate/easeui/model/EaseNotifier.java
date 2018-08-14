@@ -196,13 +196,19 @@ public class EaseNotifier {
         manager.createNotificationChannel(channel);
         long id = System.currentTimeMillis();
 
+       /* Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);
+        if (notificationInfoProvider != null) {
+            msgIntent = notificationInfoProvider.getLaunchIntent(message);
+        }
+        PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);*/
+        //PendingIntent pendingIntent = PendingIntent.getActivity(appContext, (int)id, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
         Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);
         if (notificationInfoProvider != null) {
             msgIntent = notificationInfoProvider.getLaunchIntent(message);
         }
-       /* PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-        Intent msgIntent = appContext.getPackageManager().getLaunchIntentForPackage(packageName);*/
-        PendingIntent pendingIntent = PendingIntent.getActivity(appContext, (int)id, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
 
         NotificationManager manager1 = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
@@ -258,7 +264,6 @@ public class EaseNotifier {
             }else{
                 sendNotification(message, false);
             }
-
         } else {
             //前台
             sendNotification(message, true);
@@ -320,7 +325,6 @@ public class EaseNotifier {
     protected void sendNotification(EMMessage message, boolean isForeground, boolean numIncrease) {
         //这条信息来自哪里
         String username = message.getStringAttribute("nick",null);
-
         try {
             String notifyText = username + " ";
             switch (message.getType()) {
