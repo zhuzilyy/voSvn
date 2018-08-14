@@ -106,7 +106,7 @@
 
         </RelativeLayout>
         <RelativeLayout
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/setChatBackground_re"
             android:layout_width="match_parent"
             android:layout_height="@dimen/x50"
