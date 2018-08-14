@@ -129,8 +129,6 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="#dadada" />
-
-
         </RelativeLayout>
         <!--清空聊天记录-->
         <RelativeLayout
@@ -139,7 +137,6 @@
             android:layout_height="@dimen/x50"
             android:background="@drawable/fx_btn_list_item_bg"
             android:clickable="true" >
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,9 +146,6 @@
                 android:text="清空聊天记录"
                 android:textColor="#353535"
                 android:textSize="16sp" />
-
-
-
         </RelativeLayout>
 
     </LinearLayout>
