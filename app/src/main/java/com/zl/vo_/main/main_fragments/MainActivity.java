@@ -216,18 +216,19 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         public void onSreenOn() {
             // 亮屏，移除"1像素"
             mScreenManager.finishActivity();
-            Log.i("ss","ff");
+            Log.d("onSreen","onSreenOn");
         }
 
         @Override
-        public void onSreenOff() {
+        public void onSreenOff(){
             // 接到锁屏广播，将SportsActivity切换到可见模式
             // "咕咚"、"乐动力"、"悦动圈"就是这么做滴
-//            Intent intent = new Intent(SportsActivity.this,SportsActivity.class);
-//            startActivity(intent);
+//           Intent intent = new Intent(SportsActivity.this,SportsActivity.class);
+//           startActivity(intent);
             // 如果你觉得，直接跳出SportActivity很不爽
             // 那么，我们就制造个"1像素"惨案
             mScreenManager.startActivity();
+            Log.d("onSreen","onSreenOff");
         }
 
         @Override
@@ -255,7 +256,10 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         mScreenListener.setScreenReceiverListener(mScreenListenerer);
         mJobManager = JobSchedulerManager.getJobSchedulerInstance(this);
         mJobManager.startJobScheduler();
+        //开启前台服务
         startDaemonService();
+        //播放无声音乐
+        startPlayMusicService();
 
         //-------alive-end-----------------------------
         DemoApplication.setMainActivity(this);

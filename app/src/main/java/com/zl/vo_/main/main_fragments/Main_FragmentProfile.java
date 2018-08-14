@@ -1,10 +1,12 @@
 package com.zl.vo_.main.main_fragments;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -155,6 +157,9 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     @BindView(R.id.rl_addAndReduceFriend)
     RelativeLayout rl_addAndReduceFriend;
     private Dialog jiaMiDialog;
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -172,7 +177,15 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     }
     private void mInit() {
         //初始化开关
-        switch_infopwd.closeSwitch();
+       // switch_infopwd.closeSwitch();
+        SharedPreferences mySharedPreferences= getActivity().getSharedPreferences("infoPwd", Activity.MODE_PRIVATE);
+        String state_ =mySharedPreferences.getString("state", "");
+        if("open".equals(state_)){
+            switch_infopwd.openSwitch();
+        }else if("close".equals(state_)){
+            switch_infopwd.closeSwitch();
+        }
+
         Glide.with(getActivity()).asGif().load(R.mipmap.jiami).into(info_iv01);
         Glide.with(getActivity()).asGif().load(R.drawable.info_iv02).into(info_iv02);
         //判断是否为vip状态，如果不是，某些条目为灰色
@@ -434,6 +447,10 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
     private void mineInfoPwd() {
         if (switch_infopwd.isSwitchOpen()) {
             switch_infopwd.closeSwitch();
+            SharedPreferences mySharedPreferences= getActivity().getSharedPreferences("infoPwd", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = mySharedPreferences.edit();
+            editor.putString("state", "close");
+            editor.commit();
         } else {
             showInfoRe(switch_infopwd, re_info);
         }
@@ -733,6 +750,10 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
             public void run() {
                 button.openSwitch();
                 //re_info.setVisibility(View.INVISIBLE);
+                SharedPreferences mySharedPreferences= getActivity().getSharedPreferences("infoPwd", Activity.MODE_PRIVATE);
+                SharedPreferences.Editor editor = mySharedPreferences.edit();
+                editor.putString("state", "open");
+                editor.commit();
                 jiaMiDialog.dismiss();
             }
         }, 7930);

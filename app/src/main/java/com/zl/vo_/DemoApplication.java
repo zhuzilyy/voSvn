@@ -18,6 +18,7 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -100,6 +101,9 @@ public class DemoApplication extends Application {
     private static MainActivity sMainActivity = null;
     private boolean isRunInBackground = false;
     private int appCount = 0;
+
+
+
 
 
     @Override

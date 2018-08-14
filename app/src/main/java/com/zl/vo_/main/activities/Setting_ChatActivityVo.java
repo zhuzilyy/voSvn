@@ -71,9 +71,6 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
     private Uri imageUri;
     private Uri cropImageUri;
 
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
