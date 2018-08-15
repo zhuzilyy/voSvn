@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="260dp"
     android:gravity="center_horizontal"
-    android:paddingTop="@dimen/x15"
+    android:paddingTop="10dp"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/x25"
+        android:paddingBottom="10dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
         >
     <ImageView
-        android:layout_width="@dimen/x50"
-        android:layout_height="@dimen/x50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@mipmap/vip_dui"
         />
     <TextView
@@ -24,19 +25,19 @@
         android:text="会员开通成功"
         android:textColor="@color/black_deep"
         android:textSize="18sp"
-        android:layout_marginTop="@dimen/x15"
+        android:layout_marginTop="10dp"
         />
     <Button
         android:id="@+id/vip_success_btn"
         android:layout_marginTop="@dimen/x15"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x45"
+        android:layout_height="40dp"
         android:background="@drawable/vip_success"
         android:text="确定"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_marginLeft="@dimen/x25"
-        android:layout_marginRight="@dimen/x25"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         />
     </LinearLayout>
 </RelativeLayout>
