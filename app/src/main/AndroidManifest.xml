@@ -117,13 +117,12 @@
                 android:resource="@xml/file_paths" />
         </provider>
 -->
-
         <!--开屏页-->
         <activity
             android:name=".main.activities.SplashActivityVo"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|locale"
-            android:screenOrientation="portrait"
             android:theme="@style/splashTheme"
+            android:screenOrientation="portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -66,8 +66,9 @@
         <item name="android:windowBackground">@mipmap/welbg</item>
     </style>
     <style name="splashTheme" parent="AppTheme">
-        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
     </style>
     <!--1像素Activity风格 @android:color/transparent-->
     <style name="SingleActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
