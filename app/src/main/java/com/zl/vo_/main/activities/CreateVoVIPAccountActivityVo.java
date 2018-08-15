@@ -332,11 +332,13 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         LoginData.LoginInfo.LoginAccountInfo user= myUtils.readUser(CreateVoVIPAccountActivityVo.this);
         if(user!=null){
             Glide.with(CreateVoVIPAccountActivityVo.this).load(user.getAvatar()).into(vip_head);
-            vip_name.setText(user.getNickname()+"(蓝钻会员)");
+
             if("1".equals(user.getVip())){
                 vip_state.setVisibility(View.VISIBLE);
+                vip_name.setText(user.getNickname()+"(蓝钻会员)");
             }else {
                 vip_state.setVisibility(View.GONE);
+                vip_name.setText(user.getNickname());
             }
 
             //VIP到期时间
@@ -581,6 +583,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     vip_name.setText(user2.getNickname());
                     if("1".equals(user2.getVip())){
                         vip_state.setVisibility(View.VISIBLE);
+
                     }else {
                         vip_state.setVisibility(View.GONE);
                     }
@@ -591,6 +594,12 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.lay_vip_pay_success);
                     TextView stateTv=dialog.findViewById(R.id.state_tv);
+
+                    vip_name.setText(user2.getNickname()+"(蓝钻会员)");
+                    vip_endtime.setVisibility(View.VISIBLE);
+                    vip_endtime.setText(user2.getVip_enddate());
+                    ll_vipnofree.setVisibility(View.GONE);
+
                     if("1".equals(state02)){
                         stateTv.setText("会员开通成功");
                     }else {
