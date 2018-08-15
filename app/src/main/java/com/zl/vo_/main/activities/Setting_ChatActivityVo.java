@@ -28,6 +28,7 @@ import com.hyphenate.easeui.widget.EaseSwitchButton;
 import com.zl.vo_.DemoModel;
 import com.zl.vo_.R;
 import com.zl.vo_.main.main_utils.PhotoUtils;
+import com.zl.vo_.util.BitmapAndBase64Transform;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -241,6 +242,7 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
                     case 2:
                         //取消背景
                         settingsModel.setChatBackGroundPicUrl("");
+                        Toast.makeText(Setting_ChatActivityVo.this, "聊天背景已取消！", Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;
@@ -269,16 +271,12 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        int output_X = 480, output_Y = 480;
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case CODE_CAMERA_REQUEST://拍照完成回调
                     cropImageUri = Uri.fromFile(fileCropUri);
-                    String camera_uri =  getRealPathFromURI(cropImageUri);
-                    Log.i("ss",camera_uri);
-                    settingsModel.setChatBackGroundPicUrl(camera_uri+"");
-                    String imgurl=settingsModel.getChatBackGroundPicUrl();
-                    Log.i("ss",imgurl);
+                    PhotoUtils.cropImageUri(this, imageUri, cropImageUri, 0, 0, output_X, output_Y, CODE_RESULT_REQUEST);
                     break;
                 case CODE_GALLERY_REQUEST://访问相册完成回调
                     if (hasSdcard()) {
@@ -286,17 +284,24 @@ public class Setting_ChatActivityVo extends VoBaseActivity implements View.OnCli
                         Uri newUri = Uri.parse(PhotoUtils.getPath(this, data.getData()));
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                             newUri = FileProvider.getUriForFile(this, "com.zl.vo_.fileprovider", new File(newUri.getPath()));
-                        String picpath =  getRealPathFromURI(cropImageUri);
-                        Log.i("ss",picpath);
-                        settingsModel.setChatBackGroundPicUrl(picpath+"");
-                        Log.i("ss",picpath);
+                        PhotoUtils.cropImageUri(this, newUri, cropImageUri, 0, 0, output_X, output_Y, CODE_RESULT_REQUEST);
                     } else {
                         Toast.makeText(Setting_ChatActivityVo.this, "设备没有SD卡!", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case CODE_RESULT_REQUEST:
+                    Bitmap bitmap = PhotoUtils.getBitmapFromUri(cropImageUri, this);
+                    if (bitmap != null) {
+                        String base64 = BitmapAndBase64Transform.bitmapToBase64(bitmap);
+                        settingsModel.setChatBackGroundPicUrl(base64);
+                        Toast.makeText(this, "背景设置成功！", Toast.LENGTH_SHORT).show();
+
                     }
                     break;
             }
         }
     }
+
 
     public String getRealPathFromURI(Uri contentUri) {
         String res = null;

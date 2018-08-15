@@ -554,8 +554,8 @@ public class MyIndexbarContactsFragment extends Fragment implements View.OnClick
                             //帮助及反馈
                             case 3:
                                 Intent intent=new Intent(getActivity(),Help_Feedback.class);
-                                intent.putExtra("url", Url.FunctionIntroduceUrl);
-                                intent.putExtra("param","15");
+                                intent.putExtra("url", Url.NEW_HELPANDFEEDBACK);
+                                intent.putExtra("param","");
                                 intent.putExtra("title","功能介绍");
                                 startActivity(intent);
 

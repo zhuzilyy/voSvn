@@ -67,6 +67,7 @@ import com.zl.vo_.ui.GroupDetailsActivity;
 import com.zl.vo_.ui.ImageGridActivity;
 import com.zl.vo_.ui.VideoCallActivity;
 import com.zl.vo_.ui.VoiceCallActivity;
+import com.zl.vo_.util.BitmapAndBase64Transform;
 import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.ChatRowVoiceCall;
 import com.zl.vo_.widget.EaseChatRowRecall;
@@ -162,8 +163,11 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         //设置聊天背景（在子类中设置）
         String bgUrl = demoModel.getChatBackGroundPicUrl();
         Log.i("bgUrl", bgUrl + "聊天背景图片");
-        Uri uri = Uri.fromFile(new File(bgUrl));
-       Glide.with(getActivity()).load(uri).into(chatBackground_iv);
+        Bitmap bitmap = BitmapAndBase64Transform.base64ToBitmap(bgUrl);
+        if(bitmap!=null){
+            chatBackground_iv.setImageBitmap(bitmap);
+        }
+
 
 
         setChatFragmentHelper(this);
