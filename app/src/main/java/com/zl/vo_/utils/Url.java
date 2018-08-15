@@ -159,4 +159,6 @@ public class Url {
     public static String NEW_HELPANDFEEDBACK="http://api.ykhswl.net/vo_admin_system/list.php";
     //VIPwebview(new)
     public static String NEW_VIPWebView="http://api.ykhswl.net/vo_admin_system/view.php?id=4";
+ //用户协议(new)
+ public static String NEW_UserAgreementUrl="http://api.ykhswl.net/vo_admin_system/view.php?id=3";
 }

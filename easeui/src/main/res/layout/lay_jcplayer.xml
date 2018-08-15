@@ -24,10 +24,10 @@
                 <ImageView
                     android:id="@+id/video_back"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/back_"
-                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/back_"
+                   android:layout_marginLeft="10dp"
                     />
 
                 <Button

@@ -69,8 +69,8 @@
             android:layout_height="wrap_content">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/edit_group_avatar"
-                android:layout_width="@dimen/x65"
-                android:layout_height="@dimen/x65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="@dimen/x2"
                 android:src="@mipmap/group"
                 android:background="@drawable/circle_stroke"

@@ -92,7 +92,7 @@ public class wxInfoActivityVo extends VoBaseActivity implements View.OnClickList
                 //用户协议
                 Intent intent=new Intent(wxInfoActivityVo.this, Help_Feedback.class);
                 intent.putExtra("title","用户协议");
-                intent.putExtra("url","http://47.95.115.55:8080/voadmin/home/api/webview?id=3");
+                intent.putExtra("url",Url.NEW_UserAgreementUrl);
                 startActivity(intent);
                 break;
             case R.id.wx_next:
