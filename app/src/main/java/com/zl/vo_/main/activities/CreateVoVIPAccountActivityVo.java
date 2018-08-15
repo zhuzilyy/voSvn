@@ -540,6 +540,12 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.lay_vip_pay_success);
                     TextView stateTv=dialog.findViewById(R.id.state_tv);
+
+                    vip_name.setText(user.getNickname()+"(蓝钻会员)");
+                    vip_endtime.setVisibility(View.VISIBLE);
+                    vip_endtime.setText(user.getVip_enddate());
+                    ll_vipnofree.setVisibility(View.GONE);
+
                     if("1".equals(state02)){
                         stateTv.setText("会员开通成功");
                         sendBroadcast(new Intent("openVipOK"));

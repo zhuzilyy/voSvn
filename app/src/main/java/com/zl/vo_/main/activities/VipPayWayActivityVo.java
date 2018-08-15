@@ -1,6 +1,9 @@
 package com.zl.vo_.main.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -31,6 +34,8 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -183,6 +188,14 @@ public class VipPayWayActivityVo extends VoBaseActivity implements View.OnClickL
         });
     }
     private void alipay() {
+
+        boolean isInstall = isAppInstalled(VipPayWayActivityVo.this,"com.eg.android.AlipayGphone");
+        if(!isInstall){
+            Toast.makeText(instance, "请先下载安装支付宝app", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
         Runnable payRunnable = new Runnable() {
             @Override
             public void run() {
@@ -251,4 +264,18 @@ public class VipPayWayActivityVo extends VoBaseActivity implements View.OnClickL
         Thread payThread = new Thread(payRunnable);
         payThread.start();
     }
+
+    public boolean isAppInstalled(Context context, String packageName) {
+        final PackageManager packageManager = context.getPackageManager();
+        List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
+        List<String> pName = new ArrayList<String>();
+        if (pinfo != null) {
+            for (int i = 0; i < pinfo.size(); i++) {
+                String pn = pinfo.get(i).packageName;
+                pName.add(pn);
+            }
+        }
+        return pName.contains(packageName);
+    }
+
 }
