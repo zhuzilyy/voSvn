@@ -42,9 +42,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class EditActivity extends VoBaseActivity{
-	private ImageView groupAvatar;
+	private CircleImageView groupAvatar;
 	private String GroupId;
 	private RelativeLayout loadingView;
 
