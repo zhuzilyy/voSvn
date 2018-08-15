@@ -155,5 +155,8 @@ public class Url {
     //微信注册
     public static String WX_REGISTER=mURL+"weixin_mobile_login";
 
-
+    //帮助与反馈（new）
+    public static String NEW_HELPANDFEEDBACK="http://api.ykhswl.net/vo_admin_system/list.php";
+    //VIPwebview(new)
+    public static String NEW_VIPWebView="http://api.ykhswl.net/vo_admin_system/view.php?id=4";
 }

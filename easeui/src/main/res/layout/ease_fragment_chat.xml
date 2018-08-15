@@ -18,9 +18,10 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/input_menu"
         android:layout_below="@id/title_bar"
+        android:background="@color/white_h"
         >
         <ImageView
-            android:scaleType="center"
+            android:scaleType="fitXY"
             android:visibility="visible"
             android:id="@+id/chatBackground_iv"
             android:layout_width="match_parent"

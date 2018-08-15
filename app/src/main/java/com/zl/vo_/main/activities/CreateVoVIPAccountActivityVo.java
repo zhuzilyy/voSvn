@@ -404,7 +404,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
      * @param mWebView
      */
     private void setVIPWebView(WebView mWebView) {
-        mWebView.loadUrl(Url.VIPWebView);
+        mWebView.loadUrl(Url.NEW_VIPWebView);
         //启用支持javascript
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
