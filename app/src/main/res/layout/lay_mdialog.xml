@@ -17,8 +17,8 @@
                 android:layout_height="match_parent"
                 android:text="清空聊天记录"
                 android:gravity="center"
-                android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textColor="@color/tipcolor"
                 android:layout_centerVertical="true"
                 />
             <RelativeLayout
@@ -31,11 +31,9 @@
                 >
 
                 <ImageView
-
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@mipmap/close3"
-
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/imageView2" />
@@ -51,15 +49,14 @@
             android:layerType="software"
             />
         <TextView
+            android:layout_marginLeft="@dimen/x15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:text="确认要清空聊天记录"
             android:gravity="center_vertical"
-            android:paddingLeft="16sp"
-            android:textColor="@color/black_deep"
-            android:textSize="16sp"
+            android:textColor="@color/tipcolor"
+            android:textSize="14sp"
             />
         <View
             android:layout_width="match_parent"
@@ -75,6 +72,7 @@
                 android:layout_height="match_parent"
                />
             <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/confirm"
                 android:layout_width="0dp"
                 android:layout_height="40dp"

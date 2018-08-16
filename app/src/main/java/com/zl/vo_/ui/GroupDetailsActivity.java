@@ -666,7 +666,7 @@ public class GroupDetailsActivity extends VoBaseActivity implements OnClickListe
 					}
 				}, true).show();*/
 				final Dialog dialog = new Dialog(this);
-				View vv = LayoutInflater.from(this).inflate(R.layout.lay_clear, null);
+				View vv = LayoutInflater.from(this).inflate(R.layout.lay_clear_group, null);
 				dialog.setContentView(vv);
 				ImageView cancel = vv.findViewById(R.id.cancel_iv);
 				TextView confirm = vv.findViewById(R.id.tv_confrim);

@@ -120,7 +120,7 @@ public class GridImageAdapter extends
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         //少于8张，显示继续添加的图标
         if (getItemViewType(position) == TYPE_CAMERA) {
-            viewHolder.mImg.setImageResource(R.drawable.addimg_1x);
+            viewHolder.mImg.setImageResource(R.mipmap.add_picture);
             viewHolder.mImg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

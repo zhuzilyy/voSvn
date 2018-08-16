@@ -24,8 +24,8 @@
                     android:layout_height="match_parent"
                     android:text="删除加密好友"
                     android:gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textColor="@color/tipcolor"
                     android:layout_centerInParent="true"
                     />
                 <RelativeLayout
@@ -55,14 +55,13 @@
                 android:layout_marginRight="@dimen/x15"
                 android:layerType="software"
                 />
-
             <TextView
                 android:id="@+id/tv_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="您确认删除此加密好友吗?删除后不可恢复"
-                android:textColor="@color/black"
-                android:textSize="16sp"
+                android:text="您确认删除此加密好友吗（删除后不可恢复）"
+                android:textColor="@color/tipcolor"
+                android:textSize="14sp"
                 android:layout_marginTop="@dimen/x10"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"

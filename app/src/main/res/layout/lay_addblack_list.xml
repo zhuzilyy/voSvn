@@ -24,7 +24,7 @@
                     android:text="加入黑名单"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tipcolor"
                     android:layout_centerInParent="true"
                     />
                 <RelativeLayout
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="确定将好友加入黑名单?"
-                android:textColor="@color/black"
+                android:textColor="@color/tipcolor"
                 android:textSize="14sp"
                 android:layout_marginTop="@dimen/x10"
                 android:layout_marginLeft="@dimen/x15"
