@@ -167,24 +167,16 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                                                 JSONObject jsonObject3 = jsonObject2.getJSONObject("vip");
                                                 if(jsonObject3!=null){
                                                 String endTime = jsonObject3.getString("new_endtime");
-
                                                     //开通成功，更新数据
                                                     LoginData.LoginInfo.LoginAccountInfo user = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
                                                     getUserLastInfo(user.getHuanxin_account());
-
                                                 }
                                             }
-
                                         }
-
                                     }
-
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-
-
-
                             }
                         });
                     }
@@ -197,7 +189,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     }
                     @Override
                     public void onFinished() {
-
                     }
                 });
                 dialog.dismiss();

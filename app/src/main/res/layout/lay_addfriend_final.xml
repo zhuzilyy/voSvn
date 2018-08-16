@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
+        <!--title-->
         <RelativeLayout
             android:id="@+id/title"
             android:layout_width="match_parent"
@@ -22,7 +22,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:src="@mipmap/back_" />
-
             <EditText
                 android:id="@+id/et_search"
                 android:layout_width="match_parent"
@@ -32,7 +31,6 @@
                 android:layout_toRightOf="@+id/iv_back"
                 android:background="@null"
                 android:textColor="#000"
-                android:imeOptions="actionSearch"
                 android:hint="VO号/手机号"
                 android:paddingLeft="46dp"
                 android:singleLine="true"
@@ -56,6 +54,82 @@
                 android:background="@color/blue02version"
                 />
         </RelativeLayout>
+        <!--展示的结果，点击进入详情-->
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:visibility="gone"
+            android:id="@+id/ll_search_out"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:id="@+id/ll_search_inner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/group"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索："
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_search_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue02version"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+        </LinearLayout>
+        <!--该用户不存在-->
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:id="@+id/ll_search_noName"
+            android:visibility="gone"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/backgroundColor"
+            >
+            <TextView
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:text="该用户不存在"
+                />
+        </LinearLayout>
+
+        <!--搜索的结果-->
         <RelativeLayout
             android:background="@color/white"
             android:layout_marginTop="@dimen/x12"
@@ -88,7 +162,6 @@
                     android:text="红僧资本"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="@dimen/x12"
-
                     />
                 <TextView
                     android:id="@+id/searchContacts_vo"
@@ -98,10 +171,8 @@
                     android:text="红僧资本"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="@dimen/x12"
-
                     />
             </LinearLayout>
-
         </RelativeLayout>
         <!--loading-->
         <RelativeLayout
@@ -125,8 +196,6 @@
                 />
 
         </RelativeLayout>
-
-
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"

@@ -350,7 +350,7 @@
             android:id="@+id/tv_vipnofree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7天"
+            android:text="3天"
             android:textColor="@color/black"
             android:textSize="14sp"
             />
