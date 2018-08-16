@@ -26,7 +26,7 @@
                     android:layout_height="match_parent"
                     android:text="人生笔记设置"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/black"
                     android:layout_centerInParent="true"
                     />
@@ -61,7 +61,7 @@
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:id="@+id/ed_pwd"
-                android:layout_marginTop="@dimen/x10"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:hint="请输入密码"
@@ -78,7 +78,7 @@
                 android:text="确认"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                android:layout_marginTop="@dimen/x10"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"
                 android:background="@drawable/shape_blue_bgr"
@@ -103,7 +103,7 @@
                 android:textSize="14sp"
                 />
             <RelativeLayout
-                android:layout_marginTop="@dimen/x10"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="@dimen/x15"
                 android:layout_marginRight="@dimen/x15"

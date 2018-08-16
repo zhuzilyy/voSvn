@@ -213,7 +213,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:layout_toRightOf="@id/iv_find_password"
-                            android:text="设置"
+                            android:text="通用设置"
                             android:textColor="#353535"
                             android:textSize="14sp" />
                     </RelativeLayout>

@@ -163,7 +163,6 @@
                                 android:layout_width="@dimen/x45"
                                 android:layout_height="@dimen/x45"
                                 android:src="@mipmap/wx_icon"
-
                                 />
                             <TextView
                                 android:layout_centerHorizontal="true"
@@ -175,10 +174,7 @@
                                 android:textSize="18sp"
                                 android:textColor="@color/black"
                                 />
-
                         </LinearLayout>
-
-
 
                     </LinearLayout>
                     </android.support.v7.widget.CardView>

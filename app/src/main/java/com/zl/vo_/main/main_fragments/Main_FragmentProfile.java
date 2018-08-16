@@ -490,7 +490,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                         //修改密码
                         Intent intent = new Intent(getActivity(), FixLifePwdActivity.class);
                         startActivity(intent);
-
                     }
                 }).cancelPwdListener(new View.OnClickListener() {
                     @Override
@@ -499,8 +498,6 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
                         //取消密码
                         Intent intent = new Intent(getActivity(), CancelLifePwdActivity.class);
                         startActivity(intent);
-
-
                     }
                 }).findPwdListener(new View.OnClickListener() {
                     @Override
