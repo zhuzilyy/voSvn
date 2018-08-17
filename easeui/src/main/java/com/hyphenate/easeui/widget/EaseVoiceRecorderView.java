@@ -20,6 +20,7 @@ import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.model.EaseVoiceRecorder;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.SoundUtils;
+import com.hyphenate.easeui.utils.VibratorUtil;
 import com.hyphenate.easeui.widget.chatrow.EaseChatRowVoicePlayClickListener;
 
 /**
@@ -98,7 +99,8 @@ public class EaseVoiceRecorderView extends RelativeLayout {
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN:
             try {
-                SoundUtils.playSound(R.raw.h2,context);
+               //震动一下
+                VibratorUtil.Vibrate(context,200);
                 if (EaseChatRowVoicePlayClickListener.isPlaying)
                     EaseChatRowVoicePlayClickListener.currentPlayListener.stopPlayVoice();
                 v.setPressed(true);
