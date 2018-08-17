@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.hyphenate.EMError;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.model.EaseVoiceRecorder;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.hyphenate.easeui.utils.SoundUtils;
 import com.hyphenate.easeui.widget.chatrow.EaseChatRowVoicePlayClickListener;
 
 /**
@@ -96,6 +98,7 @@ public class EaseVoiceRecorderView extends RelativeLayout {
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN:
             try {
+                SoundUtils.playSound(R.raw.h2,context);
                 if (EaseChatRowVoicePlayClickListener.isPlaying)
                     EaseChatRowVoicePlayClickListener.currentPlayListener.stopPlayVoice();
                 v.setPressed(true);

@@ -59,6 +59,7 @@ import com.hyphenate.easeui.loader.UILImageLoader;
 import com.hyphenate.easeui.model.EaseAtMessageHelper;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.EaseUserUtils;
+import com.hyphenate.easeui.utils.SoundUtils;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
 import com.hyphenate.easeui.widget.EaseChatExtendMenu;
@@ -233,8 +234,12 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                     @Override
                     public void onVoiceRecordComplete(String voiceFilePath, int voiceTimeLength) {
                         sendVoiceMessage(voiceFilePath, voiceTimeLength);
+                        //播放声音
+                        SoundUtils.playSound(R.raw.didi,getActivity());
                     }
                 });
+
+
             }
             @Override
             public void onBigExpressionClicked(EaseEmojicon emojicon) {
