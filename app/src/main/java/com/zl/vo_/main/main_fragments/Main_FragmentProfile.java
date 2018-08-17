@@ -13,10 +13,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -464,6 +466,8 @@ public class Main_FragmentProfile extends Fragment implements View.OnClickListen
         jiaMiDialog.show();
         jiaMiDialog.setCancelable(false);
         jiaMiDialog.setCanceledOnTouchOutside(false);
+
+        //宽高可设置具体大小 lp.height = LayoutParams.MATH_PARENT; dlg.getWindow().setAttributes(lp);
     }
 
     private void mineHideLifePwd() {
