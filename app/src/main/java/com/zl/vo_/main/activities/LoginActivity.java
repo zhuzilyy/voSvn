@@ -24,6 +24,7 @@ import com.zl.vo_.R;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.ui.BaseActivity;
 import com.zl.vo_.util.CameraUtil;
+import com.zl.vo_.util.MobileInfoUtils;
 
 import java.io.IOException;
 import java.util.List;
@@ -252,6 +253,7 @@ public class LoginActivity extends VoBaseActivity implements View.OnClickListene
             case R.id.ll_phone_login:
                 //手机号登录
                 startActivity(new Intent(LoginActivity.this,LoginAfterActivityVo.class));
+                //MobileInfoUtils.jumpStartInterface(LoginActivity.this);
                 break;
             case R.id.ll_phone_register:
                 //手机号注册
