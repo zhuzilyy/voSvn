@@ -9,6 +9,7 @@
         android:id="@+id/list_itease_layout"
         android:layout_width="match_parent"
         android:layout_height="64dp"
+        android:background="@color/white"
         android:gravity="center_vertical">
         <RelativeLayout
             android:id="@+id/avatar_container"
