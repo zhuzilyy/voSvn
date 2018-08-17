@@ -100,7 +100,7 @@ public class EaseVoiceRecorderView extends RelativeLayout {
         case MotionEvent.ACTION_DOWN:
             try {
                //震动一下
-                VibratorUtil.Vibrate(context,200);
+                VibratorUtil.Vibrate(context,30);
                 if (EaseChatRowVoicePlayClickListener.isPlaying)
                     EaseChatRowVoicePlayClickListener.currentPlayListener.stopPlayVoice();
                 v.setPressed(true);
