@@ -103,6 +103,7 @@ public class ConversationListFragment extends EaseConversationListFragment {
            // conversationList=delConversation(conversationList);
             Remarks= getallConversationsRemarks(conversationList);
         }
+
         //设置会话数据
         conversationListView.init(conversationList,null,Remarks);
 
