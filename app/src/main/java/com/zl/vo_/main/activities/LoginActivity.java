@@ -265,7 +265,6 @@ public class LoginActivity extends VoBaseActivity implements View.OnClickListene
             case R.id.login_forgetpwd:
 
                break;
-
            case R.id.switch_account:
 //                //切换账号
               //  switchAccount();
