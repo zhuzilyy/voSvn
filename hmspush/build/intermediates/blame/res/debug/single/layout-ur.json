@@ -1,13 +1,5 @@
 [
     {
-        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout-ur\\upsdk_ota_update_view.xml",
-        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\layout-ur\\upsdk_ota_update_view.xml"
-    },
-    {
-        "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout-ur\\upsdk_app_dl_progress_dialog.xml",
-        "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\layout-ur\\upsdk_app_dl_progress_dialog.xml"
-    },
-    {
         "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\layout-ur\\upsdk_ota_update_view.xml",
         "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\layout-ur\\upsdk_ota_update_view.xml"
     },
