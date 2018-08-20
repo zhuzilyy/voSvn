@@ -826,6 +826,45 @@ public  class  DemoDBManager {
         return null;
     }
 
+
+
+
+    /****
+     * 查询一个好友通过userId
+     */
+
+    synchronized public MyFrindEntivity getFriendByUserID(String UserId){
+        SQLiteDatabase db=dbHelper.getWritableDatabase();
+        if(db.isOpen()){
+            try{
+                String sql="select * from myfriendtable where userid='"+UserId+"'";
+                Cursor cursor=db.rawQuery(sql,null);
+                while (cursor.moveToNext()){
+                    MyFrindEntivity friend=new MyFrindEntivity();
+                    friend.setAccount(cursor.getString(cursor.getColumnIndex("account")));
+                    friend.setHuanxinID(cursor.getString(cursor.getColumnIndex("huanxinId")));
+                    friend.setAvatar(cursor.getString(cursor.getColumnIndex("avatar")));
+                    friend.setGrooupID(cursor.getString(cursor.getColumnIndex("groupid")));
+                    friend.setAddress(cursor.getString(cursor.getColumnIndex("address")));
+                    friend.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
+                    friend.setGroupname(cursor.getString(cursor.getColumnIndex("groupname")));
+                    friend.setPassid(cursor.getString(cursor.getColumnIndex("passid")));
+                    friend.setFriend_check(cursor.getString(cursor.getColumnIndex("friend_check")));
+                    friend.setUserID(cursor.getString(cursor.getColumnIndex("userid")));
+                    Log.i("friend","查找好友成功");
+                    return friend;
+                }
+            }catch (SQLException e){
+                Log.i("friend","查找好友失败");
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return null;
+    }
+
+
+
     /****
      * 查询好友列表
      */

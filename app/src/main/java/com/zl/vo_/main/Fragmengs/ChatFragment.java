@@ -602,7 +602,15 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
             Intent intent = new Intent(getActivity(), UserDetailsActivityVo.class);
             intent.putExtra("HXid",username);
             intent.putExtra("way","apply_group");
-
+            List<MyFrindEntivity> entivities = dbManager.gethidefriends_pwdstate();
+            //passid是空的 就说明没有加密
+            for (MyFrindEntivity u: entivities) {
+                if(username.equals(u.getHuanxinID())){
+                 if(!TextUtils.isEmpty(u.getPassid())){
+                     intent.putExtra("passId",u.getPassid());
+                 }
+                }
+            }
             startActivity(intent);
 
         }
