@@ -32,6 +32,7 @@ import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.Entity.UserInfoEntity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_fragments.MainActivity;
+import com.zl.vo_.main.main_utils.TimeUtil;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.RoundImageView;
@@ -123,6 +124,10 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
     private String code;
     //是否是从search界面过来的
     private String search_;
+
+    private String PassId;
+
+
     @BindView(R.id.re_switGroup)
     public RelativeLayout re_switGroup;
     //好友的userID
@@ -145,6 +150,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
         account=getIntent().getStringExtra("account");
         applyWay=getIntent().getStringExtra("way");
         code=getIntent().getStringExtra("code");
+        PassId = getIntent().getStringExtra("passId");
 
         mInit();
 
@@ -242,7 +248,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
         friend= dbManager.getFriendByHxID(frindHxID);
 
 
-        if(friend!=null){
+        if(friend!=null&& TextUtils.isEmpty(PassId)){
             //是我的朋友
             Picasso.with(UserDetailsActivityVo.this).load(friend.getAvatar()).placeholder(R.drawable.ease_default_avatar).into(avatar);
             tv_name.setText(friend.getRemark());
@@ -264,8 +270,6 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                 phone_re.setVisibility(View.VISIBLE);
                 tv_phone.setText(friend.getPhone());
             }
-
-
 
         }else {
             //不是我的朋友
@@ -449,6 +453,12 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                             confirm.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+                                    if(!TextUtils.isEmpty(PassId)){
+                                        Toast.makeText(UserDetailsActivityVo.this, "验证消息已发送,等等对方验证", Toast.LENGTH_SHORT).show();
+                                        dialog2.dismiss();
+                                        return;
+                                    }
+
                                     String content = tv_yanzhenContent.getText().toString().trim();
                                     sendReasonForNewFriend(content);
                                     dialog2.dismiss();
@@ -462,6 +472,10 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                             });
                             dialog2.show();
                         }else {
+                            if(!TextUtils.isEmpty(PassId)){
+                                Toast.makeText(this, "验证消息已发送,等等对方验证", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
                             //不需要验证
                             RequestParams params=new RequestParams(Url.NativeAddFriendUrl);
                             params.addParameter("huanxin_account",myUtils.readUser(UserDetailsActivityVo.this).getHuanxin_account());
