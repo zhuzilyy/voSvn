@@ -28,8 +28,8 @@
                     android:layout_centerInParent="true"
                     android:gravity="center"
                     android:text="重发"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textColor="#333"
+                    android:textSize="16sp" />
 
                 <RelativeLayout
                     android:id="@+id/re_cancel"
@@ -67,8 +67,8 @@
                 android:layout_marginTop="@dimen/x10"
                 android:gravity="center_vertical"
                 android:text="确定重发该消息吗？"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textColor="#333"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_confrim"

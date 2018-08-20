@@ -41,8 +41,8 @@ public class MobileInfoUtils {
             } else if (getMobileType().equals("samsung")) { // 三星Note5测试通过
                 componentName = new ComponentName("com.samsung.android.sm_cn", "com.samsung.android.sm.ui.ram.AutoRunActivity");
             } else if (getMobileType().equals("HUAWEI")) { // 华为测试通过
-                //componentName = new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.optimize.process.ProtectActivity");
-                componentName = new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity");
+                componentName = new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.optimize.process.ProtectActivity");
+                //componentName = new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity");
             } else if (getMobileType().equals("vivo")) { // VIVO测试通过
                 componentName = ComponentName.unflattenFromString("com.iqoo.secure/.safeguard.PurviewTabActivity");
             } else if (getMobileType().equals("Meizu")) { //万恶的魅族
@@ -50,7 +50,8 @@ public class MobileInfoUtils {
                 // 针对魅族，我们只能通过魅族内置手机管家去设置自启动，所以我在这里直接跳转到魅族内置手机管家界面，具体结果请看图
                 componentName = ComponentName.unflattenFromString("com.meizu.safe/.permission.PermissionMainActivity");
             } else if (getMobileType().equals("OPPO")) { // OPPO R8205测试通过
-                componentName = ComponentName.unflattenFromString("com.oppo.safe/.permission.startup.StartupAppListActivity");
+                //componentName = ComponentName.unflattenFromString("com.oppo.safe/.permission.startup.StartupAppListActivity");
+                componentName = new ComponentName("oppo com.coloros.oppoguardelf", "com.coloros.powermanager.fuelgaue.PowerUsageModelActivity");
             } else if (getMobileType().equals("ulong")) { // 360手机 未测试
                 componentName = new ComponentName("com.yulong.android.coolsafe", ".ui.activity.autorun.AutoRunListActivity");
             } else {

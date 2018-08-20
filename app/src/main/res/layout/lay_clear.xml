@@ -58,7 +58,7 @@
                 android:id="@+id/tv_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="删除加密好友"
+                android:text="加密好友及聊天记录将一并删除，您需要再次添加好友才能聊天"
                 android:textColor="@color/tipcolor"
                 android:textSize="14sp"
                 android:layout_marginTop="@dimen/x10"

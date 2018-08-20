@@ -65,7 +65,6 @@ public class Main_FragmentFind extends Fragment implements View.OnClickListener 
     public LinearLayout ll_find;
     private PopupWindow pw_share;
     private View view_share;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -82,9 +81,6 @@ public class Main_FragmentFind extends Fragment implements View.OnClickListener 
             tv_update_flag.setVisibility(View.INVISIBLE);
         }
         view_share=LayoutInflater.from(getActivity()).inflate(R.layout.pw_share,null);
-
-
-
     }
     @OnClick({R.id.iv_add,R.id.iv_search,R.id.re_qrcode,R.id.re_game,
             R.id.re_helpfeedback,R.id.re_aboutVO,R.id.re_share})

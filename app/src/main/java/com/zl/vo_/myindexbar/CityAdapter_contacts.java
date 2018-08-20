@@ -1,6 +1,7 @@
 package com.zl.vo_.myindexbar;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,20 +69,18 @@ public class CityAdapter_contacts extends RecyclerView.Adapter<CityAdapter_conta
                 Glide.with(mContext).load(friend.getAvatar()).into(holder.avatar);
                 holder.tvCity.setText(mDatas.get(position).getNickname());
         if(friend.getTag().equals("1")){
+            holder.addressBtn.setTextColor(Color.parseColor("#ffffff"));
             holder.addressBtn.setText("添加");
             holder.addressBtn.setBackground(mContext.getResources().getDrawable(R.drawable.selector_accept2));
-
         }else {
+            holder.addressBtn.setTextColor(Color.parseColor("#000000"));
             holder.addressBtn.setText("邀请");
             holder.addressBtn.setBackground(mContext.getResources().getDrawable(R.drawable.selector_accept));
         }
-
-
                 holder.addressBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         listener.onMyContactItemClick(position);
-
                     }
                 });
                 holder.addressBtn.setOnLongClickListener(new View.OnLongClickListener() {
