@@ -82,4 +82,9 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowNoDisplay">false</item>
     </style>
+
+
+
+
+
 </resources>

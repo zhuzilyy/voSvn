@@ -2,6 +2,7 @@ package com.zl.vo_.main.activities;
 
 import android.app.Dialog;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -24,10 +26,8 @@ import android.widget.Toast;
 
 import com.mcxtzhang.indexlib.IndexBar.widget.IndexBar;
 import com.mcxtzhang.indexlib.suspension.SuspensionDecoration;
-import com.superrtc.util.BitmapUtil;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.modelmsg.WXTextObject;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -41,7 +41,6 @@ import com.zl.vo_.main.Entity.friendHintEntivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.myindexbar.CityAdapter_contacts;
-import com.zl.vo_.myindexbar.DividerItemDecoration;
 import com.zl.vo_.util.WhiteBgBitmapUtil;
 import com.zl.vo_.utils.AppConst;
 import com.zl.vo_.utils.Url;
@@ -118,7 +117,6 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         if(!b){
             ll_phoneContacts.setVisibility(View.GONE);
         }
-
         //上传通讯录字符串，返回是否是我的朋友
         getData(DemoApplication.phoneStrRes);
         mInit();
@@ -128,9 +126,13 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
      * 上传通讯录字符串，返回是否是我的好友
      */
     private void getData(String contactSTR) {
+        final Dialog dialog = new Dialog(addFriendActivity_ContactsVo.this);
+        View vv = LayoutInflater.from(addFriendActivity_ContactsVo.this).inflate(R.layout.lay_dia_getfriendinfo, null);
+        dialog.setContentView(vv);
+        dialog.show();
+
 
         RequestParams params=new RequestParams(Url.Friend_hintURL);
-
         params.addParameter("userid", myUtils.readUser(addFriendActivity_ContactsVo.this).getUserid());
         params.addParameter("address_book",contactSTR);
         params.setConnectTimeout(300000);
@@ -138,6 +140,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         x.http().post(params, new MyCommonCallback<Result<friendHintEntivity>>() {
             @Override
             public void success(Result<friendHintEntivity> data) {
+              //progressDialog.dismiss();
                 friendHintEntivity entivity=data.data;
                 friendHintEntivity.friendHintInfo hintInfo=entivity.getInfo();
                 if(hintInfo!=null){
@@ -180,6 +183,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
 
             @Override
             public void error(Throwable ex, boolean isOnCallback) {
+
                 Log.i("xx","钢铁侠=="+ex.getMessage());
 
                 int n=9/5;
