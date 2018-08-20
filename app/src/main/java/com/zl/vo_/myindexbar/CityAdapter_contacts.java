@@ -81,7 +81,6 @@ public class CityAdapter_contacts extends RecyclerView.Adapter<CityAdapter_conta
                     @Override
                     public void onClick(View v) {
                         listener.onMyContactItemClick(position);
-
                     }
                 });
                 holder.addressBtn.setOnLongClickListener(new View.OnLongClickListener() {

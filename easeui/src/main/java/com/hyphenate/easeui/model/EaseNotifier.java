@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -192,6 +193,9 @@ public class EaseNotifier {
             content=username+"发来一条消息";
         }
         NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+        channel.enableLights(true); //是否在桌面icon右上角展示小红点
+        channel.setLightColor(Color.GREEN); //小红点颜色
+        channel.setShowBadge(true);
         NotificationManager manager = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
         manager.createNotificationChannel(channel);
         long id = System.currentTimeMillis();
@@ -228,8 +232,9 @@ public class EaseNotifier {
                 .setWhen(System.currentTimeMillis())
                 .setSmallIcon(R.mipmap.logo)
                 .setLargeIcon(BitmapFactory.decodeResource(appContext.getResources(), R.mipmap.logo))
-                .setAutoCancel(true).setContentIntent(pendingIntent)
+                .setAutoCancel(true).setContentIntent(pendingIntent).setNumber(3)
                 .build();
+        notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
         manager1.notify((int)id, notification);
     }
 
