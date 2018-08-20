@@ -222,7 +222,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
         tv_region.setText(!TextUtils.isEmpty(friendInfo.getAddress())?friendInfo.getAddress():"中国省市");
         selectgroup.setText(friendInfo.getGroupname());
         iv_sex.setImageResource("男".equals(friendInfo.getSex())?R.mipmap.nan:R.mipmap.nv);
-        if(!"1".equals(friendInfo.getFriend_check())){
+        if(!"1".equals(friendInfo.getFriend_check()) || !TextUtils.isEmpty(PassId)){
             moreInfo.setVisibility(View.GONE);
             re_switGroup.setEnabled(false);
 
