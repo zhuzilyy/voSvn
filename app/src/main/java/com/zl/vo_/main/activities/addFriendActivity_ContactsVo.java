@@ -127,6 +127,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
      */
     private void getData(String contactSTR) {
         final Dialog dialog = new Dialog(addFriendActivity_ContactsVo.this);
+
         View vv = LayoutInflater.from(addFriendActivity_ContactsVo.this).inflate(R.layout.lay_dia_getfriendinfo, null);
         dialog.setContentView(vv);
         dialog.show();
@@ -140,6 +141,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         x.http().post(params, new MyCommonCallback<Result<friendHintEntivity>>() {
             @Override
             public void success(Result<friendHintEntivity> data) {
+                dialog.dismiss();
               //progressDialog.dismiss();
                 friendHintEntivity entivity=data.data;
                 friendHintEntivity.friendHintInfo hintInfo=entivity.getInfo();
@@ -180,10 +182,9 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
                     });
                 }
             }
-
             @Override
             public void error(Throwable ex, boolean isOnCallback) {
-
+                dialog.dismiss();
                 Log.i("xx","钢铁侠=="+ex.getMessage());
 
                 int n=9/5;

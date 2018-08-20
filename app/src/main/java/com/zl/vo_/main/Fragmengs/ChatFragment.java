@@ -144,6 +144,8 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
 
     private MyReceiver myReceiver;
 
+    private String passid;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -597,10 +599,10 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
         //handling when user click avatar
         //点击头像进入个人详情界面
         if (EaseConstant.CHATTYPE_GROUP == chatType) {
-
             Intent intent = new Intent(getActivity(), UserDetailsActivityVo.class);
-            intent.putExtra("HXid", username);
-            intent.putExtra("way", "apply_group");
+            intent.putExtra("HXid",username);
+            intent.putExtra("way","apply_group");
+
             startActivity(intent);
 
         }
