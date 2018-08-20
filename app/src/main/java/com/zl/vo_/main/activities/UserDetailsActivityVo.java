@@ -229,7 +229,6 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
         }else {
             moreInfo.setVisibility(View.VISIBLE);
             re_switGroup.setEnabled(true);
-
         }
         /***
          * 这个好友如果在手机通讯录中，就显示他的电话号码

@@ -108,15 +108,15 @@ public class EaseChatRowVoicePlayClickListener implements View.OnClickListener {
 
 
 		} else {
-			Log.i("ysq==","打开扬声器,关闭听筒");
-			audioManager.setMode(AudioManager.MODE_NORMAL);
-			audioManager.setSpeakerphoneOn(true);
-			mediaPlayer.setAudioStreamType(AudioManager.STREAM_RING);
+//			Log.i("ysq==","打开扬声器,关闭听筒");
+//			audioManager.setMode(AudioManager.MODE_NORMAL);
+//			audioManager.setSpeakerphoneOn(true);
+//			mediaPlayer.setAudioStreamType(AudioManager.STREAM_RING);
 
-//			audioManager.setSpeakerphoneOn(false);// 关闭扬声器
-//			// 把声音设定成Earpiece（听筒）出来，设定为正在通话中
-//			audioManager.setMode(AudioManager.MODE_IN_CALL);
-//			mediaPlayer.setAudioStreamType(AudioManager.STREAM_VOICE_CALL);
+			audioManager.setSpeakerphoneOn(true);// 打开扬声器
+			// 把声音设定成Earpiece（听筒）出来，设定为正在通话中
+			audioManager.setMode(AudioManager.MODE_IN_CALL);
+			mediaPlayer.setAudioStreamType(AudioManager.STREAM_VOICE_CALL);
 		}
 		try {
 			mediaPlayer.setDataSource(filePath);

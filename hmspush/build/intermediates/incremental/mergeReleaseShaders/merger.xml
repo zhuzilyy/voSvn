@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\vo1.0\voSvn\hmspush\src\main\shaders"/></dataSet><dataSet config="release"><source path="E:\vo1.0\voSvn\hmspush\src\release\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\AndroidContent\voSvn\hmspush\src\main\shaders"/></dataSet><dataSet config="release"><source path="D:\AndroidContent\voSvn\hmspush\src\release\shaders"/></dataSet></merger>
