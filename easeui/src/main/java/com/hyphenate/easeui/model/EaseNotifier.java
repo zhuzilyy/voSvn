@@ -237,9 +237,6 @@ public class EaseNotifier {
         notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
         manager1.notify((int)id, notification);
     }
-
-
-
     /**
      * handle the new message
      * this function can be override

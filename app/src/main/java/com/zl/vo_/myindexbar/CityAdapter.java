@@ -40,7 +40,6 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
         mInflater = LayoutInflater.from(mContext);
         this.hasNewMsg=hasNewMsg;
     }
-
     public List<MyFrindEntivity> getDatas() {
         return mDatas;
     }

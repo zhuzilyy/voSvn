@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/ll_content"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,27 +33,22 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         >
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="match_parent">
-                            <View
-                                android:layout_centerInParent="true"
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
-                                android:background="@drawable/circle_black"
-                                />
-                        </RelativeLayout>
-
                         <TextView
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="一键好友隐藏"
-                            android:gravity="center"
+                            android:text="1.一键好友隐藏"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
@@ -61,35 +57,35 @@
                             android:textSize="12sp"
                             android:text="开通VO会员，可以对好友进行隐私设置，点击隐藏快捷键，即可隐藏好友"
                             />
-
                     </LinearLayout>
+                    <View
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/common_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
                     <!--一摇隐藏好友-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         >
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="match_parent">
-                            <View
-                                android:layout_centerInParent="true"
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
-                                android:background="@drawable/circle_black"
-                                />
-                        </RelativeLayout>
-
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="一摇隐藏好友"
-                            android:gravity="center"
+                            android:text="2.一摇隐藏好友"
+                            android:gravity="center_vertical"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
@@ -98,8 +94,13 @@
                             android:textSize="12sp"
                             android:text="开通VO会员后，可以对好友进行隐私设置，手机摇一摇，即可隐藏好友"
                             />
-
                     </LinearLayout>
+                    <View
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/common_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
                     <!--一键显示好友-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -107,6 +108,7 @@
                         android:orientation="horizontal"
                         >
                         <RelativeLayout
+                            android:visibility="gone"
                             android:layout_width="0dp"
                             android:layout_weight="0.3"
                             android:layout_height="match_parent">
@@ -119,14 +121,21 @@
                         </RelativeLayout>
 
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="一键显示好友"
-                            android:gravity="center"
+                            android:text="3.一键显示好友"
+                            android:gravity="center_vertical"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
@@ -137,33 +146,35 @@
                             />
 
                     </LinearLayout>
+                    <View
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/common_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
                     <!--一键清除加密好友-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         >
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="match_parent">
-                            <View
-                                android:layout_centerInParent="true"
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
-                                android:background="@drawable/circle_black"
-                                />
-                        </RelativeLayout>
 
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="一键清除加密好友"
-                            android:gravity="center"
+                            android:text="4.一键清除加密好友"
+                            android:gravity="center_vertical"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
@@ -174,33 +185,34 @@
                             />
 
                     </LinearLayout>
+                    <View
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/common_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
                     <!--人生笔记隐私功能-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         >
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="match_parent">
-                            <View
-                                android:layout_centerInParent="true"
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
-                                android:background="@drawable/circle_black"
-                                />
-                        </RelativeLayout>
-
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="人生笔记隐私功能"
-                            android:gravity="center"
+                            android:text="5.人生笔记隐私功能"
+                            android:gravity="center_vertical"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
@@ -211,44 +223,43 @@
                             />
 
                     </LinearLayout>
+                    <View
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/common_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
                     <!--信息传输端对端加密-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         >
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="match_parent">
-                            <View
-                                android:layout_centerInParent="true"
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
-                                android:background="@drawable/circle_black"
-                                />
-                        </RelativeLayout>
-
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.8"
-                            android:text="信息传输端对端加密"
-                            android:gravity="center"
+                            android:text="6.信息传输端对端加密"
+                            android:gravity="center_vertical"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             />
+                        <View
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="0.5dp"
+                            android:layout_height="20dp"/>
                         <TextView
                             android:padding="@dimen/x5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"
                             android:textSize="12sp"
-                            android:text="利用2048位密码对用户之间的信息传输进行保护，不会被第三方切取，确保信息传输安全"
+                            android:text="利用2048位密码对用户之间的信息传输进行保护，不会被第三方窃取，确保信息传输安全"
                             />
-
                     </LinearLayout>
-
 
                 </LinearLayout>
 

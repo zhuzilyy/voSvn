@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -100,7 +101,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     public LinearLayout function_four_ll;
     public ImageView function_arrow;
     private boolean functionShow=true;
-
     public TextView vip_function_pressfriend;
     public TextView vip_function_shakefriend;
     public TextView vip_function_showallfriend;
@@ -316,6 +316,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         vip_function_allclear.setOnClickListener(this);
         vip_function_lifenoteprivacy.setOnClickListener(this);
         vip_function_infortrans.setOnClickListener(this);
+        function_four_ll.setOnClickListener(this);
 
         if(vip_webview!=null){
             setVIPWebView(vip_webview);
@@ -470,7 +471,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
             case R.id.vip_function_allclear:
             case R.id.vip_function_lifenoteprivacy:
             case R.id.vip_function_infortrans:
-
+            case R.id.function_four_ll:
                 //显示popuwindow
                 showVipFunctionDetails();
                 break;
@@ -487,17 +488,25 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
         popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         View vv = LayoutInflater.from(CreateVoVIPAccountActivityVo.this).inflate(R.layout.lay_vip_function_details,null);
+        LinearLayout ll_content=vv.findViewById(R.id.ll_content);
         popupWindow.setContentView(vv);
         popupWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
        // popupWindow.setTouchable(false);
-
         popupWindow.showAsDropDown(function_vip_ll);
         vv.findViewById(R.id.pp).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 popupWindow.dismiss();
+            }
+        });
+        ll_content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (popupWindow!=null && popupWindow.isShowing()){
+                    popupWindow.dismiss();
+                }
             }
         });
 
