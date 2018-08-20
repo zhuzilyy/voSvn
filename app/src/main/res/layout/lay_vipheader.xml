@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="蓝钻会员6大专享功能"
+            android:text="vo会员6大专享功能"
             android:paddingLeft="@dimen/x12"
             android:paddingRight="@dimen/x12"
             android:paddingBottom="@dimen/x8"
@@ -186,42 +186,40 @@
         >
         <!--001-->
         <LinearLayout
-            android:gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x40"
-            android:orientation="horizontal"
-            >
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
             <TextView
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="13sp"
                 android:id="@+id/vip_function_pressfriend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/shape_stoke_bluenew"
-                android:text="一键好友隐藏"
-                android:paddingTop="@dimen/x6"
-                android:textColor="@color/black"
+                android:gravity="center"
                 android:paddingBottom="@dimen/x6"
-                />
+                android:paddingTop="@dimen/x6"
+                android:text="一键好友隐藏"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
             <TextView
-                android:textSize="13sp"
                 android:id="@+id/vip_function_shakefriend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingTop="@dimen/x6"
-                android:paddingBottom="@dimen/x6"
-                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
                 android:background="@drawable/shape_stoke_bluenew"
+                android:gravity="center"
+                android:paddingBottom="@dimen/x6"
+                android:paddingTop="@dimen/x6"
                 android:text="一摇好友隐藏"
-                />
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
         </LinearLayout>
         <!--002-->
