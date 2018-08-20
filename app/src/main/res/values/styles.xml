@@ -88,6 +88,13 @@
         <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
         <item name="android:windowBackground">@android:color/transparent</item>  <!-- 设置window背景透明，也就是去边框 -->
     </style>
+    <!-- popup window 显示消失动画-->
+    <style name="PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/dialog_enter_shopping</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/dialog_exit_shopping</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
 
 
 

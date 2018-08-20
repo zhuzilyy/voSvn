@@ -44,6 +44,7 @@ import com.zl.vo_.myindexbar.CityAdapter_contacts;
 import com.zl.vo_.util.WhiteBgBitmapUtil;
 import com.zl.vo_.utils.AppConst;
 import com.zl.vo_.utils.Url;
+import com.zl.vo_.utils.WeiboDialogUtils;
 
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -100,7 +101,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
     private PopupWindow pw_share;
     @BindView(R.id.container)
     public RelativeLayout container;
-
+    private Dialog dialog;
 
    // public List<friendHintEntivity.friendHintInfo.friend_hintArr> bigList=new ArrayList<>();
 
@@ -126,13 +127,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
      * 上传通讯录字符串，返回是否是我的好友
      */
     private void getData(String contactSTR) {
-        final Dialog dialog = new Dialog(addFriendActivity_ContactsVo.this);
-
-        View vv = LayoutInflater.from(addFriendActivity_ContactsVo.this).inflate(R.layout.lay_dia_getfriendinfo, null);
-        dialog.setContentView(vv);
-        dialog.show();
-
-
+        dialog= WeiboDialogUtils.createLoadingDialog(this,"正在获取好友信息");
         RequestParams params=new RequestParams(Url.Friend_hintURL);
         params.addParameter("userid", myUtils.readUser(addFriendActivity_ContactsVo.this).getUserid());
         params.addParameter("address_book",contactSTR);
@@ -141,8 +136,9 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         x.http().post(params, new MyCommonCallback<Result<friendHintEntivity>>() {
             @Override
             public void success(Result<friendHintEntivity> data) {
-                dialog.dismiss();
+                //dialog.dismiss();
               //progressDialog.dismiss();
+                dialog.dismiss();
                 friendHintEntivity entivity=data.data;
                 friendHintEntivity.friendHintInfo hintInfo=entivity.getInfo();
                 if(hintInfo!=null){

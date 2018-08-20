@@ -8,7 +8,7 @@
         android:layout_width="260dp"
         android:layout_height="55dp"
         android:gravity="center"
-        android:background="@drawable/shape_corner_getfriendinfo"
+        android:background="@mipmap/bg_contact_friend"
         android:orientation="horizontal"
         >
         <ProgressBar
