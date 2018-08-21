@@ -413,8 +413,16 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 // TODO Auto-generated method stub
                 //返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
-                view.loadUrl(url);
-                return true;
+                //view.loadUrl(url);
+                if (url.equals("http://api.ykhswl.net/vo_admin_system/view.php?id=11")) {
+                    Intent intent = new Intent(CreateVoVIPAccountActivityVo.this, Help_Feedback.class);
+                    intent.putExtra("title","会员服务协议");
+                    intent.putExtra("url","http://api.ykhswl.net/vo_admin_system/view.php?id=11");
+                    startActivity(intent);
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
         //判断页面加载过程
@@ -422,7 +430,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 // TODO Auto-generated method stub
-
                 if (newProgress >95) {
                     loading_view.setVisibility(View.GONE);
                     // 网页加载完成
@@ -433,6 +440,7 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                 }
             }
         });
+        //http://api.ykhswl.net/vo_admin_system/view.php?id=11
     }
     @OnClick({R.id.iv_back,R.id.vip_btn_submit,R.id.back})
     @Override

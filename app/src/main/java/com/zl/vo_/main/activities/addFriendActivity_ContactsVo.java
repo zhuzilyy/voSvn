@@ -136,9 +136,9 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         x.http().post(params, new MyCommonCallback<Result<friendHintEntivity>>() {
             @Override
             public void success(Result<friendHintEntivity> data) {
-                //dialog.dismiss();
-              //progressDialog.dismiss();
                 dialog.dismiss();
+              //progressDialog.dismiss();
+               // dialog.dismiss();
                 friendHintEntivity entivity=data.data;
                 friendHintEntivity.friendHintInfo hintInfo=entivity.getInfo();
                 if(hintInfo!=null){

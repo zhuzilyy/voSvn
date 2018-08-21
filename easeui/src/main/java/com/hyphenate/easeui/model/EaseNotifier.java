@@ -212,9 +212,7 @@ public class EaseNotifier {
         if (notificationInfoProvider != null) {
             msgIntent = notificationInfoProvider.getLaunchIntent(message);
         }
-        PendingIntent pendingIntent = PendingIntent.getActivity(appContext, notifyID, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-
-
+        PendingIntent pendingIntent = PendingIntent.getActivity(appContext,(int)id, msgIntent,PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationManager manager1 = (NotificationManager) appContext.getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel1 = manager.getNotificationChannel("chat");
@@ -232,9 +230,9 @@ public class EaseNotifier {
                 .setWhen(System.currentTimeMillis())
                 .setSmallIcon(R.mipmap.logo)
                 .setLargeIcon(BitmapFactory.decodeResource(appContext.getResources(), R.mipmap.logo))
-                .setAutoCancel(true).setContentIntent(pendingIntent).setNumber(3)
+                .setAutoCancel(true).setContentIntent(pendingIntent)
                 .build();
-        notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
+        //notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
         manager1.notify((int)id, notification);
     }
     /**
