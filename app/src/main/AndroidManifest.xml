@@ -158,11 +158,10 @@
             android:enabled="true"
             android:exported="true"
             android:process=":daemon_service"/>
-<!--
         <service android:name=".alive_app.service.CancelNoticeService"
             android:enabled="true"
             android:exported="true"
-            android:process=":service"/>-->
+            android:process=":service"/>
         <service android:name=".alive_app.service.PlayerMusicService"
             android:enabled="true"
             android:exported="true"
@@ -203,10 +202,7 @@
                 <action android:name="android.net.wifi.STATE_CHANGE" />
             </intent-filter>
         </receiver>
-
         <!--保活结束-->
-
-
         <!--MainActivity-->
         <activity
             android:screenOrientation="portrait"
