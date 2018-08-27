@@ -27,6 +27,7 @@
                 tools:src="@mipmap/girl2" />
 
             <TextView
+                android:textColor="#333"
                 android:id="@+id/tvCity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

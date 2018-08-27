@@ -66,7 +66,6 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-
 		if (position == 0) {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.em_row_add_group, parent, false);

@@ -55,9 +55,7 @@ public class LifeNoteSetDialog extends Dialog {
     }
 
     private void show(LifeNoteSetDialog hypCommDialog) {
-
         if(re_cancel!=null){
-
             hypCommDialog.re_cancel.setOnClickListener(cancelListener);
         }
         if(ll_setPwd!=null){

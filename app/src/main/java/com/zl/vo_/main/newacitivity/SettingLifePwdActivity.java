@@ -2,7 +2,10 @@ package com.zl.vo_.main.newacitivity;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -118,7 +121,6 @@ public class SettingLifePwdActivity extends VoBaseActivity implements View.OnCli
                 }
                 setPwd(pwdStr, pwdConfrimStr, answerStr, answer_ConfirmStr);
                 break;
-
             default:
                 break;
 

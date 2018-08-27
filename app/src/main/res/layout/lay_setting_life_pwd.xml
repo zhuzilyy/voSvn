@@ -124,7 +124,7 @@
             android:gravity="center_vertical"
             android:layout_height="35dp">
             <com.zl.vo_.main.views.ClearEditText
-                android:inputType="textPassword"
+                android:password="true"
                 android:maxLength="4"
                 android:paddingLeft="@dimen/x15"
                 android:id="@+id/et_mibao_question_answer"
@@ -165,7 +165,7 @@
                 />
 
             <com.zl.vo_.main.views.ClearEditText
-                android:inputType="textPassword"
+                android:password="true"
                 android:maxLength="4"
                 android:paddingLeft="@dimen/x15"
                 android:id="@+id/et_mibao_question_answer_again"
