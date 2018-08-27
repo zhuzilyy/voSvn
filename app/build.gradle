@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'android.keystore'
             keyPassword '031424'
-            storeFile file('C:/Program Files/Java/jre1.8.0_131/bin/android.keystore')
+            storeFile file('D:/AndroidContent/keystory/android.keystore')
             storePassword '031424'
         }
     }
@@ -16,8 +16,8 @@ android {
         applicationId "com.zl.vo_"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         signingConfig signingConfigs.config
@@ -98,7 +98,6 @@ dependencies {
 
     //noinspection GradleCompatible
     compile 'com.android.support:design:26.1.0'
-
 
     //多类型弹框
     compile 'com.dou361.dialogui:jjdxm-dialogui:1.0.1'

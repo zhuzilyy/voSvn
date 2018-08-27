@@ -63,6 +63,7 @@ public class RegisterActivityVo extends VoBaseActivity implements View.OnClickLi
     }
 
     private void mInit() {
+
     }
     @OnClick({R.id.register_submit,R.id.ll_back,R.id.register_getcode,R.id.ll_Protocol})
     @Override

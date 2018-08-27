@@ -57,6 +57,7 @@
             android:id="@+id/tv_userid"
             style="@style/chat_text_name_style"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/chat_nick_margin_left"
             android:textSize="@dimen/chat_nick_text_size"

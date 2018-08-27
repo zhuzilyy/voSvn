@@ -63,6 +63,7 @@ public class WriterLifeNote extends VoBaseActivity implements View.OnClickListen
         mInit();
     }
 
+
     private void mInit() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         FullyGridLayoutManager manager = new FullyGridLayoutManager(WriterLifeNote.this, 4, GridLayoutManager.VERTICAL, false);
