@@ -82,7 +82,7 @@ public class GroupsActivity extends VoBaseActivity {
 		instance = this;
 		inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		grouplist = EMClient.getInstance().groupManager().getAllGroups();
-		groupListView = (ListView) findViewById(R.id.list);
+		groupListView = findViewById(R.id.list);
 		//show group list
         groupAdapter = new GroupAdapter(this, 1, grouplist);
         groupListView.setAdapter(groupAdapter);

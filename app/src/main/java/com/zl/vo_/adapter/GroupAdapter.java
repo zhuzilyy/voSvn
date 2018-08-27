@@ -48,21 +48,21 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 		this.context=context;
 	}
 
-	@Override
-	public int getViewTypeCount() {
-		return 2;
-	}
-
-	@Override
-	public int getItemViewType(int position) {
-		if (position == 0) {
-			return 0;
-		} else if (position == 1) {
-			return 1;
-		}  else {
-			return 2;
-		}
-	}
+//	@Override
+//	public int getViewTypeCount() {
+//		return 2;
+//	}
+//
+//	@Override
+//	public int getItemViewType(int position) {
+//		if (position == 0) {
+//			return 0;
+//		} else if (position == 1) {
+//			return 1;
+//		}  else {
+//			return 2;
+//		}
+//	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
