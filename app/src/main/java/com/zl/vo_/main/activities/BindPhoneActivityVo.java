@@ -22,6 +22,7 @@ import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_fragments.MainActivity;
 import com.zl.vo_.main.main_utils.myUtils;
+import com.zl.vo_.main.views.ClearEditText;
 import com.zl.vo_.main.views.MEditText;
 import com.zl.vo_.util.CodeTimerTask;
 import com.zl.vo_.utils.Url;
@@ -41,17 +42,17 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
     @BindView(R.id.ll_back)
     public LinearLayout back;
     @BindView(R.id.reg_phone)
-    public MEditText phone;
+    public ClearEditText phone;
     @BindView(R.id.account)
     public MEditText account;
     @BindView(R.id.reg_smsCode)
-    public MEditText smsCode;
+    public ClearEditText smsCode;
     @BindView(R.id.reg_tv_smsCode)
     public TextView tv_smsCode;
     @BindView(R.id.reg_pwd)
-    public MEditText pwd;
+    public ClearEditText pwd;
     @BindView(R.id.reg_confirm_pwd)
-    public MEditText conPwd;
+    public ClearEditText conPwd;
     @BindView(R.id.reg_submit)
     public Button reg_sub;
     private String type = "1";
@@ -127,7 +128,6 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
                     return;
                 }
                 wechatRegister(phone_, smsCode_);
-
                 break;
             default:
                 break;
@@ -146,7 +146,6 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
         params.addParameter("nickname", nickname);
         params.addParameter("sex", sex);
         params.addParameter("password", confirmPwd);
-
         x.http().post(params, new MyCommonCallback<Result<LoginData>>() {
             @Override
             public void success(Result<LoginData> data) {

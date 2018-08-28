@@ -79,7 +79,6 @@ public class Help_Feedback_front extends VoBaseActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.re_feedback:
                 Intent intent1=new Intent(Help_Feedback_front.this,PlatformComplainsActivityVo.class);
-
                 startActivity(intent1);
                 break;
             case R.id.re_function:
@@ -91,7 +90,6 @@ public class Help_Feedback_front extends VoBaseActivity implements View.OnClickL
                 intent.putExtra("title","功能介绍");
                 startActivity(intent);
                 break;
-
             default:
                 break;
 

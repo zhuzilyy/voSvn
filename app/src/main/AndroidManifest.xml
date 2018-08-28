@@ -743,7 +743,7 @@
         </receiver>
 
         //----------------------------------------------
-        <!-- gcm start -->
+     <!--   &lt;!&ndash; gcm start &ndash;&gt;
         <receiver
             android:name="com.hyphenate.chat.EMGCMBroadcastReceiver"
             android:exported="true"
@@ -766,7 +766,7 @@
     <service
             android:name="com.hyphenate.chat.EMGCMListenerService"
             android:exported="false" />
-
+-->
         <receiver
             android:name=".receiver.GCMPushBroadCast"
             android:exported="false">

@@ -106,19 +106,12 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
         <ImageView
             android:src="@drawable/fx_bg_btn_gray"
             android:id="@+id/code_image"
             android:layout_centerInParent="true"
             android:layout_width="240dp"
             android:layout_height="240dp" />
-
     </RelativeLayout>
-
-
-
-
 
 </RelativeLayout>

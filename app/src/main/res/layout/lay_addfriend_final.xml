@@ -26,14 +26,14 @@
                 android:id="@+id/et_search"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_toRightOf="@+id/iv_back"
+                android:layout_alignLeft="@+id/view4"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/view4"
                 android:background="@null"
-                android:textColor="#000"
                 android:hint="VO号/手机号"
                 android:paddingLeft="46dp"
                 android:singleLine="true"
+                android:textColor="#000"
                 android:textColorHint="#484c4c"
                 android:textSize="16sp" />
             <ImageView
@@ -52,7 +52,7 @@
                 android:layout_marginRight="@dimen/x15"
                 android:layout_marginBottom="@dimen/x5"
                 android:background="@color/blue02version"
-                />
+                android:id="@+id/view4" />
         </RelativeLayout>
         <!--展示的结果，点击进入详情-->
         <LinearLayout

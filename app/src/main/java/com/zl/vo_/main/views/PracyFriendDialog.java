@@ -44,9 +44,7 @@ public class PracyFriendDialog extends Dialog {
         btn_allClear= findViewById(R.id.allClearPwdFriendBtn);
         btn_setPwdFriend= findViewById(R.id.setPwdFriendBtn);
         btn_fixPwdFriend= findViewById(R.id.fixPwdFriendBtn);
-
     }
-
     @Override
     public void show() {
         super.show();
@@ -54,7 +52,6 @@ public class PracyFriendDialog extends Dialog {
     }
 
     private void show(PracyFriendDialog hypCommDialog) {
-
         if(btn_cancel!=null){
 
             hypCommDialog .btn_cancel.setOnClickListener(cancelListener);

@@ -111,9 +111,6 @@
             android:textColor="#353535"
             android:textSize="14sp" />
     </RelativeLayout>
-
-
-
     <!--帮助与反馈-->
     <RelativeLayout
         android:layout_marginTop="15dp"

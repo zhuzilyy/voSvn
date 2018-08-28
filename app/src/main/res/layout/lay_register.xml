@@ -92,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <com.zl.vo_.main.views.ClearEditText
+                    android:password="true"
                     android:singleLine="true"
-                    android:inputType="number"
                     android:layout_marginLeft="15dp"
                     android:maxLength="11"
                     android:id="@+id/register_nick"

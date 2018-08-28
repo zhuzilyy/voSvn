@@ -66,8 +66,6 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
     public TextView tv_search_name;
     @BindView(R.id.ll_search_noName)
     public LinearLayout ll_search_noName;
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +75,6 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
         mInit();
     }
     private void mInit() {
-
         et_search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
@@ -100,7 +97,6 @@ public class addFriendActivity_SearchVo extends VoBaseActivity implements View.O
                }
             }
         });
-
         ll_search_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
