@@ -316,7 +316,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                     }
 
                 }else {
-                    Toast.makeText(this, "null************", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, "null************", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.moreInfo:
