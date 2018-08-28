@@ -21,6 +21,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMImageMessageBody;
 import com.hyphenate.chat.EMMessage;
@@ -74,11 +76,14 @@ import com.zl.vo_.widget.EaseChatRowRecall;
 import com.zl.vo_.widget.scan.GameShareCharRow;
 import com.zl.vo_.widget.scan.MingPianCharRow;
 
+import org.xutils.DbManager;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -136,7 +141,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     private boolean isRobot;
 
     private DemoModel demoModel;
-    private DemoDBManager dbManager = DemoDBManager.getInstance();
+    private  DemoDBManager dbManager = DemoDBManager.getInstance();
     private Hyp_dialog hyp_dialog;
 
 
@@ -145,6 +150,22 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     private MyReceiver myReceiver;
 
     private String passid;
+    //备注
+    Map<String,String> Remarks=new HashMap<>();
+    //昵称
+    Map<String,String> Avatars=new HashMap<>();
+
+    /*
+    获取我的好友头像
+     */
+    public  Map<String,String> getFrindEntivities(){
+
+        List<MyFrindEntivity> entivities =dbManager.getAllFriends();
+        for (MyFrindEntivity e:entivities) {
+            Avatars.put(e.getHuanxinID(),e.getAvatar());
+        }
+        return Avatars;
+    }
 
 
     @Override
@@ -154,11 +175,65 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     }
 
     @Override
+    protected void onMessageListInit() {
+        super.onMessageListInit();
+        List<MyFrindEntivity> entivities =getMyfrinds();
+        if(entivities.size()>0){
+            Remarks = getallConversationsRemarks(entivities);
+            Avatars = getFrindEntivities();
+            Log.i("ss",Avatars.size()+"");
+        }
+
+        messageList.init(toChatUsername, chatType, chatFragmentHelper != null ?
+                chatFragmentHelper.onSetCustomChatRowProvider() : null,Remarks,Avatars);
+        setListItemClickListener();
+        messageList.getListView().setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                hideKeyboard();
+                inputMenu.hideExtendMenuContainer();
+                return false;
+            }
+        });
+
+    }
+
+    private List<MyFrindEntivity> getMyfrinds() {
+     return    dbManager.getAllFriends();
+    }
+
+
+    /****
+     * 获取联系人的备注
+     * @param myFrindEntivities
+     * @return
+     */
+    private Map<String,String> getallConversationsRemarks(List<MyFrindEntivity> myFrindEntivities) {
+        Map<String,String> remarkMap=new HashMap<>();
+
+        for (int i = 0; i <myFrindEntivities.size() ; i++) {
+            MyFrindEntivity fri =  myFrindEntivities.get(i);
+//            MyFrindEntivity fri=  dbManager.getFriendByHxID(conversationList.get(i).conversationId());
+            if(fri!=null){
+                remarkMap.put(fri.getHuanxinID(),fri.getRemark());
+            }
+
+        }
+
+        return remarkMap;
+    }
+
+
+    @Override
     protected void setUpView() {
         //注册广播，用于预览后直接发送视频
         myReceiver =  new MyReceiver();
         IntentFilter filter =  new IntentFilter("videoPreviewOK");
+        IntentFilter filter1 =  new IntentFilter("setAlias_success");
+
         getActivity().registerReceiver(myReceiver,filter);
+        getActivity().registerReceiver(myReceiver,filter1);
 
 
         demoModel = new DemoModel(getActivity());
@@ -913,10 +988,21 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
                }
 
            }
+           if("setAlias_success".equals(action)){
+              String chatName = intent.getStringExtra("chatName");
+              if(!TextUtils.isEmpty(chatName)){
+                  refrshChatName(chatName);
+              }
+
+           }
         }
     }
-
-
+    /*
+    更改备注后接收到更改成功后，刷新备注
+     */
+    private void refrshChatName(String chatName) {
+        titleBar.setTitle(chatName);
+    }
 
 
 }

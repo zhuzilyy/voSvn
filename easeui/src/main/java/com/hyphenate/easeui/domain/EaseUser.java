@@ -15,6 +15,9 @@ package com.hyphenate.easeui.domain;
 
 import com.hyphenate.chat.EMContact;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
+
+import java.util.Timer;
+
 //EMContact 代表联系人 对象，这是个基类 。
 public class EaseUser extends EMContact {
     
@@ -30,6 +33,16 @@ public class EaseUser extends EMContact {
 	protected String username;
 	protected String nick;
 	protected String groupid;
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+
+	protected String remark;
 
 	@Override
 	public String getUsername() {
@@ -59,11 +72,13 @@ public class EaseUser extends EMContact {
 	}
 
 
-	public EaseUser(String avatar,String username,String nick,String groupid){
+	public EaseUser(String avatar,String username,String nick,String groupid,
+					String remark){
 		this.avatar=avatar;
 		this.username=username;
 		this.nick=nick;
 		this.groupid=groupid;
+		this.remark = remark;
 
 	}
 	public EaseUser (){}

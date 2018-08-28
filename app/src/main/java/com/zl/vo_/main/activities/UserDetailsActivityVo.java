@@ -124,9 +124,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
     private String code;
     //是否是从search界面过来的
     private String search_;
-
     private String PassId;
-
 
     @BindView(R.id.re_switGroup)
     public RelativeLayout re_switGroup;
@@ -316,7 +314,7 @@ public class UserDetailsActivityVo extends VoBaseActivity implements View.OnClic
                     }
 
                 }else {
-                    Toast.makeText(this, "null************", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, "null************", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.moreInfo:

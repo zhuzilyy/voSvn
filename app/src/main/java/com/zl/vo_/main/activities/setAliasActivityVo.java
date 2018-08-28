@@ -8,16 +8,23 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.hyphenate.easeui.EaseUI;
+import com.hyphenate.easeui.domain.EaseUser;
 import com.zl.vo_.R;
 import com.zl.vo_.db.DemoDBManager;
+import com.zl.vo_.db.UserDao;
 import com.zl.vo_.main.Entity.Result;
 import com.zl.vo_.main.Entity.UserInfoEntity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.utils.Url;
 
+import org.xutils.DbManager;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
+
+import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -71,10 +78,15 @@ public class setAliasActivityVo extends VoBaseActivity {
                             loading_view.setVisibility(View.GONE);
                             UserInfoEntity userInfoEntity=  data.data;
                             UserInfoEntity.UserInfo userInfo=userInfoEntity.getInfo();
+
                             if(userInfo!=null){
                                 friendInfo=  userInfo.getFriend_info();
                                 if(friendInfo!=null){
                                     UpdataFriend(friendInfo);
+                                  //  setEaseUser(friendInfo);
+                                    Intent intent = new Intent("setAlias_success");
+                                    intent.putExtra("chatName",friendInfo.getRemark());
+                                    sendBroadcast(intent);
                                 }
                             }
                         }else {
@@ -90,6 +102,34 @@ public class setAliasActivityVo extends VoBaseActivity {
             }
         });
     }
+
+    /***
+     * 设置EaseUser
+     * @param friendInfo
+     */
+    private void setEaseUser(UserInfoEntity.UserInfo.UserFriendInfo friendInfo) {
+        String nick = friendInfo.getNickname();
+        UserDao userDao =new UserDao(setAliasActivityVo.this);
+        Map<String, EaseUser> contactList = userDao.getContactList();
+
+        for (Map.Entry<String, EaseUser> entry : contactList.entrySet()) {
+            String key = entry.getKey().toString();
+            if(friendInfo.getHuanxin_account().equals(key)){
+               EaseUser easeUser = entry.getValue();
+               easeUser.setRemark(friendInfo.getRemark());
+               userDao.saveContact(easeUser);
+            }
+        }
+
+        Map<String, EaseUser> contactList2 = userDao.getContactList();
+        Log.i("ss",contactList2+"");
+
+
+
+
+
+    }
+
     /****
      * 网络请求成功，更新数据库中该对象的信息
      * @param friendInfo
@@ -104,6 +144,7 @@ public class setAliasActivityVo extends VoBaseActivity {
         entivity.setRemark(friendInfo.getRemark());
         entivity.setAddress(friendInfo.getAddress());
         entivity.setSex(friendInfo.getSex());
+
         //更新数据
         boolean b=dbManager.updateMyFriendInfo(entivity);
         Log.i("jj","更新备注=="+b+entivity.getRemark());

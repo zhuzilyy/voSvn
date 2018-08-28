@@ -17,6 +17,8 @@ import com.hyphenate.easeui.model.styles.EaseMessageListItemStyle;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.widget.chatrow.EaseCustomChatRowProvider;
 
+import java.util.Map;
+
 public class EaseChatMessageList extends RelativeLayout{
 
     protected static final String TAG = "EaseChatMessageList";
@@ -29,6 +31,8 @@ public class EaseChatMessageList extends RelativeLayout{
     protected EaseMessageAdapter messageAdapter;
 
     protected EaseMessageListItemStyle itemStyle;
+
+
 
     public EaseChatMessageList(Context context, AttributeSet attrs, int defStyle) {
         this(context, attrs);
@@ -63,12 +67,32 @@ public class EaseChatMessageList extends RelativeLayout{
         this.toChatUsername = toChatUsername;
         
         conversation = EMClient.getInstance().chatManager().getConversation(toChatUsername, EaseCommonUtils.getConversationType(chatType), true);
-        messageAdapter = new EaseMessageAdapter(context, toChatUsername, chatType, listView);
+        messageAdapter = new EaseMessageAdapter(context, toChatUsername, chatType, listView,null);
         messageAdapter.setItemStyle(itemStyle);
         messageAdapter.setCustomChatRowProvider(customChatRowProvider);
         // set message adapter
         listView.setAdapter(messageAdapter);
         
+        refreshSelectLast();
+    }
+    /**
+     * init widget
+     * @param toChatUsername
+     * @param chatType
+     * @param customChatRowProvider
+     */
+    public void init(String toChatUsername, int chatType, EaseCustomChatRowProvider customChatRowProvider,  Map<String,String> Remarks,Map<String,String> Avatars) {
+        this.chatType = chatType;
+        this.toChatUsername = toChatUsername;
+
+        conversation = EMClient.getInstance().chatManager().getConversation(toChatUsername, EaseCommonUtils.getConversationType(chatType), true);
+       //设置备注
+        messageAdapter = new EaseMessageAdapter(context, toChatUsername, chatType, listView,Remarks,Avatars);
+        messageAdapter.setItemStyle(itemStyle);
+        messageAdapter.setCustomChatRowProvider(customChatRowProvider);
+        // set message adapter
+        listView.setAdapter(messageAdapter);
+
         refreshSelectLast();
     }
     
