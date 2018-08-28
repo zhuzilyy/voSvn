@@ -1720,11 +1720,18 @@ public class DemoHelper {
      */
     private void testIsMyFriend(EMMessage message) {
         boolean isMyFriend = TestDbForIsMyFriend(message);
+        DemoDBManager demoDBManager = DemoDBManager.getInstance();
         if (isMyFriend) {
+            String huxi_account = message.getFrom();
+            MyFrindEntivity myFrindEntivity = demoDBManager.getFriendByHxID(huxi_account);
+            message.setAttribute("remark",myFrindEntivity.getRemark());
+
+            String ss = message.getStringAttribute("remark","");
+            Log.i("ss",message.getStringAttribute("remark",""));
             return;
         } else {
             MyFrindEntivity frindEntivity = getNewFriendData(message);
-            DemoDBManager demoDBManager = DemoDBManager.getInstance();
+
 
             try {
                 demoDBManager.saveMyFriend(frindEntivity);

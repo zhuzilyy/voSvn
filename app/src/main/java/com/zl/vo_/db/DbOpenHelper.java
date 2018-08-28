@@ -32,6 +32,7 @@ public class DbOpenHelper extends SQLiteOpenHelper{
             +UserDao.COLUMN_NAME_NICK+" TEXT,"
             +UserDao.COLUMN_NAME_AVATAR +" TEXT,"
             +UserDao.COLUMN_NAME_MGROUPID +" TEXT,"
+            +UserDao.COLUMN_NAME_REMARK +" TEXT,"
             +UserDao.COLUMN_NAME_ID+" TEXT PRIMARY KEY)";
     //存储消息的表
     private static final String INIVTE_MESSAGE_TABLE_CREATE = "CREATE TABLE "

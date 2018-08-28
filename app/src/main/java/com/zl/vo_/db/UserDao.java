@@ -33,6 +33,7 @@ public class UserDao {
 	public static final String COLUMN_NAME_NICK = "nick";
 	public static final String COLUMN_NAME_AVATAR = "avatar";
 	public static final String COLUMN_NAME_MGROUPID = "groupid";
+	public static final String COLUMN_NAME_REMARK = "remark";
 	
 	public static final String PREF_TABLE_NAME = "pref";
 	public static final String COLUMN_NAME_DISABLED_GROUPS = "disabled_groups";

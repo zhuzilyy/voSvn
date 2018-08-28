@@ -84,6 +84,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -175,6 +176,8 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     private ThemeConfig themeConfig = null;
 
     public RelativeLayout chat_re;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_chat, container, false);
@@ -255,7 +258,11 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         if (isRoaming) {
             fetchQueue = Executors.newSingleThreadExecutor();
         }
+
     }
+
+
+
     protected void setUpView() {
         if (chatType == EaseConstant.CHATTYPE_SINGLE) {
             if(!TextUtils.isEmpty(singleRemark)){
@@ -272,6 +279,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
         } else {
             //群聊  右边是俩个人
+
         	titleBar.setRightImageResource(R.drawable.groups_icon);
             if (chatType == EaseConstant.CHATTYPE_GROUP) {
                 //group chat
@@ -339,16 +347,18 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                 String msgId = null;
                 if (msgs != null && msgs.size() > 0) {
                     msgId = msgs.get(0).getMsgId();
+                    EMMessage emMessage = msgs.get(0);
+                    Log.i("ss",emMessage+"");
                 }
                 conversation.loadMoreMsgFromDB(msgId, pagesize - msgCount);
+                Log.i("loadMoreMsgFromDB","loadMoreMsgFromDB ="+ msgId);
             }
         } else {
             fetchQueue.execute(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        EMClient.getInstance().chatManager().fetchHistoryMessages(
-                                toChatUsername, EaseCommonUtils.getConversationType(chatType), pagesize, "");
+                        EMClient.getInstance().chatManager().fetchHistoryMessages(toChatUsername, EaseCommonUtils.getConversationType(chatType), pagesize, "");
                         final List<EMMessage> msgs = conversation.getAllMessages();
                         int msgCount = msgs != null ? msgs.size() : 0;
                         if (msgCount < conversation.getAllMsgCount() && msgCount < pagesize) {
@@ -367,19 +377,19 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         }
     }
     protected void onMessageListInit(){
-        messageList.init(toChatUsername, chatType, chatFragmentHelper != null ? 
-                chatFragmentHelper.onSetCustomChatRowProvider() : null);
-       setListItemClickListener();
-        messageList.getListView().setOnTouchListener(new OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                hideKeyboard();
-                inputMenu.hideExtendMenuContainer();
-                return false;
-            }
-        });
-        isMessageListInited = true;
+//        messageList.init(toChatUsername, chatType, chatFragmentHelper != null ?
+//                chatFragmentHelper.onSetCustomChatRowProvider() : null);
+//       setListItemClickListener();
+//        messageList.getListView().setOnTouchListener(new OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                hideKeyboard();
+//                inputMenu.hideExtendMenuContainer();
+//                return false;
+//            }
+//        });
+       isMessageListInited = true;
     }
     protected void setListItemClickListener() {
         messageList.setItemClickListener(new EaseChatMessageList.MessageListItemClickListener() {

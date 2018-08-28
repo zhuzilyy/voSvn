@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.EaseUI;
 import com.hyphenate.easeui.EaseUI.EaseUserProfileProvider;
@@ -55,7 +56,7 @@ public class EaseUserUtils {
                 options.placeholder(R.drawable.ease_default_avatar);
                 options.diskCacheStrategy(DiskCacheStrategy.ALL);
                 Glide.with(context).load(user.getAvatar()).apply(options).into(imageView);
-              //  Glide.with(context).load(user.getAvatar()).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.ease_default_avatar).into(imageView);
+              //Glide.with(context).load(user.getAvatar()).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.ease_default_avatar).into(imageView);
             }
         }else{
             Glide.with(context).load(R.drawable.ease_default_avatar).into(imageView);
@@ -68,13 +69,21 @@ public class EaseUserUtils {
      */
     public static void setUserNick(String username,TextView textView){
         if(textView != null){
+
         	EaseUser user = getUserInfo(username);
         	if(user != null && user.getNick() != null){
+
         		textView.setText(user.getNick());
         	}else{
         		textView.setText(username);
         	}
+
+
+
+
         }
     }
+
+
     
 }

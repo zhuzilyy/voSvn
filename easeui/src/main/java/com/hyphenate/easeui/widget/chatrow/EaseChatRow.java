@@ -2,6 +2,7 @@ package com.hyphenate.easeui.widget.chatrow;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.adapter.EaseMessageAdapter;
 import com.hyphenate.easeui.domain.EaseAvatarOptions;
 import com.hyphenate.easeui.model.styles.EaseMessageListItemStyle;
+import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.hyphenate.easeui.utils.EaseUserUtils;
 import com.hyphenate.easeui.widget.EaseChatMessageList;
 import com.hyphenate.easeui.widget.EaseChatMessageList.MessageListItemClickListener;
@@ -30,6 +32,7 @@ import com.hyphenate.easeui.widget.EaseImageView;
 import com.hyphenate.util.DateUtils;
 
 import java.util.Date;
+import java.util.Map;
 
 public abstract class EaseChatRow extends LinearLayout {
     protected static final String TAG = EaseChatRow.class.getSimpleName();
@@ -58,6 +61,10 @@ public abstract class EaseChatRow extends LinearLayout {
 
     protected MessageListItemClickListener itemClickListener;
     protected EaseMessageListItemStyle itemStyle;
+    //备注
+    protected Map<String,String> Remarks;
+    //头像
+    protected Map<String,String> Avatars;
 
     public EaseChatRow(Context context, EMMessage message, int position, BaseAdapter adapter) {
         super(context);
@@ -94,11 +101,13 @@ public abstract class EaseChatRow extends LinearLayout {
      */
     public void setUpView(EMMessage message, int position,
             EaseChatMessageList.MessageListItemClickListener itemClickListener,
-                          EaseMessageListItemStyle itemStyle) {
+                          EaseMessageListItemStyle itemStyle,Map<String,String> Remarks,Map<String,String> Avatars) {
         this.message = message;
         this.position = position;
         this.itemClickListener = itemClickListener;
         this.itemStyle = itemStyle;
+        this.Remarks = Remarks;
+        this.Avatars = Avatars;
 
         setUpBaseView();
         onSetUpView();
@@ -135,8 +144,10 @@ public abstract class EaseChatRow extends LinearLayout {
 
 //                EaseUserUtils.setUserAvatar(context, message.getStringAttribute("avatar",""), userAvatarView);
 //                EaseUserUtils.setUserNick(message.getStringAttribute("nick",""), usernickView);
-                EaseUserUtils.setUserNick(message.getStringAttribute("nick",""), usernickView);
-                Glide.with(getContext()).load(message.getStringAttribute("avatar","")).into(userAvatarView);
+               // EaseUserUtils.setUserNick(message.getStringAttribute("nick",""), usernickView);
+                EaseUserUtils.setUserNick(Remarks.get(message.getUserName()), usernickView);
+                dowithGroupAvatar(message,Avatars);//-----------------------===
+              //  Glide.with(getContext()).load(message.getStringAttribute("avatar","")).into(userAvatarView);
                 }else {
                     //接收方
                     if("000000".equals(message.getFrom())){
@@ -150,10 +161,6 @@ public abstract class EaseChatRow extends LinearLayout {
                     }
 
                 }
-
-
-
-
             }
         }
         if(deliveredView != null){
@@ -215,8 +222,23 @@ public abstract class EaseChatRow extends LinearLayout {
         }
 
     }
+    /*
+    同步群组聊天头像的问题
+     */
+    private void dowithGroupAvatar(EMMessage message, Map<String, String> avatars) {
+      String hxid =  message.getFrom();
+        for (Map.Entry<String,String > entry :avatars.entrySet()) {
+            if(!TextUtils.isEmpty(hxid)){
+                if(hxid.equals(entry.getKey())){
+                    Glide.with(getContext()).load(entry.getValue()).into(userAvatarView);
+                }
+            }
+        }
 
-    /**
+
+    }
+
+    /*
      * set callback for sending message
      */
     protected void setMessageSendCallback(){

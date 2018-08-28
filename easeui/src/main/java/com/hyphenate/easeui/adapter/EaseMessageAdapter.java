@@ -41,6 +41,8 @@ import com.hyphenate.easeui.widget.chatrow.EaseChatRowVoice;
 import com.hyphenate.easeui.widget.chatrow.EaseCustomChatRowProvider;
 import com.hyphenate.easeui.widget.chatrow.MyChatRowCard;
 
+import java.util.Map;
+
 public class EaseMessageAdapter extends BaseAdapter{
 
 	private final static String TAG = "msg";
@@ -88,12 +90,26 @@ public class EaseMessageAdapter extends BaseAdapter{
 
     private ListView listView;
 	private EaseMessageListItemStyle itemStyle;
+	private  Map<String,String> Remarks;
+	private  Map<String,String> Avatars;
 
 
-	public EaseMessageAdapter(Context context, String username, int chatType, ListView listView) {
+	public EaseMessageAdapter(Context context, String username, int chatType, ListView listView, Map<String,String> Remarks) {
 		this.context = context;
 		this.listView = listView;
 		toChatUsername = username;
+		//备注
+		this.Remarks = Remarks;
+		this.conversation = EMClient.getInstance().chatManager().getConversation(username, EaseCommonUtils.getConversationType(chatType), true);
+	}
+
+	public EaseMessageAdapter(Context context, String username, int chatType, ListView listView, Map<String,String> Remarks,Map<String,String> Avatars) {
+		this.context = context;
+		this.listView = listView;
+		toChatUsername = username;
+		//备注
+		this.Remarks = Remarks;
+		this.Avatars = Avatars;
 		this.conversation = EMClient.getInstance().chatManager().getConversation(username, EaseCommonUtils.getConversationType(chatType), true);
 	}
 
@@ -276,8 +292,9 @@ public class EaseMessageAdapter extends BaseAdapter{
 		if(convertView == null){
 			convertView = createChatRow(context, message, position);
 		}
-		//refresh ui with messages
-		((EaseChatRow)convertView).setUpView(message, position, itemClickListener, itemStyle);
+
+			//refresh ui with messages  设置备注
+		((EaseChatRow)convertView).setUpView(message, position, itemClickListener, itemStyle,Remarks,Avatars);
 		
 		return convertView;
 	}
