@@ -114,7 +114,6 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
                 String smsCode_ = smsCode.getText().toString().trim();
                 String pwd_ = pwd.getText().toString().trim();
                 confirmPwd = conPwd.getText().toString().trim();
-
                 if (TextUtils.isEmpty(phone_)) {
                     Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
                     return;
@@ -133,7 +132,6 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
                 break;
         }
     }
-
     //微信注册
     private void wechatRegister(String phone, String confirmCode) {
         loading_view.setVisibility(View.VISIBLE);
@@ -151,6 +149,7 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
             public void success(Result<LoginData> data) {
                 loading_view.setVisibility(View.GONE);
                 LoginData loginData = data.data;
+                //LoginActivity.instance.finish();
                 if (loginData != null) {
                     LoginData.LoginInfo loginInfo = loginData.getInfo();
                     if (loginInfo != null) {
@@ -159,12 +158,9 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
                             //登录环信
                             LoginHX(user, user.getAccount());
                         }
-
-
                     }
                 }
             }
-
             @Override
             public void error(Throwable ex, boolean isOnCallback) {
                 loading_view.setVisibility(View.GONE);
@@ -172,8 +168,6 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
             }
         });
     }
-
-
     /****
      * 登录环信
      */
@@ -230,11 +224,7 @@ public class BindPhoneActivityVo extends VoBaseActivity implements View.OnClickL
                 Log.i("cspp", "onProgress" + s);
             }
         });
-
-
     }
-
-
     /***
      * 去注册
      *
