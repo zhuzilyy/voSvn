@@ -165,7 +165,6 @@ public class RegisterActivityVo extends VoBaseActivity implements View.OnClickLi
         if (!TextUtils.isEmpty(register_phone_str) && !TextUtils.isEmpty(register_pwd_str)) {
 
             loading_view.setVisibility(View.VISIBLE);
-
             RequestParams params=new RequestParams(Url.RegisterURL);
             params.addParameter("account",register_phone_str);
             params.addParameter("smscode",register_code_str);
