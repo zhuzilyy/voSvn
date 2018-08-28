@@ -125,12 +125,14 @@ public class EaseConversationAdapter extends ArrayAdapter<EMConversation> {
             }
             //设置群组头像
             EMGroup emGroup=EMClient.getInstance().groupManager().getGroup(groupId);
-            String avatarDes=emGroup.getDescription();
-            if(!TextUtils.isEmpty(avatarDes)){
-                Glide.with(getContext()).load(avatarDes).into(holder.avatar);
-            }else {
-                // group message, show group avatar
-                holder.avatar.setImageResource(R.drawable.ease_group_icon);
+            if (emGroup!=null){
+                String avatarDes=emGroup.getDescription();
+                if(!TextUtils.isEmpty(avatarDes)){
+                    Glide.with(getContext()).load(avatarDes).into(holder.avatar);
+                }else {
+                    // group message, show group avatar
+                    holder.avatar.setImageResource(R.drawable.ease_group_icon);
+                }
             }
 
             EMGroup group = EMClient.getInstance().groupManager().getGroup(username);

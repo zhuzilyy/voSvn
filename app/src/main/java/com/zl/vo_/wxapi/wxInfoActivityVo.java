@@ -129,9 +129,7 @@ public class wxInfoActivityVo extends VoBaseActivity implements View.OnClickList
                         intent.putExtra("sex", "1");
                     }
                     startActivity(intent);
-                    LoginActivity.instance.finish();
                     finish();
-
                 }else if ("0".equals(code)) {
                     LoginData loginData = data.data;
                     if (loginData != null) {
