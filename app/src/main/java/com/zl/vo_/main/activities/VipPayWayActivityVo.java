@@ -221,9 +221,10 @@ public class VipPayWayActivityVo extends VoBaseActivity implements View.OnClickL
                                             x.http().post(params, new MyCommonCallback<Result<LoginData>>() {
                                                 @Override
                                                 public void success(Result<LoginData> data) {
-                                                    // loadingview.setVisibility(View.GONE);
+                                                    Log.i("tag",data.toString());
                                                     LoginData loginData=data.data;
                                                     LoginData.LoginInfo loginInfo=loginData.getInfo();
+                                                    Log.i("tag",loginInfo.getAccount_info().toString());
                                                     if("0".equals(data.code)){
                                                         if(loginInfo!=null){
                                                             LoginData.LoginInfo.LoginAccountInfo user=loginInfo.getAccount_info();

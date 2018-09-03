@@ -110,8 +110,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
     private LinearLayout ll_vipnofree;
     private TextView tv_vipnofree;
     private TextView vip_endtime;
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,8 +122,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         getData();
         mInit();
         LoginData.LoginInfo.LoginAccountInfo user  = myUtils.readUser(CreateVoVIPAccountActivityVo.this);
-
-
     }
 
     /***
@@ -528,10 +524,8 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
         super.onActivityResult(requestCode, resultCode, data);
         switch(resultCode){
             case 200:
-
                 String state=data.getStringExtra("state");
                 String state02=data.getStringExtra("state02");
-
                 LoginData.LoginInfo.LoginAccountInfo user= myUtils.readUser(CreateVoVIPAccountActivityVo.this);
                 if(user!=null){
                     Glide.with(CreateVoVIPAccountActivityVo.this).load(user.getAvatar()).into(vip_head);
@@ -542,7 +536,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                         vip_state.setVisibility(View.GONE);
                     }
                 }
-
                 if("success".equals(state)){
                     final Dialog dialog=new Dialog(CreateVoVIPAccountActivityVo.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -553,12 +546,12 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     vip_endtime.setVisibility(View.VISIBLE);
                     vip_endtime.setText(user.getVip_enddate());
                     ll_vipnofree.setVisibility(View.GONE);
-
                     if("1".equals(state02)){
                         stateTv.setText("会员开通成功");
                         sendBroadcast(new Intent("openVipOK"));
                     }else {
                         stateTv.setText("支付成功");
+                        sendBroadcast(new Intent("openVipOK"));
                     }
 
                     dialog.findViewById(R.id.vip_success_btn).setOnClickListener(new View.OnClickListener() {
@@ -569,11 +562,9 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
                     });
                     dialog.show();
                 }
-            break;
+                //支付成功之后请求接口
 
-            default:
             break;
-
 
         }
 
@@ -587,7 +578,6 @@ public class CreateVoVIPAccountActivityVo extends VoBaseActivity implements View
            String action= intent.getAction();
             if("wxpayOk".equals(action)){
                 //***********微信支付成功后的操作**************************************************
-
                 String state=intent.getStringExtra("state");
                 String state02 =intent.getStringExtra("state02");
 

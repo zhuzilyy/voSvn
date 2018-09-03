@@ -129,12 +129,11 @@
 
         <TextView
             android:id="@+id/tv_address"
-            android:layout_toRightOf="@+id/tv_temp_erweima"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/tv_temp_erweima"
+            android:layout_toRightOf="@+id/tv_temp_erweima"
             android:ellipsize="end"
             android:gravity="right"
             android:singleLine="true"

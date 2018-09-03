@@ -92,7 +92,6 @@ public class FixMoreActivityVo extends VoBaseActivity implements View.OnClickLis
 
     private void mInit() {
         mHandler.sendEmptyMessage(MSG_LOAD_DATA);
-
         LoginData.LoginInfo.LoginAccountInfo currentUser= myUtils.readUser(FixMoreActivityVo.this);
 
         if(currentUser!=null){

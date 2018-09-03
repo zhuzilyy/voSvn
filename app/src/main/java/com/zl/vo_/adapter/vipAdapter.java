@@ -33,25 +33,18 @@ public class vipAdapter extends BaseAdapter {
     public void setSelectedPosition(int position) {
         selectedPosition = position;
     }
-
     @Override
     public int getCount() {
         return biglist.size();
     }
-
     @Override
     public Object getItem(int i) {
         return null;
     }
-
     @Override
     public long getItemId(int i) {
         return 0;
     }
-
-
-
-
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         VIPProductData.VIPProductInfo.VIPProductCell cell=biglist.get(i);

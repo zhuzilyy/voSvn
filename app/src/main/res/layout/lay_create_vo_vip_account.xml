@@ -186,12 +186,7 @@
                 android:background="@drawable/zhifubg"
                 android:textColor="@color/white"
                 />
-
         </LinearLayout>
-
-
-
-
     </LinearLayout>
 
     <RelativeLayout

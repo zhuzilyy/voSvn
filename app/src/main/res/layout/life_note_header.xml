@@ -97,10 +97,7 @@
                 android:gravity="center"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/x30"
-
                 >
-
-
                 <!--头像-->
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/lifeNote_header_avator"
@@ -139,7 +136,5 @@
         android:layout_marginTop="@dimen/x15"
         android:src="@mipmap/life_setting"
         />
-
-
 
 </RelativeLayout>
