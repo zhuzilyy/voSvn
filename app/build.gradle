@@ -178,6 +178,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile files('libs/MiPush_SDK_Client_3_6_9.jar')
 
+
     compile project(':hmspush')
     compile project(':pickerview')
     compile project(':wheelview')
