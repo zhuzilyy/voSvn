@@ -1,6 +1,5 @@
 package com.zl.vo_.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Rect;
@@ -24,10 +23,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.zl.vo_.R;
 import com.zl.vo_.main.Entity.Result;
-import com.zl.vo_.main.activities.*;
+import com.zl.vo_.main.activities.UserDetailsActivityVo;
+import com.zl.vo_.main.activities.VoBaseActivity;
 import com.zl.vo_.main.https.MyCommonCallback;
 import com.zl.vo_.main.main_utils.myUtils;
 import com.zl.vo_.utils.Url;

@@ -95,7 +95,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 						getAccessToken(code);
 						break;
 					case RETURN_MSG_TYPE_SHARE:
-						Toast.makeText(this, "分享成功", Toast.LENGTH_SHORT).show();
+						//Toast.makeText(this, "分享成功", Toast.LENGTH_SHORT).show();
 						finish();
 						break;
 				}

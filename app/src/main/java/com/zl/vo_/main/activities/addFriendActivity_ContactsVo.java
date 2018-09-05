@@ -360,7 +360,7 @@ public class addFriendActivity_ContactsVo extends VoBaseActivity implements View
         WXMediaMessage msg = new WXMediaMessage(webpage);
         msg.title ="人生知己，我在VO等你！";
         msg.description ="手机摇一摇即可隐藏好友,聊天办公,高端人群都在用" ;
-        Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.logo);
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.mipmap.share_logo);
         Bitmap bitmap = WhiteBgBitmapUtil.changeColor(bmp);
         msg.setThumbImage(bitmap);
 

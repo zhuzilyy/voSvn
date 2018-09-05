@@ -173,7 +173,7 @@ public class Main_ContactListFragment extends EaseContactListFragment implements
                         break;
                     //扫一扫
                     case 2:
-                            startActivity(new Intent(getActivity(),ScanCaptureActivity.class));
+                        startActivity(new Intent(getActivity(),ScanCaptureActivity.class));
                        // Toast.makeText(getActivity(), "扫一扫", Toast.LENGTH_SHORT).show();
                         break;
                     //帮助及反馈
