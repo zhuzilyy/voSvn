@@ -91,7 +91,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 						String code = ((SendAuth.Resp) resp).code;
 						Log.i("wx","code = " + code);
 						//就在这个地方，用网络库什么的或者自己封的网络api，发请求去咯，注意是get请求
-						// 通过code获取授权口令access_token
+						//通过code获取授权口令access_token
 						getAccessToken(code);
 						break;
 					case RETURN_MSG_TYPE_SHARE:

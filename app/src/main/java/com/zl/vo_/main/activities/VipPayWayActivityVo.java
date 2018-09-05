@@ -95,7 +95,7 @@ public class VipPayWayActivityVo extends VoBaseActivity implements View.OnClickL
     }
 
     /****
-     * 从自己服务器上获取支付信息
+     * 从自己服务器上获取支付信息(支付宝)
      * @param pid
      */
     private void getZFBInfo(String pid) {

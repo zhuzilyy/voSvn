@@ -1,11 +1,15 @@
 package com.zl.vo_.main.main_fragments;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +42,12 @@ import com.zl.vo_.util.WhiteBgBitmapUtil;
 import com.zl.vo_.utils.AppConst;
 import com.zl.vo_.utils.Url;
 import com.zl.vo_.widget.FXPopWindow;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -74,12 +84,135 @@ public class Main_FragmentFind extends Fragment implements View.OnClickListener 
         return vv;
     }
 
-    private void mInit() {
-        if(DemoApplication.hasNerVersion == 1){
+    @Override
+    public void onResume() {
+        super.onResume();
+        //检查更新
+        checkPackageVersion();
+    }
+
+    /***
+     * 检查版本
+     */
+    private void checkPackageVersion() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                RequestParams params=new RequestParams(Url.GetNewVOVewsionUrl);
+                x.http().post(params, new Callback.CacheCallback<String>() {
+                    @Override
+                    public void onSuccess(String result) {
+                        Log.i("ss",result);
+                        try {
+                            JSONObject jsonObject =  new JSONObject(result);
+                            String version =  jsonObject.getString("version");
+                            String downloadPath =  jsonObject.getString("url");
+                            if(!TextUtils.isEmpty(version)){
+                                CompareVersion(version);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+                        Log.i("ss","onCancelled");
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+                        Log.i("ss","onCancelled");
+                    }
+
+                    @Override
+                    public void onFinished() {
+                        Log.i("ss","onFinished");
+                    }
+
+                    @Override
+                    public boolean onCache(String result) {
+                        return false;
+                    }
+                });
+
+
+
+              /*  RequestParams params=new RequestParams(Url.GetNewVOVewsionUrl);
+                x.http().post(params, new MyCommonCallback<ApkBean>() {
+                    @Override
+                    public void success(ApkBean data) {
+                        Log.i("ss",data+"");
+                        String code=data.getCode();
+                        if("0".equals(code)){
+                            ApkBean.ApkData apkData=data.getData();
+                            if(apkData!=null){
+                                ApkBean.ApkData.ApkInfo apkInfo=apkData.getInfo();
+                                if(apkInfo!=null){
+                                    String mVersion=apkInfo.getVersion();
+                                    if(!TextUtils.isEmpty(mVersion)){
+                                        CompareVersion(mVersion);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void error(Throwable ex, boolean isOnCallback) {
+                        Log.i("ss",ex.getMessage());
+                    }
+                });
+           */
+
+
+            }
+        }).start();
+    }
+
+    /***
+     * 比对版本号
+     * @param mVersion
+     */
+    private void CompareVersion(String mVersion) {
+        float currentVersion= getCurrentVersion();
+        Float newVerSion=Float.parseFloat(mVersion);
+        if(newVerSion>currentVersion){
             tv_update_flag.setVisibility(View.VISIBLE);
-        }else if(DemoApplication.hasNerVersion == 0){
-            tv_update_flag.setVisibility(View.INVISIBLE);
+            getActivity().sendBroadcast(new Intent("hasNewVersion"));
+            DemoApplication.hasNerVersion=1;
+        }else {
+            tv_update_flag.setVisibility(View.GONE);
+            DemoApplication.hasNerVersion=0;
         }
+    }
+
+    /**
+     * 获取当前版本号
+     */
+    private float getCurrentVersion() {
+        try {
+
+            PackageManager manager = getActivity().getPackageManager();
+            PackageInfo info = manager.getPackageInfo(getActivity().getPackageName(), 0);
+
+         //   Log.e(TAG, "当前版本名和版本号" + info.versionName + "--" + info.versionCode);
+
+            return info.versionCode;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+          //  Log.e(TAG, "获取当前版本号出错");
+            return 0;
+        }
+    }
+
+
+    private void mInit() {
+
         view_share=LayoutInflater.from(getActivity()).inflate(R.layout.pw_share,null);
     }
     @OnClick({R.id.iv_add,R.id.iv_search,R.id.re_qrcode,R.id.re_game,
@@ -235,4 +368,10 @@ public class Main_FragmentFind extends Fragment implements View.OnClickListener 
     public static String buildTransaction(final String type) {
         return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
     }
+
+
+
+
+
+
 }

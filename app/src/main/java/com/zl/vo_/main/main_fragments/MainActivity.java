@@ -437,9 +437,11 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         IntentFilter filter = new IntentFilter("needRefresh");
         //账号在其他设备上登录
         IntentFilter filter1 = new IntentFilter("conflict");
+        IntentFilter filter2 = new IntentFilter("hasNewVersion");
 
         registerReceiver(myReceiver, filter);
         registerReceiver(myReceiver, filter1);
+        registerReceiver(myReceiver, filter2);
         //**************
         initView();
         showExceptionDialogFromIntent(getIntent());
@@ -1475,6 +1477,9 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
             if ("conflict".equals(action)) {
                 showExceptionDialogFromIntent(intent);
             }
+            if("hasNewVersion".equals(action)){
+                tv_newVersion.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -1524,5 +1529,7 @@ public class MainActivity extends VoBaseActivity implements View.OnClickListener
         }
        // mLogView.setText(AllLog);
     }
+
+
 
 }

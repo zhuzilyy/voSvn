@@ -1,23 +1,11 @@
 [
     {
-        "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_cancel_pressed.png",
-        "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable-xhdpi-v4\\upsdk_cancel_pressed.png"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_btn_emphasis_normal_layer.9.png",
         "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable-xhdpi-v4\\upsdk_btn_emphasis_normal_layer.9.png"
     },
     {
-        "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_btn_emphasis_normal_layer.9.png",
-        "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable-xhdpi-v4\\upsdk_btn_emphasis_normal_layer.9.png"
-    },
-    {
         "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_cancel_pressed.png",
         "source": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable-xhdpi-v4\\upsdk_cancel_pressed.png"
-    },
-    {
-        "merged": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_cancel_normal.png",
-        "source": "E:\\vo1.0\\voSvn\\hmspush\\build\\intermediates\\exploded-aar\\com.huawei.android.hms\\base\\2.6.0.301\\res\\drawable-xhdpi-v4\\upsdk_cancel_normal.png"
     },
     {
         "merged": "D:\\AndroidContent\\voSvn\\hmspush\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\upsdk_cancel_normal.png",

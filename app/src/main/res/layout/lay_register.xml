@@ -6,28 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <!--loading-->
-    <RelativeLayout
-        android:layout_below="@+id/title"
-        android:id="@+id/loading_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#44000000"
-        android:clickable="true"
-        android:visibility="gone"
 
-        >
-        <com.wang.avi.AVLoadingIndicatorView
-            android:layout_width="@dimen/custom_avloading_height"
-            android:layout_height="@dimen/custom_avloading_height"
-            android:layout_centerInParent="true"
-            android:visibility="visible"
-            app:indicator="BallScaleMultiple"
-            app:indicator_color="@color/common_bottom_bar_normal_bg"
-
-            />
-
-    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -91,7 +70,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <com.zl.vo_.main.views.ClearEditText
-                    android:password="true"
                     android:singleLine="true"
                     android:layout_marginLeft="15dp"
                     android:maxLength="11"
@@ -229,7 +207,7 @@
             android:orientation="horizontal">
             <com.zl.vo_.main.views.ClearEditText
                 android:singleLine="true"
-                android:inputType="number"
+                android:password="true"
                 android:layout_marginLeft="15dp"
                 android:maxLength="11"
                 android:id="@+id/register_pwd"
@@ -312,6 +290,28 @@
                 />
         </LinearLayout>
     </LinearLayout>
+    <!--loading-->
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:clickable="true"
+        android:visibility="gone"
+
+        >
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="@dimen/custom_avloading_height"
+            android:layout_height="@dimen/custom_avloading_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicator="BallScaleMultiple"
+            app:indicator_color="@color/common_bottom_bar_normal_bg"
+
+            />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
